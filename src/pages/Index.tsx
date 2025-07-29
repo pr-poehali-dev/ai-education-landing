@@ -1,5 +1,6 @@
 import React from 'react';
 import HeroSection from '@/components/sections/HeroSection';
+import ScheduleSection from '@/components/sections/ScheduleSection';
 import VideoTestimonialsSection from '@/components/sections/VideoTestimonialsSection';
 import SkillsSection from '@/components/sections/SkillsSection';
 import TestimonialsSection from '@/components/sections/TestimonialsSection';
@@ -21,6 +22,7 @@ export default function Index() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <HeroSection scrollToForm={scrollToForm} scrollToSection={scrollToSection} />
+      <ScheduleSection />
       <VideoTestimonialsSection />
       <SkillsSection />
       <TestimonialsSection />
