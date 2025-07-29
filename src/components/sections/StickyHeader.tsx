@@ -61,9 +61,9 @@ export default function StickyHeader({ scrollToForm, scrollToSection }: StickyHe
             href="https://torguykriptoy.getcourse.ru/NeuroVL" 
             target="_blank" 
             rel="noopener noreferrer"
-            className="inline-flex items-center px-3 py-2 lg:px-4 lg:py-2 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-medium rounded-md transition-colors text-sm lg:text-base"
+            className="inline-flex items-center px-4 py-3 lg:px-6 lg:py-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold rounded-lg transition-all duration-300 shadow-lg hover:shadow-cyan-500/25 hover:scale-105 text-sm lg:text-base border border-cyan-400/20"
           >
-            Оставить заявку
+            🚀 Оставить заявку
           </a>
         </div>
 
@@ -71,9 +71,9 @@ export default function StickyHeader({ scrollToForm, scrollToSection }: StickyHe
         <div className="md:hidden">
           <button 
             onClick={scrollToForm}
-            className="inline-flex items-center px-3 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-medium rounded-md transition-colors text-sm"
+            className="inline-flex items-center px-4 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold rounded-lg transition-all duration-300 shadow-lg hover:shadow-cyan-500/25 hover:scale-105 text-sm border border-cyan-400/20"
           >
-            Заявка
+            🚀 Заявка
           </button>
         </div>
       </nav>

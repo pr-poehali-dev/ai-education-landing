@@ -39,9 +39,9 @@ export default function HeroSection({ scrollToForm, scrollToSection }: HeroSecti
                 href="https://torguykriptoy.getcourse.ru/NeuroVL" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="inline-flex items-center bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-lg px-8 py-6 animate-pulse text-white font-medium rounded-md transition-colors"
+                className="inline-flex items-center bg-gradient-to-r from-cyan-500 via-blue-600 to-purple-600 hover:from-cyan-400 hover:via-blue-500 hover:to-purple-500 text-xl px-10 py-6 text-white font-bold rounded-xl transition-all duration-300 shadow-2xl hover:shadow-cyan-500/30 hover:scale-105 animate-pulse border-2 border-cyan-300/30 hover:border-cyan-300/60"
               >
-                <Icon name="Rocket" className="mr-2" />
+                <Icon name="Rocket" className="mr-3" size={24} />
                 Оставить заявку
               </a>
             </div>
