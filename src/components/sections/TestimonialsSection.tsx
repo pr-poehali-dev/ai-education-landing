@@ -108,7 +108,7 @@ export default function TestimonialsSection() {
       <div className="text-center mt-12">
         <div className="inline-flex items-center bg-slate-800/50 border border-slate-700 rounded-full px-6 py-3">
           <Icon name="Users" className="text-cyan-400 mr-2" size={20} />
-          <span className="text-white font-medium">Более 10,000 довольных студентов</span>
+          <span className="text-white font-medium">Более 10,000 довольных студентов по всему миру. Онлайн+офлайн.</span>
         </div>
       </div>
     </section>
