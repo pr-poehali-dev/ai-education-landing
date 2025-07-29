@@ -16,7 +16,7 @@ export default function ScheduleSection() {
 
       <div className="grid md:grid-cols-3 gap-8">
         {/* Старт курса */}
-        <Card className="bg-gradient-to-br from-cyan-500/10 to-blue-600/10 border-cyan-500/30 hover:border-cyan-400/50 transition-all duration-300 backdrop-blur-sm">
+        <Card className="bg-slate-800/90 border-slate-600 hover:border-cyan-400/70 transition-all duration-300 backdrop-blur-sm">
           <CardContent className="p-8 text-center">
             <div className="mb-6">
               <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -26,19 +26,19 @@ export default function ScheduleSection() {
             </div>
             
             <div className="space-y-2">
-              <div className="text-3xl font-bold text-cyan-400">8</div>
+              <div className="text-4xl font-bold text-cyan-400">8</div>
               <div className="text-lg text-white font-semibold">сентября</div>
               <div className="text-sm text-gray-300">2024 года</div>
             </div>
             
-            <div className="mt-6 pt-4 border-t border-cyan-500/20">
+            <div className="mt-6 pt-4 border-t border-slate-600">
               <Icon name="Rocket" className="text-cyan-400 mx-auto" size={24} />
             </div>
           </CardContent>
         </Card>
 
         {/* Расписание встреч */}
-        <Card className="bg-gradient-to-br from-purple-500/10 to-pink-600/10 border-purple-500/30 hover:border-purple-400/50 transition-all duration-300 backdrop-blur-sm">
+        <Card className="bg-slate-800/90 border-slate-600 hover:border-purple-400/70 transition-all duration-300 backdrop-blur-sm">
           <CardContent className="p-8 text-center">
             <div className="mb-6">
               <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -54,13 +54,13 @@ export default function ScheduleSection() {
               </div>
               
               <div className="space-y-2">
-                <div className="bg-purple-500/20 rounded-lg py-2 px-3">
-                  <div className="text-purple-300 text-sm">Понедельник</div>
-                  <div className="text-white font-bold">18:30 - 21:30</div>
+                <div className="bg-slate-700/70 border border-purple-400/30 rounded-lg py-3 px-4">
+                  <div className="text-purple-300 text-sm font-medium">Понедельник</div>
+                  <div className="text-white font-bold text-lg">18:30 - 21:30</div>
                 </div>
-                <div className="bg-pink-500/20 rounded-lg py-2 px-3">
-                  <div className="text-pink-300 text-sm">Четверг</div>
-                  <div className="text-white font-bold">18:30 - 21:30</div>
+                <div className="bg-slate-700/70 border border-pink-400/30 rounded-lg py-3 px-4">
+                  <div className="text-pink-300 text-sm font-medium">Четверг</div>
+                  <div className="text-white font-bold text-lg">18:30 - 21:30</div>
                 </div>
               </div>
             </div>
@@ -68,7 +68,7 @@ export default function ScheduleSection() {
         </Card>
 
         {/* Общая продолжительность */}
-        <Card className="bg-gradient-to-br from-green-500/10 to-emerald-600/10 border-green-500/30 hover:border-green-400/50 transition-all duration-300 backdrop-blur-sm">
+        <Card className="bg-slate-800/90 border-slate-600 hover:border-green-400/70 transition-all duration-300 backdrop-blur-sm">
           <CardContent className="p-8 text-center">
             <div className="mb-6">
               <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-600 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -80,23 +80,23 @@ export default function ScheduleSection() {
             <div className="space-y-4">
               <div className="text-center">
                 <div className="text-4xl font-bold text-green-400 mb-1">24</div>
-                <div className="text-white font-semibold">встречи</div>
+                <div className="text-white font-semibold text-lg">встречи</div>
               </div>
               
-              <div className="flex items-center justify-center space-x-2">
+              <div className="flex items-center justify-center space-x-3">
                 <div className="text-center">
                   <div className="text-2xl font-bold text-emerald-400">3</div>
-                  <div className="text-sm text-gray-300">часа</div>
+                  <div className="text-sm text-gray-300 font-medium">часа</div>
                 </div>
                 <Icon name="X" className="text-gray-400" size={16} />
                 <div className="text-center">
                   <div className="text-2xl font-bold text-emerald-400">24</div>
-                  <div className="text-sm text-gray-300">встречи</div>
+                  <div className="text-sm text-gray-300 font-medium">встречи</div>
                 </div>
               </div>
               
-              <div className="pt-2 border-t border-green-500/20">
-                <div className="text-green-300 text-sm">Всего:</div>
+              <div className="pt-3 border-t border-slate-600">
+                <div className="text-green-300 text-sm font-medium">Всего:</div>
                 <div className="text-xl font-bold text-white">72 часа</div>
               </div>
             </div>
@@ -106,7 +106,7 @@ export default function ScheduleSection() {
 
       {/* Дополнительная информация */}
       <div className="mt-12 text-center">
-        <div className="inline-flex items-center bg-slate-800/50 border border-slate-700 rounded-full px-8 py-4">
+        <div className="inline-flex items-center bg-slate-800/70 border border-slate-600 rounded-full px-8 py-4">
           <Icon name="Info" className="text-cyan-400 mr-3" size={20} />
           <span className="text-white font-medium">
             Интенсивная программа • Практические задания • Индивидуальная поддержка
