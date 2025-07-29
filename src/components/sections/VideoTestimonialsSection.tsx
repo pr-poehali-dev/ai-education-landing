@@ -8,7 +8,7 @@ const videoTestimonials = [
     title: "Отзыв студента #1",
     videoId: "16538997_456247056",
     embedUrl: "https://vk.com/video_ext.php?oid=16538997&id=456247056&hd=2",
-    thumbnail: "https://sun9-44.userapi.com/impg/c857616/v857616997/1d7c32/bQwOvfNnNVk.jpg?size=320x240&quality=96&sign=ed7b2a8fd0c6f5b7e25a0b8e3fa7f8b0&c_uniq_tag=456247056",
+    thumbnail: "https://cdn.poehali.dev/files/cace7603-42ad-44c9-a91f-60b96a8dc4bc.jpg",
     name: "Дмитрий Приезжих",
     description: "Впечатления от изучения нейросетей"
   },
