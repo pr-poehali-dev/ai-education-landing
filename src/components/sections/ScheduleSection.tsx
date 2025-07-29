@@ -28,7 +28,7 @@ export default function ScheduleSection() {
             <div className="space-y-2">
               <div className="text-4xl font-bold text-cyan-400">8</div>
               <div className="text-lg text-white font-semibold">сентября</div>
-              <div className="text-sm text-gray-300">2024 года</div>
+              <div className="text-sm text-gray-300">2025 года</div>
             </div>
             
             <div className="mt-6 pt-4 border-t border-slate-600">
