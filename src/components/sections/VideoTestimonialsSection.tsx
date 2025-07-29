@@ -17,7 +17,7 @@ const videoTestimonials = [
     title: "Отзыв студента #2", 
     videoId: "16538997_456247049",
     embedUrl: "https://vk.com/video_ext.php?oid=16538997&id=456247049&hd=2",
-    thumbnail: "https://sun9-44.userapi.com/impg/c857616/v857616997/1d7c25/kLhwBOqZYHQ.jpg?size=320x240&quality=96&sign=a4c2d3f1e8b9a6c7d2e5f8g9h0i1j2k3&c_uniq_tag=456247049",
+    thumbnail: "https://cdn.poehali.dev/files/f489f927-55e4-4aa7-a26f-46e9391871b3.jpg",
     name: "Студент курса",
     description: "Результаты применения полученных знаний"
   },
