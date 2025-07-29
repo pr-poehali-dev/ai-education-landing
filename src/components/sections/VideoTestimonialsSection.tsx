@@ -26,7 +26,7 @@ const videoTestimonials = [
     title: "Отзыв студента #3",
     videoId: "16538997_456247048",
     embedUrl: "https://vk.com/video_ext.php?oid=16538997&id=456247048&hd=2",
-    thumbnail: "https://sun9-44.userapi.com/impg/c857616/v857616997/1d7c18/XpGfKdCb72s.jpg?size=320x240&quality=96&sign=b5d3e4f2a9c8b7d6e3f0g1h2i5j6k7l8&c_uniq_tag=456247048",
+    thumbnail: "https://cdn.poehali.dev/files/8486b7d9-b796-4c8e-a496-aadd33b30c89.jpg",
     name: "Лидия Воскобой",
     description: "Как изменилась работа после курса"
   },
