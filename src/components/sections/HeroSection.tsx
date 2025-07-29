@@ -22,9 +22,14 @@ export default function HeroSection({ scrollToForm, scrollToSection }: HeroSecti
           <button onClick={() => scrollToSection('program')} className="text-white hover:text-cyan-400 transition-colors">Программа</button>
           <button onClick={() => scrollToSection('about-course')} className="text-white hover:text-cyan-400 transition-colors">О курсе</button>
           <button onClick={() => scrollToSection('testimonials')} className="text-white hover:text-cyan-400 transition-colors">Отзывы</button>
-          <Button onClick={scrollToForm} className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700">
+          <a 
+            href="https://torguykriptoy.getcourse.ru/NeuroVL" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-medium rounded-md transition-colors"
+          >
             Оставить заявку
-          </Button>
+          </a>
         </div>
       </nav>
 
@@ -50,14 +55,15 @@ export default function HeroSection({ scrollToForm, scrollToSection }: HeroSecti
             </div>
             
             <div>
-              <Button 
-                size="lg" 
-                onClick={scrollToForm}
-                className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-lg px-8 py-6 animate-pulse"
+              <a 
+                href="https://torguykriptoy.getcourse.ru/NeuroVL" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="inline-flex items-center bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-lg px-8 py-6 animate-pulse text-white font-medium rounded-md transition-colors"
               >
                 <Icon name="Rocket" className="mr-2" />
                 Оставить заявку
-              </Button>
+              </a>
             </div>
 
             <div className="flex items-center space-x-8 text-sm text-gray-400">

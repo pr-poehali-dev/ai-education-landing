@@ -78,12 +78,14 @@ export default function DirectionsSection({ scrollToForm }: DirectionsSectionPro
                     </li>
                   ))}
                 </ul>
-                <Button 
-                  onClick={scrollToForm}
-                  className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 mt-4"
+                <a 
+                  href="https://torguykriptoy.getcourse.ru/NeuroVL" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="w-full inline-flex items-center justify-center px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 mt-4 text-white font-medium rounded-md transition-colors"
                 >
                   Оставить заявку
-                </Button>
+                </a>
               </AccordionContent>
             </AccordionItem>
           ))}
