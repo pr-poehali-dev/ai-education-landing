@@ -8,7 +8,7 @@ const videoTestimonials = [
     title: "Отзыв студента #1",
     videoId: "16538997_456247056",
     embedUrl: "https://vk.com/video_ext.php?oid=16538997&id=456247056&hd=2",
-    name: "Студент курса",
+    name: "Дмитрий Приезжих",
     description: "Впечатления от изучения нейросетей"
   },
   {
@@ -24,7 +24,7 @@ const videoTestimonials = [
     title: "Отзыв студента #3",
     videoId: "16538997_456247048",
     embedUrl: "https://vk.com/video_ext.php?oid=16538997&id=456247048&hd=2",
-    name: "Студент курса",
+    name: "Лидия Воскобой",
     description: "Как изменилась работа после курса"
   },
   {
@@ -32,7 +32,7 @@ const videoTestimonials = [
     title: "Отзыв студента #4",
     videoId: "16538997_456247055",
     embedUrl: "https://vk.com/video_ext.php?oid=16538997&id=456247055&hd=2",
-    name: "Студент курса",
+    name: "Анна Савкина",
     description: "Практическая ценность обучения"
   },
   {
@@ -48,7 +48,7 @@ const videoTestimonials = [
     title: "Отзыв студента #6",
     videoId: "16538997_456247054",
     embedUrl: "https://vk.com/video_ext.php?oid=16538997&id=456247054&hd=2",
-    name: "Студент курса",
+    name: "Ирина Нечет",
     description: "Рекомендации другим студентам"
   }
 ];
