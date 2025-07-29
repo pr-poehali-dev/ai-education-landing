@@ -146,7 +146,7 @@ export default function AdvantagesSection() {
           <div className="relative">
             <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-blue-600/20 rounded-2xl blur-xl"></div>
             <img 
-              src="/img/3ac6948c-bdf9-4fe9-9e36-39277d6a0e3e.jpg"
+              src="https://cdn.poehali.dev/files/5e906def-1145-46ea-98c8-a5b27c58bc2d.png"
               alt="Сергей Черников"
               className="relative z-10 w-full rounded-2xl shadow-2xl border border-cyan-500/20"
             />

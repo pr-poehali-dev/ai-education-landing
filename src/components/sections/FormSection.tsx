@@ -64,46 +64,15 @@ export default function FormSection() {
 
         <Card className="bg-slate-800/50 border-slate-700 backdrop-blur-sm">
           <CardContent className="p-8">
-            <form className="space-y-6">
-              <div>
-                <label className="block text-sm font-medium text-gray-300 mb-2">
-                  Ваше имя
-                </label>
-                <input 
-                  type="text" 
-                  className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white focus:border-cyan-500 focus:outline-none"
-                  placeholder="Введите ваше имя"
-                />
-              </div>
-              <div>
-                <label className="block text-sm font-medium text-gray-300 mb-2">
-                  Номер телефона
-                </label>
-                <input 
-                  type="tel" 
-                  className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white focus:border-cyan-500 focus:outline-none"
-                  placeholder="+7 (999) 123-45-67"
-                />
-              </div>
-              <div>
-                <label className="block text-sm font-medium text-gray-300 mb-2">
-                  Email
-                </label>
-                <input 
-                  type="email" 
-                  className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white focus:border-cyan-500 focus:outline-none"
-                  placeholder="example@email.com"
-                />
-              </div>
+            <div className="text-center">
               <Button 
-                type="submit"
                 size="lg"
-                className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-lg py-6"
+                className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-lg py-6 px-12"
               >
                 <Icon name="Send" className="mr-2" />
                 Отправить заявку
               </Button>
-            </form>
+            </div>
           </CardContent>
         </Card>
       </section>
