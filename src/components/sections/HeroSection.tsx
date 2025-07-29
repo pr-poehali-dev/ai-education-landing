@@ -49,7 +49,7 @@ export default function HeroSection({ scrollToForm, scrollToSection }: HeroSecti
               </div>
             </div>
             
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div>
               <Button 
                 size="lg" 
                 onClick={scrollToForm}
@@ -57,14 +57,6 @@ export default function HeroSection({ scrollToForm, scrollToSection }: HeroSecti
               >
                 <Icon name="Rocket" className="mr-2" />
                 Оставить заявку
-              </Button>
-              <Button 
-                size="lg" 
-                variant="outline" 
-                className="border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900 text-lg px-8 py-6"
-              >
-                <Icon name="Play" className="mr-2" />
-                Смотреть презентацию
               </Button>
             </div>
 

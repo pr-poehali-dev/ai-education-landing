@@ -68,12 +68,42 @@ export default function AdvantagesSection() {
         <p className="text-xl text-gray-300 mb-8">
           Более 10,000 специалистов уже прошли обучение в наших программах при поддержке ведущих организаций
         </p>
-        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-4">
-          {partners.map((partner, index) => (
-            <div key={index} className="p-4 bg-slate-800/30 rounded-lg border border-slate-700 text-center">
-              <div className="text-sm text-gray-300">{partner}</div>
-            </div>
-          ))}
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+          <div className="p-4 bg-slate-800/30 rounded-lg border border-slate-700 flex items-center justify-center">
+            <img 
+              src="https://cdn.poehali.dev/files/4bc30784-6b4b-4dd5-af33-57ab2eaff47a.jpg" 
+              alt="Мой Бизнес" 
+              className="max-h-12 object-contain"
+            />
+          </div>
+          <div className="p-4 bg-slate-800/30 rounded-lg border border-slate-700 flex items-center justify-center">
+            <img 
+              src="https://cdn.poehali.dev/files/67470047-e195-4c54-8ed9-2230ccd6b6f8.jpeg" 
+              alt="Центр Развития Предпринимательства" 
+              className="max-h-12 object-contain"
+            />
+          </div>
+          <div className="p-4 bg-slate-800/30 rounded-lg border border-slate-700 flex items-center justify-center">
+            <img 
+              src="https://cdn.poehali.dev/files/894590f6-de63-49af-a296-83da32f246cb.jpeg" 
+              alt="Штаб Общественной Поддержки Единой России" 
+              className="max-h-12 object-contain"
+            />
+          </div>
+          <div className="p-4 bg-slate-800/30 rounded-lg border border-slate-700 flex items-center justify-center">
+            <img 
+              src="https://cdn.poehali.dev/files/eb4d7375-5a58-4943-bb20-57a56f1eba5f.png" 
+              alt="Росмолодежь" 
+              className="max-h-12 object-contain"
+            />
+          </div>
+          <div className="p-4 bg-slate-800/30 rounded-lg border border-slate-700 flex items-center justify-center">
+            <img 
+              src="https://cdn.poehali.dev/files/46d80ccd-7d32-487f-821e-331a1d2c4ce8.png" 
+              alt="Бизнес Завтрак" 
+              className="max-h-12 object-contain"
+            />
+          </div>
         </div>
       </div>
 
