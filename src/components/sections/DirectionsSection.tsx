@@ -58,10 +58,10 @@ export default function DirectionsSection({ scrollToForm }: DirectionsSectionPro
         <Accordion type="single" collapsible className="space-y-4">
           {directions.map((direction, index) => (
             <AccordionItem key={index} value={`direction-${index}`} className="bg-slate-800/50 border-slate-700 rounded-lg px-6">
-              <AccordionTrigger className="text-white hover:text-cyan-400">
+              <AccordionTrigger className="text-white hover:text-cyan-400 group">
                 <div className="flex items-center">
-                  <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-cyan-500 to-blue-600 flex items-center justify-center mr-4">
-                    <Icon name={direction.icon as any} className="text-white" size={24} />
+                  <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-cyan-500 to-blue-600 group-hover:from-cyan-400 group-hover:to-purple-600 flex items-center justify-center mr-4 transition-all duration-300 group-hover:scale-110 group-hover:rotate-3 group-hover:shadow-lg group-hover:shadow-cyan-500/30">
+                    <Icon name={direction.icon as any} className="text-white group-hover:animate-bounce" size={24} />
                   </div>
                   <div className="text-left">
                     <h3 className="text-xl font-bold">{direction.title}</h3>
