@@ -44,7 +44,7 @@ const videoTestimonials = [
     title: "Отзыв студента #5",
     videoId: "16538997_456246770",
     embedUrl: "https://vk.com/video_ext.php?oid=16538997&id=456246770&hd=2",
-    thumbnail: "https://sun9-44.userapi.com/impg/c857616/v857616997/1d7b1a/MnBvCxDyEzF.jpg?size=320x240&quality=96&sign=d7f5g6h4c1e0d9f8g5h2i3j4k7l8m9n0&c_uniq_tag=456246770",
+    thumbnail: "https://cdn.poehali.dev/files/71618117-981d-446b-9014-0883c8c0c9fb.jpg",
     name: "Студент курса", 
     description: "Впечатления от воркшопа"
   },
