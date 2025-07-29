@@ -45,10 +45,10 @@ export default function AdvantagesSection() {
         <Accordion type="single" collapsible className="space-y-4">
           {advantages.map((advantage, index) => (
             <AccordionItem key={index} value={`advantage-${index}`} className="bg-slate-800/50 border-slate-700 rounded-lg px-6">
-              <AccordionTrigger className="text-white hover:text-cyan-400">
+              <AccordionTrigger className="text-white hover:text-cyan-400 group">
                 <div className="flex items-center">
-                  <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-cyan-500 to-blue-600 flex items-center justify-center mr-4">
-                    <Icon name={advantage.icon as any} className="text-white" size={24} />
+                  <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-cyan-500 to-blue-600 group-hover:from-green-500 group-hover:to-emerald-600 flex items-center justify-center mr-4 transition-all duration-300 group-hover:scale-110 group-hover:rotate-12 group-hover:shadow-lg group-hover:shadow-green-500/30">
+                    <Icon name={advantage.icon as any} className="text-white group-hover:animate-spin" size={24} />
                   </div>
                   <div className="text-left">
                     <h3 className="text-xl font-bold">{advantage.title}</h3>

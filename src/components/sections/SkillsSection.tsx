@@ -154,10 +154,10 @@ export default function SkillsSection() {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {skills.map((skill, index) => (
-            <Card key={index} className="bg-slate-800/50 border-slate-700 hover:border-cyan-500/50 transition-all duration-300 hover:scale-105 backdrop-blur-sm">
+            <Card key={index} className="bg-slate-800/50 border-slate-700 hover:border-cyan-500/50 transition-all duration-300 hover:scale-105 backdrop-blur-sm group">
               <CardContent className="p-6">
-                <div className={`w-12 h-12 rounded-lg bg-gradient-to-r ${skill.gradient} flex items-center justify-center mb-4`}>
-                  <Icon name={skill.icon as any} className="text-white" size={24} />
+                <div className={`w-12 h-12 rounded-lg bg-gradient-to-r ${skill.gradient} group-hover:from-cyan-400 group-hover:to-purple-600 flex items-center justify-center mb-4 transition-all duration-300 group-hover:scale-110 group-hover:rotate-6 group-hover:shadow-lg group-hover:shadow-cyan-500/30`}>
+                  <Icon name={skill.icon as any} className="text-white group-hover:animate-pulse" size={24} />
                 </div>
                 <h3 className="text-xl font-bold text-white mb-2">{skill.title}</h3>
                 <p className="text-gray-400 mb-4">{skill.description}</p>
@@ -188,10 +188,10 @@ export default function SkillsSection() {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {aiCapabilities.map((capability, index) => (
-            <Card key={index} className="bg-slate-800/50 border-slate-700 hover:border-cyan-500/50 transition-all duration-300">
+            <Card key={index} className="bg-slate-800/50 border-slate-700 hover:border-cyan-500/50 transition-all duration-300 group">
               <CardContent className="p-6">
-                <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-cyan-500 to-blue-600 flex items-center justify-center mb-4">
-                  <Icon name={capability.icon as any} className="text-white" size={24} />
+                <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-cyan-500 to-blue-600 group-hover:from-purple-500 group-hover:to-pink-600 flex items-center justify-center mb-4 transition-all duration-300 group-hover:scale-110 group-hover:-rotate-3 group-hover:shadow-lg group-hover:shadow-purple-500/30">
+                  <Icon name={capability.icon as any} className="text-white group-hover:animate-bounce" size={24} />
                 </div>
                 <h3 className="text-xl font-bold text-white mb-2">{capability.title}</h3>
                 <p className="text-gray-400">{capability.description}</p>
