@@ -32,7 +32,11 @@ export default function ScheduleSection() {
             </div>
             
             <div className="mt-6 pt-4 border-t border-slate-600">
-              <Icon name="Rocket" className="text-cyan-400 mx-auto" size={24} />
+              <Icon name="Rocket" className="text-cyan-400 mx-auto mb-3" size={24} />
+              <div className="text-xs text-gray-400 leading-relaxed">
+                Адрес уточняется.<br />
+                И будет готов к 15 августа.
+              </div>
             </div>
           </CardContent>
         </Card>
