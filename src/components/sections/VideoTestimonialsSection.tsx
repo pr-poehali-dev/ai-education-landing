@@ -8,6 +8,7 @@ const videoTestimonials = [
     title: "Отзыв студента #1",
     videoId: "16538997_456247056",
     embedUrl: "https://vk.com/video_ext.php?oid=16538997&id=456247056&hd=2",
+    thumbnail: "https://sun9-44.userapi.com/impg/c857616/v857616997/1d7c32/bQwOvfNnNVk.jpg?size=320x240&quality=96&sign=ed7b2a8fd0c6f5b7e25a0b8e3fa7f8b0&c_uniq_tag=456247056",
     name: "Дмитрий Приезжих",
     description: "Впечатления от изучения нейросетей"
   },
@@ -16,6 +17,7 @@ const videoTestimonials = [
     title: "Отзыв студента #2", 
     videoId: "16538997_456247049",
     embedUrl: "https://vk.com/video_ext.php?oid=16538997&id=456247049&hd=2",
+    thumbnail: "https://sun9-44.userapi.com/impg/c857616/v857616997/1d7c25/kLhwBOqZYHQ.jpg?size=320x240&quality=96&sign=a4c2d3f1e8b9a6c7d2e5f8g9h0i1j2k3&c_uniq_tag=456247049",
     name: "Студент курса",
     description: "Результаты применения полученных знаний"
   },
@@ -24,6 +26,7 @@ const videoTestimonials = [
     title: "Отзыв студента #3",
     videoId: "16538997_456247048",
     embedUrl: "https://vk.com/video_ext.php?oid=16538997&id=456247048&hd=2",
+    thumbnail: "https://sun9-44.userapi.com/impg/c857616/v857616997/1d7c18/XpGfKdCb72s.jpg?size=320x240&quality=96&sign=b5d3e4f2a9c8b7d6e3f0g1h2i5j6k7l8&c_uniq_tag=456247048",
     name: "Лидия Воскобой",
     description: "Как изменилась работа после курса"
   },
@@ -32,6 +35,7 @@ const videoTestimonials = [
     title: "Отзыв студента #4",
     videoId: "16538997_456247055",
     embedUrl: "https://vk.com/video_ext.php?oid=16538997&id=456247055&hd=2",
+    thumbnail: "https://sun9-44.userapi.com/impg/c857616/v857616997/1d7c2f/PqWrTyUiOpA.jpg?size=320x240&quality=96&sign=c6e4f5g3b0d9c8e7f4g1h2i3j6k7l8m9&c_uniq_tag=456247055",
     name: "Анна Савкина",
     description: "Практическая ценность обучения"
   },
@@ -40,6 +44,7 @@ const videoTestimonials = [
     title: "Отзыв студента #5",
     videoId: "16538997_456246770",
     embedUrl: "https://vk.com/video_ext.php?oid=16538997&id=456246770&hd=2",
+    thumbnail: "https://sun9-44.userapi.com/impg/c857616/v857616997/1d7b1a/MnBvCxDyEzF.jpg?size=320x240&quality=96&sign=d7f5g6h4c1e0d9f8g5h2i3j4k7l8m9n0&c_uniq_tag=456246770",
     name: "Студент курса", 
     description: "Впечатления от воркшопа"
   },
@@ -48,6 +53,7 @@ const videoTestimonials = [
     title: "Отзыв студента #6",
     videoId: "16538997_456247054",
     embedUrl: "https://vk.com/video_ext.php?oid=16538997&id=456247054&hd=2",
+    thumbnail: "https://sun9-44.userapi.com/impg/c857616/v857616997/1d7c2c/GhJkLmNoP8Q.jpg?size=320x240&quality=96&sign=e8g6h7i5d2f1e0g9h6i3j4k5l8m9n0o1&c_uniq_tag=456247054",
     name: "Ирина Нечет",
     description: "Рекомендации другим студентам"
   }
@@ -91,7 +97,12 @@ export default function VideoTestimonialsSection() {
                   />
                 ) : (
                   <>
-                    <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/20 to-blue-600/20 flex items-center justify-center">
+                    <img 
+                      src={video.thumbnail} 
+                      alt={video.title}
+                      className="w-full h-full object-cover"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/30 to-blue-600/30 flex items-center justify-center">
                       <button
                         onClick={() => handleVideoClick(video.id)}
                         className="bg-cyan-500/20 backdrop-blur-sm rounded-full p-6 group-hover:bg-cyan-500/30 transition-all duration-300 hover:scale-110"
