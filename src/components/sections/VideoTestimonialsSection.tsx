@@ -35,7 +35,7 @@ const videoTestimonials = [
     title: "Отзыв студента #4",
     videoId: "16538997_456247055",
     embedUrl: "https://vk.com/video_ext.php?oid=16538997&id=456247055&hd=2",
-    thumbnail: "https://sun9-44.userapi.com/impg/c857616/v857616997/1d7c2f/PqWrTyUiOpA.jpg?size=320x240&quality=96&sign=c6e4f5g3b0d9c8e7f4g1h2i3j6k7l8m9&c_uniq_tag=456247055",
+    thumbnail: "https://cdn.poehali.dev/files/2ed17afe-1e10-496a-9029-16e7eb50bfa2.jpg",
     name: "Анна Савкина",
     description: "Практическая ценность обучения"
   },
