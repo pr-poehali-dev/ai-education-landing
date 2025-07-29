@@ -1,4 +1,5 @@
 import React from 'react';
+import StickyHeader from '@/components/sections/StickyHeader';
 import HeroSection from '@/components/sections/HeroSection';
 import ScheduleSection from '@/components/sections/ScheduleSection';
 import VideoTestimonialsSection from '@/components/sections/VideoTestimonialsSection';
@@ -21,6 +22,7 @@ export default function Index() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <StickyHeader scrollToForm={scrollToForm} scrollToSection={scrollToSection} />
       <HeroSection scrollToForm={scrollToForm} scrollToSection={scrollToSection} />
       <ScheduleSection />
       <VideoTestimonialsSection />
