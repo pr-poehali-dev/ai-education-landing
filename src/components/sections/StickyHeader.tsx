@@ -50,6 +50,14 @@ export default function StickyHeader({ scrollToForm, scrollToSection }: StickyHe
             Отзывы
           </button>
           <a 
+            href="https://t.me/chernikovgpt" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="text-white hover:text-cyan-400 transition-colors text-sm lg:text-base"
+          >
+            ТГ-КАНАЛ
+          </a>
+          <a 
             href="https://torguykriptoy.getcourse.ru/NeuroVL" 
             target="_blank" 
             rel="noopener noreferrer"
