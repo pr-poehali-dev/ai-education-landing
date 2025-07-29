@@ -53,7 +53,7 @@ const videoTestimonials = [
     title: "Отзыв студента #6",
     videoId: "16538997_456247054",
     embedUrl: "https://vk.com/video_ext.php?oid=16538997&id=456247054&hd=2",
-    thumbnail: "https://sun9-44.userapi.com/impg/c857616/v857616997/1d7c2c/GhJkLmNoP8Q.jpg?size=320x240&quality=96&sign=e8g6h7i5d2f1e0g9h6i3j4k5l8m9n0o1&c_uniq_tag=456247054",
+    thumbnail: "https://cdn.poehali.dev/files/0934b061-4bea-4d6f-9c32-71179331c1e5.jpg",
     name: "Ирина Нечет",
     description: "Рекомендации другим студентам"
   }
