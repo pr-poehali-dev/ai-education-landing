@@ -10,6 +10,7 @@ import DirectionsSection from '@/components/sections/DirectionsSection';
 import PricingSection from '@/components/sections/PricingSection';
 import AdvantagesSection from '@/components/sections/AdvantagesSection';
 import FormSection from '@/components/sections/FormSection';
+import CTAButton from '@/components/ui/cta-button';
 
 export default function Index() {
   const scrollToForm = () => {
@@ -41,12 +42,18 @@ export default function Index() {
       <HeroSection scrollToForm={scrollToForm} scrollToSection={scrollToSection} />
       <ScheduleSection />
       <VideoTestimonialsSection />
+      <CTAButton onClick={scrollToForm} />
       <SkillsSection />
+      <CTAButton onClick={scrollToForm} />
       <TestimonialsSection />
+      <CTAButton onClick={scrollToForm} />
       <ProgramSection scrollToForm={scrollToForm} />
+      <CTAButton onClick={scrollToForm} />
       <DirectionsSection scrollToForm={scrollToForm} />
+      <CTAButton onClick={scrollToForm} />
       <PricingSection scrollToForm={scrollToForm} />
       <AdvantagesSection />
+      <CTAButton onClick={scrollToForm} />
       <FormSection />
     </div>
   );
