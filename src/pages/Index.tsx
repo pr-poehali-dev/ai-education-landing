@@ -12,6 +12,7 @@ import AdvantagesSection from '@/components/sections/AdvantagesSection';
 import FormSection from '@/components/sections/FormSection';
 import CTAButton from '@/components/ui/cta-button';
 import AnimatedBackground from '@/components/ui/animated-background';
+import ChatWidget from '@/components/ChatWidget';
 
 export default function Index() {
   const scrollToForm = () => {
@@ -42,6 +43,7 @@ export default function Index() {
       <AdvantagesSection />
       <CTAButton onClick={scrollToForm} />
       <FormSection />
+      <ChatWidget />
     </div>
   );
 }
