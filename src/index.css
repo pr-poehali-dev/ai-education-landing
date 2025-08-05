@@ -99,3 +99,182 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* Custom animations for background */
+@keyframes gradient-shift {
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes pulse-slow {
+  0%,
+  100% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 0.8;
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  33% {
+    transform: translateY(-10px) rotate(1deg);
+  }
+  66% {
+    transform: translateY(5px) rotate(-1deg);
+  }
+}
+
+@keyframes float-slow {
+  0%,
+  100% {
+    transform: translateY(0px) scale(1);
+  }
+  50% {
+    transform: translateY(-20px) scale(1.05);
+  }
+}
+
+@keyframes dots-float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+@keyframes float-particle-1 {
+  0%,
+  100% {
+    transform: translateY(0px) translateX(0px);
+  }
+  25% {
+    transform: translateY(-20px) translateX(10px);
+  }
+  50% {
+    transform: translateY(-10px) translateX(-5px);
+  }
+  75% {
+    transform: translateY(-30px) translateX(15px);
+  }
+}
+
+@keyframes float-particle-2 {
+  0%,
+  100% {
+    transform: translateY(0px) translateX(0px);
+  }
+  33% {
+    transform: translateY(-15px) translateX(-10px);
+  }
+  66% {
+    transform: translateY(-25px) translateX(8px);
+  }
+}
+
+@keyframes float-particle-3 {
+  0%,
+  100% {
+    transform: translateY(0px) translateX(0px);
+  }
+  40% {
+    transform: translateY(-18px) translateX(12px);
+  }
+  80% {
+    transform: translateY(-8px) translateX(-6px);
+  }
+}
+
+@keyframes float-particle-4 {
+  0%,
+  100% {
+    transform: translateY(0px) translateX(0px);
+  }
+  30% {
+    transform: translateY(-22px) translateX(-8px);
+  }
+  70% {
+    transform: translateY(-12px) translateX(14px);
+  }
+}
+
+@keyframes pulse-glow {
+  0%,
+  100% {
+    opacity: 0.1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.3;
+    transform: scale(1.1);
+  }
+}
+
+@keyframes pulse-glow-delayed {
+  0%,
+  100% {
+    opacity: 0.05;
+    transform: scale(0.9);
+  }
+  50% {
+    opacity: 0.25;
+    transform: scale(1.2);
+  }
+}
+
+/* Apply animations */
+.animate-gradient-shift {
+  background-size: 400% 400%;
+  animation: gradient-shift 15s ease infinite;
+}
+
+.animate-pulse-slow {
+  animation: pulse-slow 8s ease-in-out infinite;
+}
+
+.animate-float {
+  animation: float 12s ease-in-out infinite;
+}
+
+.animate-float-slow {
+  animation: float-slow 20s ease-in-out infinite;
+}
+
+.animate-dots-float {
+  animation: dots-float 6s ease-in-out infinite;
+}
+
+.animate-float-particle-1 {
+  animation: float-particle-1 25s linear infinite;
+}
+
+.animate-float-particle-2 {
+  animation: float-particle-2 20s linear infinite;
+}
+
+.animate-float-particle-3 {
+  animation: float-particle-3 30s linear infinite;
+}
+
+.animate-float-particle-4 {
+  animation: float-particle-4 22s linear infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 12s ease-in-out infinite;
+}
+
+.animate-pulse-glow-delayed {
+  animation: pulse-glow-delayed 16s ease-in-out infinite 4s;
+}
