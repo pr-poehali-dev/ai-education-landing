@@ -1,228 +1,30 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
 import Icon from '@/components/ui/icon';
-import { useToast } from '@/hooks/use-toast';
-
-interface Message {
-  id: string;
-  text: string;
-  timestamp: Date;
-  sender: 'user' | 'support';
-  status?: 'sent' | 'delivered' | 'read';
-}
 
 const ChatWidget = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [messages, setMessages] = useState<Message[]>([
-    {
-      id: '1',
-      text: 'Привет! 👋 Я готов помочь с любыми вопросами. Что вас интересует?',
-      timestamp: new Date(),
-      sender: 'support'
-    }
-  ]);
-  const [inputMessage, setInputMessage] = useState('');
-  const [userInfo, setUserInfo] = useState({ name: '', email: '' });
-  const [showUserForm, setShowUserForm] = useState(true);
-  const { toast } = useToast();
-
-  const handleSendMessage = () => {
-    if (!inputMessage.trim()) return;
-
-    const newMessage: Message = {
-      id: Date.now().toString(),
-      text: inputMessage,
-      timestamp: new Date(),
-      sender: 'user',
-      status: 'sent'
-    };
-
-    setMessages(prev => [...prev, newMessage]);
-    
-    // Отправляем в WhatsApp
-    const whatsappText = `Привет! Пишу с сайта.
-
-*Имя:* ${userInfo.name}
-*Email:* ${userInfo.email}
-
-*Сообщение:*
-${inputMessage}`;
-    
-    const whatsappUrl = `https://wa.me/message/YRBE2VIUHPMYN1?text=${encodeURIComponent(whatsappText)}`;
-    window.open(whatsappUrl, '_blank');
-    
-    setInputMessage('');
-
-    toast({
-      title: "Переходим в WhatsApp!",
-      description: "Сейчас откроется WhatsApp для отправки сообщения.",
-    });
-
-    // Ответ с инструкциями
-    setTimeout(() => {
-      const autoReply: Message = {
-        id: (Date.now() + 1).toString(),
-        text: 'Отлично! WhatsApp открылся в новой вкладке. Отправьте сообщение там, и я отвечу очень быстро! 📱',
-        timestamp: new Date(),
-        sender: 'support'
-      };
-      setMessages(prev => [...prev, autoReply]);
-    }, 1000);
-  };
-
-  const handleUserInfoSubmit = () => {
-    if (!userInfo.name || !userInfo.email) {
-      toast({
-        title: "Заполните поля",
-        description: "Пожалуйста, укажите имя и email для связи.",
-        variant: "destructive"
-      });
-      return;
-    }
-    setShowUserForm(false);
-  };
-
-  const formatTime = (date: Date) => {
-    return date.toLocaleTimeString('ru-RU', { 
-      hour: '2-digit', 
-      minute: '2-digit' 
-    });
+  const openWhatsApp = () => {
+    window.open('https://wa.me/message/YRBE2VIUHPMYN1', '_blank');
   };
 
   return (
     <div className="fixed bottom-4 right-4 z-50">
-      {/* Кнопка открытия чата */}
-      {!isOpen && (
-        <Button
-          onClick={() => setIsOpen(true)}
-          className="rounded-full w-16 h-16 shadow-lg hover:shadow-xl transition-all duration-300 bg-primary hover:bg-primary/90"
-        >
-          <Icon name="MessageCircle" size={24} />
-        </Button>
-      )}
-
-      {/* Окно чата */}
-      {isOpen && (
-        <Card className="w-80 h-96 shadow-2xl border-0 bg-white">
-          <CardHeader className="bg-primary text-primary-foreground p-4">
-            <div className="flex items-center justify-between">
-              <div className="flex items-center gap-2">
-                <Icon name="Headphones" size={20} />
-                <CardTitle className="text-sm">Поддержка</CardTitle>
-                <Badge variant="secondary" className="text-xs bg-green-500 text-white">
-                  Онлайн
-                </Badge>
-              </div>
-              <Button
-                variant="ghost"
-                size="sm"
-                onClick={() => setIsOpen(false)}
-                className="text-primary-foreground hover:bg-primary-foreground/20 h-8 w-8 p-0"
-              >
-                <Icon name="X" size={16} />
-              </Button>
-            </div>
-          </CardHeader>
-
-          <CardContent className="p-0 flex flex-col h-80">
-            {/* Форма пользователя */}
-            {showUserForm && (
-              <div className="p-4 border-b bg-muted/30">
-                <p className="text-sm text-muted-foreground mb-3">
-                  Представьтесь для начала диалога:
-                </p>
-                <div className="space-y-2">
-                  <Input
-                    placeholder="Ваше имя"
-                    value={userInfo.name}
-                    onChange={(e) => setUserInfo(prev => ({ ...prev, name: e.target.value }))}
-                    className="h-8"
-                  />
-                  <Input
-                    placeholder="Email для связи"
-                    type="email"
-                    value={userInfo.email}
-                    onChange={(e) => setUserInfo(prev => ({ ...prev, email: e.target.value }))}
-                    className="h-8"
-                  />
-                  <Button onClick={handleUserInfoSubmit} className="w-full h-8">
-                    Начать чат
-                  </Button>
-                </div>
-              </div>
-            )}
-
-            {/* Сообщения */}
-            {!showUserForm && (
-              <>
-                <div className="flex-1 overflow-y-auto p-4 space-y-3">
-                  {messages.map((message) => (
-                    <div
-                      key={message.id}
-                      className={`flex ${message.sender === 'user' ? 'justify-end' : 'justify-start'}`}
-                    >
-                      <div
-                        className={`max-w-[80%] rounded-lg p-2 ${
-                          message.sender === 'user'
-                            ? 'bg-primary text-primary-foreground'
-                            : 'bg-muted'
-                        }`}
-                      >
-                        <p className="text-sm">{message.text}</p>
-                        <p className={`text-xs mt-1 ${
-                          message.sender === 'user' ? 'text-primary-foreground/70' : 'text-muted-foreground'
-                        }`}>
-                          {formatTime(message.timestamp)}
-                          {message.sender === 'user' && message.status && (
-                            <span className="ml-1">
-                              {message.status === 'sent' && '✓'}
-                              {message.status === 'delivered' && '✓✓'}
-                              {message.status === 'read' && '✓✓'}
-                            </span>
-                          )}
-                        </p>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-
-                {/* Поле ввода */}
-                <div className="p-4 border-t bg-muted/30">
-                  <div className="flex gap-2">
-                    <Textarea
-                      placeholder="Напишите ваш вопрос..."
-                      value={inputMessage}
-                      onChange={(e) => setInputMessage(e.target.value)}
-                      className="min-h-[40px] max-h-20 resize-none"
-                      onKeyDown={(e) => {
-                        if (e.key === 'Enter' && !e.shiftKey) {
-                          e.preventDefault();
-                          handleSendMessage();
-                        }
-                      }}
-                    />
-                    <Button 
-                      onClick={handleSendMessage}
-                      disabled={!inputMessage.trim()}
-                      className="h-10 px-3 bg-green-600 hover:bg-green-700"
-                    >
-                      <Icon name="MessageCircle" size={16} />
-                    </Button>
-                  </div>
-                  <p className="text-xs text-muted-foreground mt-1 flex items-center gap-1">
-                    <Icon name="MessageCircle" size={12} className="text-green-600" />
-                    Отправить в WhatsApp
-                  </p>
-                </div>
-              </>
-            )}
-          </CardContent>
-        </Card>
-      )}
+      <Button
+        onClick={openWhatsApp}
+        className="rounded-full w-16 h-16 shadow-lg hover:shadow-xl transition-all duration-300 bg-green-600 hover:bg-green-700 group"
+        title="Написать в WhatsApp"
+      >
+        <Icon name="MessageCircle" size={24} className="group-hover:scale-110 transition-transform" />
+      </Button>
+      
+      {/* Подсказка */}
+      <div className="absolute bottom-20 right-0 bg-white rounded-lg shadow-lg p-3 text-sm opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
+        <div className="flex items-center gap-2">
+          <Icon name="MessageCircle" size={16} className="text-green-600" />
+          <span>Написать в WhatsApp</span>
+        </div>
+        <div className="absolute bottom-[-6px] right-6 w-3 h-3 bg-white transform rotate-45 border-r border-b border-gray-200"></div>
+      </div>
     </div>
   );
 };
