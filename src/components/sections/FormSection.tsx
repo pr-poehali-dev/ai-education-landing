@@ -86,7 +86,7 @@ export default function FormSection() {
             Школа ИИ <span className="text-cyan-400">Сергея Черникова</span>
           </div>
           <p className="text-gray-400">
-            © 2024 Школа ИИ. Все права защищены.
+            © 2025 Школа ИИ. Все права защищены.
           </p>
         </div>
       </footer>
