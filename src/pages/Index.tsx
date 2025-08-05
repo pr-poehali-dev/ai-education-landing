@@ -22,9 +22,9 @@ export default function Index() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative">
-      {/* Dots pattern overlay - only behind content */}
+      {/* Dots pattern overlay */}
       <div 
-        className="absolute inset-0 pointer-events-none opacity-30 -z-10"
+        className="absolute inset-0 pointer-events-none opacity-30"
         style={{
           backgroundImage: `
             radial-gradient(circle at 20% 20%, rgba(59, 130, 246, 0.6) 2px, transparent 2px),
