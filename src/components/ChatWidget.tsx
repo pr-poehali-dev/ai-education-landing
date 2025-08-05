@@ -42,24 +42,36 @@ const ChatWidget = () => {
     };
 
     setMessages(prev => [...prev, newMessage]);
+    
+    // Отправляем в WhatsApp
+    const whatsappText = `Привет! Пишу с сайта.
+
+*Имя:* ${userInfo.name}
+*Email:* ${userInfo.email}
+
+*Сообщение:*
+${inputMessage}`;
+    
+    const whatsappUrl = `https://wa.me/message/YRBE2VIUHPMYN1?text=${encodeURIComponent(whatsappText)}`;
+    window.open(whatsappUrl, '_blank');
+    
     setInputMessage('');
 
-    // Симуляция отправки в службу поддержки
     toast({
-      title: "Сообщение отправлено!",
-      description: "Мы получили ваш вопрос и скоро ответим.",
+      title: "Переходим в WhatsApp!",
+      description: "Сейчас откроется WhatsApp для отправки сообщения.",
     });
 
-    // Симуляция автоответа
+    // Ответ с инструкциями
     setTimeout(() => {
       const autoReply: Message = {
         id: (Date.now() + 1).toString(),
-        text: 'Спасибо за ваш вопрос! Наша команда поддержки получила сообщение и ответит в течение нескольких минут. 🚀',
+        text: 'Отлично! WhatsApp открылся в новой вкладке. Отправьте сообщение там, и я отвечу очень быстро! 📱',
         timestamp: new Date(),
         sender: 'support'
       };
       setMessages(prev => [...prev, autoReply]);
-    }, 1500);
+    }, 1000);
   };
 
   const handleUserInfoSubmit = () => {
@@ -196,13 +208,14 @@ const ChatWidget = () => {
                     <Button 
                       onClick={handleSendMessage}
                       disabled={!inputMessage.trim()}
-                      className="h-10 px-3"
+                      className="h-10 px-3 bg-green-600 hover:bg-green-700"
                     >
-                      <Icon name="Send" size={16} />
+                      <Icon name="MessageCircle" size={16} />
                     </Button>
                   </div>
-                  <p className="text-xs text-muted-foreground mt-1">
-                    Enter для отправки, Shift+Enter для новой строки
+                  <p className="text-xs text-muted-foreground mt-1 flex items-center gap-1">
+                    <Icon name="MessageCircle" size={12} className="text-green-600" />
+                    Отправить в WhatsApp
                   </p>
                 </div>
               </>
