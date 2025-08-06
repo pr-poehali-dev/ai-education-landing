@@ -47,23 +47,14 @@ const videoWorks = [
 ];
 
 export default function VideoWorksSection() {
-  const [selectedVideo, setSelectedVideo] = useState(0);
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const videosPerSlide = 4;
-  
-  const totalSlides = Math.ceil(videoWorks.length / videosPerSlide);
-  
-  const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % totalSlides);
+  const [currentVideo, setCurrentVideo] = useState(0);
+
+  const nextVideo = () => {
+    setCurrentVideo((prev) => (prev + 1) % videoWorks.length);
   };
   
-  const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + totalSlides) % totalSlides);
-  };
-  
-  const getCurrentVideos = () => {
-    const start = currentSlide * videosPerSlide;
-    return videoWorks.slice(start, start + videosPerSlide);
+  const prevVideo = () => {
+    setCurrentVideo((prev) => (prev - 1 + videoWorks.length) % videoWorks.length);
   };
 
   const getEmbedUrl = (videoId: string, token: string) => {
@@ -71,17 +62,15 @@ export default function VideoWorksSection() {
   };
 
   const getThumbnailUrl = (videoId: string) => {
-    // Пробуем несколько возможных форматов превьюшек Rutube
     return `https://pic.rutube.ru/video/${videoId.substring(0, 2)}/${videoId}/original.jpg`;
   };
 
   const getThumbnailUrlFallback = (videoId: string) => {
-    // Альтернативный формат
     return `https://pic.rutube.ru/video/${videoId}/original.jpg`;
   };
 
   return (
-    <section id="video-works" className="py-20 px-6 max-w-7xl mx-auto">
+    <section id="video-works" className="py-20 px-6 max-w-5xl mx-auto">
       <div className="text-center mb-16">
         <h2 className="text-5xl lg:text-6xl font-bold text-white mb-6">
           Примеры <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">видео работ</span>
@@ -91,121 +80,61 @@ export default function VideoWorksSection() {
         </p>
       </div>
 
-      <div className="grid lg:grid-cols-2 gap-8 items-start">
-        {/* Главное видео */}
-        <div className="order-2 lg:order-1">
-          <Card className="bg-slate-800/50 border-slate-700 overflow-hidden">
-            <CardContent className="p-0">
-              <div className="aspect-video">
-                <iframe
-                  src={getEmbedUrl(videoWorks[selectedVideo].id, videoWorks[selectedVideo].token)}
-                  className="w-full h-full"
-                  allowFullScreen
-                  title={`Видео ${selectedVideo + 1}`}
-                />
-              </div>
-            </CardContent>
-          </Card>
-        </div>
-
-        {/* Карусель видео */}
-        <div className="order-1 lg:order-2">
-          <div className="flex items-center justify-center mb-6">
-            <div className="flex gap-2">
-              <Button
-                onClick={prevSlide}
-                variant="outline"
-                size="sm"
-                className="bg-slate-800 border-slate-600 text-white hover:bg-slate-700"
-              >
-                <Icon name="ChevronLeft" size={16} />
-              </Button>
-              <Button
-                onClick={nextSlide}
-                variant="outline" 
-                size="sm"
-                className="bg-slate-800 border-slate-600 text-white hover:bg-slate-700"
-              >
-                <Icon name="ChevronRight" size={16} />
-              </Button>
-            </div>
-          </div>
-
-          <div className="grid grid-cols-2 gap-4">
-            {getCurrentVideos().map((video, index) => {
-              const globalIndex = currentSlide * videosPerSlide + index;
-              const isActive = globalIndex === selectedVideo;
-              
-              return (
-                <Card 
-                  key={video.id}
-                  className={`cursor-pointer transition-all duration-300 aspect-video ${
-                    isActive 
-                      ? 'ring-2 ring-cyan-400 shadow-lg shadow-cyan-500/20' 
-                      : 'hover:ring-1 hover:ring-slate-600'
-                  }`}
-                  onClick={() => setSelectedVideo(globalIndex)}
-                >
-                  <CardContent className="p-0 h-full">
-                    <div className="relative aspect-video w-full h-full rounded-lg overflow-hidden bg-slate-900">
-                      <img
-                        src={getThumbnailUrl(video.id)}
-                        alt={`Видео ${globalIndex + 1}`}
-                        className="w-full h-full object-cover"
-                        onError={(e) => {
-                          // Пробуем альтернативный формат
-                          const fallbackUrl = getThumbnailUrlFallback(video.id);
-                          if (e.currentTarget.src !== fallbackUrl) {
-                            e.currentTarget.src = fallbackUrl;
-                          } else {
-                            // Если и второй формат не работает, показываем заглушку
-                            e.currentTarget.style.display = 'none';
-                            const parent = e.currentTarget.parentElement;
-                            if (parent && !parent.querySelector('.video-placeholder')) {
-                              const placeholder = document.createElement('div');
-                              placeholder.className = 'video-placeholder absolute inset-0 bg-gradient-to-br from-slate-700 to-slate-800 flex items-center justify-center';
-                              placeholder.innerHTML = `
-                                <div class="text-center text-white">
-                                  <div class="text-2xl font-bold mb-2">Видео ${globalIndex + 1}</div>
-                                  <div class="text-sm opacity-75">Нажмите для просмотра</div>
-                                </div>
-                              `;
-                              parent.appendChild(placeholder);
-                            }
-                          }
-                        }}
-                      />
-                      <div className="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center hover:bg-opacity-20 transition-all duration-300">
-                        <div className="bg-black bg-opacity-50 rounded-full p-3 hover:bg-opacity-70 transition-all duration-300">
-                          <Icon 
-                            name="Play" 
-                            size={24} 
-                            className="text-white ml-1"
-                          />
-                        </div>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-              );
-            })}
-          </div>
-
-          {/* Индикаторы слайдов */}
-          <div className="flex justify-center gap-2 mt-6">
-            {Array.from({ length: totalSlides }).map((_, index) => (
-              <button
-                key={index}
-                onClick={() => setCurrentSlide(index)}
-                className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                  index === currentSlide 
-                    ? 'bg-cyan-400 w-8' 
-                    : 'bg-slate-600 hover:bg-slate-500'
-                }`}
+      {/* Основное видео с навигацией */}
+      <div className="relative max-w-4xl mx-auto">
+        <Card className="bg-slate-800/50 border-slate-700 overflow-hidden">
+          <CardContent className="p-0">
+            <div className="aspect-video">
+              <iframe
+                src={getEmbedUrl(videoWorks[currentVideo].id, videoWorks[currentVideo].token)}
+                className="w-full h-full"
+                allowFullScreen
+                title={`Видео ${currentVideo + 1}`}
               />
-            ))}
+            </div>
+          </CardContent>
+        </Card>
+
+        {/* Стрелки навигации */}
+        <Button
+          onClick={prevVideo}
+          variant="outline"
+          size="lg"
+          className="absolute left-4 top-1/2 -translate-y-1/2 bg-slate-900/80 border-slate-600 text-white hover:bg-slate-800/90 hover:border-cyan-400 backdrop-blur-sm shadow-lg z-10"
+        >
+          <Icon name="ChevronLeft" size={24} />
+        </Button>
+        
+        <Button
+          onClick={nextVideo}
+          variant="outline"
+          size="lg"
+          className="absolute right-4 top-1/2 -translate-y-1/2 bg-slate-900/80 border-slate-600 text-white hover:bg-slate-800/90 hover:border-cyan-400 backdrop-blur-sm shadow-lg z-10"
+        >
+          <Icon name="ChevronRight" size={24} />
+        </Button>
+
+        {/* Счетчик видео */}
+        <div className="absolute bottom-4 left-1/2 -translate-x-1/2 bg-slate-900/80 backdrop-blur-sm rounded-full px-4 py-2 z-10">
+          <div className="text-white text-sm font-medium">
+            {currentVideo + 1} / {videoWorks.length}
           </div>
         </div>
+      </div>
+
+      {/* Индикаторы */}
+      <div className="flex justify-center gap-2 mt-8">
+        {videoWorks.map((_, index) => (
+          <button
+            key={index}
+            onClick={() => setCurrentVideo(index)}
+            className={`w-2 h-2 rounded-full transition-all duration-300 ${
+              index === currentVideo 
+                ? 'bg-cyan-400 w-8' 
+                : 'bg-slate-600 hover:bg-slate-500'
+            }`}
+          />
+        ))}
       </div>
     </section>
   );
