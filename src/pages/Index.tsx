@@ -33,6 +33,8 @@ export default function Index() {
       <StickyHeader scrollToForm={scrollToForm} scrollToSection={scrollToSection} />
       <HeroSection scrollToForm={scrollToForm} scrollToSection={scrollToSection} />
       <ScheduleSection />
+      <AIToolsSection />
+      <CTAButton onClick={scrollToForm} />
       <VideoTestimonialsSection />
       <CTAButton onClick={scrollToForm} />
       <SkillsSection />
@@ -40,8 +42,6 @@ export default function Index() {
       <VideoWorksSection />
       <CTAButton onClick={scrollToForm} />
       <PhotoWorksSection />
-      <CTAButton onClick={scrollToForm} />
-      <AIToolsSection />
       <CTAButton onClick={scrollToForm} />
       <TestimonialsSection />
       <CTAButton onClick={scrollToForm} />
