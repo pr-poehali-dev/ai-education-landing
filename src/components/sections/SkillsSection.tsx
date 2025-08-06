@@ -213,7 +213,7 @@ export default function SkillsSection() {
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {studentCases.slice(0, 3).map((student, index) => (
+          {studentCases.map((student, index) => (
             <Card key={index} className="bg-slate-800/50 border-slate-700 hover:border-cyan-500/50 transition-all duration-300">
               <CardContent className="p-6">
                 <div className="text-center mb-4">
