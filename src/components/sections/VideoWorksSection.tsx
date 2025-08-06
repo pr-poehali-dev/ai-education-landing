@@ -70,6 +70,10 @@ export default function VideoWorksSection() {
     return `https://rutube.ru/play/embed/${videoId}/?p=${token}`;
   };
 
+  const getThumbnailUrl = (videoId: string) => {
+    return `https://pic.rutube.ru/video/${videoId.substring(0, 2)}/${videoId}/original.jpg`;
+  };
+
   return (
     <section id="video-works" className="py-20 px-6 max-w-7xl mx-auto">
       <div className="text-center mb-16">
@@ -138,12 +142,22 @@ export default function VideoWorksSection() {
                 >
                   <CardContent className="p-0 h-full">
                     <div className="relative aspect-video w-full h-full rounded-lg overflow-hidden bg-slate-900">
-                      <div className="absolute inset-0 flex items-center justify-center">
-                        <Icon 
-                          name="Play" 
-                          size={32} 
-                          className={`${isActive ? 'text-cyan-400' : 'text-gray-400'} hover:text-cyan-300 transition-colors`}
-                        />
+                      <img
+                        src={getThumbnailUrl(video.id)}
+                        alt={`Видео ${globalIndex + 1}`}
+                        className="w-full h-full object-cover"
+                        onError={(e) => {
+                          e.currentTarget.style.display = 'none';
+                        }}
+                      />
+                      <div className="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center hover:bg-opacity-20 transition-all duration-300">
+                        <div className="bg-black bg-opacity-50 rounded-full p-3 hover:bg-opacity-70 transition-all duration-300">
+                          <Icon 
+                            name="Play" 
+                            size={24} 
+                            className="text-white ml-1"
+                          />
+                        </div>
                       </div>
                     </div>
                   </CardContent>
