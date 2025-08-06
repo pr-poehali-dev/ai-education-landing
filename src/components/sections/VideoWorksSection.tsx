@@ -1,58 +1,55 @@
 import React, { useState } from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
 import Icon from '@/components/ui/icon';
 
 const videoWorks = [
   {
     id: "cf6d03ce4297ed70bba73a0011c3ef4d",
-    token: "HpIFoHeiJvJe7BaZ982A2Q",
-    title: "Нейро-аватар в действии",
-    description: "Создание персонального ИИ-аватара для контента",
-    category: "Видеомейкинг"
+    token: "HpIFoHeiJvJe7BaZ982A2Q"
   },
   {
     id: "2c2bfd77a6c9d06d8bbd1cf4f195f987", 
-    token: "ISM6E6f59Ld93C1EsGc3ZA",
-    title: "Автоматизация SMM",
-    description: "Полная автоматизация социальных сетей с ИИ",
-    category: "SMM"
+    token: "ISM6E6f59Ld93C1EsGc3ZA"
   },
   {
     id: "76d44642d8ebf4e04cfcc823561b4fe0",
-    token: "EXbH9gcyuUWWNEL7bG9tsQ", 
-    title: "Дизайн с нейросетями",
-    description: "Профессиональный дизайн без навыков рисования",
-    category: "Дизайн"
+    token: "EXbH9gcyuUWWNEL7bG9tsQ"
   },
   {
     id: "c28f62565a685bedbf3c59b0ca0988aa",
-    token: "_Om2OA0ClfGkXo3vtWszEw",
-    title: "Маркетинговые стратегии",
-    description: "ИИ-анализ рынка и создание стратегий продвижения", 
-    category: "Маркетинг"
+    token: "_Om2OA0ClfGkXo3vtWszEw"
   },
   {
     id: "417c896fe252645ada1a0d0c0913de0f",
-    token: "9NX18BRUmMJe1h7ixXWFlg",
-    title: "Контент для Reels",
-    description: "Вирусный контент для Instagram и TikTok",
-    category: "Reels"
+    token: "9NX18BRUmMJe1h7ixXWFlg"
   },
   {
     id: "642a76b67d22165ef1ff3fb92c2874de",
-    token: "yAeWEnRj48YR9oZl-Wlu8A",
-    title: "Промпт-инженерия",
-    description: "Эффективные техники работы с нейросетями",
-    category: "Промпты"
+    token: "yAeWEnRj48YR9oZl-Wlu8A"
+  },
+  {
+    id: "b7e70f3ae0a76e8fa7475f8c15ad4f10",
+    token: "zZ7EJmXSG8HbDCkt_lx6qQ"
+  },
+  {
+    id: "00d0503d6d3f7277537394f78e414777",
+    token: "2yaAjRCW83NhYJCsZw_h5w"
+  },
+  {
+    id: "a5a522cc0f55776171747779b05950ef",
+    token: "Cak8wdT2tvNBirARgj0D7A"
+  },
+  {
+    id: "a5eff53782d5fc215a0733a2b07d5e84",
+    token: "MD64lBIE04q5tl8ipxiBjg"
   }
 ];
 
 export default function VideoWorksSection() {
   const [selectedVideo, setSelectedVideo] = useState(0);
   const [currentSlide, setCurrentSlide] = useState(0);
-  const videosPerSlide = 3;
+  const videosPerSlide = 4;
   
   const totalSlides = Math.ceil(videoWorks.length / videosPerSlide);
   
@@ -94,21 +91,8 @@ export default function VideoWorksSection() {
                   src={getEmbedUrl(videoWorks[selectedVideo].id, videoWorks[selectedVideo].token)}
                   className="w-full h-full"
                   allowFullScreen
-                  title={videoWorks[selectedVideo].title}
+                  title={`Видео ${selectedVideo + 1}`}
                 />
-              </div>
-              <div className="p-6">
-                <div className="flex items-center gap-3 mb-3">
-                  <Badge className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white">
-                    {videoWorks[selectedVideo].category}
-                  </Badge>
-                </div>
-                <h3 className="text-xl font-bold text-white mb-2">
-                  {videoWorks[selectedVideo].title}
-                </h3>
-                <p className="text-gray-400">
-                  {videoWorks[selectedVideo].description}
-                </p>
               </div>
             </CardContent>
           </Card>
@@ -116,8 +100,7 @@ export default function VideoWorksSection() {
 
         {/* Карусель видео */}
         <div className="order-1 lg:order-2">
-          <div className="flex items-center justify-between mb-6">
-            <h3 className="text-2xl font-bold text-white">Выберите видео</h3>
+          <div className="flex items-center justify-center mb-6">
             <div className="flex gap-2">
               <Button
                 onClick={prevSlide}
@@ -138,7 +121,7 @@ export default function VideoWorksSection() {
             </div>
           </div>
 
-          <div className="space-y-4">
+          <div className="grid grid-cols-2 gap-4">
             {getCurrentVideos().map((video, index) => {
               const globalIndex = currentSlide * videosPerSlide + index;
               const isActive = globalIndex === selectedVideo;
@@ -146,45 +129,21 @@ export default function VideoWorksSection() {
               return (
                 <Card 
                   key={video.id}
-                  className={`cursor-pointer transition-all duration-300 ${
+                  className={`cursor-pointer transition-all duration-300 aspect-video ${
                     isActive 
-                      ? 'bg-slate-700/70 border-cyan-500/50 shadow-lg shadow-cyan-500/20' 
-                      : 'bg-slate-800/50 border-slate-700 hover:border-slate-600 hover:bg-slate-700/50'
+                      ? 'ring-2 ring-cyan-400 shadow-lg shadow-cyan-500/20' 
+                      : 'hover:ring-1 hover:ring-slate-600'
                   }`}
                   onClick={() => setSelectedVideo(globalIndex)}
                 >
-                  <CardContent className="p-4">
-                    <div className="flex items-center gap-4">
-                      <div className="relative aspect-video w-24 flex-shrink-0 rounded-lg overflow-hidden bg-slate-900">
-                        <div className="absolute inset-0 flex items-center justify-center">
-                          <Icon 
-                            name="Play" 
-                            size={20} 
-                            className={isActive ? 'text-cyan-400' : 'text-gray-400'} 
-                          />
-                        </div>
-                      </div>
-                      <div className="flex-1 min-w-0">
-                        <div className="flex items-center gap-2 mb-1">
-                          <Badge 
-                            variant="outline" 
-                            className={`text-xs ${
-                              isActive 
-                                ? 'border-cyan-400 text-cyan-400' 
-                                : 'border-slate-600 text-gray-400'
-                            }`}
-                          >
-                            {video.category}
-                          </Badge>
-                        </div>
-                        <h4 className={`font-semibold mb-1 truncate ${
-                          isActive ? 'text-cyan-400' : 'text-white'
-                        }`}>
-                          {video.title}
-                        </h4>
-                        <p className="text-sm text-gray-400 line-clamp-2">
-                          {video.description}
-                        </p>
+                  <CardContent className="p-0 h-full">
+                    <div className="relative aspect-video w-full h-full rounded-lg overflow-hidden bg-slate-900">
+                      <div className="absolute inset-0 flex items-center justify-center">
+                        <Icon 
+                          name="Play" 
+                          size={32} 
+                          className={`${isActive ? 'text-cyan-400' : 'text-gray-400'} hover:text-cyan-300 transition-colors`}
+                        />
                       </div>
                     </div>
                   </CardContent>
