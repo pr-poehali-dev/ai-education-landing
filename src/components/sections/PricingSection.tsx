@@ -122,9 +122,9 @@ export default function PricingSection({ scrollToForm }: PricingSectionProps) {
               href="https://torguykriptoy.getcourse.ru/NeuroVL" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="w-full inline-flex items-center justify-center px-6 py-4 bg-gradient-to-r from-cyan-500 via-blue-600 to-purple-600 hover:from-cyan-400 hover:via-blue-500 hover:to-purple-500 text-white font-bold rounded-lg transition-all duration-300 shadow-xl hover:shadow-cyan-500/40 hover:scale-105 border-2 border-cyan-300/30 hover:border-cyan-300/60 animate-pulse"
+              className="w-full inline-flex items-center justify-center px-6 py-4 bg-gradient-to-r from-orange-500 to-red-600 hover:from-orange-400 hover:to-red-500 text-white font-bold rounded-lg transition-all duration-300 shadow-xl hover:shadow-orange-500/50 hover:scale-105 border-2 border-orange-300/30 hover:border-orange-300/60 animate-pulse"
             >
-              🚀 Оставить заявку
+              🔥 ПОЛУЧИТЬ МАКСИМУМ
             </a>
           </CardContent>
         </Card>
