@@ -6,6 +6,7 @@ import ScheduleSection from '@/components/sections/ScheduleSection';
 import VideoTestimonialsSection from '@/components/sections/VideoTestimonialsSection';
 import SkillsSection from '@/components/sections/SkillsSection';
 import VideoWorksSection from '@/components/sections/VideoWorksSection';
+import PhotoWorksSection from '@/components/sections/PhotoWorksSection';
 import TestimonialsSection from '@/components/sections/TestimonialsSection';
 import ProgramSection from '@/components/sections/ProgramSection';
 import DirectionsSection from '@/components/sections/DirectionsSection';
@@ -36,6 +37,8 @@ export default function Index() {
       <SkillsSection />
       <CTAButton onClick={scrollToForm} />
       <VideoWorksSection />
+      <CTAButton onClick={scrollToForm} />
+      <PhotoWorksSection />
       <CTAButton onClick={scrollToForm} />
       <TestimonialsSection />
       <CTAButton onClick={scrollToForm} />
