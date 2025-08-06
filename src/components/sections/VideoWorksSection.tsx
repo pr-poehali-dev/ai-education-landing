@@ -71,7 +71,13 @@ export default function VideoWorksSection() {
   };
 
   const getThumbnailUrl = (videoId: string) => {
+    // Пробуем несколько возможных форматов превьюшек Rutube
     return `https://pic.rutube.ru/video/${videoId.substring(0, 2)}/${videoId}/original.jpg`;
+  };
+
+  const getThumbnailUrlFallback = (videoId: string) => {
+    // Альтернативный формат
+    return `https://pic.rutube.ru/video/${videoId}/original.jpg`;
   };
 
   return (
@@ -147,7 +153,26 @@ export default function VideoWorksSection() {
                         alt={`Видео ${globalIndex + 1}`}
                         className="w-full h-full object-cover"
                         onError={(e) => {
-                          e.currentTarget.style.display = 'none';
+                          // Пробуем альтернативный формат
+                          const fallbackUrl = getThumbnailUrlFallback(video.id);
+                          if (e.currentTarget.src !== fallbackUrl) {
+                            e.currentTarget.src = fallbackUrl;
+                          } else {
+                            // Если и второй формат не работает, показываем заглушку
+                            e.currentTarget.style.display = 'none';
+                            const parent = e.currentTarget.parentElement;
+                            if (parent && !parent.querySelector('.video-placeholder')) {
+                              const placeholder = document.createElement('div');
+                              placeholder.className = 'video-placeholder absolute inset-0 bg-gradient-to-br from-slate-700 to-slate-800 flex items-center justify-center';
+                              placeholder.innerHTML = `
+                                <div class="text-center text-white">
+                                  <div class="text-2xl font-bold mb-2">Видео ${globalIndex + 1}</div>
+                                  <div class="text-sm opacity-75">Нажмите для просмотра</div>
+                                </div>
+                              `;
+                              parent.appendChild(placeholder);
+                            }
+                          }
                         }}
                       />
                       <div className="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center hover:bg-opacity-20 transition-all duration-300">
