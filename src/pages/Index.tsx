@@ -1,6 +1,7 @@
 import React from 'react';
 import StickyHeader from '@/components/sections/StickyHeader';
 import HeroSection from '@/components/sections/HeroSection';
+import StatsSection from '@/components/sections/StatsSection';
 import ScheduleSection from '@/components/sections/ScheduleSection';
 import VideoTestimonialsSection from '@/components/sections/VideoTestimonialsSection';
 import SkillsSection from '@/components/sections/SkillsSection';
@@ -28,6 +29,7 @@ export default function Index() {
       <AnimatedBackground />
       <StickyHeader scrollToForm={scrollToForm} scrollToSection={scrollToSection} />
       <HeroSection scrollToForm={scrollToForm} scrollToSection={scrollToSection} />
+      <StatsSection />
       <ScheduleSection />
       <VideoTestimonialsSection />
       <CTAButton onClick={scrollToForm} />

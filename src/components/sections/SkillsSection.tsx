@@ -142,9 +142,9 @@ export default function SkillsSection() {
   return (
     <>
       {/* Skills Section */}
-      <section id="about-course" className="py-20 px-6 max-w-7xl mx-auto">
+      <section id="skills" className="py-20 px-6 max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
+          <h2 className="text-5xl lg:text-6xl font-bold text-white mb-6">
             Какие <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">навыки</span> ты освоишь
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -178,7 +178,7 @@ export default function SkillsSection() {
       {/* AI Capabilities Section */}
       <section className="py-20 px-6 max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
+          <h2 className="text-5xl lg:text-6xl font-bold text-white mb-6">
             Твои <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">ИИ возможности</span>
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -204,7 +204,7 @@ export default function SkillsSection() {
       {/* Student Cases Section */}
       <section id="testimonials" className="py-20 px-6 max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
+          <h2 className="text-5xl lg:text-6xl font-bold text-white mb-6">
             Кейсы <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">студентов</span>
           </h2>
           <p className="text-xl text-gray-300">
@@ -213,7 +213,7 @@ export default function SkillsSection() {
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {studentCases.map((student, index) => (
+          {studentCases.slice(0, 3).map((student, index) => (
             <Card key={index} className="bg-slate-800/50 border-slate-700 hover:border-cyan-500/50 transition-all duration-300">
               <CardContent className="p-6">
                 <div className="text-center mb-4">

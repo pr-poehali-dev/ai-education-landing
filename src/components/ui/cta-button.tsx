@@ -11,10 +11,10 @@ const CTAButton: React.FC<CTAButtonProps> = ({ onClick, className = '' }) => {
     <div className={`flex justify-center py-8 ${className}`}>
       <button
         onClick={onClick}
-        className="group relative bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-full font-semibold text-lg shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300 overflow-hidden"
+        className="group relative bg-gradient-to-r from-orange-500 to-red-600 text-white px-12 py-5 rounded-full font-bold text-xl shadow-2xl hover:shadow-orange-500/50 transform hover:scale-110 transition-all duration-300 overflow-hidden border-2 border-orange-400/30"
       >
         {/* Animated background glow */}
-        <div className="absolute -inset-1 bg-gradient-to-r from-blue-400 to-purple-400 rounded-full blur opacity-30 group-hover:opacity-60 transition-opacity duration-300 animate-pulse"></div>
+        <div className="absolute -inset-1 bg-gradient-to-r from-orange-300 to-red-300 rounded-full blur opacity-40 group-hover:opacity-80 transition-opacity duration-300 animate-pulse"></div>
         
         {/* Button content */}
         <div className="relative flex items-center gap-3">

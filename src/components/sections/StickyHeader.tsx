@@ -32,22 +32,28 @@ export default function StickyHeader({ scrollToForm, scrollToSection }: StickyHe
         
         <div className="hidden md:flex items-center space-x-6 lg:space-x-8">
           <button 
+            onClick={() => scrollToSection('skills')} 
+            className="text-white hover:text-cyan-400 transition-colors text-sm lg:text-base"
+          >
+            О курсе
+          </button>
+          <button 
             onClick={() => scrollToSection('program')} 
             className="text-white hover:text-cyan-400 transition-colors text-sm lg:text-base"
           >
             Программа
           </button>
           <button 
-            onClick={() => scrollToSection('about-course')} 
-            className="text-white hover:text-cyan-400 transition-colors text-sm lg:text-base"
-          >
-            О курсе
-          </button>
-          <button 
-            onClick={() => scrollToSection('testimonials')} 
+            onClick={() => scrollToSection('video-testimonials')} 
             className="text-white hover:text-cyan-400 transition-colors text-sm lg:text-base"
           >
             Отзывы
+          </button>
+          <button 
+            onClick={() => scrollToSection('pricing')} 
+            className="text-white hover:text-cyan-400 transition-colors text-sm lg:text-base"
+          >
+            Тарифы
           </button>
           <a 
             href="https://t.me/chernikovgpt" 
