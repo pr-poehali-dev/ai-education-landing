@@ -44,7 +44,7 @@ export default function StickyHeader({ scrollToForm, scrollToSection }: StickyHe
             Программа
           </button>
           <button 
-            onClick={() => scrollToSection('video-testimonials')} 
+            onClick={() => scrollToSection('testimonials')} 
             className="text-white hover:text-cyan-400 transition-colors text-sm lg:text-base"
           >
             Отзывы
