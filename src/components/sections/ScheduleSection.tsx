@@ -32,10 +32,11 @@ export default function ScheduleSection() {
             </div>
             
             <div className="mt-6 pt-4 border-t border-slate-600">
-              <Icon name="Rocket" className="text-cyan-400 mx-auto mb-3" size={24} />
-              <div className="text-xs text-gray-400 leading-relaxed">
-                Адрес уточняется.<br />
-                И будет готов к 15 августа.
+              <Icon name="MapPin" className="text-cyan-400 mx-auto mb-3" size={24} />
+              <div className="text-xs text-gray-300 leading-relaxed">
+                <div className="font-medium text-white mb-1">Место проведения:</div>
+                Океанский проспект 43 А<br />
+                Лофт Grey Square
               </div>
             </div>
           </CardContent>
