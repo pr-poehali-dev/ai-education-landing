@@ -31,10 +31,7 @@ export default function PricingSection({ scrollToForm }: PricingSectionProps) {
                 <Icon name="Check" className="text-cyan-400 mr-3" size={20} />
                 Д/З с проверкой кураторов
               </li>
-              <li className="flex items-center text-gray-300">
-                <Icon name="Check" className="text-cyan-400 mr-3" size={20} />
-                Еженедельные созвоны
-              </li>
+
               <li className="flex items-center text-gray-300">
                 <Icon name="Check" className="text-cyan-400 mr-3" size={20} />
                 Общий чат потока
