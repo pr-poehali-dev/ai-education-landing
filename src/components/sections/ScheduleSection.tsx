@@ -26,8 +26,8 @@ export default function ScheduleSection() {
             </div>
             
             <div className="space-y-2">
-              <div className="text-4xl font-bold text-cyan-400">8</div>
-              <div className="text-lg text-white font-semibold">сентября</div>
+              <div className="text-4xl font-bold text-cyan-400">11</div>
+              <div className="text-lg text-white font-semibold">ноября</div>
               <div className="text-sm text-gray-300">2025 года</div>
             </div>
             
@@ -60,11 +60,11 @@ export default function ScheduleSection() {
               
               <div className="space-y-2">
                 <div className="bg-slate-700/70 border border-purple-400/30 rounded-lg py-3 px-4">
-                  <div className="text-purple-300 text-sm font-medium">Понедельник</div>
+                  <div className="text-purple-300 text-sm font-medium">Вторник</div>
                   <div className="text-white font-bold text-lg">18:30 - 21:30</div>
                 </div>
                 <div className="bg-slate-700/70 border border-pink-400/30 rounded-lg py-3 px-4">
-                  <div className="text-pink-300 text-sm font-medium">Четверг</div>
+                  <div className="text-pink-300 text-sm font-medium">Пятница</div>
                   <div className="text-white font-bold text-lg">18:30 - 21:30</div>
                 </div>
               </div>
