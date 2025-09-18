@@ -21,16 +21,19 @@ export default function HeroSection({ scrollToForm, scrollToSection }: HeroSecti
               <Badge className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white border-0">
                 Практический курс по нейросетям
               </Badge>
-              <p className="text-lg text-gray-300">
-                Освоение трендовых инструментов для заработка, продвижения себя и клиентов
-              </p>
-              <h1 className="text-5xl lg:text-6xl font-bold text-white leading-tight">
-                Начни <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">зарабатывать</span><br />
-                на ИИ через месяц!
+              <h1 className="text-4xl lg:text-5xl font-bold text-white leading-tight">
+                Школа <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">"Хакни Нейросети"</span>
               </h1>
-              <div className="space-y-2 text-xl text-gray-300">
-                <p>Освой 6 востребованных профессий с нейросетями</p>
-                <p>Автоматизируй бизнес с помощью ИИ</p>
+              <div className="space-y-4 text-lg text-gray-300 leading-relaxed">
+                <p>
+                  — это место, где <span className="text-white font-semibold">без "воды" и сложных терминов</span> на простом русском языке можно 
+                  <span className="text-cyan-300 font-semibold"> освоить 6 топ-профессий в нейросетях</span>.
+                </p>
+                <p>
+                  Здесь выпускники не просто учатся, а <span className="text-white font-semibold">сразу начинают применять навыки в работе</span>, 
+                  экономят <span className="text-cyan-300 font-semibold">до 50% времени</span> и 
+                  <span className="text-green-400 font-semibold">значительно увеличивают доход</span>.
+                </p>
               </div>
             </div>
             
@@ -42,7 +45,7 @@ export default function HeroSection({ scrollToForm, scrollToSection }: HeroSecti
                 className="inline-flex items-center bg-gradient-to-r from-cyan-500 via-blue-600 to-purple-600 hover:from-cyan-400 hover:via-blue-500 hover:to-purple-500 text-xl px-10 py-6 text-white font-bold rounded-xl transition-all duration-300 shadow-2xl hover:shadow-cyan-500/30 hover:scale-105 animate-pulse border-2 border-cyan-300/30 hover:border-cyan-300/60"
               >
                 <Icon name="Rocket" className="mr-3" size={24} />
-                Оставить заявку
+                Записаться в школу
               </a>
             </div>
 
