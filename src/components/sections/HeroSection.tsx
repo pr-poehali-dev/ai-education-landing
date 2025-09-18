@@ -32,7 +32,7 @@ export default function HeroSection({ scrollToForm, scrollToSection }: HeroSecti
                 <p>
                   Здесь выпускники не просто учатся, а <span className="text-white font-semibold">сразу начинают применять навыки в работе</span>, 
                   экономят <span className="text-cyan-300 font-semibold">до 50% времени</span> и 
-                  <span className="text-green-400 font-semibold">и значительно увеличивают доход</span>.
+                  <span className="text-green-400 font-semibold">значительно увеличивают доход</span>.
                 </p>
               </div>
             </div>
