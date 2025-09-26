@@ -7,7 +7,7 @@ const videoTestimonials = [
     id: 1,
     title: "Отзыв студента #1",
     videoId: "16538997_456247056",
-    embedUrl: "https://vk.com/video_ext.php?oid=16538997&id=456247056&hd=2",
+    embedUrl: "https://rutube.ru/shorts/cbee02ce7c4a6f23d17485276fc9b884/",
     thumbnail: "https://cdn.poehali.dev/files/cace7603-42ad-44c9-a91f-60b96a8dc4bc.jpg",
     name: "Дмитрий Приезжих",
     description: "Впечатления от изучения нейросетей"
@@ -16,7 +16,7 @@ const videoTestimonials = [
     id: 2,
     title: "Отзыв студента #2", 
     videoId: "16538997_456247049",
-    embedUrl: "https://vk.com/video_ext.php?oid=16538997&id=456247049&hd=2",
+    embedUrl: "https://rutube.ru/video/3c0b3f8a9e627a76e4f57fbc2e3f7d3b/",
     thumbnail: "https://cdn.poehali.dev/files/f489f927-55e4-4aa7-a26f-46e9391871b3.jpg",
     name: "Студент курса",
     description: "Результаты применения полученных знаний"
@@ -25,7 +25,7 @@ const videoTestimonials = [
     id: 3,
     title: "Отзыв студента #3",
     videoId: "16538997_456247048",
-    embedUrl: "https://vk.com/video_ext.php?oid=16538997&id=456247048&hd=2",
+    embedUrl: "https://rutube.ru/video/3811f7cb1b16c920e9d57ac58f5fb2f5/",
     thumbnail: "https://cdn.poehali.dev/files/8486b7d9-b796-4c8e-a496-aadd33b30c89.jpg",
     name: "Лидия Воскобой",
     description: "Как изменилась работа после курса"
@@ -34,7 +34,7 @@ const videoTestimonials = [
     id: 4,
     title: "Отзыв студента #4",
     videoId: "16538997_456247055",
-    embedUrl: "https://vk.com/video_ext.php?oid=16538997&id=456247055&hd=2",
+    embedUrl: "https://rutube.ru/video/b3cf415c8770466ea630dfa45957e91a/",
     thumbnail: "https://cdn.poehali.dev/files/2ed17afe-1e10-496a-9029-16e7eb50bfa2.jpg",
     name: "Анна Савкина",
     description: "Практическая ценность обучения"
@@ -43,7 +43,7 @@ const videoTestimonials = [
     id: 5,
     title: "Отзыв студента #5",
     videoId: "16538997_456246770",
-    embedUrl: "https://vk.com/video_ext.php?oid=16538997&id=456246770&hd=2",
+    embedUrl: "https://rutube.ru/video/e49a0c8514ac5620e4d609a73ee4a56a/",
     thumbnail: "https://cdn.poehali.dev/files/71618117-981d-446b-9014-0883c8c0c9fb.jpg",
     name: "Студент курса", 
     description: "Впечатления от воркшопа"
@@ -52,7 +52,7 @@ const videoTestimonials = [
     id: 6,
     title: "Отзыв студента #6",
     videoId: "16538997_456247054",
-    embedUrl: "https://vk.com/video_ext.php?oid=16538997&id=456247054&hd=2",
+    embedUrl: "https://rutube.ru/video/28ea40f9ae44c2f53c5b4c8fe06d12c0/",
     thumbnail: "https://cdn.poehali.dev/files/0934b061-4bea-4d6f-9c32-71179331c1e5.jpg",
     name: "Ирина Нечет",
     description: "Рекомендации другим студентам"
@@ -114,7 +114,7 @@ export default function VideoTestimonialsSection() {
                     <div className="absolute top-4 left-4">
                       <div className="bg-blue-600 text-white px-2 py-1 rounded text-xs font-medium flex items-center">
                         <Icon name="Video" className="mr-1" size={12} />
-                        VK
+                        Rutube
                       </div>
                     </div>
                     
