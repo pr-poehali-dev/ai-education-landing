@@ -3,7 +3,7 @@ import StickyHeader from '@/components/sections/StickyHeader';
 import HeroSection from '@/components/sections/HeroSection';
 
 import ScheduleSection from '@/components/sections/ScheduleSection';
-import VideoTestimonialsSection from '@/components/sections/VideoTestimonialsSection';
+
 import SkillsSection from '@/components/sections/SkillsSection';
 import VideoWorksSection from '@/components/sections/VideoWorksSection';
 import PhotoWorksSection from '@/components/sections/PhotoWorksSection';
@@ -35,8 +35,7 @@ export default function Index() {
       <ScheduleSection />
       <AIToolsSection />
       <CTAButton onClick={scrollToForm} />
-      <VideoTestimonialsSection />
-      <CTAButton onClick={scrollToForm} />
+
       <SkillsSection />
       <CTAButton onClick={scrollToForm} />
       <VideoWorksSection />
