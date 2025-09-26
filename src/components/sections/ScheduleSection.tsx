@@ -35,8 +35,8 @@ export default function ScheduleSection() {
               <Icon name="MapPin" className="text-cyan-400 mx-auto mb-3" size={24} />
               <div className="text-xs text-gray-300 leading-relaxed">
                 <div className="font-medium text-white mb-1">Место проведения:</div>
-                Океанский проспект 43 А<br />
-                Лофт Grey Square
+                ул. Русская 41а<br />
+                3 этаж офис "Хакни Нейросети"
               </div>
             </div>
           </CardContent>
