@@ -48,19 +48,25 @@ export default function HeroSection({ scrollToForm, scrollToSection }: HeroSecti
               </a>
             </div>
 
-            <div className="flex items-center space-x-8 text-sm text-gray-400">
-              <div className="flex items-center">
-                <Icon name="Users" className="mr-2 text-cyan-400" />
-                10,000+ студентов
+            <div className="space-y-4">
+              <div className="flex items-center space-x-8 text-sm text-gray-400">
+                <div className="flex items-center">
+                  <Icon name="Users" className="mr-2 text-cyan-400" />
+                  10,000+ студентов
+                </div>
+                <div className="flex items-center">
+                  <Icon name="Star" className="mr-2 text-cyan-400" />
+                  4.9/5 рейтинг
+                </div>
+                <div className="flex items-center">
+                  <Icon name="Clock" className="mr-2 text-cyan-400" />
+                  3 месяца
+                </div>
               </div>
-              <div className="flex items-center">
-                <Icon name="Star" className="mr-2 text-cyan-400" />
-                4.9/5 рейтинг
-              </div>
-              <div className="flex items-center">
-                <Icon name="Clock" className="mr-2 text-cyan-400" />
-                3 месяца
-              </div>
+              
+              <p className="text-sm text-gray-400 italic">
+                При поддержке Центра развития предпринимательства Владивостока
+              </p>
             </div>
           </div>
 
