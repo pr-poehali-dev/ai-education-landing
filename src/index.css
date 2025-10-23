@@ -244,6 +244,44 @@
   }
 }
 
+/* Calendar flip animation */
+@keyframes calendar-flip {
+  0%,
+  100% {
+    transform: rotateX(0deg);
+  }
+  25% {
+    transform: rotateX(-20deg);
+  }
+  50% {
+    transform: rotateX(20deg);
+  }
+  75% {
+    transform: rotateX(-10deg);
+  }
+}
+
+/* Clock rotation animation */
+@keyframes clock-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Book page flip animation */
+@keyframes book-flip {
+  0%,
+  100% {
+    transform: perspective(400px) rotateY(0deg);
+  }
+  50% {
+    transform: perspective(400px) rotateY(180deg);
+  }
+}
+
 /* Apply animations */
 .animate-gradient-shift {
   background-size: 400% 400%;
@@ -292,4 +330,16 @@
 
 .animate-fade-in-up {
   animation: fade-in-up 0.8s ease-out forwards;
+}
+
+.group:hover .group-hover\:animate-calendar-flip {
+  animation: calendar-flip 1.2s ease-in-out;
+}
+
+.group:hover .group-hover\:animate-clock-spin {
+  animation: clock-spin 2s linear;
+}
+
+.group:hover .group-hover\:animate-book-flip {
+  animation: book-flip 1.5s ease-in-out;
 }

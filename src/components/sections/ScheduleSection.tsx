@@ -16,11 +16,11 @@ export default function ScheduleSection() {
 
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
         {/* Старт курса */}
-        <Card className="bg-slate-800/90 border-slate-600 hover:border-cyan-400/70 transition-all duration-300 backdrop-blur-sm">
+        <Card className="bg-slate-800/90 border-slate-600 hover:border-cyan-400/70 transition-all duration-300 backdrop-blur-sm group">
           <CardContent className="p-6 sm:p-8 text-center">
             <div className="mb-6">
               <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Icon name="Calendar" className="text-white" size={32} />
+                <Icon name="Calendar" className="text-white group-hover:animate-calendar-flip" size={32} />
               </div>
               <h3 className="text-xl font-bold text-white mb-2">Старт курса</h3>
             </div>
@@ -43,11 +43,11 @@ export default function ScheduleSection() {
         </Card>
 
         {/* Расписание встреч */}
-        <Card className="bg-slate-800/90 border-slate-600 hover:border-purple-400/70 transition-all duration-300 backdrop-blur-sm">
+        <Card className="bg-slate-800/90 border-slate-600 hover:border-purple-400/70 transition-all duration-300 backdrop-blur-sm group">
           <CardContent className="p-8 text-center">
             <div className="mb-6">
               <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Icon name="Clock" className="text-white" size={32} />
+                <Icon name="Clock" className="text-white group-hover:animate-clock-spin" size={32} />
               </div>
               <h3 className="text-xl font-bold text-white mb-2">Встречи</h3>
             </div>
@@ -73,11 +73,11 @@ export default function ScheduleSection() {
         </Card>
 
         {/* Общая продолжительность */}
-        <Card className="bg-slate-800/90 border-slate-600 hover:border-green-400/70 transition-all duration-300 backdrop-blur-sm">
+        <Card className="bg-slate-800/90 border-slate-600 hover:border-green-400/70 transition-all duration-300 backdrop-blur-sm group">
           <CardContent className="p-8 text-center">
             <div className="mb-6">
               <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Icon name="BookOpen" className="text-white" size={32} />
+                <Icon name="BookOpen" className="text-white group-hover:animate-book-flip" size={32} />
               </div>
               <h3 className="text-xl font-bold text-white mb-2">Объём курса</h3>
             </div>
