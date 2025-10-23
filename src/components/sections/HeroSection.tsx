@@ -48,7 +48,7 @@ export default function HeroSection({ scrollToForm, scrollToSection }: HeroSecti
               </a>
             </div>
 
-            <div className="space-y-4">
+            <div className="space-y-6">
               <div className="flex items-center space-x-8 text-sm text-gray-400">
                 <div className="flex items-center">
                   <Icon name="Users" className="mr-2 text-cyan-400" />
@@ -64,9 +64,19 @@ export default function HeroSection({ scrollToForm, scrollToSection }: HeroSecti
                 </div>
               </div>
               
-              <p className="text-sm text-gray-400 italic">
-                При поддержке Центра развития предпринимательства Владивостока
-              </p>
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-cyan-500/20">
+                <div className="flex items-center gap-4">
+                  <img 
+                    src="https://cdn.poehali.dev/files/583f12e9-bcf2-4958-8302-d544a301424d.png"
+                    alt="Центр развития предпринимательства Владивостока"
+                    className="h-12 w-auto"
+                  />
+                  <p className="text-sm text-white font-medium">
+                    При поддержке<br />
+                    <span className="text-cyan-300">Центра развития предпринимательства Владивостока</span>
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
 
