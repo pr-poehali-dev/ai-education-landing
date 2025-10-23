@@ -25,7 +25,7 @@ const aiTools = {
     color: "from-red-500 to-pink-600",
     bgColor: "bg-red-500/10",
     borderColor: "border-red-500/20",
-    items: ["Kling Ai", "Veo 3", "Mini max", "RunWayML", "Seedance", "Sora 2"]
+    items: ["Kling Ai", "Veo 3", "Mini max", "RunWayML", "Seedance", "Sora 2", "WAN", "PixVerse"]
   },
   services: {
     title: "Полезные сервисы",
