@@ -80,12 +80,12 @@ export default function HeroSection({ scrollToForm, scrollToSection }: HeroSecti
             </div>
           </div>
 
-          <div className="relative">
-            <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/30 to-blue-600/30 rounded-full blur-3xl"></div>
+          <div className="relative animate-fade-in-up">
+            <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/30 to-blue-600/30 rounded-full blur-3xl animate-pulse"></div>
             <img 
               src="https://cdn.poehali.dev/files/86be2539-f781-4550-a0e1-86adfb8e1f54.png"
               alt="Сергей Черников - Эксперт по ИИ"
-              className="relative z-10 w-full max-w-md mx-auto rounded-2xl shadow-2xl border border-cyan-500/20"
+              className="relative z-10 w-full max-w-md mx-auto rounded-2xl shadow-2xl border border-cyan-500/20 hover:scale-105 transition-transform duration-500"
             />
           </div>
         </div>

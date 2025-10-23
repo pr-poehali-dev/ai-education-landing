@@ -233,6 +233,17 @@
   }
 }
 
+@keyframes fade-in-up {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 /* Apply animations */
 .animate-gradient-shift {
   background-size: 400% 400%;
@@ -277,4 +288,8 @@
 
 .animate-pulse-glow-delayed {
   animation: pulse-glow-delayed 16s ease-in-out infinite 4s;
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.8s ease-out forwards;
 }
