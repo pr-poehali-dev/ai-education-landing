@@ -21,10 +21,10 @@ export default function HeroSection({ scrollToForm, scrollToSection }: HeroSecti
               <Badge className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white border-0">
                 Практический курс по нейросетям
               </Badge>
-              <h1 className="text-4xl lg:text-5xl font-bold text-white leading-tight">
-                Школа <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">"Хакни Нейросети"</span> <span className="inline-block px-4 py-2 bg-gradient-to-r from-orange-500 to-red-600 text-white rounded-lg shadow-lg animate-pulse">OFFLINE</span>
+              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight">
+                Школа <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">"Хакни Нейросети"</span> <span className="inline-block px-3 py-1.5 sm:px-4 sm:py-2 bg-gradient-to-r from-orange-500 to-red-600 text-white text-base sm:text-lg rounded-lg shadow-lg animate-pulse mt-2 sm:mt-0">OFFLINE</span>
               </h1>
-              <div className="space-y-4 text-lg text-gray-300 leading-relaxed">
+              <div className="space-y-4 text-base sm:text-lg text-gray-300 leading-relaxed">
                 <p>
                   — это место, где <span className="text-white font-semibold">без "воды" и сложных терминов</span> на простом русском языке можно 
                   <span className="text-cyan-300 font-semibold"> освоить 6 топ-профессий в нейросетях</span>.
@@ -41,7 +41,7 @@ export default function HeroSection({ scrollToForm, scrollToSection }: HeroSecti
                 href="https://torguykriptoy.getcourse.ru/NeuroVL" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="inline-flex items-center bg-gradient-to-r from-cyan-500 via-blue-600 to-purple-600 hover:from-cyan-400 hover:via-blue-500 hover:to-purple-500 text-xl px-10 py-6 text-white font-bold rounded-xl transition-all duration-300 shadow-2xl hover:shadow-cyan-500/30 hover:scale-105 animate-pulse border-2 border-cyan-300/30 hover:border-cyan-300/60"
+                className="inline-flex items-center bg-gradient-to-r from-cyan-500 via-blue-600 to-purple-600 hover:from-cyan-400 hover:via-blue-500 hover:to-purple-500 text-lg sm:text-xl px-8 sm:px-10 py-5 sm:py-6 text-white font-bold rounded-xl transition-all duration-300 shadow-2xl hover:shadow-cyan-500/30 hover:scale-105 animate-pulse border-2 border-cyan-300/30 hover:border-cyan-300/60 w-full sm:w-auto justify-center"
               >
                 <Icon name="Rocket" className="mr-3" size={24} />
                 Записаться в школу
@@ -49,7 +49,7 @@ export default function HeroSection({ scrollToForm, scrollToSection }: HeroSecti
             </div>
 
             <div className="space-y-6">
-              <div className="flex items-center space-x-8 text-sm text-gray-400">
+              <div className="flex flex-wrap items-center gap-4 sm:gap-8 text-xs sm:text-sm text-gray-400">
                 <div className="flex items-center">
                   <Icon name="Users" className="mr-2 text-cyan-400" />
                   10,000+ студентов

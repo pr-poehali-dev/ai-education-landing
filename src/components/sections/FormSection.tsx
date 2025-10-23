@@ -28,15 +28,15 @@ export default function FormSection() {
     <>
       {/* FAQ Section */}
       <section className="py-20 px-6 max-w-4xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
+        <div className="text-center mb-12 sm:mb-16">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6">
             Часто задаваемые <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">вопросы</span>
           </h2>
         </div>
 
         <Accordion type="single" collapsible className="space-y-4">
           {faqItems.map((item, index) => (
-            <AccordionItem key={index} value={`faq-${index}`} className="bg-slate-800/50 border-slate-700 rounded-lg px-6">
+            <AccordionItem key={index} value={`faq-${index}`} className="bg-slate-800/50 border-slate-700 rounded-lg px-4 sm:px-6">
               <AccordionTrigger className="text-white hover:text-cyan-400 text-left">
                 {item.question}
               </AccordionTrigger>
@@ -51,13 +51,13 @@ export default function FormSection() {
       {/* Lead Form */}
       <section id="lead-form" className="py-20 px-6 max-w-4xl mx-auto">
         <div className="text-center mb-12">
-          <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6">
             Начни своё <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">обучение</span> уже сегодня!
           </h2>
-          <p className="text-xl text-gray-300 mb-4">
+          <p className="text-lg sm:text-xl text-gray-300 mb-4">
             Оставьте заявку на участие в программе
           </p>
-          <p className="text-lg text-gray-400">
+          <p className="text-base sm:text-lg text-gray-400">
             Освоение искусственного интеллекта. Продвижение и рост продаж
           </p>
         </div>
@@ -69,7 +69,7 @@ export default function FormSection() {
                 href="https://torguykriptoy.getcourse.ru/NeuroVL" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="inline-flex items-center bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-lg py-6 px-12 text-white font-medium rounded-md transition-colors"
+                className="inline-flex items-center bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-base sm:text-lg py-5 sm:py-6 px-8 sm:px-12 text-white font-medium rounded-md transition-colors w-full sm:w-auto justify-center"
               >
                 <Icon name="Send" className="mr-2" />
                 Отправить заявку

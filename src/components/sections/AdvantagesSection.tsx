@@ -35,8 +35,8 @@ const partners = ["Мой Бизнес", "Центр Поддержки Пред
 export default function AdvantagesSection() {
   return (
     <section className="py-20 px-6 max-w-7xl mx-auto">
-      <div className="text-center mb-16">
-        <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
+      <div className="text-center mb-12 sm:mb-16">
+        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6">
           Почему нужно идти <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">ко мне?</span>
         </h2>
       </div>
@@ -44,14 +44,14 @@ export default function AdvantagesSection() {
       <div className="max-w-4xl mx-auto">
         <Accordion type="single" collapsible className="space-y-4">
           {advantages.map((advantage, index) => (
-            <AccordionItem key={index} value={`advantage-${index}`} className="bg-slate-800/50 border-slate-700 rounded-lg px-6">
+            <AccordionItem key={index} value={`advantage-${index}`} className="bg-slate-800/50 border-slate-700 rounded-lg px-4 sm:px-6">
               <AccordionTrigger className="text-white hover:text-cyan-400 group">
                 <div className="flex items-center">
-                  <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-cyan-500 to-blue-600 group-hover:from-green-500 group-hover:to-emerald-600 flex items-center justify-center mr-4 transition-all duration-300 group-hover:scale-110 group-hover:rotate-12 group-hover:shadow-lg group-hover:shadow-green-500/30">
-                    <Icon name={advantage.icon as any} className="text-white group-hover:animate-spin" size={24} />
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-lg bg-gradient-to-r from-cyan-500 to-blue-600 group-hover:from-green-500 group-hover:to-emerald-600 flex items-center justify-center mr-3 sm:mr-4 transition-all duration-300 group-hover:scale-110 group-hover:rotate-12 group-hover:shadow-lg group-hover:shadow-green-500/30 flex-shrink-0">
+                    <Icon name={advantage.icon as any} className="text-white group-hover:animate-spin" size={20} />
                   </div>
                   <div className="text-left">
-                    <h3 className="text-xl font-bold">{advantage.title}</h3>
+                    <h3 className="text-base sm:text-xl font-bold">{advantage.title}</h3>
                   </div>
                 </div>
               </AccordionTrigger>
@@ -68,7 +68,7 @@ export default function AdvantagesSection() {
         <p className="text-xl text-gray-300 mb-8">
           Более 10,000 специалистов уже прошли обучение в наших программах при поддержке ведущих организаций
         </p>
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 sm:gap-6">
           <div className="p-4 bg-slate-800/30 rounded-lg border border-slate-700 flex items-center justify-center">
             <img 
               src="https://cdn.poehali.dev/files/4bc30784-6b4b-4dd5-af33-57ab2eaff47a.jpg" 
@@ -111,16 +111,16 @@ export default function AdvantagesSection() {
       <div className="mt-20">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div>
-            <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6">
               О <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">спикере</span>
             </h2>
-            <h3 className="text-2xl font-bold text-cyan-400 mb-4">Черников Сергей</h3>
-            <p className="text-lg text-gray-300 mb-6 leading-relaxed">
+            <h3 className="text-xl sm:text-2xl font-bold text-cyan-400 mb-4">Черников Сергей</h3>
+            <p className="text-base sm:text-lg text-gray-300 mb-6 leading-relaxed">
               Практикующий разработчик с 2017 года, специалист по внедрению ИИ-решений в бизнес. 
               За время работы помог более чем 500 предпринимателям и специалистам из Владивостока освоить 
               искусственный интеллект для увеличения прибыли и автоматизации процессов.
             </p>
-            <p className="text-lg text-gray-300 mb-8 leading-relaxed">
+            <p className="text-base sm:text-lg text-gray-300 mb-8 leading-relaxed">
               Автор уникальных методик работы с нейросетями, которые позволяют получать результат 
               без использования VPN и зарубежных карт. Мой подход основан на практическом применении ИИ в реальных бизнес-задачах.
             </p>

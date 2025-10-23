@@ -10,18 +10,18 @@ interface ProgramSectionProps {
 export default function ProgramSection({ scrollToForm }: ProgramSectionProps) {
   return (
     <section id="program" className="py-20 px-6 max-w-7xl mx-auto">
-      <div className="text-center mb-16">
-        <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
+      <div className="text-center mb-12 sm:mb-16">
+        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6">
           Программа <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">курса</span>
         </h2>
-        <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+        <p className="text-base sm:text-lg lg:text-xl text-gray-300 max-w-3xl mx-auto">
           Структурированное обучение от основ до продвинутых техник работы с ИИ
         </p>
       </div>
 
       <div className="max-w-4xl mx-auto">
         <Accordion type="single" collapsible className="space-y-4">
-          <AccordionItem value="part1" className="bg-slate-800/50 border-slate-700 rounded-lg px-6">
+          <AccordionItem value="part1" className="bg-slate-800/50 border-slate-700 rounded-lg px-4 sm:px-6">
             <AccordionTrigger className="text-white hover:text-cyan-400">
               <div className="flex items-center">
                 <div className="w-8 h-8 rounded-full bg-gradient-to-r from-cyan-500 to-blue-600 flex items-center justify-center text-white font-bold mr-4">1</div>
@@ -46,7 +46,7 @@ export default function ProgramSection({ scrollToForm }: ProgramSectionProps) {
             </AccordionContent>
           </AccordionItem>
 
-          <AccordionItem value="part2" className="bg-slate-800/50 border-slate-700 rounded-lg px-6">
+          <AccordionItem value="part2" className="bg-slate-800/50 border-slate-700 rounded-lg px-4 sm:px-6">
             <AccordionTrigger className="text-white hover:text-cyan-400">
               <div className="flex items-center">
                 <div className="w-8 h-8 rounded-full bg-gradient-to-r from-cyan-500 to-blue-600 flex items-center justify-center text-white font-bold mr-4">2</div>

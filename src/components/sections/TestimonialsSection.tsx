@@ -50,16 +50,16 @@ const testimonials = [
 export default function TestimonialsSection() {
   return (
     <section id="testimonials" className="py-20 px-6 max-w-7xl mx-auto">
-      <div className="text-center mb-16">
-        <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
+      <div className="text-center mb-12 sm:mb-16">
+        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6">
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">Отзывы</span> студентов
         </h2>
-        <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+        <p className="text-base sm:text-lg lg:text-xl text-gray-300 max-w-3xl mx-auto">
           Реальные истории успеха наших выпускников
         </p>
       </div>
 
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
         {testimonials.map((testimonial) => (
           <Card key={testimonial.id} className="bg-slate-800/50 border-slate-700 hover:border-cyan-500/50 transition-all duration-300 backdrop-blur-sm">
             <CardContent className="p-6">
@@ -106,7 +106,7 @@ export default function TestimonialsSection() {
       </div>
 
       <div className="text-center mt-12">
-        <div className="inline-flex items-center bg-slate-800/50 border border-slate-700 rounded-full px-6 py-3">
+        <div className="inline-flex items-center bg-slate-800/50 border border-slate-700 rounded-full px-4 sm:px-6 py-3 text-sm sm:text-base">
           <Icon name="Users" className="text-cyan-400 mr-2" size={20} />
           <span className="text-white font-medium">Более 10,000 довольных студентов по всему миру. Онлайн+офлайн.</span>
         </div>

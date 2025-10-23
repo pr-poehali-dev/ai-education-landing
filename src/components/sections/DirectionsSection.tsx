@@ -48,8 +48,8 @@ const directions = [
 export default function DirectionsSection({ scrollToForm }: DirectionsSectionProps) {
   return (
     <section className="py-20 px-6 max-w-7xl mx-auto">
-      <div className="text-center mb-16">
-        <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
+      <div className="text-center mb-12 sm:mb-16">
+        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6">
           Выбери свое <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">направление</span>
         </h2>
       </div>
@@ -57,7 +57,7 @@ export default function DirectionsSection({ scrollToForm }: DirectionsSectionPro
       <div className="max-w-4xl mx-auto">
         <Accordion type="single" collapsible className="space-y-4">
           {directions.map((direction, index) => (
-            <AccordionItem key={index} value={`direction-${index}`} className="bg-slate-800/50 border-slate-700 rounded-lg px-6">
+            <AccordionItem key={index} value={`direction-${index}`} className="bg-slate-800/50 border-slate-700 rounded-lg px-4 sm:px-6">
               <AccordionTrigger className="text-white hover:text-cyan-400 group">
                 <div className="flex items-center">
                   <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-cyan-500 to-blue-600 group-hover:from-cyan-400 group-hover:to-purple-600 flex items-center justify-center mr-4 transition-all duration-300 group-hover:scale-110 group-hover:rotate-3 group-hover:shadow-lg group-hover:shadow-cyan-500/30">

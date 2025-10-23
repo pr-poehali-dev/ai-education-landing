@@ -14,10 +14,10 @@ export default function ScheduleSection() {
         </p>
       </div>
 
-      <div className="grid md:grid-cols-3 gap-8">
+      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
         {/* Старт курса */}
         <Card className="bg-slate-800/90 border-slate-600 hover:border-cyan-400/70 transition-all duration-300 backdrop-blur-sm">
-          <CardContent className="p-8 text-center">
+          <CardContent className="p-6 sm:p-8 text-center">
             <div className="mb-6">
               <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Icon name="Calendar" className="text-white" size={32} />
@@ -33,7 +33,7 @@ export default function ScheduleSection() {
             
             <div className="mt-6 pt-4 border-t border-slate-600">
               <Icon name="MapPin" className="text-cyan-400 mx-auto mb-3" size={24} />
-              <div className="text-xs text-gray-300 leading-relaxed">
+              <div className="text-xs sm:text-sm text-gray-300 leading-relaxed">
                 <div className="font-medium text-white mb-1">Место проведения:</div>
                 ул. Русская 41а<br />
                 3 этаж офис "Хакни Нейросети"
@@ -111,7 +111,7 @@ export default function ScheduleSection() {
 
       {/* Дополнительная информация */}
       <div className="mt-12 text-center">
-        <div className="inline-flex items-center bg-slate-800/70 border border-slate-600 rounded-full px-8 py-4">
+        <div className="inline-flex items-center bg-slate-800/70 border border-slate-600 rounded-full px-4 sm:px-8 py-3 sm:py-4 text-sm sm:text-base">
           <Icon name="Info" className="text-cyan-400 mr-3" size={20} />
           <span className="text-white font-medium">
             Интенсивная программа • Практические задания • Индивидуальная поддержка

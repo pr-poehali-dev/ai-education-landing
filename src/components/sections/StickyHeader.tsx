@@ -26,7 +26,7 @@ export default function StickyHeader({ scrollToForm, scrollToSection }: StickyHe
       }`}
     >
       <nav className="flex justify-between items-center p-4 lg:p-6 max-w-7xl mx-auto">
-        <div className="text-xl lg:text-2xl font-bold text-white">
+        <div className="text-base sm:text-lg lg:text-2xl font-bold text-white">
           Школа ИИ <span className="text-cyan-400">Сергея Черникова</span>
         </div>
         
