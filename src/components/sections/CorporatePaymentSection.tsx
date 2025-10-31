@@ -75,12 +75,12 @@ export default function CorporatePaymentSection() {
                   </div>
 
                   <a
-                    href="https://api.whatsapp.com/message/YRBE2VIUHPMYN1?autoload=1&app_absent=0"
+                    href="https://torguykriptoy.getcourse.ru/NeuroVL"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-3 px-6 py-4 bg-gradient-to-r from-orange-500 to-red-600 hover:from-orange-400 hover:to-red-500 text-white font-bold text-lg rounded-lg transition-all duration-300 shadow-lg hover:shadow-orange-500/25 hover:scale-105 border border-orange-400/20 group"
                   >
-                    <Icon name="MessageCircle" size={24} className="group-hover:scale-110 transition-transform" />
+                    <Icon name="CreditCard" size={24} className="group-hover:scale-110 transition-transform" />
                     Узнать условия рассрочки
                     <Icon name="ExternalLink" size={18} className="opacity-70" />
                   </a>
