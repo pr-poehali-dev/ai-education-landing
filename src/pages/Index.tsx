@@ -12,6 +12,7 @@ import TestimonialsSection from '@/components/sections/TestimonialsSection';
 import ProgramSection from '@/components/sections/ProgramSection';
 import DirectionsSection from '@/components/sections/DirectionsSection';
 import PricingSection from '@/components/sections/PricingSection';
+import CorporatePaymentSection from '@/components/sections/CorporatePaymentSection';
 import AdvantagesSection from '@/components/sections/AdvantagesSection';
 import FormSection from '@/components/sections/FormSection';
 import CTAButton from '@/components/ui/cta-button';
@@ -49,6 +50,7 @@ export default function Index() {
       <DirectionsSection scrollToForm={scrollToForm} />
       <CTAButton onClick={scrollToForm} />
       <PricingSection scrollToForm={scrollToForm} />
+      <CorporatePaymentSection />
       <AdvantagesSection />
       <CTAButton onClick={scrollToForm} />
       <FormSection />
