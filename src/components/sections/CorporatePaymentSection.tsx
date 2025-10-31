@@ -42,8 +42,16 @@ export default function CorporatePaymentSection() {
                       <div className="flex-shrink-0 w-8 h-8 rounded-lg bg-orange-500/20 flex items-center justify-center mt-1">
                         <span className="text-orange-400 font-bold">2</span>
                       </div>
-                      <div className="text-gray-300">
-                        Свяжитесь с нами для оформления индивидуальных условий рассрочки
+                      <div>
+                        <p className="text-gray-300">Оставьте заявку на сайте:</p>
+                        <a 
+                          href="https://torguykriptoy.getcourse.ru/NeuroVL" 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          className="text-orange-400 hover:text-orange-300 underline transition-colors"
+                        >
+                          https://torguykriptoy.getcourse.ru/NeuroVL
+                        </a>
                       </div>
                     </div>
 
@@ -52,7 +60,7 @@ export default function CorporatePaymentSection() {
                         <span className="text-orange-400 font-bold">3</span>
                       </div>
                       <div className="text-gray-300">
-                        Оформляем документы и настраиваем график платежей
+                        Попадаете в платежный шлюз
                       </div>
                     </div>
 
@@ -61,7 +69,7 @@ export default function CorporatePaymentSection() {
                         <span className="text-orange-400 font-bold">4</span>
                       </div>
                       <div className="text-gray-300">
-                        Вносите платежи удобными частями — начинайте учиться уже сейчас!
+                        Выбираете подходящие условия рассрочки. Всё!
                       </div>
                     </div>
                   </div>
