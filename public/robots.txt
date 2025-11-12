@@ -12,3 +12,5 @@ Allow: /
 
 User-agent: *
 Allow: /
+
+Sitemap: https://ai-education-landing.poehali.dev/sitemap.xml
