@@ -21,7 +21,7 @@ export default function PricingSection({ scrollToForm }: PricingSectionProps) {
         <Card className="bg-slate-800/50 border-slate-700 hover:border-cyan-500/50 transition-all duration-300">
           <CardContent className="p-6 sm:p-8">
             <h3 className="text-xl sm:text-2xl font-bold text-white mb-2">БАЗА</h3>
-            <div className="text-3xl sm:text-4xl font-bold text-cyan-400 mb-4 sm:mb-6">80,000₽</div>
+            <div className="text-3xl sm:text-4xl font-bold text-cyan-400 mb-4 sm:mb-6">99,000₽</div>
             <ul className="space-y-2 sm:space-y-3 mb-6 sm:mb-8">
               <li className="flex items-center text-gray-300">
                 <Icon name="Check" className="text-cyan-400 mr-3" size={20} />
@@ -73,7 +73,7 @@ export default function PricingSection({ scrollToForm }: PricingSectionProps) {
           </div>
           <CardContent className="p-6 sm:p-8">
             <h3 className="text-xl sm:text-2xl font-bold text-white mb-2">Индивидуальный</h3>
-            <div className="text-3xl sm:text-4xl font-bold text-cyan-400 mb-4 sm:mb-6">300,000₽</div>
+            <div className="text-3xl sm:text-4xl font-bold text-cyan-400 mb-4 sm:mb-6">299,000₽</div>
             <ul className="space-y-2 sm:space-y-3 mb-6 sm:mb-8">
               <li className="flex items-center text-gray-300">
                 <Icon name="Check" className="text-cyan-400 mr-3" size={20} />

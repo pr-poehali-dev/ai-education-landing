@@ -26,9 +26,9 @@ export default function ScheduleSection() {
             </div>
             
             <div className="space-y-2">
-              <div className="text-4xl font-bold text-cyan-400">18</div>
-              <div className="text-lg text-white font-semibold">ноября</div>
-              <div className="text-sm text-gray-300">2025 года</div>
+              <div className="text-4xl font-bold text-cyan-400">16</div>
+              <div className="text-lg text-white font-semibold">февраля</div>
+              <div className="text-sm text-gray-300">2026 года</div>
             </div>
             
             <div className="mt-6 pt-4 border-t border-slate-600">
@@ -60,7 +60,7 @@ export default function ScheduleSection() {
               
               <div className="space-y-2">
                 <div className="bg-slate-700/70 border border-purple-400/30 rounded-lg py-3 px-4">
-                  <div className="text-purple-300 text-sm font-medium">Вторник</div>
+                  <div className="text-purple-300 text-sm font-medium">Понедельник</div>
                   <div className="text-white font-bold text-lg">17:00 - 20:00</div>
                 </div>
                 <div className="bg-slate-700/70 border border-pink-400/30 rounded-lg py-3 px-4">
@@ -110,7 +110,13 @@ export default function ScheduleSection() {
       </div>
 
       {/* Дополнительная информация */}
-      <div className="mt-12 text-center">
+      <div className="mt-12 text-center space-y-6">
+        <div className="inline-flex items-center bg-gradient-to-r from-orange-500/20 to-red-600/20 border-2 border-orange-400/50 rounded-full px-6 sm:px-10 py-4 sm:py-5 text-base sm:text-lg backdrop-blur-sm shadow-lg shadow-orange-500/20">
+          <Icon name="Users" className="text-orange-400 mr-3" size={24} />
+          <span className="text-white font-bold">
+            Осталось мест: <span className="text-orange-400 text-xl sm:text-2xl">15</span>
+          </span>
+        </div>
         <div className="inline-flex items-center bg-slate-800/70 border border-slate-600 rounded-full px-4 sm:px-8 py-3 sm:py-4 text-sm sm:text-base">
           <Icon name="Info" className="text-cyan-400 mr-3" size={20} />
           <span className="text-white font-medium">
