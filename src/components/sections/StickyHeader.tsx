@@ -88,66 +88,68 @@ export default function StickyHeader({ scrollToForm, scrollToSection }: StickyHe
       </nav>
       
       {/* Мобильное выпадающее меню */}
-      {isMobileMenuOpen && (
-        <div className="md:hidden bg-slate-900/98 backdrop-blur-sm border-b border-slate-700/50">
-          <div className="flex flex-col space-y-4 p-6">
-            <button 
-              onClick={() => {
-                scrollToSection('skills');
-                setIsMobileMenuOpen(false);
-              }} 
-              className="text-white hover:text-cyan-400 transition-colors text-left"
-            >
-              О курсе
-            </button>
-            <button 
-              onClick={() => {
-                scrollToSection('program');
-                setIsMobileMenuOpen(false);
-              }} 
-              className="text-white hover:text-cyan-400 transition-colors text-left"
-            >
-              Программа
-            </button>
-            <button 
-              onClick={() => {
-                scrollToSection('testimonials');
-                setIsMobileMenuOpen(false);
-              }} 
-              className="text-white hover:text-cyan-400 transition-colors text-left"
-            >
-              Отзывы
-            </button>
-            <button 
-              onClick={() => {
-                scrollToSection('pricing');
-                setIsMobileMenuOpen(false);
-              }} 
-              className="text-white hover:text-cyan-400 transition-colors text-left"
-            >
-              Тарифы
-            </button>
-            <a 
-              href="https://t.me/chernikovgpt" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="text-white hover:text-cyan-400 transition-colors"
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              ТГ-КАНАЛ
-            </a>
-            <a 
-              href="https://torguykriptoy.getcourse.ru/NeuroVL" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold rounded-lg transition-all duration-300 shadow-lg hover:shadow-cyan-500/25 border border-cyan-400/20"
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              🚀 Оставить заявку
-            </a>
-          </div>
+      <div 
+        className={`md:hidden bg-slate-900/98 backdrop-blur-sm border-b border-slate-700/50 overflow-hidden transition-all duration-300 ease-in-out ${
+          isMobileMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+        }`}
+      >
+        <div className="flex flex-col space-y-4 p-6 animate-fade-in-up">
+          <button 
+            onClick={() => {
+              scrollToSection('skills');
+              setIsMobileMenuOpen(false);
+            }} 
+            className="text-white hover:text-cyan-400 transition-all duration-200 text-left hover:translate-x-2"
+          >
+            О курсе
+          </button>
+          <button 
+            onClick={() => {
+              scrollToSection('program');
+              setIsMobileMenuOpen(false);
+            }} 
+            className="text-white hover:text-cyan-400 transition-all duration-200 text-left hover:translate-x-2"
+          >
+            Программа
+          </button>
+          <button 
+            onClick={() => {
+              scrollToSection('testimonials');
+              setIsMobileMenuOpen(false);
+            }} 
+            className="text-white hover:text-cyan-400 transition-all duration-200 text-left hover:translate-x-2"
+          >
+            Отзывы
+          </button>
+          <button 
+            onClick={() => {
+              scrollToSection('pricing');
+              setIsMobileMenuOpen(false);
+            }} 
+            className="text-white hover:text-cyan-400 transition-all duration-200 text-left hover:translate-x-2"
+          >
+            Тарифы
+          </button>
+          <a 
+            href="https://t.me/chernikovgpt" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="text-white hover:text-cyan-400 transition-all duration-200 hover:translate-x-2"
+            onClick={() => setIsMobileMenuOpen(false)}
+          >
+            ТГ-КАНАЛ
+          </a>
+          <a 
+            href="https://torguykriptoy.getcourse.ru/NeuroVL" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold rounded-lg transition-all duration-300 shadow-lg hover:shadow-cyan-500/25 hover:scale-105 border border-cyan-400/20"
+            onClick={() => setIsMobileMenuOpen(false)}
+          >
+            🚀 Оставить заявку
+          </a>
         </div>
-      )}
+      </div>
     </header>
   );
 }
