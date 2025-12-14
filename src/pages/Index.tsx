@@ -4,13 +4,12 @@ import HeroSection from '@/components/sections/HeroSection';
 
 import ScheduleSection from '@/components/sections/ScheduleSection';
 
-import SkillsSection from '@/components/sections/SkillsSection';
+import ProfessionsSection from '@/components/sections/ProfessionsSection';
 import VideoWorksSection from '@/components/sections/VideoWorksSection';
 import PhotoWorksSection from '@/components/sections/PhotoWorksSection';
 import AIToolsSection from '@/components/sections/AIToolsSection';
 import TestimonialsSection from '@/components/sections/TestimonialsSection';
 import ProgramSection from '@/components/sections/ProgramSection';
-import DirectionsSection from '@/components/sections/DirectionsSection';
 import PricingSection from '@/components/sections/PricingSection';
 import CorporatePaymentSection from '@/components/sections/CorporatePaymentSection';
 import AdvantagesSection from '@/components/sections/AdvantagesSection';
@@ -37,7 +36,7 @@ export default function Index() {
       <AIToolsSection />
       <CTAButton onClick={scrollToForm} />
 
-      <SkillsSection />
+      <ProfessionsSection />
       <CTAButton onClick={scrollToForm} />
       <VideoWorksSection />
       <CTAButton onClick={scrollToForm} />
@@ -46,8 +45,6 @@ export default function Index() {
       <TestimonialsSection />
       <CTAButton onClick={scrollToForm} />
       <ProgramSection scrollToForm={scrollToForm} />
-      <CTAButton onClick={scrollToForm} />
-      <DirectionsSection scrollToForm={scrollToForm} />
       <CTAButton onClick={scrollToForm} />
       <PricingSection scrollToForm={scrollToForm} />
       <CorporatePaymentSection />
