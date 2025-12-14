@@ -220,10 +220,10 @@ export default function ProfessionsSection() {
             const colors = gradients[index % 3];
             
             return (
-              <div key={index} className="relative group">
+              <div key={index} className="relative group h-full">
                 <div className={`absolute inset-0 bg-gradient-to-r ${colors.card} rounded-2xl blur-xl opacity-50 group-hover:opacity-100 transition-opacity duration-300`}></div>
-                <Card className={`relative bg-gradient-to-br from-slate-800/95 to-slate-900/95 border-2 ${colors.border} backdrop-blur-sm hover:scale-[1.02] transition-all duration-300 hover:${colors.glow} hover:shadow-2xl`}>
-                  <CardContent className="p-6">
+                <Card className={`relative h-full bg-gradient-to-br from-slate-800/95 to-slate-900/95 border-2 ${colors.border} backdrop-blur-sm hover:scale-[1.02] transition-all duration-300 hover:${colors.glow} hover:shadow-2xl`}>
+                  <CardContent className="p-6 flex flex-col h-full">
                     <div className="text-center mb-6">
                       <div className={`w-16 h-16 mx-auto mb-4 bg-gradient-to-r ${colors.icon} rounded-2xl flex items-center justify-center shadow-lg ${colors.glow} group-hover:scale-110 group-hover:rotate-6 transition-all duration-500`}>
                         <Icon name="TrendingUp" className="text-white group-hover:scale-125 transition-all duration-500" size={32} />
@@ -232,8 +232,8 @@ export default function ProfessionsSection() {
                       <p className="text-sm font-medium text-cyan-400">{studentCase.role}</p>
                     </div>
                     
-                    <div className="space-y-3 mb-5">
-                      <div className="bg-slate-700/30 rounded-xl p-4 border border-slate-600/50 group-hover:border-slate-500 transition-colors duration-300">
+                    <div className="space-y-3 mb-5 flex-grow">
+                      <div className="bg-slate-700/30 rounded-xl p-4 border border-slate-600/50 group-hover:border-slate-500 transition-colors duration-300 min-h-[80px] flex flex-col justify-center">
                         <div className="flex items-center gap-2 mb-2">
                           <div className="w-8 h-8 bg-red-500/20 rounded-lg flex items-center justify-center">
                             <Icon name="X" className="text-red-400" size={16} />
@@ -249,7 +249,7 @@ export default function ProfessionsSection() {
                         </div>
                       </div>
                       
-                      <div className={`bg-gradient-to-r ${colors.card} rounded-xl p-4 border-2 ${colors.border} group-hover:${colors.glow} group-hover:shadow-lg transition-all duration-300`}>
+                      <div className={`bg-gradient-to-r ${colors.card} rounded-xl p-4 border-2 ${colors.border} group-hover:${colors.glow} group-hover:shadow-lg transition-all duration-300 min-h-[80px] flex flex-col justify-center`}>
                         <div className="flex items-center gap-2 mb-2">
                           <div className={`w-8 h-8 bg-gradient-to-r ${colors.icon} rounded-lg flex items-center justify-center shadow-md`}>
                             <Icon name="Check" className="text-white" size={16} />
@@ -267,8 +267,8 @@ export default function ProfessionsSection() {
                       </div>
                     </div>
                     
-                    <div className="space-y-2">
-                      <div className="flex items-start gap-2">
+                    <div className="space-y-2 mt-auto">
+                      <div className="flex items-start gap-2 min-h-[60px]">
                         <Icon name="CheckCircle" className="text-cyan-400 flex-shrink-0 mt-0.5" size={16} />
                         <p className="text-xs text-gray-300 leading-relaxed">{studentCase.description}</p>
                       </div>
