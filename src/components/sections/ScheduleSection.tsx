@@ -118,17 +118,47 @@ export default function ScheduleSection() {
           </span>
         </div>
         
-        <div className="max-w-2xl mx-auto bg-slate-800/50 border border-slate-700 rounded-2xl p-6 backdrop-blur-sm">
-          <div className="flex items-start gap-3">
-            <Icon name="Shield" className="text-cyan-400 flex-shrink-0 mt-1" size={24} />
-            <div className="text-left">
-              <h4 className="text-white font-bold text-base sm:text-lg mb-2">Почему только 15 мест?</h4>
-              <p className="text-gray-300 text-sm sm:text-base leading-relaxed">
-                Я намеренно ограничиваю количество участников, чтобы <span className="text-cyan-400 font-semibold">уделить внимание каждому студенту</span>. 
-                Это позволяет мне лично помочь разобраться с трудностями, проверить домашние задания и 
-                убедиться, что <span className="text-cyan-400 font-semibold">все справляются с обучением и практикой</span>. 
-                Качество важнее количества!
-              </p>
+        <div className="relative max-w-3xl mx-auto">
+          <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/30 via-blue-500/30 to-purple-500/30 rounded-3xl blur-2xl animate-pulse"></div>
+          <div className="relative bg-gradient-to-br from-slate-800/95 to-slate-900/95 border-2 border-cyan-500/50 rounded-3xl p-8 sm:p-10 backdrop-blur-sm shadow-2xl hover:shadow-cyan-500/30 transition-all duration-300 hover:scale-[1.02]">
+            <div className="text-center mb-6">
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-2xl mb-4 shadow-lg shadow-cyan-500/50 animate-bounce">
+                <Icon name="Heart" className="text-white" size={32} />
+              </div>
+              <h4 className="text-2xl sm:text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500 mb-2">
+                Почему только 15 мест?
+              </h4>
+              <div className="h-1 w-24 bg-gradient-to-r from-cyan-500 to-blue-500 mx-auto rounded-full"></div>
+            </div>
+            
+            <p className="text-gray-200 text-base sm:text-lg leading-relaxed text-center">
+              Я намеренно ограничиваю количество участников, чтобы <span className="text-cyan-400 font-bold">уделить внимание каждому студенту</span>. 
+              Это позволяет мне лично помочь разобраться с трудностями, проверить домашние задания и 
+              убедиться, что <span className="text-cyan-400 font-bold">все справляются с обучением и практикой</span>.
+            </p>
+            
+            <div className="mt-6 pt-6 border-t border-cyan-500/30">
+              <div className="flex items-center justify-center gap-2">
+                <Icon name="Award" className="text-yellow-400" size={24} />
+                <p className="text-xl sm:text-2xl font-bold text-white">
+                  Качество важнее количества!
+                </p>
+              </div>
+            </div>
+            
+            <div className="mt-6 grid grid-cols-1 sm:grid-cols-3 gap-4">
+              <div className="bg-gradient-to-br from-cyan-500/10 to-blue-600/10 rounded-xl p-4 border border-cyan-500/20 text-center">
+                <Icon name="UserCheck" className="text-cyan-400 mx-auto mb-2" size={28} />
+                <p className="text-white font-semibold text-sm">Личная проверка ДЗ</p>
+              </div>
+              <div className="bg-gradient-to-br from-cyan-500/10 to-blue-600/10 rounded-xl p-4 border border-cyan-500/20 text-center">
+                <Icon name="MessageCircle" className="text-cyan-400 mx-auto mb-2" size={28} />
+                <p className="text-white font-semibold text-sm">Быстрая обратная связь</p>
+              </div>
+              <div className="bg-gradient-to-br from-cyan-500/10 to-blue-600/10 rounded-xl p-4 border border-cyan-500/20 text-center">
+                <Icon name="Target" className="text-cyan-400 mx-auto mb-2" size={28} />
+                <p className="text-white font-semibold text-sm">Гарантия результата</p>
+              </div>
             </div>
           </div>
         </div>
