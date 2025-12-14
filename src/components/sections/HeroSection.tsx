@@ -48,7 +48,7 @@ export default function HeroSection({ scrollToForm, scrollToSection }: HeroSecti
               </a>
               
               <a 
-                href="https://t.me/YOUR_BOT_USERNAME" 
+                href="https://t.me/chernikovFAQ_Bot" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="inline-flex items-center bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-400 hover:to-cyan-400 text-lg sm:text-xl px-6 sm:px-8 py-5 sm:py-6 text-white font-bold rounded-xl transition-all duration-300 shadow-xl hover:shadow-blue-500/30 hover:scale-105 border-2 border-blue-300/30 hover:border-blue-300/60 w-full sm:w-auto justify-center"

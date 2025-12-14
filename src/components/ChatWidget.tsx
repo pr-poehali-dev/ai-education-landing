@@ -4,7 +4,7 @@ import Icon from '@/components/ui/icon';
 
 const ChatWidget = () => {
   const openTelegram = () => {
-    window.open('https://t.me/YOUR_BOT_USERNAME', '_blank');
+    window.open('https://t.me/chernikovFAQ_Bot', '_blank');
   };
 
   return (
