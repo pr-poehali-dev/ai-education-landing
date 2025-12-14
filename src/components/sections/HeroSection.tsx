@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import Icon from '@/components/ui/icon';
@@ -8,7 +8,38 @@ interface HeroSectionProps {
   scrollToSection: (id: string) => void;
 }
 
+interface TimeLeft {
+  days: number;
+  hours: number;
+  minutes: number;
+  seconds: number;
+}
+
 export default function HeroSection({ scrollToForm, scrollToSection }: HeroSectionProps) {
+  const [timeLeft, setTimeLeft] = useState<TimeLeft>({ days: 0, hours: 0, minutes: 0, seconds: 0 });
+
+  useEffect(() => {
+    const targetDate = new Date('2026-02-16T00:00:00').getTime();
+
+    const updateCountdown = () => {
+      const now = new Date().getTime();
+      const distance = targetDate - now;
+
+      if (distance > 0) {
+        setTimeLeft({
+          days: Math.floor(distance / (1000 * 60 * 60 * 24)),
+          hours: Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
+          minutes: Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)),
+          seconds: Math.floor((distance % (1000 * 60)) / 1000)
+        });
+      }
+    };
+
+    updateCountdown();
+    const interval = setInterval(updateCountdown, 1000);
+
+    return () => clearInterval(interval);
+  }, []);
   return (
     <div className="relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 via-purple-600/20 to-cyan-500/20 animate-pulse"></div>
@@ -36,6 +67,55 @@ export default function HeroSection({ scrollToForm, scrollToSection }: HeroSecti
               </div>
             </div>
             
+            {/* Countdown Timer */}
+            <div className="relative">
+              <div className="absolute inset-0 bg-gradient-to-r from-orange-500/20 via-red-500/20 to-pink-500/20 rounded-2xl blur-xl animate-pulse"></div>
+              <div className="relative bg-gradient-to-br from-slate-800/90 to-slate-900/90 backdrop-blur-sm rounded-2xl p-6 border-2 border-orange-500/50 shadow-2xl">
+                <div className="text-center mb-4">
+                  <p className="text-orange-400 font-bold text-sm uppercase tracking-wider mb-1">До старта курса осталось</p>
+                  <div className="h-1 w-20 bg-gradient-to-r from-orange-500 to-red-500 mx-auto rounded-full"></div>
+                </div>
+                
+                <div className="grid grid-cols-4 gap-3 sm:gap-4">
+                  <div className="text-center group">
+                    <div className="bg-gradient-to-br from-orange-500/20 to-red-600/20 rounded-xl p-3 sm:p-4 border border-orange-500/30 backdrop-blur-sm group-hover:scale-105 transition-all duration-300 group-hover:shadow-lg group-hover:shadow-orange-500/50">
+                      <div className="text-2xl sm:text-4xl font-bold text-white mb-1 font-mono tabular-nums">
+                        {String(timeLeft.days).padStart(2, '0')}
+                      </div>
+                      <div className="text-xs sm:text-sm text-orange-300 font-medium">дней</div>
+                    </div>
+                  </div>
+                  
+                  <div className="text-center group">
+                    <div className="bg-gradient-to-br from-orange-500/20 to-red-600/20 rounded-xl p-3 sm:p-4 border border-orange-500/30 backdrop-blur-sm group-hover:scale-105 transition-all duration-300 group-hover:shadow-lg group-hover:shadow-orange-500/50">
+                      <div className="text-2xl sm:text-4xl font-bold text-white mb-1 font-mono tabular-nums">
+                        {String(timeLeft.hours).padStart(2, '0')}
+                      </div>
+                      <div className="text-xs sm:text-sm text-orange-300 font-medium">часов</div>
+                    </div>
+                  </div>
+                  
+                  <div className="text-center group">
+                    <div className="bg-gradient-to-br from-orange-500/20 to-red-600/20 rounded-xl p-3 sm:p-4 border border-orange-500/30 backdrop-blur-sm group-hover:scale-105 transition-all duration-300 group-hover:shadow-lg group-hover:shadow-orange-500/50">
+                      <div className="text-2xl sm:text-4xl font-bold text-white mb-1 font-mono tabular-nums">
+                        {String(timeLeft.minutes).padStart(2, '0')}
+                      </div>
+                      <div className="text-xs sm:text-sm text-orange-300 font-medium">минут</div>
+                    </div>
+                  </div>
+                  
+                  <div className="text-center group">
+                    <div className="bg-gradient-to-br from-orange-500/20 to-red-600/20 rounded-xl p-3 sm:p-4 border border-orange-500/30 backdrop-blur-sm group-hover:scale-105 transition-all duration-300 group-hover:shadow-lg group-hover:shadow-orange-500/50">
+                      <div className="text-2xl sm:text-4xl font-bold text-white mb-1 font-mono tabular-nums">
+                        {String(timeLeft.seconds).padStart(2, '0')}
+                      </div>
+                      <div className="text-xs sm:text-sm text-orange-300 font-medium">секунд</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
             <div>
               <a 
                 href="https://torguykriptoy.getcourse.ru/NeuroVL" 
