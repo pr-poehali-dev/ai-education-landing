@@ -211,39 +211,77 @@ export default function ProfessionsSection() {
         </div>
         
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-          {studentCases.map((studentCase, index) => (
-            <Card key={index} className="bg-gradient-to-br from-slate-800/70 to-slate-900/70 border-cyan-500/30 backdrop-blur-sm">
-              <CardContent className="p-6">
-                <div className="text-center mb-4">
-                  <h4 className="text-lg font-bold text-white">{studentCase.name}</h4>
-                  <p className="text-sm text-cyan-400">{studentCase.role}</p>
-                </div>
-                
-                <div className="space-y-4 mb-4">
-                  <div className="bg-slate-700/50 rounded-lg p-3">
-                    <p className="text-xs text-gray-400 mb-1">Было:</p>
-                    <p className="text-sm text-white font-medium">{studentCase.before}</p>
-                  </div>
-                  
-                  <div className="flex justify-center">
-                    <Icon name="ArrowDown" className="text-cyan-400" size={24} />
-                  </div>
-                  
-                  <div className="bg-gradient-to-r from-cyan-500/20 to-blue-600/20 rounded-lg p-3 border border-cyan-500/30">
-                    <p className="text-xs text-gray-400 mb-1">Стало:</p>
-                    <p className="text-sm text-white font-medium">{studentCase.after}</p>
-                  </div>
-                </div>
-                
-                <div className="bg-gradient-to-r from-green-500/10 to-emerald-600/10 rounded-lg p-3 border-l-4 border-green-500 mb-3">
-                  <p className="text-lg font-bold text-green-400">{studentCase.result}</p>
-                </div>
-                
-                <p className="text-xs text-gray-400 mb-2">{studentCase.description}</p>
-                <p className="text-xs text-cyan-400">Период: {studentCase.period}</p>
-              </CardContent>
-            </Card>
-          ))}
+          {studentCases.map((studentCase, index) => {
+            const gradients = [
+              { card: 'from-purple-500/20 to-pink-600/20', border: 'border-purple-500/50', icon: 'from-purple-500 to-pink-600', glow: 'shadow-purple-500/50' },
+              { card: 'from-orange-500/20 to-red-600/20', border: 'border-orange-500/50', icon: 'from-orange-500 to-red-600', glow: 'shadow-orange-500/50' },
+              { card: 'from-green-500/20 to-emerald-600/20', border: 'border-green-500/50', icon: 'from-green-500 to-emerald-600', glow: 'shadow-green-500/50' }
+            ];
+            const colors = gradients[index % 3];
+            
+            return (
+              <div key={index} className="relative group">
+                <div className={`absolute inset-0 bg-gradient-to-r ${colors.card} rounded-2xl blur-xl opacity-50 group-hover:opacity-100 transition-opacity duration-300`}></div>
+                <Card className={`relative bg-gradient-to-br from-slate-800/95 to-slate-900/95 border-2 ${colors.border} backdrop-blur-sm hover:scale-[1.02] transition-all duration-300 hover:${colors.glow} hover:shadow-2xl`}>
+                  <CardContent className="p-6">
+                    <div className="text-center mb-6">
+                      <div className={`w-16 h-16 mx-auto mb-4 bg-gradient-to-r ${colors.icon} rounded-2xl flex items-center justify-center shadow-lg ${colors.glow} group-hover:scale-110 group-hover:rotate-6 transition-all duration-500`}>
+                        <Icon name="TrendingUp" className="text-white group-hover:scale-125 transition-all duration-500" size={32} />
+                      </div>
+                      <h4 className="text-xl font-bold text-white mb-1">{studentCase.name}</h4>
+                      <p className="text-sm font-medium text-cyan-400">{studentCase.role}</p>
+                    </div>
+                    
+                    <div className="space-y-3 mb-5">
+                      <div className="bg-slate-700/30 rounded-xl p-4 border border-slate-600/50 group-hover:border-slate-500 transition-colors duration-300">
+                        <div className="flex items-center gap-2 mb-2">
+                          <div className="w-8 h-8 bg-red-500/20 rounded-lg flex items-center justify-center">
+                            <Icon name="X" className="text-red-400" size={16} />
+                          </div>
+                          <p className="text-xs text-gray-400 font-semibold uppercase tracking-wide">Было:</p>
+                        </div>
+                        <p className="text-sm text-white font-medium pl-10">{studentCase.before}</p>
+                      </div>
+                      
+                      <div className="flex justify-center">
+                        <div className={`w-10 h-10 bg-gradient-to-r ${colors.icon} rounded-full flex items-center justify-center animate-bounce shadow-lg ${colors.glow}`}>
+                          <Icon name="ArrowDown" className="text-white" size={20} />
+                        </div>
+                      </div>
+                      
+                      <div className={`bg-gradient-to-r ${colors.card} rounded-xl p-4 border-2 ${colors.border} group-hover:${colors.glow} group-hover:shadow-lg transition-all duration-300`}>
+                        <div className="flex items-center gap-2 mb-2">
+                          <div className={`w-8 h-8 bg-gradient-to-r ${colors.icon} rounded-lg flex items-center justify-center shadow-md`}>
+                            <Icon name="Check" className="text-white" size={16} />
+                          </div>
+                          <p className="text-xs text-white font-semibold uppercase tracking-wide">Стало:</p>
+                        </div>
+                        <p className="text-sm text-white font-bold pl-10">{studentCase.after}</p>
+                      </div>
+                    </div>
+                    
+                    <div className={`bg-gradient-to-r from-green-500/20 to-emerald-600/20 rounded-xl p-4 border-2 border-green-500/50 mb-4 group-hover:shadow-lg group-hover:shadow-green-500/50 transition-all duration-300`}>
+                      <div className="flex items-center justify-center gap-2">
+                        <Icon name="Zap" className="text-green-400 animate-pulse" size={24} />
+                        <p className="text-xl font-bold text-green-400">{studentCase.result}</p>
+                      </div>
+                    </div>
+                    
+                    <div className="space-y-2">
+                      <div className="flex items-start gap-2">
+                        <Icon name="CheckCircle" className="text-cyan-400 flex-shrink-0 mt-0.5" size={16} />
+                        <p className="text-xs text-gray-300 leading-relaxed">{studentCase.description}</p>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <Icon name="Clock" className="text-cyan-400" size={16} />
+                        <p className="text-xs text-cyan-400 font-medium">{studentCase.period}</p>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              </div>
+            );
+          })}
         </div>
       </div>
     </section>
