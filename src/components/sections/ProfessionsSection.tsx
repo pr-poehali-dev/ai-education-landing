@@ -189,8 +189,8 @@ export default function ProfessionsSection() {
             <Card key={index} className="bg-slate-800/30 border-slate-700 hover:border-cyan-500/30 transition-all duration-300 group hover:shadow-lg hover:shadow-cyan-500/10">
               <CardContent className="p-6">
                 <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-cyan-500/20 to-blue-600/20 flex items-center justify-center flex-shrink-0 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
-                    <Icon name={capability.icon as any} className="text-cyan-400 group-hover:scale-110 transition-transform duration-300" size={24} />
+                  <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-cyan-500/20 to-blue-600/20 flex items-center justify-center flex-shrink-0 group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 group-hover:shadow-lg group-hover:shadow-cyan-500/30">
+                    <Icon name={capability.icon as any} className="text-cyan-400 group-hover:scale-125 group-hover:rotate-12 transition-all duration-500" size={24} />
                   </div>
                   <div>
                     <h4 className="text-lg font-semibold text-white mb-2">{capability.title}</h4>
