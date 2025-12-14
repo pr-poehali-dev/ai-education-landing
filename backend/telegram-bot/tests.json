@@ -1,0 +1,34 @@
+{
+  "tests": [
+    {
+      "name": "Test /start command",
+      "method": "POST",
+      "body": {
+        "message": {
+          "chat": {"id": 12345},
+          "text": "/start"
+        }
+      },
+      "expectedStatus": 200,
+      "expectedBody": {
+        "ok": true
+      },
+      "bodyMatcher": "partial"
+    },
+    {
+      "name": "Test schedule question",
+      "method": "POST",
+      "body": {
+        "message": {
+          "chat": {"id": 12345},
+          "text": "когда начинается курс?"
+        }
+      },
+      "expectedStatus": 200,
+      "expectedBody": {
+        "ok": true
+      },
+      "bodyMatcher": "partial"
+    }
+  ]
+}
