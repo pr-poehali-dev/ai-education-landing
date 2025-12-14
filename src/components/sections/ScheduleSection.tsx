@@ -117,6 +117,22 @@ export default function ScheduleSection() {
             Всего мест: <span className="text-orange-400 text-xl sm:text-2xl">15</span>
           </span>
         </div>
+        
+        <div className="max-w-2xl mx-auto bg-slate-800/50 border border-slate-700 rounded-2xl p-6 backdrop-blur-sm">
+          <div className="flex items-start gap-3">
+            <Icon name="Shield" className="text-cyan-400 flex-shrink-0 mt-1" size={24} />
+            <div className="text-left">
+              <h4 className="text-white font-bold text-base sm:text-lg mb-2">Почему только 15 мест?</h4>
+              <p className="text-gray-300 text-sm sm:text-base leading-relaxed">
+                Я намеренно ограничиваю количество участников, чтобы <span className="text-cyan-400 font-semibold">уделить внимание каждому студенту</span>. 
+                Это позволяет мне лично помочь разобраться с трудностями, проверить домашние задания и 
+                убедиться, что <span className="text-cyan-400 font-semibold">все справляются с обучением и практикой</span>. 
+                Качество важнее количества!
+              </p>
+            </div>
+          </div>
+        </div>
+        
         <div className="inline-flex items-center bg-slate-800/70 border border-slate-600 rounded-full px-4 sm:px-8 py-3 sm:py-4 text-sm sm:text-base">
           <Icon name="Info" className="text-cyan-400 mr-3" size={20} />
           <span className="text-white font-medium">
