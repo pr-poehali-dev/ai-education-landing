@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import Icon from '@/components/ui/icon';
 
 interface StickyHeaderProps {
   scrollToForm: () => void;
@@ -7,6 +8,7 @@ interface StickyHeaderProps {
 
 export default function StickyHeader({ scrollToForm, scrollToSection }: StickyHeaderProps) {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -73,16 +75,79 @@ export default function StickyHeader({ scrollToForm, scrollToSection }: StickyHe
           </a>
         </div>
 
-        {/* Мобильное меню - можно добавить позже */}
+        {/* Мобильное меню */}
         <div className="md:hidden">
           <button 
-            onClick={scrollToForm}
-            className="inline-flex items-center px-4 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold rounded-lg transition-all duration-300 shadow-lg hover:shadow-cyan-500/25 hover:scale-105 text-sm border border-cyan-400/20"
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            className="text-white p-2"
+            aria-label="Меню"
           >
-            🚀 Заявка
+            <Icon name={isMobileMenuOpen ? "X" : "Menu"} size={24} />
           </button>
         </div>
       </nav>
+      
+      {/* Мобильное выпадающее меню */}
+      {isMobileMenuOpen && (
+        <div className="md:hidden bg-slate-900/98 backdrop-blur-sm border-b border-slate-700/50">
+          <div className="flex flex-col space-y-4 p-6">
+            <button 
+              onClick={() => {
+                scrollToSection('skills');
+                setIsMobileMenuOpen(false);
+              }} 
+              className="text-white hover:text-cyan-400 transition-colors text-left"
+            >
+              О курсе
+            </button>
+            <button 
+              onClick={() => {
+                scrollToSection('program');
+                setIsMobileMenuOpen(false);
+              }} 
+              className="text-white hover:text-cyan-400 transition-colors text-left"
+            >
+              Программа
+            </button>
+            <button 
+              onClick={() => {
+                scrollToSection('testimonials');
+                setIsMobileMenuOpen(false);
+              }} 
+              className="text-white hover:text-cyan-400 transition-colors text-left"
+            >
+              Отзывы
+            </button>
+            <button 
+              onClick={() => {
+                scrollToSection('pricing');
+                setIsMobileMenuOpen(false);
+              }} 
+              className="text-white hover:text-cyan-400 transition-colors text-left"
+            >
+              Тарифы
+            </button>
+            <a 
+              href="https://t.me/chernikovgpt" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-white hover:text-cyan-400 transition-colors"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              ТГ-КАНАЛ
+            </a>
+            <a 
+              href="https://torguykriptoy.getcourse.ru/NeuroVL" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold rounded-lg transition-all duration-300 shadow-lg hover:shadow-cyan-500/25 border border-cyan-400/20"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              🚀 Оставить заявку
+            </a>
+          </div>
+        </div>
+      )}
     </header>
   );
 }
