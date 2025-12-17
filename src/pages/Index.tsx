@@ -5,6 +5,7 @@ import HeroSection from '@/components/sections/HeroSection';
 import ScheduleSection from '@/components/sections/ScheduleSection';
 
 import ProfessionsSection from '@/components/sections/ProfessionsSection';
+import SundayAISection from '@/components/sections/SundayAISection';
 import VideoWorksSection from '@/components/sections/VideoWorksSection';
 import PhotoWorksSection from '@/components/sections/PhotoWorksSection';
 import AIToolsSection from '@/components/sections/AIToolsSection';
@@ -38,6 +39,7 @@ export default function Index() {
 
       <ProfessionsSection />
       <CTAButton onClick={scrollToForm} />
+      <SundayAISection />
       <VideoWorksSection />
       <CTAButton onClick={scrollToForm} />
       <PhotoWorksSection />
