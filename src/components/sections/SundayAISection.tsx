@@ -129,10 +129,10 @@ export default function SundayAISection() {
                     </Button>
                   </a>
                   
-                  {/* Free badge */}
-                  <div className="hidden sm:flex items-center gap-2 bg-green-500/20 border-2 border-green-500/50 rounded-full px-4 py-2 animate-bounce">
-                    <Icon name="Check" className="text-green-400" size={20} />
-                    <span className="text-green-400 font-bold">Бесплатно</span>
+                  {/* Price badge */}
+                  <div className="hidden sm:flex flex-col items-start gap-1 bg-orange-500/20 border-2 border-orange-500/50 rounded-xl px-4 py-2">
+                    <span className="text-orange-400 font-bold text-xl">1000₽</span>
+                    <span className="text-orange-300 text-xs">Завтрак включен</span>
                   </div>
                 </div>
               </div>

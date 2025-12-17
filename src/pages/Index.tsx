@@ -34,12 +34,12 @@ export default function Index() {
       <StickyHeader scrollToForm={scrollToForm} scrollToSection={scrollToSection} />
       <HeroSection scrollToForm={scrollToForm} scrollToSection={scrollToSection} />
       <ScheduleSection />
+      <SundayAISection />
       <AIToolsSection />
       <CTAButton onClick={scrollToForm} />
 
       <ProfessionsSection />
       <CTAButton onClick={scrollToForm} />
-      <SundayAISection />
       <VideoWorksSection />
       <CTAButton onClick={scrollToForm} />
       <PhotoWorksSection />
