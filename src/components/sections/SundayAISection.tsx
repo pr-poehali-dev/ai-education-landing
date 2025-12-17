@@ -26,22 +26,49 @@ export default function SundayAISection() {
             <div className="grid md:grid-cols-[200px_1fr] gap-8 items-center">
               {/* Logo section with animation */}
               <div className="flex justify-center">
-                <div className="relative">
-                  {/* Logo glow */}
-                  <div className="absolute inset-0 bg-gradient-to-r from-orange-500 to-yellow-400 rounded-full blur-2xl opacity-50 animate-pulse"></div>
+                <div className="relative group/logo">
+                  {/* Logo glow - becomes hotter on hover */}
+                  <div className="absolute inset-0 bg-gradient-to-r from-orange-500 to-yellow-400 rounded-full blur-2xl opacity-50 animate-pulse group-hover/logo:opacity-100 group-hover/logo:from-red-600 group-hover/logo:to-orange-500 transition-all duration-300"></div>
                   
-                  {/* Logo container */}
-                  <div className="relative bg-white rounded-full p-2 shadow-2xl transform group-hover:scale-110 group-hover:rotate-3 transition-all duration-500">
+                  {/* Oil sizzle particles - appear on hover */}
+                  <div className="absolute inset-0 opacity-0 group-hover/logo:opacity-100 transition-opacity duration-300 pointer-events-none">
+                    {/* Oil splash particles */}
+                    <div className="absolute top-[20%] left-[15%] w-2 h-2 bg-yellow-300 rounded-full animate-[ping_0.8s_ease-in-out_infinite] shadow-lg"></div>
+                    <div className="absolute top-[30%] right-[20%] w-1.5 h-1.5 bg-orange-400 rounded-full animate-[ping_1s_ease-in-out_infinite_0.2s] shadow-lg"></div>
+                    <div className="absolute bottom-[35%] left-[25%] w-1 h-1 bg-yellow-400 rounded-full animate-[ping_0.9s_ease-in-out_infinite_0.1s] shadow-lg"></div>
+                    <div className="absolute top-[45%] right-[15%] w-2 h-2 bg-orange-300 rounded-full animate-[ping_1.1s_ease-in-out_infinite_0.3s] shadow-lg"></div>
+                    <div className="absolute bottom-[25%] right-[30%] w-1.5 h-1.5 bg-yellow-300 rounded-full animate-[ping_0.85s_ease-in-out_infinite_0.15s] shadow-lg"></div>
+                    <div className="absolute top-[60%] left-[20%] w-1 h-1 bg-orange-400 rounded-full animate-[ping_1.05s_ease-in-out_infinite_0.25s] shadow-lg"></div>
+                    <div className="absolute top-[15%] right-[35%] w-1.5 h-1.5 bg-yellow-400 rounded-full animate-[ping_0.95s_ease-in-out_infinite_0.4s] shadow-lg"></div>
+                    <div className="absolute bottom-[50%] left-[40%] w-1 h-1 bg-orange-300 rounded-full animate-[ping_0.9s_ease-in-out_infinite_0.35s] shadow-lg"></div>
+                  </div>
+                  
+                  {/* Logo container with sizzle effect */}
+                  <div className="relative bg-white rounded-full p-2 shadow-2xl transform group-hover/logo:scale-110 group-hover/logo:rotate-2 transition-all duration-500 group-hover/logo:shadow-orange-500/50">
                     <img 
                       src="https://cdn.poehali.dev/files/start_frame.jpg" 
                       alt="Воскресная ИИшница"
-                      className="w-40 h-40 rounded-full object-cover"
+                      className="w-40 h-40 rounded-full object-cover group-hover/logo:brightness-110 transition-all duration-300"
                     />
+                    
+                    {/* Heat waves effect */}
+                    <div className="absolute inset-0 rounded-full opacity-0 group-hover/logo:opacity-100 transition-opacity duration-300 pointer-events-none">
+                      <div className="absolute inset-0 rounded-full bg-gradient-to-t from-orange-500/20 to-transparent animate-pulse"></div>
+                    </div>
                   </div>
                   
-                  {/* Animated rings */}
-                  <div className="absolute inset-0 border-4 border-orange-500/30 rounded-full animate-ping"></div>
-                  <div className="absolute inset-0 border-2 border-yellow-400/30 rounded-full animate-pulse"></div>
+                  {/* Animated rings - pulse faster on hover */}
+                  <div className="absolute inset-0 border-4 border-orange-500/30 rounded-full animate-ping group-hover/logo:border-red-500/50"></div>
+                  <div className="absolute inset-0 border-2 border-yellow-400/30 rounded-full animate-pulse group-hover/logo:border-orange-500/50 group-hover/logo:animate-ping"></div>
+                  
+                  {/* Steam effect on hover */}
+                  <div className="absolute -top-8 left-1/2 -translate-x-1/2 opacity-0 group-hover/logo:opacity-100 transition-opacity duration-500 pointer-events-none">
+                    <div className="flex gap-2">
+                      <div className="w-1 h-6 bg-gradient-to-t from-gray-400/60 to-transparent rounded-full animate-[pulse_1.5s_ease-in-out_infinite] blur-sm"></div>
+                      <div className="w-1 h-8 bg-gradient-to-t from-gray-400/60 to-transparent rounded-full animate-[pulse_1.5s_ease-in-out_infinite_0.3s] blur-sm"></div>
+                      <div className="w-1 h-7 bg-gradient-to-t from-gray-400/60 to-transparent rounded-full animate-[pulse_1.5s_ease-in-out_infinite_0.6s] blur-sm"></div>
+                    </div>
+                  </div>
                 </div>
               </div>
               
