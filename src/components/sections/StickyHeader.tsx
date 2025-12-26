@@ -59,6 +59,8 @@ export default function StickyHeader({ scrollToForm, scrollToSection }: StickyHe
           </button>
           <a 
             href="/calendar"
+            target="_blank"
+            rel="noopener noreferrer"
             className="text-white hover:text-cyan-400 transition-colors text-sm lg:text-base"
           >
             Календарь
@@ -138,6 +140,8 @@ export default function StickyHeader({ scrollToForm, scrollToSection }: StickyHe
           </button>
           <a 
             href="/calendar"
+            target="_blank"
+            rel="noopener noreferrer"
             className="text-white hover:text-cyan-400 transition-all duration-200 text-left hover:translate-x-2"
             onClick={() => setIsMobileMenuOpen(false)}
           >
