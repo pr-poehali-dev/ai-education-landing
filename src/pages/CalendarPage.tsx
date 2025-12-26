@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
 import Icon from '@/components/ui/icon';
 import { Badge } from '@/components/ui/badge';
 
@@ -22,7 +24,7 @@ const MONTHS = [
   'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'
 ];
 
-const EVENT_TYPES: Record<string, { label: string; icon: string }> = {
+const EVENT_TYPES_DISPLAY: Record<string, { label: string; icon: string }> = {
   lesson: { label: 'Занятие', icon: 'BookOpen' },
   consultation: { label: 'Консультация', icon: 'MessageCircle' },
   free_day: { label: 'Свободный день', icon: 'Calendar' },
@@ -30,13 +32,42 @@ const EVENT_TYPES: Record<string, { label: string; icon: string }> = {
   special: { label: 'Особое событие', icon: 'Star' }
 };
 
+const EVENT_TYPES = [
+  { value: 'lesson', label: 'Занятие', color: '#3b82f6' },
+  { value: 'consultation', label: 'Консультация', color: '#8b5cf6' },
+  { value: 'free_day', label: 'Свободный день', color: '#10b981' },
+  { value: 'holiday', label: 'Праздник', color: '#f59e0b' },
+  { value: 'special', label: 'Особое событие', color: '#ec4899' }
+];
+
 export default function CalendarPage() {
   const [events, setEvents] = useState<CalendarEvent[]>([]);
   const [loading, setLoading] = useState(true);
-  const [selectedMonth, setSelectedMonth] = useState(1); // Февраль (индекс 1)
+  const [selectedMonth, setSelectedMonth] = useState(1);
   const [selectedDate, setSelectedDate] = useState<string | null>(null);
+  const [isAdminMode, setIsAdminMode] = useState(false);
+  const [adminKey, setAdminKey] = useState('');
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const [showAdminLogin, setShowAdminLogin] = useState(false);
+  const [showForm, setShowForm] = useState(false);
+  const [editingEvent, setEditingEvent] = useState<CalendarEvent | null>(null);
+  const [formData, setFormData] = useState({
+    title: '',
+    description: '',
+    event_date: '',
+    start_time: '',
+    end_time: '',
+    event_type: 'lesson',
+    color: '#3b82f6',
+    is_available: true
+  });
 
   useEffect(() => {
+    const savedKey = localStorage.getItem('admin_key');
+    if (savedKey) {
+      setAdminKey(savedKey);
+      setIsAuthenticated(true);
+    }
     loadEvents();
   }, []);
 
@@ -50,6 +81,109 @@ export default function CalendarPage() {
     } finally {
       setLoading(false);
     }
+  };
+
+  const handleAdminLogin = () => {
+    if (adminKey.trim()) {
+      localStorage.setItem('admin_key', adminKey);
+      setIsAuthenticated(true);
+      setShowAdminLogin(false);
+      setIsAdminMode(true);
+    }
+  };
+
+  const handleLogout = () => {
+    localStorage.removeItem('admin_key');
+    setAdminKey('');
+    setIsAuthenticated(false);
+    setIsAdminMode(false);
+    setShowAdminLogin(false);
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    
+    try {
+      const url = editingEvent 
+        ? `${CALENDAR_API}?id=${editingEvent.id}`
+        : CALENDAR_API;
+      
+      const method = editingEvent ? 'PUT' : 'POST';
+      
+      const response = await fetch(url, {
+        method,
+        headers: {
+          'Content-Type': 'application/json',
+          'X-Admin-Key': adminKey
+        },
+        body: JSON.stringify(formData)
+      });
+
+      if (response.ok) {
+        await loadEvents();
+        resetForm();
+        alert(editingEvent ? 'Событие обновлено!' : 'Событие создано!');
+      } else {
+        const error = await response.json();
+        alert('Ошибка: ' + (error.error || 'Неизвестная ошибка'));
+      }
+    } catch (error) {
+      console.error('Error saving event:', error);
+      alert('Ошибка при сохранении события');
+    }
+  };
+
+  const handleDelete = async (id: number) => {
+    if (!confirm('Вы уверены, что хотите удалить это событие?')) return;
+
+    try {
+      const response = await fetch(`${CALENDAR_API}?id=${id}`, {
+        method: 'DELETE',
+        headers: {
+          'X-Admin-Key': adminKey
+        }
+      });
+
+      if (response.ok) {
+        await loadEvents();
+        alert('Событие удалено!');
+      } else {
+        alert('Ошибка при удалении события');
+      }
+    } catch (error) {
+      console.error('Error deleting event:', error);
+      alert('Ошибка при удалении события');
+    }
+  };
+
+  const handleEdit = (event: CalendarEvent) => {
+    setEditingEvent(event);
+    setFormData({
+      title: event.title,
+      description: event.description || '',
+      event_date: event.event_date,
+      start_time: event.start_time || '',
+      end_time: event.end_time || '',
+      event_type: event.event_type,
+      color: event.color,
+      is_available: event.is_available
+    });
+    setShowForm(true);
+  };
+
+  const resetForm = () => {
+    setFormData({
+      title: '',
+      description: '',
+      event_date: '',
+      start_time: '',
+      end_time: '',
+      event_type: 'lesson',
+      color: '#3b82f6',
+      is_available: true
+    });
+    setEditingEvent(null);
+    setShowForm(false);
   };
 
   const getDaysInMonth = (month: number, year: number = 2026) => {
@@ -77,7 +211,6 @@ export default function CalendarPage() {
     for (let day = 1; day <= daysInMonth; day++) {
       const date = `2026-${String(selectedMonth + 1).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
       const dayEvents = getEventsForDate(date);
-      const isToday = false;
 
       days.push(
         <div
@@ -85,9 +218,9 @@ export default function CalendarPage() {
           onClick={() => setSelectedDate(date)}
           className={`relative h-24 sm:h-28 border border-slate-700/50 p-2 cursor-pointer transition-all duration-200 hover:border-cyan-500/50 hover:bg-slate-800/50 ${
             selectedDate === date ? 'bg-slate-800 border-cyan-500' : 'bg-slate-900/30'
-          } ${isToday ? 'ring-2 ring-cyan-400' : ''}`}
+          }`}
         >
-          <div className={`text-sm font-semibold mb-1 ${isToday ? 'text-cyan-400' : 'text-white'}`}>
+          <div className="text-sm font-semibold mb-1 text-white">
             {day}
           </div>
           <div className="space-y-1 overflow-hidden">
@@ -128,12 +261,90 @@ export default function CalendarPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 py-8 sm:py-12">
-        <div className="text-center mb-8">
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4">
-            Календарь <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">2026</span>
-          </h1>
-          <p className="text-gray-300 text-lg">Расписание занятий и мероприятий</p>
+        <div className="flex justify-between items-start mb-8">
+          <div>
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4">
+              Календарь <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">2026</span>
+            </h1>
+            <p className="text-gray-300 text-lg">
+              {isAdminMode ? 'Режим редактирования' : 'Расписание занятий и мероприятий'}
+            </p>
+          </div>
+          
+          <div className="flex gap-2">
+            {!isAdminMode ? (
+              <Button
+                onClick={() => {
+                  if (isAuthenticated) {
+                    setIsAdminMode(true);
+                  } else {
+                    setShowAdminLogin(true);
+                  }
+                }}
+                className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-400 hover:to-pink-500"
+              >
+                <Icon name="Settings" className="mr-2" size={20} />
+                Управление
+              </Button>
+            ) : (
+              <>
+                <Button
+                  onClick={() => setIsAdminMode(false)}
+                  variant="outline"
+                  className="border-slate-700 text-gray-300 hover:bg-slate-800"
+                >
+                  <Icon name="Eye" className="mr-2" size={20} />
+                  Просмотр
+                </Button>
+                <Button
+                  onClick={handleLogout}
+                  variant="outline"
+                  className="border-red-500 text-red-500 hover:bg-red-500 hover:text-white"
+                >
+                  <Icon name="LogOut" className="mr-2" size={20} />
+                  Выйти
+                </Button>
+              </>
+            )}
+          </div>
         </div>
+
+        {showAdminLogin && (
+          <Card className="mb-6 bg-slate-900/80 border-slate-700 backdrop-blur-sm">
+            <CardHeader>
+              <CardTitle className="text-white flex items-center justify-between">
+                <span>Вход в режим редактирования</span>
+                <Button
+                  onClick={() => setShowAdminLogin(false)}
+                  variant="ghost"
+                  size="sm"
+                  className="text-gray-400 hover:text-white"
+                >
+                  <Icon name="X" size={20} />
+                </Button>
+              </CardTitle>
+            </CardHeader>
+            <CardContent>
+              <div className="flex gap-2">
+                <Input
+                  type="password"
+                  placeholder="Введите админ-ключ"
+                  value={adminKey}
+                  onChange={(e) => setAdminKey(e.target.value)}
+                  onKeyPress={(e) => e.key === 'Enter' && handleAdminLogin()}
+                  className="bg-slate-800 border-slate-700 text-white"
+                />
+                <Button
+                  onClick={handleAdminLogin}
+                  className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500"
+                >
+                  <Icon name="LogIn" className="mr-2" size={20} />
+                  Войти
+                </Button>
+              </div>
+            </CardContent>
+          </Card>
+        )}
 
         <div className="mb-6 flex flex-wrap justify-center gap-2">
           {MONTHS.map((month, index) => (
@@ -152,7 +363,7 @@ export default function CalendarPage() {
         </div>
 
         <div className="grid lg:grid-cols-3 gap-6">
-          <div className="lg:col-span-2">
+          <div className={isAdminMode ? 'lg:col-span-2' : 'lg:col-span-2'}>
             <Card className="bg-slate-900/80 border-slate-700 backdrop-blur-sm">
               <CardHeader>
                 <CardTitle className="text-white text-2xl">
@@ -174,8 +385,132 @@ export default function CalendarPage() {
             </Card>
           </div>
 
-          <div className="lg:col-span-1">
-            <Card className="bg-slate-900/80 border-slate-700 backdrop-blur-sm sticky top-6">
+          <div className="lg:col-span-1 space-y-6">
+            {isAdminMode && (
+              <Card className="bg-slate-900/80 border-slate-700 backdrop-blur-sm">
+                <CardHeader>
+                  <CardTitle className="text-white flex items-center justify-between">
+                    <span>{editingEvent ? 'Редактировать' : 'Новое событие'}</span>
+                    {showForm && (
+                      <Button
+                        onClick={resetForm}
+                        variant="ghost"
+                        size="sm"
+                        className="text-gray-400 hover:text-white"
+                      >
+                        <Icon name="X" size={20} />
+                      </Button>
+                    )}
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  {!showForm ? (
+                    <Button
+                      onClick={() => setShowForm(true)}
+                      className="w-full bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-400 hover:to-emerald-500"
+                    >
+                      <Icon name="Plus" className="mr-2" size={20} />
+                      Добавить
+                    </Button>
+                  ) : (
+                    <form onSubmit={handleSubmit} className="space-y-3">
+                      <div>
+                        <Input
+                          required
+                          placeholder="Название события"
+                          value={formData.title}
+                          onChange={(e) => setFormData({ ...formData, title: e.target.value })}
+                          className="bg-slate-800 border-slate-700 text-white"
+                        />
+                      </div>
+
+                      <div>
+                        <textarea
+                          placeholder="Описание"
+                          value={formData.description}
+                          onChange={(e) => setFormData({ ...formData, description: e.target.value })}
+                          className="w-full px-3 py-2 bg-slate-800 border border-slate-700 rounded-md text-white text-sm"
+                          rows={2}
+                        />
+                      </div>
+
+                      <div>
+                        <Input
+                          type="date"
+                          required
+                          value={formData.event_date}
+                          onChange={(e) => setFormData({ ...formData, event_date: e.target.value })}
+                          className="bg-slate-800 border-slate-700 text-white"
+                          min="2026-01-01"
+                          max="2026-12-31"
+                        />
+                      </div>
+
+                      <div className="grid grid-cols-2 gap-2">
+                        <Input
+                          type="time"
+                          placeholder="Начало"
+                          value={formData.start_time}
+                          onChange={(e) => setFormData({ ...formData, start_time: e.target.value })}
+                          className="bg-slate-800 border-slate-700 text-white text-sm"
+                        />
+                        <Input
+                          type="time"
+                          placeholder="Конец"
+                          value={formData.end_time}
+                          onChange={(e) => setFormData({ ...formData, end_time: e.target.value })}
+                          className="bg-slate-800 border-slate-700 text-white text-sm"
+                        />
+                      </div>
+
+                      <div>
+                        <select
+                          value={formData.event_type}
+                          onChange={(e) => {
+                            const type = EVENT_TYPES.find(t => t.value === e.target.value);
+                            setFormData({ 
+                              ...formData, 
+                              event_type: e.target.value,
+                              color: type?.color || formData.color
+                            });
+                          }}
+                          className="w-full px-3 py-2 bg-slate-800 border border-slate-700 rounded-md text-white text-sm"
+                        >
+                          {EVENT_TYPES.map(type => (
+                            <option key={type.value} value={type.value}>{type.label}</option>
+                          ))}
+                        </select>
+                      </div>
+
+                      <div className="flex items-center gap-2">
+                        <input
+                          type="checkbox"
+                          id="is_available"
+                          checked={formData.is_available}
+                          onChange={(e) => setFormData({ ...formData, is_available: e.target.checked })}
+                          className="w-4 h-4"
+                        />
+                        <label htmlFor="is_available" className="text-xs text-gray-300">
+                          Доступно для записи
+                        </label>
+                      </div>
+
+                      <div className="flex gap-2">
+                        <Button
+                          type="submit"
+                          className="flex-1 bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-400 hover:to-emerald-500 text-sm"
+                        >
+                          <Icon name="Save" className="mr-2" size={16} />
+                          {editingEvent ? 'Обновить' : 'Создать'}
+                        </Button>
+                      </div>
+                    </form>
+                  )}
+                </CardContent>
+              </Card>
+            )}
+
+            <Card className="bg-slate-900/80 border-slate-700 backdrop-blur-sm">
               <CardHeader>
                 <CardTitle className="text-white flex items-center gap-2">
                   <Icon name="Info" size={20} />
@@ -197,7 +532,7 @@ export default function CalendarPage() {
                     {selectedDateEvents.length === 0 ? (
                       <div className="text-center py-8">
                         <Icon name="CalendarOff" className="text-gray-500 mx-auto mb-2" size={48} />
-                        <p className="text-gray-400">Нет событий на этот день</p>
+                        <p className="text-gray-400">Нет событий</p>
                       </div>
                     ) : (
                       selectedDateEvents.map(evt => (
@@ -215,7 +550,7 @@ export default function CalendarPage() {
                               style={{ backgroundColor: evt.color + '40' }}
                             >
                               <Icon 
-                                name={EVENT_TYPES[evt.event_type]?.icon || 'Calendar'} 
+                                name={EVENT_TYPES_DISPLAY[evt.event_type]?.icon || 'Calendar'} 
                                 size={20} 
                                 style={{ color: evt.color }}
                               />
@@ -230,7 +565,7 @@ export default function CalendarPage() {
                                   borderColor: evt.color
                                 }}
                               >
-                                {EVENT_TYPES[evt.event_type]?.label || evt.event_type}
+                                {EVENT_TYPES_DISPLAY[evt.event_type]?.label || evt.event_type}
                               </Badge>
                             </div>
                           </div>
@@ -248,13 +583,25 @@ export default function CalendarPage() {
                           {evt.description && (
                             <p className="text-sm text-gray-300 mt-2">{evt.description}</p>
                           )}
-                          
-                          {evt.is_available && evt.event_type === 'lesson' && (
-                            <div className="mt-3 pt-3 border-t border-slate-700">
-                              <div className="flex items-center gap-2 text-sm text-green-400">
-                                <Icon name="CheckCircle" size={16} />
-                                <span>Есть свободные места</span>
-                              </div>
+
+                          {isAdminMode && (
+                            <div className="flex gap-2 mt-3 pt-3 border-t border-slate-700">
+                              <Button
+                                onClick={() => handleEdit(evt)}
+                                size="sm"
+                                className="flex-1 bg-blue-600 hover:bg-blue-700"
+                              >
+                                <Icon name="Edit" size={16} className="mr-1" />
+                                Изменить
+                              </Button>
+                              <Button
+                                onClick={() => handleDelete(evt.id)}
+                                size="sm"
+                                variant="outline"
+                                className="border-red-500 text-red-500 hover:bg-red-500 hover:text-white"
+                              >
+                                <Icon name="Trash2" size={16} />
+                              </Button>
                             </div>
                           )}
                         </div>
@@ -265,12 +612,12 @@ export default function CalendarPage() {
                   <div className="space-y-4">
                     <div className="text-center py-6">
                       <Icon name="Calendar" className="text-cyan-400 mx-auto mb-3" size={48} />
-                      <p className="text-gray-300">Выберите дату для просмотра событий</p>
+                      <p className="text-gray-300">Выберите дату</p>
                     </div>
                     
                     <div className="space-y-2">
-                      <h4 className="text-white font-semibold mb-3">Легенда:</h4>
-                      {Object.entries(EVENT_TYPES).map(([type, info]) => (
+                      <h4 className="text-white font-semibold mb-3">Типы событий:</h4>
+                      {Object.entries(EVENT_TYPES_DISPLAY).map(([type, info]) => (
                         <div key={type} className="flex items-center gap-2 text-sm text-gray-300">
                           <Icon name={info.icon} size={16} className="text-cyan-400" />
                           <span>{info.label}</span>
