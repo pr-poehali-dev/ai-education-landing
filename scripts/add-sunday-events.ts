@@ -35,7 +35,7 @@ async function createSundayEvent(date: string, eventNumber: number) {
     start_time: '10:00:00',
     end_time: '13:00:00',
     event_type: 'workshop',
-    color: '#10b981', // Зеленый цвет
+    color: '#eab308', // Желтый цвет
     is_available: true
   };
 
