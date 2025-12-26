@@ -3,7 +3,7 @@ import StickyHeader from '@/components/sections/StickyHeader';
 import HeroSection from '@/components/sections/HeroSection';
 
 import ScheduleSection from '@/components/sections/ScheduleSection';
-
+import CalendarSection from '@/components/sections/CalendarSection';
 import ProfessionsSection from '@/components/sections/ProfessionsSection';
 import SundayAISection from '@/components/sections/SundayAISection';
 import SundayAICompactSection from '@/components/sections/SundayAICompactSection';
@@ -35,6 +35,7 @@ export default function Index() {
       <StickyHeader scrollToForm={scrollToForm} scrollToSection={scrollToSection} />
       <HeroSection scrollToForm={scrollToForm} scrollToSection={scrollToSection} />
       <ScheduleSection />
+      <CalendarSection />
       <SundayAISection />
       <AIToolsSection />
       <CTAButton onClick={scrollToForm} />
