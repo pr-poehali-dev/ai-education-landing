@@ -58,6 +58,12 @@ export default function StickyHeader({ scrollToForm, scrollToSection }: StickyHe
             Тарифы
           </button>
           <a 
+            href="/calendar"
+            className="text-white hover:text-cyan-400 transition-colors text-sm lg:text-base"
+          >
+            Календарь
+          </a>
+          <a 
             href="https://t.me/chernikovgpt" 
             target="_blank" 
             rel="noopener noreferrer"
@@ -130,6 +136,13 @@ export default function StickyHeader({ scrollToForm, scrollToSection }: StickyHe
           >
             Тарифы
           </button>
+          <a 
+            href="/calendar"
+            className="text-white hover:text-cyan-400 transition-all duration-200 text-left hover:translate-x-2"
+            onClick={() => setIsMobileMenuOpen(false)}
+          >
+            Календарь
+          </a>
           <a 
             href="https://t.me/chernikovgpt" 
             target="_blank" 
