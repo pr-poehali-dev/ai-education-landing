@@ -34,7 +34,7 @@ const EVENT_TYPES_DISPLAY: Record<string, { label: string; icon: string }> = {
 export default function CalendarSection() {
   const [events, setEvents] = useState<CalendarEvent[]>([]);
   const [loading, setLoading] = useState(true);
-  const [selectedMonth, setSelectedMonth] = useState(new Date().getMonth());
+  const [selectedMonth, setSelectedMonth] = useState(0);
   const [selectedDate, setSelectedDate] = useState<string | null>(null);
 
   useEffect(() => {
