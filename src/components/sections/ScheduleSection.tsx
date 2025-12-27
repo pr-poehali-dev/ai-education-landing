@@ -114,7 +114,7 @@ export default function ScheduleSection() {
         <div className="inline-flex items-center bg-gradient-to-r from-orange-500/20 to-red-600/20 border-2 border-orange-400/50 rounded-full px-6 sm:px-10 py-4 sm:py-5 text-base sm:text-lg backdrop-blur-sm shadow-lg shadow-orange-500/20">
           <Icon name="Users" className="text-orange-400 mr-3" size={24} />
           <span className="text-white font-bold">
-            Всего мест: <span className="text-orange-400 text-xl sm:text-2xl">15</span>
+            Всего мест: <span className="text-orange-400 text-xl sm:text-2xl">18</span>
           </span>
         </div>
         
@@ -126,7 +126,7 @@ export default function ScheduleSection() {
                 <Icon name="Heart" className="text-white" size={32} />
               </div>
               <h4 className="text-2xl sm:text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500 mb-2">
-                Почему только 15 мест?
+                Почему только 18 мест?
               </h4>
               <div className="h-1 w-24 bg-gradient-to-r from-cyan-500 to-blue-500 mx-auto rounded-full"></div>
             </div>
