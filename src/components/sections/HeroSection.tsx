@@ -118,7 +118,7 @@ export default function HeroSection({ scrollToForm, scrollToSection }: HeroSecti
                   <div className="flex items-center justify-center gap-2">
                     <Icon name="AlertCircle" className="text-red-500 animate-pulse" size={20} />
                     <p className="text-white font-bold text-sm sm:text-base">
-                      Осталось всего <span className="text-red-400 text-lg sm:text-xl">1 место</span>
+                      <span className="text-red-400 text-lg sm:text-xl">SOLD OUT</span>
                     </p>
                   </div>
                 </div>
