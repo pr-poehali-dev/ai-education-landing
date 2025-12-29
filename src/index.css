@@ -244,6 +244,35 @@
   }
 }
 
+@keyframes sold-out-blink {
+  0%,
+  100% {
+    opacity: 1;
+    text-shadow:
+      0 0 10px rgba(248, 113, 113, 0.8),
+      0 0 20px rgba(248, 113, 113, 0.6),
+      0 0 30px rgba(248, 113, 113, 0.4);
+  }
+  50% {
+    opacity: 0.3;
+    text-shadow:
+      0 0 5px rgba(248, 113, 113, 0.4),
+      0 0 10px rgba(248, 113, 113, 0.3);
+  }
+}
+
+@keyframes sold-out-gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
 /* Calendar flip animation */
 @keyframes calendar-flip {
   0%,
@@ -342,4 +371,24 @@
 
 .group:hover .group-hover\:animate-book-flip {
   animation: book-flip 1.5s ease-in-out;
+}
+
+.animate-sold-out-blink {
+  animation: sold-out-blink 1.5s ease-in-out infinite;
+}
+
+.animate-sold-out-gradient {
+  background: linear-gradient(
+    90deg,
+    #ef4444,
+    #f87171,
+    #fca5a5,
+    #f87171,
+    #ef4444
+  );
+  background-size: 200% 200%;
+  animation: sold-out-gradient 3s ease infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
