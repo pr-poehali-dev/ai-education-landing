@@ -54,14 +54,19 @@ export default function PricingSection({ scrollToForm }: PricingSectionProps) {
                 Сертификат по итогу обучения
               </li>
             </ul>
-            <a 
-              href="https://torguykriptoy.getcourse.ru/NeuroVL" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="w-full inline-flex items-center justify-center px-6 py-3 sm:py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold text-base sm:text-lg rounded-lg transition-all duration-300 shadow-lg hover:shadow-cyan-500/25 hover:scale-105 border border-cyan-400/20"
-            >
-              🚀 ПРЕДЗАПИСЬ НА МАЙ
-            </a>
+            <div className="space-y-2">
+              <a 
+                href="https://t.me/DashaChernikova8" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="w-full inline-flex items-center justify-center px-6 py-3 sm:py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold text-base sm:text-lg rounded-lg transition-all duration-300 shadow-lg hover:shadow-cyan-500/25 hover:scale-105 border border-cyan-400/20"
+              >
+                🚀 ПРЕДЗАПИСЬ НА МАЙ
+              </a>
+              <p className="text-xs text-gray-400 text-center">
+                На февраль мест нет. Напишите менеджеру и запишитесь на май, чтобы попасть в список
+              </p>
+            </div>
           </CardContent>
         </Card>
 
@@ -112,14 +117,19 @@ export default function PricingSection({ scrollToForm }: PricingSectionProps) {
                 Расширенное изучение кейсов
               </li>
             </ul>
-            <a 
-              href="https://torguykriptoy.getcourse.ru/NeuroVL" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="w-full inline-flex items-center justify-center px-6 py-3 sm:py-4 bg-gradient-to-r from-orange-500 to-red-600 hover:from-orange-400 hover:to-red-500 text-white font-bold text-base sm:text-lg rounded-lg transition-all duration-300 shadow-xl hover:shadow-orange-500/50 hover:scale-105 border-2 border-orange-300/30 hover:border-orange-300/60 animate-pulse"
-            >
-              🔥 ПОЛУЧИТЬ МАКСИМУМ
-            </a>
+            <div className="space-y-2">
+              <a 
+                href="https://t.me/DashaChernikova8" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="w-full inline-flex items-center justify-center px-6 py-3 sm:py-4 bg-gradient-to-r from-orange-500 to-red-600 hover:from-orange-400 hover:to-red-500 text-white font-bold text-base sm:text-lg rounded-lg transition-all duration-300 shadow-xl hover:shadow-orange-500/50 hover:scale-105 border-2 border-orange-300/30 hover:border-orange-300/60 animate-pulse"
+              >
+                🔥 ПОЛУЧИТЬ МАКСИМУМ
+              </a>
+              <p className="text-xs text-gray-400 text-center">
+                На февраль мест нет. Напишите менеджеру и запишитесь на май, чтобы попасть в список
+              </p>
+            </div>
           </CardContent>
         </Card>
       </div>

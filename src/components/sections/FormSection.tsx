@@ -64,9 +64,9 @@ export default function FormSection() {
 
         <Card className="bg-slate-800/50 border-slate-700 backdrop-blur-sm">
           <CardContent className="p-8">
-            <div className="text-center">
+            <div className="text-center space-y-3">
               <a 
-                href="https://torguykriptoy.getcourse.ru/NeuroVL" 
+                href="https://t.me/DashaChernikova8" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="inline-flex items-center bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-base sm:text-lg py-5 sm:py-6 px-8 sm:px-12 text-white font-medium rounded-md transition-colors w-full sm:w-auto justify-center"
@@ -74,6 +74,9 @@ export default function FormSection() {
                 <Icon name="Send" className="mr-2" />
                 Отправить заявку
               </a>
+              <p className="text-xs text-gray-400">
+                На февраль мест нет. Напишите менеджеру и запишитесь на май, чтобы попасть в список
+              </p>
             </div>
           </CardContent>
         </Card>
