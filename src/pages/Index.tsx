@@ -3,6 +3,7 @@ import StickyHeader from '@/components/sections/StickyHeader';
 import HeroSection from '@/components/sections/HeroSection';
 
 import ScheduleSection from '@/components/sections/ScheduleSection';
+import TrustSection from '@/components/sections/TrustSection';
 import CalendarSection from '@/components/sections/CalendarSection';
 import ProfessionsSection from '@/components/sections/ProfessionsSection';
 import SundayAISection from '@/components/sections/SundayAISection';
@@ -35,6 +36,7 @@ export default function Index() {
       <StickyHeader scrollToForm={scrollToForm} scrollToSection={scrollToSection} />
       <HeroSection scrollToForm={scrollToForm} scrollToSection={scrollToSection} />
       <ScheduleSection />
+      <TrustSection />
       <CalendarSection />
       <SundayAISection />
       <AIToolsSection />
