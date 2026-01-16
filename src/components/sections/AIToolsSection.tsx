@@ -17,7 +17,7 @@ const aiTools = {
     color: "from-green-500 to-teal-600",
     bgColor: "bg-green-500/10",
     borderColor: "border-green-500/20",
-    items: ["Flux", "Midjourney", "Stable Diffusion", "Nvidia", "Re-craft v3"]
+    items: ["Nano Banana Pro", "Seedream", "Midjourney", "Stable Diffusion", "Flux 2 Pro"]
   },
   video: {
     title: "Видео нейросети",
@@ -137,7 +137,7 @@ export default function AIToolsSection() {
                         {item}
                       </span>
                       {/* Популярные инструменты с бейджиками */}
-                      {(item === "GPT" || item === "Midjourney" || item === "Поехали") && (
+                      {(item === "GPT" || item === "Nano Banana Pro" || item === "Поехали") && (
                         <span className="ml-auto text-xs px-2 py-1 bg-cyan-500/20 text-cyan-400 rounded-full">
                           ТОП
                         </span>
