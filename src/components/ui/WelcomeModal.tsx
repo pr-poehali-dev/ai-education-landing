@@ -117,7 +117,7 @@ export default function WelcomeModal() {
                 К сожалению на февральский поток мест нет.
               </p>
               <p className="text-gray-300 text-center leading-relaxed">
-                Но вы можете оставить заявку на <span className="text-orange-400 font-semibold">май</span> и забронировать место, чтоб точно попасть в школу.
+                Но вы можете оставить заявку на <span className="text-orange-400 font-semibold">май</span> и забронировать место, чтобы точно попасть в школу.
               </p>
               <p className="text-gray-300 text-center leading-relaxed">
                 Для этого напишите менеджеру школы - <span className="text-white font-semibold">"Хочу попасть в школу ИИ"</span> по кнопке ниже
