@@ -1,16 +1,33 @@
+# Robots.txt for Школа Хакни Нейросети
+User-agent: *
+Allow: /
+Disallow: /admin/
+
+# Sitemap
+Sitemap: https://ai-education-landing.poehali.dev/sitemap.xml
+
+# Yandex specific
+User-agent: Yandex
+Allow: /
+Disallow: /admin/
+Clean-param: utm_source&utm_medium&utm_campaign&utm_content&utm_term
+
+# Google specific
 User-agent: Googlebot
 Allow: /
+Disallow: /admin/
 
+# Bing
 User-agent: Bingbot
 Allow: /
+Disallow: /admin/
 
+# Social media bots
 User-agent: Twitterbot
 Allow: /
 
 User-agent: facebookexternalhit
 Allow: /
 
-User-agent: *
-Allow: /
-
-Sitemap: https://ai-education-landing.poehali.dev/sitemap.xml
+# Crawl-delay
+Crawl-delay: 5
