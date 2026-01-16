@@ -19,7 +19,7 @@ export default function HeroSection({ scrollToForm, scrollToSection }: HeroSecti
   const [timeLeft, setTimeLeft] = useState<TimeLeft>({ days: 0, hours: 0, minutes: 0, seconds: 0 });
 
   useEffect(() => {
-    const targetDate = new Date('2026-02-16T00:00:00').getTime();
+    const targetDate = new Date('2026-05-11T00:00:00').getTime();
 
     const updateCountdown = () => {
       const now = new Date().getTime();
@@ -114,14 +114,7 @@ export default function HeroSection({ scrollToForm, scrollToSection }: HeroSecti
                   </div>
                 </div>
                 
-                <div className="mt-4 pt-4 border-t border-orange-500/30">
-                  <div className="flex items-center justify-center gap-2">
-                    <Icon name="AlertCircle" className="text-red-500 animate-pulse" size={20} />
-                    <p className="text-white font-bold text-sm sm:text-base">
-                      <span className="animate-sold-out-gradient animate-sold-out-blink font-extrabold text-2xl sm:text-3xl tracking-wider">SOLD OUT</span>
-                    </p>
-                  </div>
-                </div>
+
               </div>
             </div>
 
