@@ -8,6 +8,7 @@ import Index from "./pages/Index";
 import CalendarPage from "./pages/CalendarPage";
 import AdminCalendarPage from "./pages/AdminCalendarPage";
 import NotFound from "./pages/NotFound";
+import WelcomeModal from "@/components/ui/WelcomeModal";
 
 const queryClient = new QueryClient();
 
@@ -16,6 +17,7 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
+      <WelcomeModal />
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
