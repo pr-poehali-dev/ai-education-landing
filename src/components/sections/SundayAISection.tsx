@@ -23,9 +23,9 @@ export default function SundayAISection() {
           
           {/* Main card */}
           <div className="relative bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 rounded-2xl sm:rounded-3xl p-5 sm:p-8 md:p-12 border-2 border-orange-500/50 group-hover:border-orange-400 transition-all duration-300 shadow-2xl">
-            <div className="grid md:grid-cols-[200px_1fr] gap-6 sm:gap-8 items-center">
+            <div className="grid md:grid-cols-[200px_1fr] gap-6 sm:gap-8 items-start md:items-center">
               {/* Logo section with animation */}
-              <div className="flex justify-center">
+              <div className="flex justify-center md:justify-start">
                 <div className="relative group/logo">
                   {/* Logo glow - becomes hotter on hover */}
                   <div className="absolute inset-0 bg-gradient-to-r from-orange-500 to-yellow-400 rounded-full blur-2xl opacity-50 animate-pulse group-hover/logo:opacity-100 group-hover/logo:from-red-600 group-hover/logo:to-orange-500 transition-all duration-300"></div>
@@ -73,9 +73,9 @@ export default function SundayAISection() {
               </div>
               
               {/* Content section */}
-              <div className="space-y-6">
+              <div className="space-y-4 sm:space-y-6 w-full">
                 {/* Header with badge */}
-                <div className="space-y-3">
+                <div className="space-y-2 sm:space-y-3">
                   <div className="flex items-center gap-2 sm:gap-3 flex-wrap">
                     <div className="bg-gradient-to-r from-orange-500 to-yellow-400 text-white px-3 sm:px-4 py-1.5 rounded-full text-xs sm:text-sm font-bold uppercase tracking-wide shadow-lg animate-pulse">
                       Каждое воскресенье
@@ -98,7 +98,7 @@ export default function SundayAISection() {
                 </div>
                 
                 {/* Description */}
-                <div className="bg-slate-800/50 rounded-xl sm:rounded-2xl p-4 sm:p-6 border border-orange-500/30 backdrop-blur-sm">
+                <div className="bg-slate-800/50 rounded-xl sm:rounded-2xl p-4 sm:p-6 border border-orange-500/30 backdrop-blur-sm max-w-full">
                   <p className="text-sm sm:text-base text-gray-200 leading-relaxed">
                     Еженедельная встреча выпускников и новичков, где мы завтракаем, общаемся на тему ИИ 
                     и учимся практическим навыкам работы с нейросетями. Спикер — <span className="text-orange-400 font-semibold">Сергей Черников</span>, 
@@ -107,7 +107,7 @@ export default function SundayAISection() {
                 </div>
                 
                 {/* Features grid */}
-                <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4">
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4 w-full">
                   <div className="bg-gradient-to-br from-orange-500/10 to-yellow-500/10 rounded-lg sm:rounded-xl p-3 sm:p-4 border border-orange-500/30 hover:border-orange-400 transition-all duration-300 hover:scale-105 group/item">
                     <div className="flex items-center gap-2 sm:gap-3">
                       <div className="bg-gradient-to-r from-orange-500 to-yellow-500 p-2 rounded-lg group-hover/item:animate-bounce">
@@ -137,19 +137,19 @@ export default function SundayAISection() {
                 </div>
                 
                 {/* CTA Button */}
-                <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4 pt-2">
+                <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 pt-2 w-full">
                   <a
                     href="https://t.me/+-4ypMIvSdh1mNDg6"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="group/btn relative"
+                    className="group/btn relative w-full sm:w-auto sm:flex-1"
                   >
                     {/* Button glow */}
                     <div className="absolute -inset-1 bg-gradient-to-r from-orange-500 via-yellow-400 to-orange-500 rounded-xl blur-lg opacity-70 group-hover/btn:opacity-100 transition-all duration-300 animate-pulse"></div>
                     
                     {/* Button */}
                     <Button 
-                      className="relative bg-gradient-to-r from-orange-500 via-yellow-400 to-orange-500 hover:from-orange-400 hover:via-yellow-300 hover:to-orange-400 text-white font-bold px-5 sm:px-8 py-4 sm:py-6 text-base sm:text-lg rounded-xl shadow-2xl border-2 border-orange-300/50 hover:border-orange-200 transition-all duration-300 group-hover/btn:scale-105 w-full sm:w-auto"
+                      className="relative bg-gradient-to-r from-orange-500 via-yellow-400 to-orange-500 hover:from-orange-400 hover:via-yellow-300 hover:to-orange-400 text-white font-bold px-5 sm:px-8 py-4 sm:py-6 text-base sm:text-lg rounded-xl shadow-2xl border-2 border-orange-300/50 hover:border-orange-200 transition-all duration-300 group-hover/btn:scale-105 w-full"
                     >
                       <Icon name="Send" className="mr-2 group-hover/btn:translate-x-1 transition-transform" size={20} />
                       <span className="whitespace-nowrap">Присоединиться к встрече</span>
@@ -157,7 +157,7 @@ export default function SundayAISection() {
                   </a>
                   
                   {/* Price badge */}
-                  <div className="flex flex-col items-start gap-1 bg-orange-500/20 border-2 border-orange-500/50 rounded-xl px-3 sm:px-4 py-2 w-full sm:w-auto">
+                  <div className="flex flex-col items-start gap-1 bg-orange-500/20 border-2 border-orange-500/50 rounded-xl px-3 sm:px-4 py-2 w-full sm:w-auto sm:flex-shrink-0">
                     <span className="text-orange-400 font-bold text-lg sm:text-xl">1000₽</span>
                     <span className="text-orange-300 text-xs">Завтрак включен</span>
                   </div>
