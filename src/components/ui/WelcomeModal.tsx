@@ -90,9 +90,13 @@ export default function WelcomeModal() {
 
           {/* Close button */}
           <button
-            onClick={() => setIsOpen(false)}
-            className="absolute top-4 right-4 w-10 h-10 rounded-full bg-slate-700/50 hover:bg-slate-600/50 flex items-center justify-center transition-all duration-300 hover:scale-110 z-10"
+            onClick={(e) => {
+              e.stopPropagation();
+              setIsOpen(false);
+            }}
+            className="absolute top-4 right-4 w-10 h-10 rounded-full bg-slate-700/50 hover:bg-slate-600/50 flex items-center justify-center transition-all duration-300 hover:scale-110 z-20"
             aria-label="Закрыть"
+            type="button"
           >
             <Icon name="X" size={20} className="text-gray-300" />
           </button>
