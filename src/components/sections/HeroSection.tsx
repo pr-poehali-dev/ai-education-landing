@@ -53,8 +53,12 @@ export default function HeroSection({ scrollToForm, scrollToSection }: HeroSecti
                 Практический курс по нейросетям
               </Badge>
               <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight">
-                Школа <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">"Хакни Нейросети"</span> <span className="inline-block px-3 py-1.5 sm:px-4 sm:py-2 bg-gradient-to-r from-orange-500 to-red-600 text-white text-base sm:text-lg rounded-lg shadow-lg animate-pulse mt-2 sm:mt-0">OFFLINE</span>
+                Школа <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">"Хакни Нейросети"</span>
               </h1>
+              <div className="inline-flex items-center gap-2 px-4 py-2.5 sm:px-5 sm:py-3 bg-gradient-to-r from-orange-500 via-red-600 to-pink-600 text-white text-sm sm:text-base font-bold rounded-xl shadow-2xl animate-pulse border-2 border-orange-300/50">
+                <Icon name="Users" size={20} className="animate-bounce" />
+                ЖИВОЕ ОБУЧЕНИЕ В КЛАССЕ
+              </div>
               <div className="space-y-4 text-base sm:text-lg text-gray-300 leading-relaxed">
                 <p>
                   — это место, где <span className="text-white font-semibold">без "воды" и сложных терминов</span> на простом русском языке можно 
