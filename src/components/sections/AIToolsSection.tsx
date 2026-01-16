@@ -67,17 +67,17 @@ export default function AIToolsSection() {
   };
 
   return (
-    <section id="ai-tools" className="py-20 px-6 max-w-7xl mx-auto">
-      <div className="text-center mb-16">
-        <h2 className="text-5xl lg:text-6xl font-bold text-white mb-6">
+    <section id="ai-tools" className="py-12 sm:py-20 px-4 sm:px-6 max-w-7xl mx-auto">
+      <div className="text-center mb-10 sm:mb-16">
+        <h2 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-4 sm:mb-6 leading-tight">
           Какие <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">нейронки и сервисы</span> вы изучите
         </h2>
-        <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+        <p className="text-base sm:text-lg lg:text-xl text-gray-300 max-w-3xl mx-auto px-2">
           Полный арсенал современных ИИ-инструментов для работы с текстом, изображениями и видео
         </p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 mb-12">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4 sm:gap-6 lg:gap-8 mb-8 sm:mb-12">
         {Object.entries(aiTools).map(([key, category]) => {
           const stats = getStats(key);
           const isHovered = hoveredCard === key;
@@ -95,37 +95,37 @@ export default function AIToolsSection() {
               {/* Анимированный фон */}
               <div className={`absolute inset-0 bg-gradient-to-r ${category.color} opacity-0 group-hover:opacity-10 transition-opacity duration-500`} />
               
-              <CardContent className="p-8">
-                <div className="flex items-center justify-between mb-6">
-                  <div className="flex items-center gap-4">
-                    <div className={`w-16 h-16 rounded-2xl bg-gradient-to-r ${category.color} p-4 flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
-                      <Icon name={category.icon as any} size={32} className="text-white" />
+              <CardContent className="p-4 sm:p-6 lg:p-8">
+                <div className="flex items-start sm:items-center justify-between mb-4 sm:mb-6 gap-3">
+                  <div className="flex items-center gap-2 sm:gap-3 lg:gap-4 flex-1 min-w-0">
+                    <div className={`w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 rounded-xl sm:rounded-2xl bg-gradient-to-r ${category.color} p-2 sm:p-3 lg:p-4 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300`}>
+                      <Icon name={category.icon as any} size={24} className="sm:w-7 sm:h-7 lg:w-8 lg:h-8 text-white" />
                     </div>
-                    <div>
-                      <h3 className="text-2xl font-bold text-white mb-1">
+                    <div className="min-w-0">
+                      <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-white mb-0.5 sm:mb-1 truncate">
                         {category.title}
                       </h3>
-                      <div className="text-sm text-gray-400">
+                      <div className="text-xs sm:text-sm text-gray-400">
                         {stats.count} инструментов
                       </div>
                     </div>
                   </div>
                   
                   {/* Анимированный счетчик */}
-                  <div className="text-right">
-                    <div className={`text-3xl font-bold bg-gradient-to-r ${category.color} bg-clip-text text-transparent`}>
+                  <div className="text-right flex-shrink-0">
+                    <div className={`text-xl sm:text-2xl lg:text-3xl font-bold bg-gradient-to-r ${category.color} bg-clip-text text-transparent whitespace-nowrap`}>
                       {animatedItems[key] || 0}+
                     </div>
-                    <div className="text-xs text-gray-500">обновлений</div>
+                    <div className="text-[10px] sm:text-xs text-gray-500">обновлений</div>
                   </div>
                 </div>
 
                 {/* Список инструментов */}
-                <div className="space-y-3">
+                <div className="space-y-2 sm:space-y-3">
                   {category.items.map((item, index) => (
                     <div
                       key={item}
-                      className={`flex items-center gap-3 p-3 rounded-lg transition-all duration-300 group/item
+                      className={`flex items-center gap-2 sm:gap-3 p-2 sm:p-3 rounded-lg transition-all duration-300 group/item
                         ${isHovered ? 'bg-slate-700/30' : 'bg-slate-800/30'}
                         hover:bg-slate-600/40 hover:translate-x-1`}
                       style={{
@@ -133,12 +133,12 @@ export default function AIToolsSection() {
                       }}
                     >
                       <div className={`w-2 h-2 rounded-full bg-gradient-to-r ${category.color} opacity-60 group-hover/item:opacity-100 group-hover/item:scale-150 transition-all duration-300`} />
-                      <span className="text-gray-300 group-hover/item:text-white transition-colors duration-200 font-medium">
+                      <span className="text-sm sm:text-base text-gray-300 group-hover/item:text-white transition-colors duration-200 font-medium">
                         {item}
                       </span>
                       {/* Популярные инструменты с бейджиками */}
                       {(item === "GPT" || item === "Nano Banana Pro" || item === "Поехали") && (
-                        <span className="ml-auto text-xs px-2 py-1 bg-cyan-500/20 text-cyan-400 rounded-full">
+                        <span className="ml-auto text-[10px] sm:text-xs px-1.5 sm:px-2 py-0.5 sm:py-1 bg-cyan-500/20 text-cyan-400 rounded-full whitespace-nowrap">
                           ТОП
                         </span>
                       )}
@@ -147,7 +147,7 @@ export default function AIToolsSection() {
                 </div>
 
                 {/* Прогресс-бар */}
-                <div className="mt-6">
+                <div className="mt-4 sm:mt-6">
                   <div className="flex justify-between items-center mb-2">
                     <span className="text-sm text-gray-400">Изучено инструментов</span>
                     <span className="text-sm text-gray-400">
@@ -176,32 +176,32 @@ export default function AIToolsSection() {
 
       {/* Нижний блок с обновлениями */}
       <Card className="bg-gradient-to-r from-slate-800/50 to-slate-900/80 border-slate-700 backdrop-blur-sm">
-        <CardContent className="p-8 text-center">
-          <div className="flex items-center justify-center gap-3 mb-4">
-            <Icon name="RefreshCw" size={24} className="text-cyan-400 animate-spin" />
-            <h3 className="text-2xl font-bold text-white">Постоянные обновления</h3>
+        <CardContent className="p-5 sm:p-6 lg:p-8 text-center">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-3 mb-3 sm:mb-4">
+            <Icon name="RefreshCw" size={20} className="sm:w-6 sm:h-6 text-cyan-400 animate-spin" />
+            <h3 className="text-xl sm:text-2xl font-bold text-white">Постоянные обновления</h3>
           </div>
-          <p className="text-gray-300 text-lg max-w-2xl mx-auto">
+          <p className="text-sm sm:text-base lg:text-lg text-gray-300 max-w-2xl mx-auto px-2">
             База постоянно обновляется и вы получите самые актуальные инструменты на момент обучения.
           </p>
           
           {/* Статистика */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 mt-6 sm:mt-8">
             <div className="text-center">
-              <div className="text-3xl font-bold text-cyan-400 mb-1">25+</div>
-              <div className="text-sm text-gray-400">Инструментов</div>
+              <div className="text-2xl sm:text-3xl font-bold text-cyan-400 mb-1">25+</div>
+              <div className="text-xs sm:text-sm text-gray-400">Инструментов</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-green-400 mb-1">4</div>
-              <div className="text-sm text-gray-400">Категории</div>
+              <div className="text-2xl sm:text-3xl font-bold text-green-400 mb-1">4</div>
+              <div className="text-xs sm:text-sm text-gray-400">Категории</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-yellow-400 mb-1">∞</div>
-              <div className="text-sm text-gray-400">Обновления</div>
+              <div className="text-2xl sm:text-3xl font-bold text-yellow-400 mb-1">∞</div>
+              <div className="text-xs sm:text-sm text-gray-400">Обновления</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-purple-400 mb-1">24/7</div>
-              <div className="text-sm text-gray-400">Доступ</div>
+              <div className="text-2xl sm:text-3xl font-bold text-purple-400 mb-1">24/7</div>
+              <div className="text-xs sm:text-sm text-gray-400">Доступ</div>
             </div>
           </div>
         </CardContent>
