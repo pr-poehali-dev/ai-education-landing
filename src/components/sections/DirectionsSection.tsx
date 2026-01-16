@@ -84,7 +84,7 @@ export default function DirectionsSection({ scrollToForm }: DirectionsSectionPro
                   rel="noopener noreferrer"
                   className="w-full inline-flex items-center justify-center px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 mt-4 text-white font-medium rounded-md transition-colors"
                 >
-                  Оставить заявку
+                  ПРЕДЗАПИСЬ НА МАЙ
                 </a>
               </AccordionContent>
             </AccordionItem>

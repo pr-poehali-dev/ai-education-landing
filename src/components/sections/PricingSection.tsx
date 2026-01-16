@@ -60,7 +60,7 @@ export default function PricingSection({ scrollToForm }: PricingSectionProps) {
               rel="noopener noreferrer"
               className="w-full inline-flex items-center justify-center px-6 py-3 sm:py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold text-base sm:text-lg rounded-lg transition-all duration-300 shadow-lg hover:shadow-cyan-500/25 hover:scale-105 border border-cyan-400/20"
             >
-              🚀 Оставить заявку
+              🚀 ПРЕДЗАПИСЬ НА МАЙ
             </a>
           </CardContent>
         </Card>

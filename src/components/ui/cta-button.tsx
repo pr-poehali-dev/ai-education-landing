@@ -19,7 +19,7 @@ const CTAButton: React.FC<CTAButtonProps> = ({ onClick, className = '' }) => {
         {/* Button content */}
         <div className="relative flex items-center gap-3">
           <span className="text-white group-hover:text-blue-100 transition-colors duration-200">
-            Оставить заявку
+            ПРЕДЗАПИСЬ НА МАЙ
           </span>
           <div className="transform group-hover:translate-x-1 transition-transform duration-200">
             <Icon name="ArrowRight" size={20} className="text-white group-hover:text-blue-100" />
