@@ -33,7 +33,7 @@ const aiTools = {
     color: "from-yellow-500 to-orange-600",
     bgColor: "bg-yellow-500/10",
     borderColor: "border-yellow-500/20",
-    items: ["multi-chat", "GPT-BOSS", "freepik", "perplexity", "Gamma", "Suno", "notebooklm", "HeyGen", "Manus", "Поехали"]
+    items: ["multi-chat", "freepik", "perplexity", "Gamma", "Suno", "notebooklm", "HeyGen", "Manus", "Поехали"]
   }
 };
 
