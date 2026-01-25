@@ -65,6 +65,12 @@ export default function StickyHeader({ scrollToForm, scrollToSection }: StickyHe
           >
             Календарь
           </a>
+          <button 
+            onClick={() => scrollToSection('contacts')} 
+            className="text-white hover:text-cyan-400 transition-colors text-sm lg:text-base"
+          >
+            Контакты
+          </button>
           <a 
             href="https://t.me/chernikovgpt" 
             target="_blank" 
@@ -147,6 +153,15 @@ export default function StickyHeader({ scrollToForm, scrollToSection }: StickyHe
           >
             Календарь
           </a>
+          <button 
+            onClick={() => {
+              scrollToSection('contacts');
+              setIsMobileMenuOpen(false);
+            }} 
+            className="text-white hover:text-cyan-400 transition-all duration-200 text-left hover:translate-x-2"
+          >
+            Контакты
+          </button>
           <a 
             href="https://t.me/chernikovgpt" 
             target="_blank" 
