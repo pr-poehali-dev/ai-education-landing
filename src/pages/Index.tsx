@@ -17,6 +17,7 @@ import PricingSection from '@/components/sections/PricingSection';
 import CorporatePaymentSection from '@/components/sections/CorporatePaymentSection';
 import AdvantagesSection from '@/components/sections/AdvantagesSection';
 import FormSection from '@/components/sections/FormSection';
+import Footer from '@/components/sections/Footer';
 import CTAButton from '@/components/ui/cta-button';
 import AnimatedBackground from '@/components/ui/animated-background';
 import ChatWidget from '@/components/ChatWidget';
@@ -58,6 +59,7 @@ export default function Index() {
       <AdvantagesSection />
       <CTAButton onClick={scrollToForm} />
       <FormSection />
+      <Footer />
       <ChatWidget />
     </div>
   );
