@@ -124,17 +124,14 @@ export default function HeroSection({ scrollToForm, scrollToSection }: HeroSecti
 
             <div className="space-y-3">
               <a 
-                href="https://t.me/DashaChernikova8" 
+                href="https://torguykriptoy.getcourse.ru/chernikovgpt" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="inline-flex items-center bg-gradient-to-r from-cyan-500 via-blue-600 to-purple-600 hover:from-cyan-400 hover:via-blue-500 hover:to-purple-500 text-lg sm:text-xl px-8 sm:px-10 py-5 sm:py-6 text-white font-bold rounded-xl transition-all duration-300 shadow-2xl hover:shadow-cyan-500/30 hover:scale-105 animate-pulse border-2 border-cyan-300/30 hover:border-cyan-300/60 w-full sm:w-auto justify-center"
               >
                 <Icon name="Rocket" className="mr-3" size={24} />
-                ПРЕДЗАПИСЬ НА МАЙ
+                ЗАПИСЬ НА МАЙ
               </a>
-              <p className="text-xs sm:text-sm text-gray-400 text-center max-w-md">
-                На февраль мест нет. Напишите менеджеру и запишитесь на май, чтобы попасть в список
-              </p>
             </div>
 
             <div className="space-y-6">

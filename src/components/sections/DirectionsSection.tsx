@@ -80,16 +80,13 @@ export default function DirectionsSection({ scrollToForm }: DirectionsSectionPro
                 </ul>
                 <div className="space-y-2 mt-4">
                   <a 
-                    href="https://t.me/DashaChernikova8" 
+                    href="https://torguykriptoy.getcourse.ru/chernikovgpt" 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="w-full inline-flex items-center justify-center px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-medium rounded-md transition-colors"
                   >
-                    ПРЕДЗАПИСЬ НА МАЙ
+                    ЗАПИСЬ НА МАЙ
                   </a>
-                  <p className="text-xs text-gray-400 text-center">
-                    На февраль мест нет. Напишите менеджеру и запишитесь на май, чтобы попасть в список
-                  </p>
                 </div>
               </AccordionContent>
             </AccordionItem>

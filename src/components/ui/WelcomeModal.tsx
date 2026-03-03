@@ -135,7 +135,7 @@ export default function WelcomeModal() {
 
             {/* CTA Button */}
             <a
-              href="https://t.me/DashaChernikova8"
+              href="https://torguykriptoy.getcourse.ru/chernikovgpt"
               target="_blank"
               rel="noopener noreferrer"
               className="block w-full"

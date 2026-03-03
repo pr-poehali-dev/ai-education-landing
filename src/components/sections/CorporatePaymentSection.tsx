@@ -155,7 +155,7 @@ export default function CorporatePaymentSection() {
 
                   <div className="space-y-2">
                     <a
-                      href="https://t.me/DashaChernikova8"
+                      href="https://torguykriptoy.getcourse.ru/chernikovgpt"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="inline-flex items-center gap-3 px-6 py-4 bg-gradient-to-r from-orange-500 to-red-600 hover:from-orange-400 hover:to-red-500 text-white font-bold text-lg rounded-lg transition-all duration-300 shadow-lg hover:shadow-orange-500/25 hover:scale-105 border border-orange-400/20 group"
@@ -164,9 +164,6 @@ export default function CorporatePaymentSection() {
                       Узнать условия рассрочки
                       <Icon name="ExternalLink" size={18} className="opacity-70" />
                     </a>
-                    <p className="text-xs text-gray-400 text-center">
-                      На февраль мест нет. Напишите менеджеру и запишитесь на май, чтобы попасть в список
-                    </p>
                   </div>
                 </div>
               </div>
