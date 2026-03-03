@@ -3,21 +3,14 @@ import Icon from '@/components/ui/icon';
 
 export default function WelcomeModal() {
   const [isOpen, setIsOpen] = useState(false);
-  const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsOpen(true);
-      setTimeout(() => setIsVisible(true), 50);
     }, 3000);
 
     return () => clearTimeout(timer);
   }, []);
-
-  const handleClose = () => {
-    setIsVisible(false);
-    setTimeout(() => setIsOpen(false), 300);
-  };
 
   if (!isOpen) return null;
 
@@ -25,6 +18,34 @@ export default function WelcomeModal() {
     <>
       <style>
         {`
+          @keyframes modalFadeIn {
+            from {
+              opacity: 0;
+              transform: scale(0.95);
+            }
+            to {
+              opacity: 1;
+              transform: scale(1);
+            }
+          }
+
+          @keyframes overlayFadeIn {
+            from {
+              opacity: 0;
+            }
+            to {
+              opacity: 1;
+            }
+          }
+
+          .modal-overlay {
+            animation: overlayFadeIn 0.3s ease-out;
+          }
+
+          .modal-content {
+            animation: modalFadeIn 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+          }
+
           .pulse-glow {
             animation: pulseGlow 2s ease-in-out infinite;
           }
@@ -55,12 +76,12 @@ export default function WelcomeModal() {
 
       {/* Overlay */}
       <div
-        className={`fixed inset-0 bg-black/70 backdrop-blur-sm z-[9999] flex items-center justify-center p-4 transition-opacity duration-300 ${isVisible ? 'opacity-100' : 'opacity-0'}`}
-        onClick={handleClose}
+        className="modal-overlay fixed inset-0 bg-black/70 backdrop-blur-sm z-[9999] flex items-center justify-center p-4"
+        onClick={() => setIsOpen(false)}
       >
         {/* Modal */}
         <div
-          className={`relative max-w-lg w-full bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl shadow-2xl border border-slate-700/50 overflow-hidden max-h-[90vh] overflow-y-auto transition-all duration-300 ${isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-95'}`}
+          className="modal-content relative max-w-lg w-full bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl shadow-2xl border border-slate-700/50 overflow-hidden max-h-[90vh] overflow-y-auto"
           onClick={(e) => e.stopPropagation()}
         >
           {/* Decorative elements */}
@@ -69,7 +90,7 @@ export default function WelcomeModal() {
 
           {/* Close button */}
           <button
-            onClick={handleClose}
+            onClick={() => setIsOpen(false)}
             className="absolute top-3 right-3 sm:top-4 sm:right-4 w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-slate-700/50 hover:bg-slate-600/50 active:bg-slate-600 flex items-center justify-center transition-all duration-300 hover:scale-110 active:scale-95 z-20 touch-manipulation"
             aria-label="Закрыть"
             type="button"
@@ -115,7 +136,7 @@ export default function WelcomeModal() {
               target="_blank"
               rel="noopener noreferrer"
               className="block w-full"
-              onClick={handleClose}
+              onClick={() => setIsOpen(false)}
             >
               <button className="w-full px-6 sm:px-8 py-4 sm:py-5 bg-gradient-to-r from-orange-500 to-red-600 hover:from-orange-400 hover:to-red-500 active:scale-95 text-white font-bold text-lg sm:text-xl rounded-xl transition-all duration-300 shadow-lg hover:shadow-orange-500/50 hover:scale-105 border border-orange-400/20 flex items-center justify-center gap-2 sm:gap-3 group touch-manipulation">
                 <Icon name="Send" size={22} className="sm:w-6 sm:h-6 group-hover:scale-110 transition-transform" />
