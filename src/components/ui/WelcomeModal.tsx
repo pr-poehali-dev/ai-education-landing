@@ -118,13 +118,7 @@ export default function WelcomeModal() {
             {/* Message */}
             <div className="space-y-3 sm:space-y-4 mb-5 sm:mb-6">
               <p className="text-sm sm:text-base text-gray-300 text-center leading-relaxed">
-                К сожалению на февральский поток мест нет.
-              </p>
-              <p className="text-sm sm:text-base text-gray-300 text-center leading-relaxed">
-                Но вы можете оставить заявку на <span className="text-orange-400 font-semibold">май</span> и забронировать место, чтобы точно попасть в школу.
-              </p>
-              <p className="text-sm sm:text-base text-gray-300 text-center leading-relaxed">
-                Для этого напишите менеджеру школы - <span className="text-white font-semibold">"Хочу попасть в школу ИИ"</span> по кнопке ниже
+                Если у вас остались вопросы по обучению в нашей школе, вопрос можете задать нашему менеджеру
               </p>
             </div>
 
