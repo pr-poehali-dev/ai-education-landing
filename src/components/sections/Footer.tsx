@@ -2,7 +2,7 @@ import Icon from '@/components/ui/icon';
 
 export default function Footer() {
   return (
-    <footer id="contacts" className="bg-slate-900/50 border-t border-slate-800">
+    <footer className="bg-slate-900/50 border-t border-slate-800">
       <div className="container mx-auto px-4 py-12">
         <div className="grid md:grid-cols-2 gap-8 items-center">
           <div>
