@@ -93,7 +93,7 @@ export default function CorporatePaymentSection() {
                       <Icon name="User" size={24} className="text-white" />
                     </div>
                     <span className="text-xl sm:text-2xl font-bold text-white">
-                      Как оплатить физическому лицу? Есть ли рассрочка?
+                      Как оплатить физическому лицу? Есть ли кредит?
                     </span>
                   </div>
                   <Icon name="ChevronDown" size={28} className="text-cyan-400 faq-icon flex-shrink-0" />
@@ -103,7 +103,7 @@ export default function CorporatePaymentSection() {
               <div className="faq-answer">
                 <div className="pt-6 px-6 pb-4">
                   <p className="text-gray-300 text-lg mb-6 leading-relaxed">
-                    Да, у нас доступна беспроцентная рассрочка! Вы можете оплатить обучение частями.
+                    Да, у нас доступен кредит! Вы можете оплатить обучение частями.
                   </p>
                   
                   <div className="space-y-6 mb-8">
@@ -113,7 +113,7 @@ export default function CorporatePaymentSection() {
                       </div>
                       <div>
                         <h4 className="text-white font-semibold mb-2">Выберите тариф:</h4>
-                        <p className="text-gray-300">БАЗА или Индивидуальный — любой тариф доступен в рассрочку</p>
+                        <p className="text-gray-300">БАЗА или Индивидуальный — любой тариф доступен в кредит</p>
                       </div>
                     </div>
 
@@ -148,7 +148,7 @@ export default function CorporatePaymentSection() {
                         <span className="text-orange-400 font-bold">4</span>
                       </div>
                       <div className="text-gray-300">
-                        Выбираете подходящие условия рассрочки. Всё!
+                        Выбираете подходящие условия кредита. Всё!
                       </div>
                     </div>
                   </div>
@@ -161,7 +161,7 @@ export default function CorporatePaymentSection() {
                       className="inline-flex items-center gap-3 px-6 py-4 bg-gradient-to-r from-orange-500 to-red-600 hover:from-orange-400 hover:to-red-500 text-white font-bold text-lg rounded-lg transition-all duration-300 shadow-lg hover:shadow-orange-500/25 hover:scale-105 border border-orange-400/20 group"
                     >
                       <Icon name="CreditCard" size={24} className="group-hover:scale-110 transition-transform" />
-                      Узнать условия рассрочки
+                      Узнать условия кредита
                       <Icon name="ExternalLink" size={18} className="opacity-70" />
                     </a>
                   </div>
