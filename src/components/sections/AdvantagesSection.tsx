@@ -48,7 +48,7 @@ export default function AdvantagesSection() {
               <AccordionTrigger className="text-white hover:text-cyan-400 group">
                 <div className="flex items-center">
                   <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-lg bg-gradient-to-r from-cyan-500 to-blue-600 group-hover:from-green-500 group-hover:to-emerald-600 flex items-center justify-center mr-3 sm:mr-4 transition-all duration-300 group-hover:scale-110 group-hover:rotate-12 group-hover:shadow-lg group-hover:shadow-green-500/30 flex-shrink-0">
-                    <Icon name={advantage.icon as any} className="text-white group-hover:animate-spin" size={20} />
+                    <Icon name={advantage.icon} className="text-white group-hover:animate-spin" size={20} />
                   </div>
                   <div className="text-left">
                     <h3 className="text-base sm:text-xl font-bold">{advantage.title}</h3>
@@ -76,6 +76,25 @@ export default function AdvantagesSection() {
               За время работы помог более чем 500 предпринимателям и специалистам из Владивостока освоить 
               искусственный интеллект для увеличения прибыли и автоматизации процессов.
             </p>
+            <ul className="text-base sm:text-lg text-gray-300 mb-6 space-y-2">
+              <li className="flex items-start gap-2">
+                <span className="text-cyan-400 mt-1">▸</span>
+                <span>Член <span className="text-white font-semibold">Опоры России</span></span>
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="text-cyan-400 mt-1">▸</span>
+                <span>Организатор масштабной{' '}
+                  <a
+                    href="https://chernikovneuro.online"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-cyan-400 hover:text-cyan-300 underline underline-offset-2 transition-colors"
+                  >
+                    конференции по ИИ
+                  </a>
+                </span>
+              </li>
+            </ul>
             <p className="text-base sm:text-lg text-gray-300 mb-8 leading-relaxed">
               Автор уникальных методик работы с нейросетями, которые позволяют получать результат 
               без использования VPN и зарубежных карт. Мой подход основан на практическом применении ИИ в реальных бизнес-задачах.

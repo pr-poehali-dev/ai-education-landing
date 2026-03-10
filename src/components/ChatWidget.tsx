@@ -4,7 +4,7 @@ import Icon from '@/components/ui/icon';
 
 const ChatWidget = () => {
   const openWhatsApp = () => {
-    window.open('https://wa.me/message/YRBE2VIUHPMYN1', '_blank');
+    window.open('https://t.me/DashaChernikova8', '_blank');
   };
 
   return (
