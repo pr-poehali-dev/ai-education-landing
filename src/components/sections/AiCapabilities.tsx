@@ -111,8 +111,8 @@ export default function AiCapabilities() {
                 className="flex-shrink-0 px-3"
                 style={{ width: `${100 / cardsPerView}%` }}
               >
-                <Card className="h-full bg-slate-800/30 border-slate-700 hover:border-cyan-500/30 transition-all duration-300 group hover:shadow-lg hover:shadow-cyan-500/10">
-                  <CardContent className="p-6">
+                <Card className="h-full min-h-[220px] bg-slate-800/30 border-slate-700 hover:border-cyan-500/30 transition-all duration-300 group hover:shadow-lg hover:shadow-cyan-500/10">
+                  <CardContent className="p-6 flex flex-col justify-center h-full">
                     <div className="flex items-start space-x-4">
                       <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-cyan-500/20 to-blue-600/20 flex items-center justify-center flex-shrink-0 group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 group-hover:shadow-lg group-hover:shadow-cyan-500/30">
                         <Icon name={capability.icon} className="text-cyan-400 group-hover:scale-125 group-hover:rotate-12 transition-all duration-500" size={24} />

@@ -196,7 +196,7 @@ export default function StudentCasesCarousel() {
                 >
                   <div className="relative group h-full">
                     <div className={`absolute inset-0 bg-gradient-to-r ${colors.card} rounded-2xl blur-xl opacity-50 group-hover:opacity-100 transition-opacity duration-300`}></div>
-                    <Card className={`relative h-full bg-gradient-to-br from-slate-800/95 to-slate-900/95 border-2 ${colors.border} backdrop-blur-sm hover:scale-[1.02] transition-all duration-300`}>
+                    <Card className={`relative h-full min-h-[220px] bg-gradient-to-br from-slate-800/95 to-slate-900/95 border-2 ${colors.border} backdrop-blur-sm hover:scale-[1.02] transition-all duration-300`}>
                       <CardContent className="p-6 flex flex-col h-full">
                         <div className="text-center mb-6">
                           <div className={`w-16 h-16 mx-auto mb-4 bg-gradient-to-r ${colors.icon} rounded-2xl flex items-center justify-center shadow-lg ${colors.glow} group-hover:scale-110 group-hover:rotate-6 transition-all duration-500`}>

@@ -124,8 +124,8 @@ export default function ProfessionsCarousel() {
                 className="flex-shrink-0 px-3"
                 style={{ width: `${100 / cardsPerView}%` }}
               >
-                <Card className="h-full bg-slate-800/50 border-slate-700 hover:border-cyan-500/50 transition-all duration-300 backdrop-blur-sm group hover:shadow-lg hover:shadow-cyan-500/20">
-                  <CardContent className="p-6">
+                <Card className="h-full min-h-[220px] bg-slate-800/50 border-slate-700 hover:border-cyan-500/50 transition-all duration-300 backdrop-blur-sm group hover:shadow-lg hover:shadow-cyan-500/20">
+                  <CardContent className="p-6 flex flex-col h-full">
                     <div className={`w-16 h-16 rounded-xl bg-gradient-to-r ${profession.gradient} flex items-center justify-center mb-4 group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 shadow-lg`}>
                       <Icon name={profession.icon} className="text-white group-hover:scale-125 group-hover:rotate-12 transition-all duration-500" size={32} />
                     </div>
