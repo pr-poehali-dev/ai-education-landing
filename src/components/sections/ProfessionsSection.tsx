@@ -351,14 +351,28 @@ function StudentCasesCarousel() {
           <button
             key={index}
             onClick={() => goTo(index)}
-            className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ${
-              index >= currentIndex && index < currentIndex + cardsPerView
-                ? 'bg-cyan-400 scale-125'
-                : 'bg-slate-600 hover:bg-slate-500'
+            className={`relative h-1.5 rounded-full transition-all duration-300 overflow-hidden ${
+              index === currentIndex ? 'w-10 bg-slate-700' : index < currentIndex ? 'w-2.5 bg-cyan-400' : 'w-2.5 bg-slate-600 hover:bg-slate-500'
             }`}
-          />
+          >
+            {index === currentIndex && (
+              <span
+                key={`progress-${currentIndex}`}
+                className="absolute inset-0 bg-cyan-400 rounded-full"
+                style={{
+                  animation: isPaused ? 'none' : 'progressFill 4s linear forwards',
+                }}
+              />
+            )}
+          </button>
         ))}
       </div>
+      <style>{`
+        @keyframes progressFill {
+          from { width: 0; }
+          to { width: 100%; }
+        }
+      `}</style>
     </div>
   );
 }
