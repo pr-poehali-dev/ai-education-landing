@@ -186,6 +186,7 @@ function StudentCasesCarousel() {
   const [touchStart, setTouchStart] = useState(0);
   const [touchEnd, setTouchEnd] = useState(0);
   const [isMobile, setIsMobile] = useState(false);
+  const [isPaused, setIsPaused] = useState(false);
 
   useEffect(() => {
     const check = () => setIsMobile(window.innerWidth < 768);
@@ -201,6 +202,14 @@ function StudentCasesCarousel() {
     const next = Math.max(0, Math.min(idx, maxIndex));
     setCurrentIndex(next);
   };
+
+  useEffect(() => {
+    if (isPaused) return;
+    const timer = setInterval(() => {
+      setCurrentIndex(prev => (prev >= maxIndex ? 0 : prev + 1));
+    }, 4000);
+    return () => clearInterval(timer);
+  }, [isPaused, maxIndex]);
 
   const handleTouchStart = (e: React.TouchEvent) => {
     setTouchStart(e.targetTouches[0].clientX);
@@ -234,7 +243,7 @@ function StudentCasesCarousel() {
         </p>
       </div>
 
-      <div className="relative">
+      <div className="relative" onMouseEnter={() => setIsPaused(true)} onMouseLeave={() => setIsPaused(false)}>
         <button
           onClick={() => goTo(currentIndex - 1)}
           disabled={currentIndex === 0}
