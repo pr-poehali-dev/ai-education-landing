@@ -180,6 +180,150 @@ const studentCases = [
   }
 ];
 
+function ProfessionsCarousel() {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [isPaused, setIsPaused] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const check = () => setIsMobile(window.innerWidth < 768);
+    check();
+    window.addEventListener('resize', check);
+    return () => window.removeEventListener('resize', check);
+  }, []);
+
+  const cardsPerView = isMobile ? 1 : 3;
+  const maxIndex = professions.length - cardsPerView;
+
+  const goTo = (idx: number) => {
+    setCurrentIndex(Math.max(0, Math.min(idx, maxIndex)));
+  };
+
+  useEffect(() => {
+    if (isPaused) return;
+    const timer = setInterval(() => {
+      setCurrentIndex(prev => (prev >= maxIndex ? 0 : prev + 1));
+    }, 5000);
+    return () => clearInterval(timer);
+  }, [isPaused, maxIndex]);
+
+  const [touchStart, setTouchStart] = useState(0);
+  const [touchEnd, setTouchEnd] = useState(0);
+
+  const handleTouchEnd = () => {
+    if (touchStart - touchEnd > 60) goTo(currentIndex + 1);
+    if (touchEnd - touchStart > 60) goTo(currentIndex - 1);
+  };
+
+  return (
+    <div className="mb-20">
+      <div className="relative" onMouseEnter={() => setIsPaused(true)} onMouseLeave={() => setIsPaused(false)}>
+        <button
+          onClick={() => goTo(currentIndex - 1)}
+          disabled={currentIndex === 0}
+          className="absolute -left-4 sm:-left-6 top-1/2 -translate-y-1/2 z-10 w-12 h-12 bg-slate-800/90 border border-slate-600 rounded-full flex items-center justify-center text-white hover:bg-cyan-600 hover:border-cyan-400 transition-all duration-300 disabled:opacity-30 disabled:cursor-not-allowed disabled:hover:bg-slate-800/90 shadow-lg"
+        >
+          <Icon name="ChevronLeft" size={24} />
+        </button>
+
+        <button
+          onClick={() => goTo(currentIndex + 1)}
+          disabled={currentIndex >= maxIndex}
+          className="absolute -right-4 sm:-right-6 top-1/2 -translate-y-1/2 z-10 w-12 h-12 bg-slate-800/90 border border-slate-600 rounded-full flex items-center justify-center text-white hover:bg-cyan-600 hover:border-cyan-400 transition-all duration-300 disabled:opacity-30 disabled:cursor-not-allowed disabled:hover:bg-slate-800/90 shadow-lg"
+        >
+          <Icon name="ChevronRight" size={24} />
+        </button>
+
+        <div
+          className="overflow-hidden"
+          onTouchStart={(e) => setTouchStart(e.targetTouches[0].clientX)}
+          onTouchMove={(e) => setTouchEnd(e.targetTouches[0].clientX)}
+          onTouchEnd={handleTouchEnd}
+        >
+          <div
+            className="flex transition-transform duration-500 ease-in-out"
+            style={{ transform: `translateX(-${currentIndex * (100 / cardsPerView)}%)` }}
+          >
+            {professions.map((profession, index) => (
+              <div
+                key={index}
+                className="flex-shrink-0 px-3"
+                style={{ width: `${100 / cardsPerView}%` }}
+              >
+                <Card className="h-full bg-slate-800/50 border-slate-700 hover:border-cyan-500/50 transition-all duration-300 backdrop-blur-sm group hover:shadow-lg hover:shadow-cyan-500/20">
+                  <CardContent className="p-6">
+                    <div className={`w-16 h-16 rounded-xl bg-gradient-to-r ${profession.gradient} flex items-center justify-center mb-4 group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 shadow-lg`}>
+                      <Icon name={profession.icon} className="text-white group-hover:scale-125 group-hover:rotate-12 transition-all duration-500" size={32} />
+                    </div>
+                    <h3 className="text-xl font-bold text-white mb-2">{profession.title}</h3>
+                    <p className="text-gray-400 text-sm mb-4">{profession.description}</p>
+                    
+                    <Accordion type="single" collapsible>
+                      <AccordionItem value="skills" className="border-none">
+                        <AccordionTrigger className="text-cyan-400 hover:text-cyan-300 text-sm py-2">
+                          Что освоишь
+                        </AccordionTrigger>
+                        <AccordionContent>
+                          <ul className="space-y-2 mt-2">
+                            {profession.skills.map((skill, i) => (
+                              <li key={i} className="flex items-start text-xs text-gray-300">
+                                <Icon name="Check" className="text-cyan-400 mr-2 mt-0.5 flex-shrink-0" size={14} />
+                                {skill}
+                              </li>
+                            ))}
+                          </ul>
+                        </AccordionContent>
+                      </AccordionItem>
+                      
+                      <AccordionItem value="details" className="border-none">
+                        <AccordionTrigger className="text-purple-400 hover:text-purple-300 text-sm py-2">
+                          Программа обучения
+                        </AccordionTrigger>
+                        <AccordionContent>
+                          <ul className="space-y-2 mt-2">
+                            {profession.details.map((detail, i) => (
+                              <li key={i} className="flex items-start text-xs text-gray-300">
+                                <Icon name="ArrowRight" className="text-purple-400 mr-2 mt-0.5 flex-shrink-0" size={14} />
+                                {detail}
+                              </li>
+                            ))}
+                          </ul>
+                        </AccordionContent>
+                      </AccordionItem>
+                    </Accordion>
+                  </CardContent>
+                </Card>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      <div className="flex justify-center mt-6 gap-2">
+        {professions.map((_, index) => (
+          <button
+            key={index}
+            onClick={() => goTo(index)}
+            className={`relative h-1.5 rounded-full transition-all duration-300 overflow-hidden ${
+              index === currentIndex ? 'w-10 bg-slate-700' : index < currentIndex ? 'w-2.5 bg-cyan-400' : 'w-2.5 bg-slate-600 hover:bg-slate-500'
+            }`}
+          >
+            {index === currentIndex && (
+              <span
+                key={`prof-progress-${currentIndex}`}
+                className="absolute inset-0 bg-cyan-400 rounded-full"
+                style={{
+                  animation: isPaused ? 'none' : 'progressFill 5s linear forwards',
+                }}
+              />
+            )}
+          </button>
+        ))}
+      </div>
+    </div>
+  );
+}
+
 function StudentCasesCarousel() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const scrollRef = useRef<HTMLDivElement>(null);
@@ -389,53 +533,7 @@ export default function ProfessionsSection() {
         </p>
       </div>
 
-      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-20">
-        {professions.map((profession, index) => (
-          <Card key={index} className="bg-slate-800/50 border-slate-700 hover:border-cyan-500/50 transition-all duration-300 backdrop-blur-sm group hover:shadow-lg hover:shadow-cyan-500/20">
-            <CardContent className="p-6">
-              <div className={`w-16 h-16 rounded-xl bg-gradient-to-r ${profession.gradient} flex items-center justify-center mb-4 group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 shadow-lg`}>
-                <Icon name={profession.icon} className="text-white group-hover:scale-125 group-hover:rotate-12 transition-all duration-500" size={32} />
-              </div>
-              <h3 className="text-xl font-bold text-white mb-2">{profession.title}</h3>
-              <p className="text-gray-400 text-sm mb-4">{profession.description}</p>
-              
-              <Accordion type="single" collapsible>
-                <AccordionItem value="skills" className="border-none">
-                  <AccordionTrigger className="text-cyan-400 hover:text-cyan-300 text-sm py-2">
-                    Что освоишь
-                  </AccordionTrigger>
-                  <AccordionContent>
-                    <ul className="space-y-2 mt-2">
-                      {profession.skills.map((skill, i) => (
-                        <li key={i} className="flex items-start text-xs text-gray-300">
-                          <Icon name="Check" className="text-cyan-400 mr-2 mt-0.5 flex-shrink-0" size={14} />
-                          {skill}
-                        </li>
-                      ))}
-                    </ul>
-                  </AccordionContent>
-                </AccordionItem>
-                
-                <AccordionItem value="details" className="border-none">
-                  <AccordionTrigger className="text-purple-400 hover:text-purple-300 text-sm py-2">
-                    Программа обучения
-                  </AccordionTrigger>
-                  <AccordionContent>
-                    <ul className="space-y-2 mt-2">
-                      {profession.details.map((detail, i) => (
-                        <li key={i} className="flex items-start text-xs text-gray-300">
-                          <Icon name="ArrowRight" className="text-purple-400 mr-2 mt-0.5 flex-shrink-0" size={14} />
-                          {detail}
-                        </li>
-                      ))}
-                    </ul>
-                  </AccordionContent>
-                </AccordionItem>
-              </Accordion>
-            </CardContent>
-          </Card>
-        ))}
-      </div>
+      <ProfessionsCarousel />
 
       <div className="mb-20">
         <div className="text-center mb-12">
