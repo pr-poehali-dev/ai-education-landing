@@ -7,7 +7,7 @@ export default function WelcomeModal() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsOpen(true);
-    }, 3000);
+    }, 15000);
 
     return () => clearTimeout(timer);
   }, []);
@@ -129,7 +129,7 @@ export default function WelcomeModal() {
 
             {/* CTA Button */}
             <a
-              href="https://torguykriptoy.getcourse.ru/chernikovgpt"
+              href="https://t.me/DashaChernikova8"
               target="_blank"
               rel="noopener noreferrer"
               className="block w-full"
