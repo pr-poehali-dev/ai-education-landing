@@ -36,8 +36,8 @@ export default function Index() {
       <AnimatedBackground />
       <StickyHeader scrollToForm={scrollToForm} scrollToSection={scrollToSection} />
       <HeroSection scrollToForm={scrollToForm} scrollToSection={scrollToSection} />
-      <ScheduleSection />
       <TrustSection />
+      <ScheduleSection />
       <CalendarSection />
       <SundayAISection />
       <AIToolsSection />

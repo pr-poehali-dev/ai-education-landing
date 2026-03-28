@@ -6,7 +6,7 @@ export default function TrustSection() {
       <div className="text-center">
         <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-6">Мне доверяют!</h3>
         <p className="text-lg sm:text-xl text-gray-300 mb-10">
-          Более 10,000 специалистов уже прошли обучение в наших программах при поддержке ведущих организаций
+          Нас выбирают государственные структуры и ведущий бизнес Приморья
         </p>
         <div className="relative overflow-hidden">
           <style>{`
