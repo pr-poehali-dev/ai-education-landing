@@ -45,8 +45,8 @@ const professions = [
     gradient: "from-orange-500 to-red-600"
   },
   {
-    title: "Фрилансер / Предприниматель",
-    description: "Автоматизация бизнеса и масштабирование с ИИ",
+    title: "Предприниматель с ИИ",
+    description: "Автоматизируй бизнес и масштабируй без найма",
     skills: ["Разработка эффективных запросов", "Оптимизация промтов", "База данных промтов", "Обучение сотрудников", "Анализ результатов ИИ", "Интеграция ИИ-инструментов"],
     details: ["Создание нейросотрудника-консультанта", "Построение воронок с ИИ", "Автоворонки", "Персонализация предложений", "Анализ поведения клиентов", "Анализ звонков и общения"],
     icon: "Briefcase",
@@ -122,10 +122,10 @@ export default function ProfessionsSection() {
     <section id="skills" className="py-20 px-6 max-w-7xl mx-auto">
       <div className="text-center mb-12 sm:mb-16">
         <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6">
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">6 профессий</span> с ИИ
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">6 профессий</span>, за которые платят в 2026 году
         </h2>
         <p className="text-base sm:text-lg lg:text-xl text-gray-300 max-w-3xl mx-auto">
-          Освой востребованные направления и начни зарабатывать с нейросетями уже через 3 месяца
+          Рынок ИИ-специалистов растёт на 40% в год. Войди в него сейчас — пока конкуренция ещё низкая
         </p>
       </div>
 
