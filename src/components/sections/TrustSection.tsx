@@ -93,6 +93,41 @@ export default function TrustSection() {
                   className="h-16 w-auto object-contain"
                 />
               </div>
+              <div className="p-6 bg-slate-800/30 rounded-lg border border-slate-700 flex items-center justify-center min-w-[200px] hover:scale-105 transition-transform duration-300">
+                <img 
+                  src="https://cdn.poehali.dev/projects/e8628072-d7db-463c-b1d5-7cbdef013225/bucket/33d86649-c3b6-436d-a7f7-51a1badf5c86.png" 
+                  alt="Logistic Force" 
+                  className="h-16 w-auto object-contain"
+                />
+              </div>
+              <div className="p-6 bg-slate-800/30 rounded-lg border border-slate-700 flex items-center justify-center min-w-[200px] hover:scale-105 transition-transform duration-300">
+                <img 
+                  src="https://cdn.poehali.dev/projects/e8628072-d7db-463c-b1d5-7cbdef013225/bucket/7be0699e-2594-4797-b3eb-5c0effc8e02e.png" 
+                  alt="Кинотеатр Шахтер" 
+                  className="h-16 w-auto object-contain"
+                />
+              </div>
+              <div className="p-6 bg-slate-800/30 rounded-lg border border-slate-700 flex items-center justify-center min-w-[200px] hover:scale-105 transition-transform duration-300">
+                <img 
+                  src="https://cdn.poehali.dev/projects/e8628072-d7db-463c-b1d5-7cbdef013225/bucket/768fc7ab-c48e-4f51-865e-f6c96d83a2c7.jpg" 
+                  alt="Рейд Паллада" 
+                  className="h-16 w-auto object-contain"
+                />
+              </div>
+              <div className="p-6 bg-slate-800/30 rounded-lg border border-slate-700 flex items-center justify-center min-w-[200px] hover:scale-105 transition-transform duration-300">
+                <img 
+                  src="https://cdn.poehali.dev/projects/e8628072-d7db-463c-b1d5-7cbdef013225/bucket/3974b165-cb96-47ec-8490-e201644b3c89.jpg" 
+                  alt="Пасифик Медиа" 
+                  className="h-16 w-auto object-contain"
+                />
+              </div>
+              <div className="p-6 bg-slate-800/30 rounded-lg border border-slate-700 flex items-center justify-center min-w-[200px] hover:scale-105 transition-transform duration-300">
+                <img 
+                  src="https://cdn.poehali.dev/projects/e8628072-d7db-463c-b1d5-7cbdef013225/bucket/9ae22994-0c9c-4ee0-8797-bc2d147790b8.png" 
+                  alt="Плёсы Песчаного" 
+                  className="h-16 w-auto object-contain"
+                />
+              </div>
             </div>
             {/* Duplicate set for infinite scroll */}
             <div className="flex gap-6">
@@ -156,6 +191,41 @@ export default function TrustSection() {
                 <img 
                   src="https://cdn.poehali.dev/files/freepik__-__46148.png" 
                   alt="Перспектива" 
+                  className="h-16 w-auto object-contain"
+                />
+              </div>
+              <div className="p-6 bg-slate-800/30 rounded-lg border border-slate-700 flex items-center justify-center min-w-[200px] hover:scale-105 transition-transform duration-300">
+                <img 
+                  src="https://cdn.poehali.dev/projects/e8628072-d7db-463c-b1d5-7cbdef013225/bucket/33d86649-c3b6-436d-a7f7-51a1badf5c86.png" 
+                  alt="Logistic Force" 
+                  className="h-16 w-auto object-contain"
+                />
+              </div>
+              <div className="p-6 bg-slate-800/30 rounded-lg border border-slate-700 flex items-center justify-center min-w-[200px] hover:scale-105 transition-transform duration-300">
+                <img 
+                  src="https://cdn.poehali.dev/projects/e8628072-d7db-463c-b1d5-7cbdef013225/bucket/7be0699e-2594-4797-b3eb-5c0effc8e02e.png" 
+                  alt="Кинотеатр Шахтер" 
+                  className="h-16 w-auto object-contain"
+                />
+              </div>
+              <div className="p-6 bg-slate-800/30 rounded-lg border border-slate-700 flex items-center justify-center min-w-[200px] hover:scale-105 transition-transform duration-300">
+                <img 
+                  src="https://cdn.poehali.dev/projects/e8628072-d7db-463c-b1d5-7cbdef013225/bucket/768fc7ab-c48e-4f51-865e-f6c96d83a2c7.jpg" 
+                  alt="Рейд Паллада" 
+                  className="h-16 w-auto object-contain"
+                />
+              </div>
+              <div className="p-6 bg-slate-800/30 rounded-lg border border-slate-700 flex items-center justify-center min-w-[200px] hover:scale-105 transition-transform duration-300">
+                <img 
+                  src="https://cdn.poehali.dev/projects/e8628072-d7db-463c-b1d5-7cbdef013225/bucket/3974b165-cb96-47ec-8490-e201644b3c89.jpg" 
+                  alt="Пасифик Медиа" 
+                  className="h-16 w-auto object-contain"
+                />
+              </div>
+              <div className="p-6 bg-slate-800/30 rounded-lg border border-slate-700 flex items-center justify-center min-w-[200px] hover:scale-105 transition-transform duration-300">
+                <img 
+                  src="https://cdn.poehali.dev/projects/e8628072-d7db-463c-b1d5-7cbdef013225/bucket/9ae22994-0c9c-4ee0-8797-bc2d147790b8.png" 
+                  alt="Плёсы Песчаного" 
                   className="h-16 w-auto object-contain"
                 />
               </div>
