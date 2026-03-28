@@ -20,8 +20,13 @@ export default function PricingSection({ scrollToForm }: PricingSectionProps) {
       <div className="grid md:grid-cols-2 gap-6 sm:gap-8 max-w-4xl mx-auto">
         <Card className="bg-slate-800/50 border-slate-700 hover:border-cyan-500/50 transition-all duration-300">
           <CardContent className="p-6 sm:p-8">
-            <h3 className="text-xl sm:text-2xl font-bold text-white mb-2">БАЗА</h3>
-            <div className="text-3xl sm:text-4xl font-bold text-cyan-400 mb-4 sm:mb-6">99,000₽</div>
+            <h3 className="text-xl sm:text-2xl font-bold text-white mb-1">СТАРТ</h3>
+            <p className="text-gray-400 text-sm mb-3">всё необходимое для результата</p>
+            <div className="text-3xl sm:text-4xl font-bold text-cyan-400 mb-1">99,000₽</div>
+            <p className="text-gray-400 text-sm mb-2">или от <span className="text-cyan-300 font-semibold">9 900 ₽/мес</span> в рассрочку</p>
+            <div className="bg-cyan-500/10 border border-cyan-500/30 rounded-lg px-4 py-2 mb-5 text-sm text-cyan-300">
+              💡 Один ИИ-проект для клиента окупает курс полностью
+            </div>
             <ul className="space-y-2 sm:space-y-3 mb-6 sm:mb-8">
               <li className="flex items-center text-gray-300">
                 <Icon name="Check" className="text-cyan-400 mr-3" size={20} />
@@ -74,12 +79,16 @@ export default function PricingSection({ scrollToForm }: PricingSectionProps) {
             </Badge>
           </div>
           <CardContent className="p-6 sm:p-8">
-            <h3 className="text-xl sm:text-2xl font-bold text-white mb-2">Индивидуальный</h3>
-            <div className="text-3xl sm:text-4xl font-bold text-cyan-400 mb-4 sm:mb-6">299,000₽</div>
+            <h3 className="text-xl sm:text-2xl font-bold text-white mb-1">МАКСИМУМ</h3>
+            <p className="text-gray-400 text-sm mb-3">персональный рост с Сергеем Черниковым</p>
+            <div className="text-3xl sm:text-4xl font-bold text-cyan-400 mb-1">299,000₽</div>
+            <div className="bg-orange-500/10 border border-orange-500/30 rounded-lg px-4 py-2 mb-5 text-sm text-orange-300">
+              🔥 Личный доступ к эксперту с 7+ годами практики в ИИ
+            </div>
             <ul className="space-y-2 sm:space-y-3 mb-6 sm:mb-8">
               <li className="flex items-center text-gray-300">
                 <Icon name="Check" className="text-cyan-400 mr-3" size={20} />
-                Всё из тарифа БАЗА+
+                Всё из тарифа СТАРТ+
               </li>
               <li className="flex items-center text-gray-300">
                 <Icon name="Check" className="text-cyan-400 mr-3" size={20} />
