@@ -53,7 +53,7 @@ export default function HeroSection({ scrollToForm, scrollToSection }: HeroSecti
                 Практический курс по нейросетям
               </Badge>
               <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight">
-                Школа <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">"Хакни Нейросети"</span>
+                Научись зарабатывать с ИИ — <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">живые занятия во Владивостоке</span>
               </h1>
               <div className="inline-flex items-center gap-2 px-4 py-2.5 sm:px-5 sm:py-3 bg-gradient-to-r from-orange-500 via-red-600 to-pink-600 text-white text-sm sm:text-base font-bold rounded-xl shadow-2xl animate-pulse border-2 border-orange-300/50">
                 <Icon name="Users" size={20} className="animate-bounce" />
@@ -61,12 +61,10 @@ export default function HeroSection({ scrollToForm, scrollToSection }: HeroSecti
               </div>
               <div className="space-y-4 text-base sm:text-lg text-gray-300 leading-relaxed">
                 <p>
-                  — это место, где <span className="text-white font-semibold">без "воды" и сложных терминов</span> на простом русском языке можно 
-                  <span className="text-cyan-300 font-semibold"> освоить 6 топ-профессий в нейросетях</span>.
+                  За 3 месяца ты освоишь <span className="text-cyan-300 font-semibold">6 профессий</span>, сократишь время на задачи <span className="text-white font-semibold">в 16 раз</span> и начнёшь применять ИИ в деле — <span className="text-cyan-300 font-semibold">уже с первого занятия</span>
                 </p>
-                <p>
-                  Здесь выпускники не просто учатся, а <span className="text-white font-semibold">сразу начинают применять навыки в работе</span>, 
-                  экономят <span className="text-cyan-300 font-semibold">до 50% времени</span>.
+                <p className="text-gray-400 text-sm sm:text-base">
+                  Без VPN. Без сложных терминов. Без воды. Только практика.
                 </p>
               </div>
             </div>
@@ -130,7 +128,7 @@ export default function HeroSection({ scrollToForm, scrollToSection }: HeroSecti
                 className="inline-flex items-center bg-gradient-to-r from-cyan-500 via-blue-600 to-purple-600 hover:from-cyan-400 hover:via-blue-500 hover:to-purple-500 text-lg sm:text-xl px-8 sm:px-10 py-5 sm:py-6 text-white font-bold rounded-xl transition-all duration-300 shadow-2xl hover:shadow-cyan-500/30 hover:scale-105 animate-pulse border-2 border-cyan-300/30 hover:border-cyan-300/60 w-full sm:w-auto justify-center"
               >
                 <Icon name="Rocket" className="mr-3" size={24} />
-                ЗАПИСЬ НА МАЙ
+                Занять место на май →
               </a>
             </div>
 
