@@ -131,11 +131,17 @@ export default function ScheduleSection() {
               <div className="h-1 w-24 bg-gradient-to-r from-cyan-500 to-blue-500 mx-auto rounded-full"></div>
             </div>
             
-            <p className="text-gray-200 text-base sm:text-lg leading-relaxed text-center">
-              Я намеренно ограничиваю количество участников, чтобы <span className="text-cyan-400 font-bold">уделить внимание каждому студенту</span>. 
-              Это позволяет мне лично помочь разобраться с трудностями, проверить домашние задания и 
-              убедиться, что <span className="text-cyan-400 font-bold">все справляются с обучением и практикой</span>.
+            <p className="text-white text-lg sm:text-xl font-bold text-center mb-4">
+              «Не поток. Не конвейер. Только 18 человек в группе.»
             </p>
+            <p className="text-gray-200 text-base sm:text-lg leading-relaxed text-center mb-6">
+              Я лично проверяю каждое домашнее задание, отвечаю на вопросы и слежу за прогрессом каждого студента. Именно поэтому <span className="text-cyan-400 font-bold">94% выпускников применяют ИИ в работе</span> уже через месяц после старта.
+            </p>
+            <div className="bg-orange-500/10 border border-orange-400/40 rounded-xl px-5 py-3 text-center">
+              <p className="text-orange-300 font-bold text-base sm:text-lg">
+                ⚡ На май осталось 6 мест из 20
+              </p>
+            </div>
             
             <div className="mt-6 pt-6 border-t border-cyan-500/30">
               <div className="flex items-center justify-center gap-2">
