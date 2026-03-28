@@ -37,25 +37,25 @@ export default function StickyHeader({ scrollToForm, scrollToSection }: StickyHe
             onClick={() => scrollToSection('skills')} 
             className="text-white hover:text-cyan-400 transition-colors text-sm lg:text-base"
           >
-            О курсе
+            Почему это работает
           </button>
           <button 
             onClick={() => scrollToSection('program')} 
             className="text-white hover:text-cyan-400 transition-colors text-sm lg:text-base"
           >
-            Программа
+            Что ты освоишь
           </button>
           <button 
             onClick={() => scrollToSection('testimonials')} 
             className="text-white hover:text-cyan-400 transition-colors text-sm lg:text-base"
           >
-            Отзывы
+            Результаты студентов
           </button>
           <button 
             onClick={() => scrollToSection('pricing')} 
             className="text-white hover:text-cyan-400 transition-colors text-sm lg:text-base"
           >
-            Тарифы
+            Стоимость и старт
           </button>
           <a 
             href="/calendar"
@@ -79,7 +79,7 @@ export default function StickyHeader({ scrollToForm, scrollToSection }: StickyHe
             rel="noopener noreferrer"
             className="inline-flex items-center px-4 py-3 lg:px-6 lg:py-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold rounded-lg transition-all duration-300 shadow-lg hover:shadow-cyan-500/25 hover:scale-105 text-sm lg:text-base border border-cyan-400/20"
           >
-            🚀 ЗАПИСЬ НА МАЙ
+            🚀 Записаться
           </a>
         </div>
 
@@ -109,7 +109,7 @@ export default function StickyHeader({ scrollToForm, scrollToSection }: StickyHe
             }} 
             className="text-white hover:text-cyan-400 transition-all duration-200 text-left hover:translate-x-2"
           >
-            О курсе
+            Почему это работает
           </button>
           <button 
             onClick={() => {
@@ -118,7 +118,7 @@ export default function StickyHeader({ scrollToForm, scrollToSection }: StickyHe
             }} 
             className="text-white hover:text-cyan-400 transition-all duration-200 text-left hover:translate-x-2"
           >
-            Программа
+            Что ты освоишь
           </button>
           <button 
             onClick={() => {
@@ -127,7 +127,7 @@ export default function StickyHeader({ scrollToForm, scrollToSection }: StickyHe
             }} 
             className="text-white hover:text-cyan-400 transition-all duration-200 text-left hover:translate-x-2"
           >
-            Отзывы
+            Результаты студентов
           </button>
           <button 
             onClick={() => {
@@ -136,7 +136,7 @@ export default function StickyHeader({ scrollToForm, scrollToSection }: StickyHe
             }} 
             className="text-white hover:text-cyan-400 transition-all duration-200 text-left hover:translate-x-2"
           >
-            Тарифы
+            Стоимость и старт
           </button>
           <a 
             href="/calendar"
@@ -163,7 +163,7 @@ export default function StickyHeader({ scrollToForm, scrollToSection }: StickyHe
             className="inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold rounded-lg transition-all duration-300 shadow-lg hover:shadow-cyan-500/25 hover:scale-105 border border-cyan-400/20"
             onClick={() => setIsMobileMenuOpen(false)}
           >
-            🚀 ЗАПИСЬ НА МАЙ
+            🚀 Записаться
           </a>
         </div>
       </div>
