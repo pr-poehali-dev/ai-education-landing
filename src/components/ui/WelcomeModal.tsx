@@ -4,13 +4,22 @@ import Icon from '@/components/ui/icon';
 export default function WelcomeModal() {
   const [isOpen, setIsOpen] = useState(false);
 
-  useEffect(() => {
-    const timer = setTimeout(() => {
+  const scheduleOpen = (delay: number) => {
+    return setTimeout(() => {
       setIsOpen(true);
-    }, 15000);
+    }, delay);
+  };
 
+  useEffect(() => {
+    const timer = scheduleOpen(15000);
     return () => clearTimeout(timer);
   }, []);
+
+  const handleClose = () => {
+    setIsOpen(false);
+    const timer = scheduleOpen(60000);
+    return () => clearTimeout(timer);
+  };
 
   if (!isOpen) return null;
 
@@ -77,7 +86,7 @@ export default function WelcomeModal() {
       {/* Overlay */}
       <div
         className="modal-overlay fixed inset-0 bg-black/70 backdrop-blur-sm z-50 flex items-center justify-center p-3 sm:p-4"
-        onClick={() => setIsOpen(false)}
+        onClick={handleClose}
       >
         {/* Modal */}
         <div
@@ -92,7 +101,7 @@ export default function WelcomeModal() {
           <button
             onClick={(e) => {
               e.stopPropagation();
-              setIsOpen(false);
+              handleClose();
             }}
             className="absolute top-4 right-4 w-10 h-10 rounded-full bg-slate-700/50 hover:bg-slate-600/50 flex items-center justify-center transition-all duration-300 hover:scale-110 z-20"
             aria-label="Закрыть"
@@ -133,12 +142,11 @@ export default function WelcomeModal() {
               target="_blank"
               rel="noopener noreferrer"
               className="block w-full"
-              onClick={() => setIsOpen(false)}
+              onClick={handleClose}
             >
-              <button className="w-full px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-orange-500 to-red-600 hover:from-orange-400 hover:to-red-500 text-white font-bold text-base sm:text-lg rounded-xl transition-all duration-300 shadow-lg hover:shadow-orange-500/50 hover:scale-105 border border-orange-400/20 flex items-center justify-center gap-2 sm:gap-3 group">
+              <button className="w-full px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-[#2AABEE] to-[#229ED9] hover:from-[#229ED9] hover:to-[#1a8bc2] text-white font-bold text-base sm:text-lg rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50 hover:scale-105 border border-blue-400/20 flex items-center justify-center gap-2 sm:gap-3 group">
                 <Icon name="Send" size={20} className="sm:w-6 sm:h-6 group-hover:scale-110 transition-transform" />
                 <span className="whitespace-nowrap">Написать менеджеру</span>
-                <Icon name="ExternalLink" size={16} className="sm:w-[18px] sm:h-[18px] opacity-70" />
               </button>
             </a>
 
