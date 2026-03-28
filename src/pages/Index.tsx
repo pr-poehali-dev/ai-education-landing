@@ -21,6 +21,7 @@ import Footer from '@/components/sections/Footer';
 import CTAButton from '@/components/ui/cta-button';
 import AnimatedBackground from '@/components/ui/animated-background';
 import ChatWidget from '@/components/ChatWidget';
+import ScrollReveal from '@/components/ui/scroll-reveal';
 
 export default function Index() {
   const scrollToForm = () => {
@@ -36,30 +37,85 @@ export default function Index() {
       <AnimatedBackground />
       <StickyHeader scrollToForm={scrollToForm} scrollToSection={scrollToSection} />
       <HeroSection scrollToForm={scrollToForm} scrollToSection={scrollToSection} />
-      <TrustSection />
-      <ScheduleSection />
-      <CalendarSection />
-      <SundayAISection />
-      <AIToolsSection />
+
+      <ScrollReveal>
+        <TrustSection />
+      </ScrollReveal>
+
+      <ScrollReveal>
+        <ScheduleSection />
+      </ScrollReveal>
+
+      <ScrollReveal direction="left">
+        <CalendarSection />
+      </ScrollReveal>
+
+      <ScrollReveal>
+        <SundayAISection />
+      </ScrollReveal>
+
+      <ScrollReveal direction="right">
+        <AIToolsSection />
+      </ScrollReveal>
+
       <CTAButton onClick={scrollToForm} />
 
-      <ProfessionsSection />
+      <ScrollReveal>
+        <ProfessionsSection />
+      </ScrollReveal>
+
       <CTAButton onClick={scrollToForm} />
-      <VideoWorksSection />
+
+      <ScrollReveal direction="left">
+        <VideoWorksSection />
+      </ScrollReveal>
+
       <CTAButton onClick={scrollToForm} />
-      <PhotoWorksSection />
+
+      <ScrollReveal direction="right">
+        <PhotoWorksSection />
+      </ScrollReveal>
+
       <CTAButton onClick={scrollToForm} />
-      <TestimonialsSection />
+
+      <ScrollReveal>
+        <TestimonialsSection />
+      </ScrollReveal>
+
       <CTAButton onClick={scrollToForm} />
-      <ProgramSection scrollToForm={scrollToForm} />
+
+      <ScrollReveal>
+        <ProgramSection scrollToForm={scrollToForm} />
+      </ScrollReveal>
+
       <CTAButton onClick={scrollToForm} />
-      <PricingSection scrollToForm={scrollToForm} />
-      <SundayAICompactSection />
-      <CorporatePaymentSection />
-      <AdvantagesSection />
+
+      <ScrollReveal>
+        <PricingSection scrollToForm={scrollToForm} />
+      </ScrollReveal>
+
+      <ScrollReveal direction="left">
+        <SundayAICompactSection />
+      </ScrollReveal>
+
+      <ScrollReveal direction="right">
+        <CorporatePaymentSection />
+      </ScrollReveal>
+
+      <ScrollReveal>
+        <AdvantagesSection />
+      </ScrollReveal>
+
       <CTAButton onClick={scrollToForm} />
-      <FormSection />
-      <Footer />
+
+      <ScrollReveal>
+        <FormSection />
+      </ScrollReveal>
+
+      <ScrollReveal>
+        <Footer />
+      </ScrollReveal>
+
       <ChatWidget />
     </div>
   );
