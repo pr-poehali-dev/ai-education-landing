@@ -151,13 +151,13 @@ export default function HeroSection({ scrollToForm, scrollToSection }: HeroSecti
               <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-cyan-500/20 hover:border-cyan-500/50 transition-all duration-300">
                 <div className="flex items-center gap-4">
                   <img 
-                    src="https://cdn.poehali.dev/files/583f12e9-bcf2-4958-8302-d544a301424d.png"
-                    alt="Центр развития предпринимательства Владивостока"
+                    src="https://cdn.poehali.dev/projects/e8628072-d7db-463c-b1d5-7cbdef013225/bucket/e9ea1643-3ded-40a3-b962-8203d698a775.jpg"
+                    alt="Приморское краевое отделение Опоры России"
                     className="h-12 w-auto transition-all duration-300 hover:drop-shadow-[0_0_15px_rgba(34,211,238,0.6)] hover:scale-105"
                   />
                   <p className="text-sm text-white font-medium">
                     При поддержке<br />
-                    <span className="text-cyan-300">Центра развития предпринимательства Владивостока</span>
+                    <span className="text-cyan-300">Приморского отделения Опоры России</span>
                   </p>
                 </div>
               </div>
