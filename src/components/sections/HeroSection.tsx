@@ -64,7 +64,7 @@ export default function HeroSection({ scrollToForm, scrollToSection }: HeroSecti
                   За 3 месяца ты освоишь <span className="text-cyan-300 font-semibold">6 профессий</span>, сократишь время на задачи <span className="text-white font-semibold">в 16 раз</span> и начнёшь применять ИИ в деле — <span className="text-cyan-300 font-semibold">уже с первого занятия</span>
                 </p>
                 <p className="text-gray-400 text-sm sm:text-base">
-                  Без VPN. Без сложных терминов. Без воды. Только практика.
+                  Без сложных терминов. Без воды. Только практика.
                 </p>
               </div>
             </div>
