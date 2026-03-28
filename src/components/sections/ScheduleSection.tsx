@@ -132,7 +132,7 @@ export default function ScheduleSection() {
             </div>
             
             <p className="text-white text-lg sm:text-xl font-bold text-center mb-4">
-              «Не поток. Не конвейер. Только 18 человек в группе.»
+              «Не поток. Не конвейер. Только 20 человек в группе.»
             </p>
             <p className="text-gray-200 text-base sm:text-lg leading-relaxed text-center mb-6">
               Я лично проверяю каждое домашнее задание, отвечаю на вопросы и слежу за прогрессом каждого студента. Именно поэтому <span className="text-cyan-400 font-bold">94% выпускников применяют ИИ в работе</span> уже через месяц после старта.
