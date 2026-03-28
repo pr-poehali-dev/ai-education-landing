@@ -70,11 +70,12 @@ export default function AdvantagesSection() {
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6">
               О <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">спикере</span>
             </h2>
-            <h3 className="text-xl sm:text-2xl font-bold text-cyan-400 mb-4">Черников Сергей</h3>
+            <h3 className="text-xl sm:text-2xl font-bold text-cyan-400 mb-4">Сергей Черников — практик, который внедряет ИИ в бизнес с 2017 года</h3>
             <p className="text-base sm:text-lg text-gray-300 mb-6 leading-relaxed">
-              Практикующий разработчик с 2017 года, специалист по внедрению ИИ-решений в бизнес. 
-              За время работы помог более чем 500 предпринимателям и специалистам из Владивостока освоить 
-              искусственный интеллект для увеличения прибыли и автоматизации процессов.
+              Я не пересказываю чужие курсы — я сам разрабатываю ИИ-решения для реального бизнеса. За 7 лет помог <span className="text-white font-semibold">500+ предпринимателям Владивостока</span> автоматизировать продажи, контент и операции. Провёл обучение для <span className="text-white font-semibold">10 000+ специалистов</span> при поддержке «Мой Бизнес», «Опора России» и Росмолодёжи.
+            </p>
+            <p className="text-cyan-300 font-semibold text-base sm:text-lg mb-6 italic">
+              «Я учу только тому, что работает у меня самого.»
             </p>
             <ul className="text-base sm:text-lg text-gray-300 mb-6 space-y-2">
               <li className="flex items-start gap-2">
@@ -95,10 +96,6 @@ export default function AdvantagesSection() {
                 </span>
               </li>
             </ul>
-            <p className="text-base sm:text-lg text-gray-300 mb-8 leading-relaxed">
-              Автор уникальных методик работы с нейросетями, которые позволяют получать результат 
-              без использования VPN и зарубежных карт. Мой подход основан на практическом применении ИИ в реальных бизнес-задачах.
-            </p>
             <div className="grid grid-cols-2 gap-6">
               <div className="text-center p-4 bg-slate-800/30 rounded-lg border border-slate-700">
                 <div className="text-3xl font-bold text-cyan-400">7+</div>
