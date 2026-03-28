@@ -74,7 +74,7 @@ export default function TrustSection() {
               </div>
               <div className="p-6 bg-slate-800/30 rounded-lg border border-slate-700 flex items-center justify-center min-w-[200px] hover:scale-105 transition-transform duration-300">
                 <img 
-                  src="https://cdn.poehali.dev/files/freepik__-__46147.png" 
+                  src="https://cdn.poehali.dev/projects/e8628072-d7db-463c-b1d5-7cbdef013225/bucket/62c131ad-efa2-4213-8279-420e77d68161.png" 
                   alt="ЭКО Логотип" 
                   className="h-16 w-auto object-contain"
                 />
@@ -175,7 +175,7 @@ export default function TrustSection() {
               </div>
               <div className="p-6 bg-slate-800/30 rounded-lg border border-slate-700 flex items-center justify-center min-w-[200px] hover:scale-105 transition-transform duration-300">
                 <img 
-                  src="https://cdn.poehali.dev/files/freepik__-__46147.png" 
+                  src="https://cdn.poehali.dev/projects/e8628072-d7db-463c-b1d5-7cbdef013225/bucket/62c131ad-efa2-4213-8279-420e77d68161.png" 
                   alt="ЭКО Логотип" 
                   className="h-16 w-auto object-contain"
                 />
