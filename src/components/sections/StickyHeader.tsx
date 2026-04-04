@@ -27,32 +27,16 @@ export default function StickyHeader({ scrollToForm, scrollToSection }: StickyHe
           : 'bg-transparent'
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4 lg:px-6">
-        <div className={`flex items-center justify-center transition-all duration-300 ${
-          isScrolled ? 'pt-2 pb-0' : 'pt-4 pb-0'
-        }`}>
+      <nav className="flex justify-between items-center p-4 lg:p-6 max-w-7xl mx-auto">
+        <div className="flex-shrink-0">
           <img 
             src="https://cdn.poehali.dev/projects/e8628072-d7db-463c-b1d5-7cbdef013225/bucket/f8a0b723-d4fd-43b4-b156-ce03422b9af7.png" 
             alt="Хакни Нейросети" 
-            className={`w-auto transition-all duration-300 ${
-              isScrolled ? 'h-12 sm:h-14 lg:h-16' : 'h-32 sm:h-40 lg:h-48'
-            }`}
+            className="h-16 sm:h-20 lg:h-24 w-auto"
           />
-
-          <div className="md:hidden ml-auto">
-            <button 
-              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="text-white p-2"
-              aria-label="Меню"
-            >
-              <Icon name={isMobileMenuOpen ? "X" : "Menu"} size={24} />
-            </button>
-          </div>
         </div>
-
-        <nav className={`hidden md:flex items-center justify-center gap-6 lg:gap-8 transition-all duration-300 ${
-          isScrolled ? 'py-2' : 'py-3'
-        }`}>
+        
+        <div className="hidden md:flex items-center space-x-6 lg:space-x-8">
           <button 
             onClick={() => scrollToSection('skills')} 
             className="text-white hover:text-cyan-400 transition-colors text-sm lg:text-base"
@@ -97,13 +81,25 @@ export default function StickyHeader({ scrollToForm, scrollToSection }: StickyHe
             href="https://torguykriptoy.getcourse.ru/chernikovgpt" 
             target="_blank" 
             rel="noopener noreferrer"
-            className="inline-flex items-center px-4 py-2 lg:px-6 lg:py-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold rounded-lg transition-all duration-300 shadow-lg hover:shadow-cyan-500/25 hover:scale-105 text-sm lg:text-base border border-cyan-400/20"
+            className="inline-flex items-center px-4 py-3 lg:px-6 lg:py-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold rounded-lg transition-all duration-300 shadow-lg hover:shadow-cyan-500/25 hover:scale-105 text-sm lg:text-base border border-cyan-400/20"
           >
             🚀 Записаться
           </a>
-        </nav>
-      </div>
+        </div>
+
+        {/* Мобильное меню */}
+        <div className="md:hidden">
+          <button 
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            className="text-white p-2"
+            aria-label="Меню"
+          >
+            <Icon name={isMobileMenuOpen ? "X" : "Menu"} size={24} />
+          </button>
+        </div>
+      </nav>
       
+      {/* Мобильное выпадающее меню */}
       <div 
         className={`md:hidden bg-slate-900/98 backdrop-blur-sm border-b border-slate-700/50 overflow-hidden transition-all duration-300 ease-in-out ${
           isMobileMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
