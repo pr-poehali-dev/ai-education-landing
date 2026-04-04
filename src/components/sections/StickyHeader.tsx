@@ -32,7 +32,7 @@ export default function StickyHeader({ scrollToForm, scrollToSection }: StickyHe
           <img 
             src="https://cdn.poehali.dev/projects/e8628072-d7db-463c-b1d5-7cbdef013225/bucket/f8a0b723-d4fd-43b4-b156-ce03422b9af7.png" 
             alt="Хакни Нейросети" 
-            className="h-16 sm:h-20 lg:h-24 w-auto"
+            className="h-32 sm:h-40 lg:h-48 w-auto"
           />
         </div>
         
