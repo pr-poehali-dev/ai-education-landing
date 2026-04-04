@@ -49,6 +49,11 @@ export default function HeroSection({ scrollToForm, scrollToSection }: HeroSecti
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-8">
             <div className="space-y-4">
+              <img 
+                src="https://cdn.poehali.dev/files/bd91ffdd-1f53-4cc0-8c87-a70f83e89441.png" 
+                alt="Хакни Нейросети" 
+                className="h-14 sm:h-16 lg:h-20 w-auto mb-2 drop-shadow-[0_0_20px_rgba(6,182,212,0.3)]"
+              />
               <Badge className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white border-0">
                 Практический курс по нейросетям
               </Badge>

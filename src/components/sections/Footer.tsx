@@ -29,7 +29,12 @@ export default function Footer() {
             </div>
           </div>
           
-          <div className="text-center md:text-right">
+          <div className="flex flex-col items-center md:items-end gap-4">
+            <img 
+              src="https://cdn.poehali.dev/files/bd91ffdd-1f53-4cc0-8c87-a70f83e89441.png" 
+              alt="Хакни Нейросети" 
+              className="h-10 w-auto opacity-70"
+            />
             <p className="text-gray-400 text-sm">
               © {new Date().getFullYear()} Школа ИИ. Все права защищены.
             </p>
