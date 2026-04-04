@@ -28,12 +28,8 @@ export default function StickyHeader({ scrollToForm, scrollToSection }: StickyHe
       }`}
     >
       <nav className="flex justify-between items-center p-4 lg:p-6 max-w-7xl mx-auto">
-        <div className="flex items-center gap-3">
-          <img 
-            src="https://cdn.poehali.dev/files/bd91ffdd-1f53-4cc0-8c87-a70f83e89441.png" 
-            alt="Хакни Нейросети" 
-            className="h-8 sm:h-9 lg:h-10 w-auto"
-          />
+        <div className="text-base sm:text-lg lg:text-2xl font-bold text-white">
+          Школа ИИ <span className="text-cyan-400">Сергея Черникова</span>
         </div>
         
         <div className="hidden md:flex items-center space-x-6 lg:space-x-8">
