@@ -39,7 +39,7 @@ const partners = ["Мой Бизнес", "Центр Поддержки Пред
 
 export default function AdvantagesSection() {
   return (
-    <section className="py-20 px-6 max-w-7xl mx-auto">
+    <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 max-w-7xl mx-auto">
       <div className="text-center mb-12 sm:mb-16">
         <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6">
           Почему нужно идти <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">ко мне?</span>
@@ -69,8 +69,8 @@ export default function AdvantagesSection() {
       </div>
 
       {/* About Expert Section */}
-      <div className="mt-20">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+      <div className="mt-12 sm:mt-16 lg:mt-20">
+        <div className="grid lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 items-center">
           <div>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6">
               О <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">спикере</span>
@@ -101,7 +101,7 @@ export default function AdvantagesSection() {
                 </span>
               </li>
             </ul>
-            <div className="grid grid-cols-2 gap-6">
+            <div className="grid grid-cols-2 gap-3 sm:gap-4 md:gap-6">
               <div className="text-center p-4 bg-slate-800/30 rounded-lg border border-slate-700">
                 <div className="text-3xl font-bold text-cyan-400">7+</div>
                 <div className="text-gray-400">лет в IT</div>

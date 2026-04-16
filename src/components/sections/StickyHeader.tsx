@@ -27,12 +27,12 @@ export default function StickyHeader({ scrollToForm, scrollToSection }: StickyHe
           : 'bg-transparent'
       }`}
     >
-      <nav className="flex justify-between items-center p-4 lg:p-6 max-w-7xl mx-auto">
+      <nav className="flex justify-between items-center p-3 sm:p-4 lg:p-6 max-w-7xl mx-auto">
         <div className="flex-shrink-0">
           <img 
             src="https://cdn.poehali.dev/projects/e8628072-d7db-463c-b1d5-7cbdef013225/bucket/f8a0b723-d4fd-43b4-b156-ce03422b9af7.png" 
             alt="Хакни Нейросети" 
-            className="h-16 sm:h-20 lg:h-24 w-auto"
+            className="h-12 sm:h-16 lg:h-20 w-auto"
           />
         </div>
         
@@ -102,7 +102,7 @@ export default function StickyHeader({ scrollToForm, scrollToSection }: StickyHe
       {/* Мобильное выпадающее меню */}
       <div 
         className={`md:hidden bg-slate-900/98 backdrop-blur-sm border-b border-slate-700/50 overflow-hidden transition-all duration-300 ease-in-out ${
-          isMobileMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+          isMobileMenuOpen ? 'max-h-[80vh] opacity-100' : 'max-h-0 opacity-0'
         }`}
       >
         <div className="flex flex-col space-y-4 p-6 animate-fade-in-up">

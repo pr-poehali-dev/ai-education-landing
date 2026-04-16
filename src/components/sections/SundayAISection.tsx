@@ -48,7 +48,7 @@ export default function SundayAISection() {
                     <img 
                       src="https://cdn.poehali.dev/files/start_frame.jpg" 
                       alt="Воскресная ИИшница"
-                      className="w-40 h-40 rounded-full object-cover group-hover/logo:brightness-110 transition-all duration-300"
+                      className="w-28 h-28 sm:w-32 sm:h-32 md:w-40 md:h-40 rounded-full object-cover group-hover/logo:brightness-110 transition-all duration-300"
                     />
                     
                     {/* Heat waves effect */}

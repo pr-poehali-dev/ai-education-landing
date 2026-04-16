@@ -14,7 +14,7 @@ export default function ScheduleSection() {
         </p>
       </div>
 
-      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
         {/* Старт курса */}
         <Card className="bg-slate-800/90 border-slate-600 hover:border-cyan-400/70 transition-all duration-300 backdrop-blur-sm group">
           <CardContent className="p-6 sm:p-8 text-center">
@@ -26,7 +26,7 @@ export default function ScheduleSection() {
             </div>
             
             <div className="space-y-2">
-              <div className="text-4xl font-bold text-cyan-400">11</div>
+              <div className="text-3xl sm:text-4xl font-bold text-cyan-400">11</div>
               <div className="text-lg text-white font-semibold">мая</div>
               <div className="text-sm text-gray-300">2026 года</div>
             </div>
@@ -44,7 +44,7 @@ export default function ScheduleSection() {
 
         {/* Расписание встреч */}
         <Card className="bg-slate-800/90 border-slate-600 hover:border-purple-400/70 transition-all duration-300 backdrop-blur-sm group">
-          <CardContent className="p-8 text-center">
+          <CardContent className="p-6 sm:p-8 text-center">
             <div className="mb-6">
               <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Icon name="Clock" className="text-white group-hover:animate-clock-spin" size={32} />
@@ -74,7 +74,7 @@ export default function ScheduleSection() {
 
         {/* Общая продолжительность */}
         <Card className="bg-slate-800/90 border-slate-600 hover:border-green-400/70 transition-all duration-300 backdrop-blur-sm group">
-          <CardContent className="p-8 text-center">
+          <CardContent className="p-6 sm:p-8 text-center">
             <div className="mb-6">
               <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-600 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Icon name="BookOpen" className="text-white group-hover:animate-book-flip" size={32} />
@@ -84,7 +84,7 @@ export default function ScheduleSection() {
             
             <div className="space-y-4">
               <div className="text-center">
-                <div className="text-4xl font-bold text-green-400 mb-1">24</div>
+                <div className="text-3xl sm:text-4xl font-bold text-green-400 mb-1">24</div>
                 <div className="text-white font-semibold text-lg">встречи</div>
               </div>
               
@@ -111,7 +111,7 @@ export default function ScheduleSection() {
 
       {/* Дополнительная информация */}
       <div className="mt-12 text-center space-y-6">
-        <div className="inline-flex items-center bg-gradient-to-r from-orange-500/20 to-red-600/20 border-2 border-orange-400/50 rounded-full px-6 sm:px-10 py-4 sm:py-5 text-base sm:text-lg backdrop-blur-sm shadow-lg shadow-orange-500/20">
+        <div className="inline-flex items-center bg-gradient-to-r from-orange-500/20 to-red-600/20 border-2 border-orange-400/50 rounded-full px-4 sm:px-6 md:px-10 py-4 sm:py-5 text-base sm:text-lg backdrop-blur-sm shadow-lg shadow-orange-500/20">
           <Icon name="Users" className="text-orange-400 mr-3" size={24} />
           <span className="text-white font-bold">
             Всего мест: <span className="text-orange-400 text-xl sm:text-2xl">30</span>
@@ -120,7 +120,7 @@ export default function ScheduleSection() {
         
         <div className="relative max-w-3xl mx-auto">
           <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/30 via-blue-500/30 to-purple-500/30 rounded-3xl blur-2xl animate-soft-pulse"></div>
-          <div className="relative bg-gradient-to-br from-slate-800/95 to-slate-900/95 border-2 border-cyan-500/50 rounded-3xl p-8 sm:p-10 backdrop-blur-sm shadow-2xl hover:shadow-cyan-500/30 transition-all duration-300 hover:scale-[1.02]">
+          <div className="relative bg-gradient-to-br from-slate-800/95 to-slate-900/95 border-2 border-cyan-500/50 rounded-3xl p-5 sm:p-8 md:p-10 backdrop-blur-sm shadow-2xl hover:shadow-cyan-500/30 transition-all duration-300 hover:scale-[1.02]">
             <div className="text-center mb-6">
               <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-2xl mb-4 shadow-lg shadow-cyan-500/50 animate-bounce">
                 <Icon name="Heart" className="text-white" size={32} />

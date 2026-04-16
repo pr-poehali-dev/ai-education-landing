@@ -27,7 +27,7 @@ export default function FormSection() {
   return (
     <>
       {/* FAQ Section */}
-      <section className="py-20 px-6 max-w-4xl mx-auto">
+      <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 max-w-4xl mx-auto">
         <div className="text-center mb-12 sm:mb-16">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6">
             Часто задаваемые <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">вопросы</span>
@@ -49,7 +49,7 @@ export default function FormSection() {
       </section>
 
       {/* Lead Form */}
-      <section id="lead-form" className="py-20 px-6 max-w-4xl mx-auto">
+      <section id="lead-form" className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 max-w-4xl mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6">
             Начни своё <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">обучение</span> уже сегодня!
@@ -63,7 +63,7 @@ export default function FormSection() {
         </div>
 
         <Card className="bg-slate-800/50 border-slate-700 backdrop-blur-sm">
-          <CardContent className="p-8">
+          <CardContent className="p-4 sm:p-6 lg:p-8">
             <div className="text-center space-y-3">
               <a 
                 href="https://torguykriptoy.getcourse.ru/chernikovgpt" 

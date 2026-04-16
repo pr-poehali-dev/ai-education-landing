@@ -84,7 +84,7 @@ export default function HeroSection({ scrollToForm, scrollToSection }: HeroSecti
                   <div className="h-1 w-20 bg-gradient-to-r from-orange-500 to-red-500 mx-auto rounded-full"></div>
                 </div>
                 
-                <div className="grid grid-cols-4 gap-3 sm:gap-4">
+                <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 sm:gap-3 md:gap-4">
                   <div className="text-center group">
                     <div className="bg-gradient-to-br from-orange-500/20 to-red-600/20 rounded-xl p-3 sm:p-4 border border-orange-500/30 backdrop-blur-sm group-hover:scale-105 transition-all duration-300 group-hover:shadow-lg group-hover:shadow-orange-500/50">
                       <div className="text-2xl sm:text-4xl font-bold text-white mb-1 font-mono tabular-nums">
@@ -131,7 +131,7 @@ export default function HeroSection({ scrollToForm, scrollToSection }: HeroSecti
                 href="https://torguykriptoy.getcourse.ru/chernikovgpt" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="inline-flex items-center bg-gradient-to-r from-cyan-500 via-blue-600 to-purple-600 hover:from-cyan-400 hover:via-blue-500 hover:to-purple-500 text-lg sm:text-xl px-8 sm:px-10 py-5 sm:py-6 text-white font-bold rounded-xl transition-all duration-300 shadow-2xl hover:shadow-cyan-500/30 hover:scale-105 animate-soft-pulse border-2 border-cyan-300/30 hover:border-cyan-300/60 w-full sm:w-auto justify-center"
+                className="inline-flex items-center bg-gradient-to-r from-cyan-500 via-blue-600 to-purple-600 hover:from-cyan-400 hover:via-blue-500 hover:to-purple-500 text-lg sm:text-xl px-6 sm:px-8 md:px-10 py-4 sm:py-5 md:py-6 text-white font-bold rounded-xl transition-all duration-300 shadow-2xl hover:shadow-cyan-500/30 hover:scale-105 animate-soft-pulse border-2 border-cyan-300/30 hover:border-cyan-300/60 w-full sm:w-auto justify-center"
               >
                 <Icon name="Rocket" className="mr-3" size={24} />
                 Занять место на май →

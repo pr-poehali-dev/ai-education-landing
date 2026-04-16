@@ -16,7 +16,7 @@ export default function SundayAICompactSection() {
           
           {/* Main card */}
           <div className="relative bg-gradient-to-br from-slate-900/95 via-slate-800/95 to-slate-900/95 rounded-2xl p-6 border border-orange-500/40 group-hover:border-orange-400 transition-all duration-300 shadow-xl backdrop-blur-sm">
-            <div className="grid sm:grid-cols-[120px_1fr_auto] gap-6 items-center">
+            <div className="grid sm:grid-cols-[120px_1fr_auto] gap-4 sm:gap-6 items-center">
               {/* Compact logo */}
               <div className="flex justify-center sm:justify-start">
                 <div className="relative group/logo">
@@ -37,7 +37,7 @@ export default function SundayAICompactSection() {
                     <img 
                       src="https://cdn.poehali.dev/files/start_frame.jpg" 
                       alt="Воскресная ИИшница"
-                      className="w-24 h-24 rounded-full object-cover group-hover/logo:brightness-110 transition-all duration-300"
+                      className="w-20 h-20 sm:w-24 sm:h-24 rounded-full object-cover group-hover/logo:brightness-110 transition-all duration-300"
                     />
                   </div>
                   
