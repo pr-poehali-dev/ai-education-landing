@@ -8,8 +8,7 @@ import CalendarSection from '@/components/sections/CalendarSection';
 import ProfessionsSection from '@/components/sections/ProfessionsSection';
 import SundayAISection from '@/components/sections/SundayAISection';
 import SundayAICompactSection from '@/components/sections/SundayAICompactSection';
-import VideoWorksSection from '@/components/sections/VideoWorksSection';
-import PhotoWorksSection from '@/components/sections/PhotoWorksSection';
+
 import AIToolsSection from '@/components/sections/AIToolsSection';
 import TestimonialsSection from '@/components/sections/TestimonialsSection';
 import ProgramSection from '@/components/sections/ProgramSection';
@@ -65,16 +64,6 @@ export default function Index() {
       </ScrollReveal>
 
       <CTAButton onClick={scrollToForm} />
-
-      <ScrollReveal direction="left">
-        <VideoWorksSection />
-      </ScrollReveal>
-
-      <CTAButton onClick={scrollToForm} />
-
-      <ScrollReveal direction="right">
-        <PhotoWorksSection />
-      </ScrollReveal>
 
       <CTAButton onClick={scrollToForm} />
 
