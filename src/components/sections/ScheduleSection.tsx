@@ -151,7 +151,7 @@ export default function ScheduleSection() {
               <div className="grid grid-cols-3 gap-3">
                 <div className="bg-slate-800/60 rounded-xl p-3 text-center border border-purple-500/20">
                   <Icon name="Mic" className="text-cyan-400 mx-auto mb-1.5" size={22} />
-                  <p className="text-white font-semibold text-xs sm:text-sm">Преподаватель</p>
+                  <p className="text-white font-semibold text-xs sm:text-sm">Спикер</p>
                   <p className="text-gray-400 text-xs">ведёт урок</p>
                 </div>
                 <div className="bg-slate-800/60 rounded-xl p-3 text-center border border-purple-500/20">
