@@ -9,7 +9,7 @@ const aiTools = {
     color: "from-blue-500 to-purple-600",
     bgColor: "bg-blue-500/10",
     borderColor: "border-blue-500/20",
-    items: ["GPT", "Gemini", "Claude", "DeepSeek", "xAI: Grok", "Qwen"]
+    items: ["GPT", "Gemini", "Claude", "xAI: Grok", "Qwen"]
   },
   image: {
     title: "Фото нейросети",
@@ -137,8 +137,8 @@ export default function AIToolsSection() {
                         {item}
                       </span>
                       {/* Популярные инструменты с бейджиками */}
-                      {(item === "GPT" || item === "Nano Banana Pro" || item === "Поехали") && (
-                        <span className="ml-auto text-[10px] sm:text-xs px-1.5 sm:px-2 py-0.5 sm:py-1 bg-cyan-500/20 text-cyan-400 rounded-full whitespace-nowrap">
+                      {["Claude", "Kling Ai", "Seedance", "Veo 3", "Nano Banana Pro", "Seedream", "Поехали", "multi-chat", "freepik", "perplexity"].includes(item) && (
+                        <span className="ml-auto text-[10px] sm:text-xs px-1.5 sm:px-2 py-0.5 sm:py-1 bg-cyan-500/20 text-cyan-400 rounded-full whitespace-nowrap font-bold">
                           ТОП
                         </span>
                       )}
