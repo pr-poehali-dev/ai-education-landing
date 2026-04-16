@@ -2,10 +2,10 @@ import React, { useState, useRef, useEffect } from 'react';
 import Icon from '@/components/ui/icon';
 
 const videos = [
+  "https://cdn.poehali.dev/projects/e8628072-d7db-463c-b1d5-7cbdef013225/bucket/5a3db8b4-f217-468b-ae28-6cf86f980b46.mp4",
   "https://cdn.poehali.dev/projects/e8628072-d7db-463c-b1d5-7cbdef013225/bucket/633e2724-e5f7-4b04-a6e7-e610776789cf.mp4",
   "https://cdn.poehali.dev/projects/e8628072-d7db-463c-b1d5-7cbdef013225/bucket/e7b36dd2-aa21-49f0-93d5-f9439ed028fc.mp4",
   "https://cdn.poehali.dev/projects/e8628072-d7db-463c-b1d5-7cbdef013225/bucket/bff51dba-bb26-451e-afd7-5579f791f173.mp4",
-  "https://cdn.poehali.dev/projects/e8628072-d7db-463c-b1d5-7cbdef013225/bucket/5a3db8b4-f217-468b-ae28-6cf86f980b46.mp4",
   "https://cdn.poehali.dev/projects/e8628072-d7db-463c-b1d5-7cbdef013225/bucket/ca6c57ce-60e8-40d8-92cb-c680ea1d9718.mp4",
   "https://cdn.poehali.dev/projects/e8628072-d7db-463c-b1d5-7cbdef013225/bucket/2a6a1d70-964c-4dc8-b85c-91196629a534.mp4",
   "https://cdn.poehali.dev/projects/e8628072-d7db-463c-b1d5-7cbdef013225/bucket/b4c4f54e-35fc-4c24-8a21-95247f547710.mp4",
