@@ -395,6 +395,59 @@
   animation: soft-pulse 3s ease-in-out infinite;
 }
 
+@keyframes typing-dots {
+  0%,
+  20% {
+    content: "";
+    opacity: 0;
+  }
+  25% {
+    content: "·";
+    opacity: 1;
+  }
+  50% {
+    content: "··";
+    opacity: 1;
+  }
+  75% {
+    content: "···";
+    opacity: 1;
+  }
+  100% {
+    content: "";
+    opacity: 0;
+  }
+}
+
+@keyframes typing-bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  15% {
+    transform: translateY(-2px);
+  }
+  30% {
+    transform: translateY(0);
+  }
+  45% {
+    transform: translateY(-3px);
+  }
+  60% {
+    transform: translateY(0);
+  }
+  75% {
+    transform: translateY(-2px);
+  }
+  90% {
+    transform: translateY(0);
+  }
+}
+
+.group:hover .animate-typing-icon {
+  animation: typing-bounce 1.2s ease-in-out infinite;
+}
+
 .animate-sold-out-gradient {
   background: linear-gradient(
     90deg,
