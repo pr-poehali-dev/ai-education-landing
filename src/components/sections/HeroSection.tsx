@@ -53,7 +53,7 @@ export default function HeroSection({ scrollToForm, scrollToSection }: HeroSecti
                 Практический курс по нейросетям — для новичков
               </Badge>
               <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight">
-                Научись зарабатывать с ИИ — <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">даже если ты полный ноль</span>
+                Научись зарабатывать с ИИ — <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">даже если твой арсенал ограничился ДипСиком</span>
               </h1>
               <div className="flex flex-wrap gap-2 sm:gap-3">
                 <div className="inline-flex items-center gap-2 px-4 py-2.5 sm:px-5 sm:py-3 bg-gradient-to-r from-orange-500 via-red-600 to-pink-600 text-white text-sm sm:text-base font-bold rounded-xl shadow-2xl animate-soft-pulse border-2 border-orange-300/50">
