@@ -11,10 +11,15 @@ interface PricingSectionProps {
 export default function PricingSection({ scrollToForm }: PricingSectionProps) {
   return (
     <section id="pricing" className="py-20 px-6 max-w-7xl mx-auto">
-      <div className="text-center mb-16">
+      <div className="text-center mb-10">
         <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">Тарифы</span>
         </h2>
+        <div className="inline-flex items-center gap-3 px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-orange-500 via-red-600 to-pink-600 text-white text-base sm:text-lg font-bold rounded-xl shadow-2xl border-2 border-orange-300/50 animate-pulse">
+          <Icon name="AlertTriangle" size={22} />
+          С СЕНТЯБРЯ ПОВЫШЕНИЕ ЦЕН
+          <Icon name="AlertTriangle" size={22} />
+        </div>
       </div>
 
       <div className="grid md:grid-cols-2 gap-6 sm:gap-8 max-w-4xl mx-auto">
