@@ -6,17 +6,17 @@ export default function SundayAISection() {
   return (
     <section className="relative py-20 overflow-hidden">
       {/* Animated background glow */}
-      <div className="absolute inset-0 bg-gradient-to-r from-orange-500/10 via-yellow-500/10 to-orange-500/10 animate-pulse"></div>
+      <div className="absolute inset-0 bg-gradient-to-r from-orange-500/10 via-yellow-500/10 to-orange-500/10 animate-soft-pulse"></div>
       
       {/* Decorative elements */}
-      <div className="absolute top-10 left-10 w-32 h-32 bg-orange-500/20 rounded-full blur-3xl animate-pulse"></div>
-      <div className="absolute bottom-10 right-10 w-40 h-40 bg-yellow-500/20 rounded-full blur-3xl animate-pulse delay-700"></div>
+      <div className="absolute top-10 left-10 w-32 h-32 bg-orange-500/20 rounded-full blur-3xl animate-soft-pulse"></div>
+      <div className="absolute bottom-10 right-10 w-40 h-40 bg-yellow-500/20 rounded-full blur-3xl animate-soft-pulse delay-700"></div>
       
       <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6">
         {/* Main card with multiple layers of glow */}
         <div className="relative group">
           {/* Outer glow layer */}
-          <div className="absolute -inset-1 bg-gradient-to-r from-orange-500 via-yellow-400 to-orange-500 rounded-3xl blur-2xl opacity-50 group-hover:opacity-100 transition-all duration-500 animate-pulse"></div>
+          <div className="absolute -inset-1 bg-gradient-to-r from-orange-500 via-yellow-400 to-orange-500 rounded-3xl blur-2xl opacity-50 group-hover:opacity-100 transition-all duration-500 animate-soft-pulse"></div>
           
           {/* Middle glow layer */}
           <div className="absolute -inset-0.5 bg-gradient-to-r from-yellow-400 via-orange-500 to-yellow-400 rounded-3xl blur-xl opacity-75 group-hover:opacity-100 transition-all duration-500"></div>
@@ -28,7 +28,7 @@ export default function SundayAISection() {
               <div className="flex justify-center md:justify-start">
                 <div className="relative group/logo">
                   {/* Logo glow - becomes hotter on hover */}
-                  <div className="absolute inset-0 bg-gradient-to-r from-orange-500 to-yellow-400 rounded-full blur-2xl opacity-50 animate-pulse group-hover/logo:opacity-100 group-hover/logo:from-red-600 group-hover/logo:to-orange-500 transition-all duration-300"></div>
+                  <div className="absolute inset-0 bg-gradient-to-r from-orange-500 to-yellow-400 rounded-full blur-2xl opacity-50 animate-soft-pulse group-hover/logo:opacity-100 group-hover/logo:from-red-600 group-hover/logo:to-orange-500 transition-all duration-300"></div>
                   
                   {/* Oil sizzle particles - appear on hover */}
                   <div className="absolute inset-0 opacity-0 group-hover/logo:opacity-100 transition-opacity duration-300 pointer-events-none">
@@ -53,13 +53,13 @@ export default function SundayAISection() {
                     
                     {/* Heat waves effect */}
                     <div className="absolute inset-0 rounded-full opacity-0 group-hover/logo:opacity-100 transition-opacity duration-300 pointer-events-none">
-                      <div className="absolute inset-0 rounded-full bg-gradient-to-t from-orange-500/20 to-transparent animate-pulse"></div>
+                      <div className="absolute inset-0 rounded-full bg-gradient-to-t from-orange-500/20 to-transparent animate-soft-pulse"></div>
                     </div>
                   </div>
                   
                   {/* Animated rings - pulse faster on hover */}
                   <div className="absolute inset-0 border-4 border-orange-500/30 rounded-full animate-ping group-hover/logo:border-red-500/50"></div>
-                  <div className="absolute inset-0 border-2 border-yellow-400/30 rounded-full animate-pulse group-hover/logo:border-orange-500/50 group-hover/logo:animate-ping"></div>
+                  <div className="absolute inset-0 border-2 border-yellow-400/30 rounded-full animate-soft-pulse group-hover/logo:border-orange-500/50 group-hover/logo:animate-ping"></div>
                   
                   {/* Steam effect on hover */}
                   <div className="absolute -top-8 left-1/2 -translate-x-1/2 opacity-0 group-hover/logo:opacity-100 transition-opacity duration-500 pointer-events-none">
@@ -77,7 +77,7 @@ export default function SundayAISection() {
                 {/* Header with badge */}
                 <div className="space-y-2 sm:space-y-3">
                   <div className="flex items-center gap-2 sm:gap-3 flex-wrap">
-                    <div className="bg-gradient-to-r from-orange-500 to-yellow-400 text-white px-3 sm:px-4 py-1.5 rounded-full text-xs sm:text-sm font-bold uppercase tracking-wide shadow-lg animate-pulse">
+                    <div className="bg-gradient-to-r from-orange-500 to-yellow-400 text-white px-3 sm:px-4 py-1.5 rounded-full text-xs sm:text-sm font-bold uppercase tracking-wide shadow-lg animate-soft-pulse">
                       Каждое воскресенье
                     </div>
                     <div className="flex items-center gap-2 text-orange-300">
@@ -145,7 +145,7 @@ export default function SundayAISection() {
                     className="group/btn relative w-full sm:w-auto sm:flex-1"
                   >
                     {/* Button glow */}
-                    <div className="absolute -inset-1 bg-gradient-to-r from-orange-500 via-yellow-400 to-orange-500 rounded-xl blur-lg opacity-70 group-hover/btn:opacity-100 transition-all duration-300 animate-pulse"></div>
+                    <div className="absolute -inset-1 bg-gradient-to-r from-orange-500 via-yellow-400 to-orange-500 rounded-xl blur-lg opacity-70 group-hover/btn:opacity-100 transition-all duration-300 animate-soft-pulse"></div>
                     
                     {/* Button */}
                     <Button 

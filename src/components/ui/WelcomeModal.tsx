@@ -11,13 +11,13 @@ export default function WelcomeModal() {
   };
 
   useEffect(() => {
-    const timer = scheduleOpen(15000);
+    const timer = scheduleOpen(60000);
     return () => clearTimeout(timer);
   }, []);
 
   const handleClose = () => {
     setIsOpen(false);
-    const timer = scheduleOpen(60000);
+    const timer = scheduleOpen(90000);
     return () => clearTimeout(timer);
   };
 

@@ -377,6 +377,24 @@
   animation: sold-out-blink 1.5s ease-in-out infinite;
 }
 
+@keyframes soft-pulse {
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+    box-shadow: 0 10px 25px -5px rgba(249, 115, 22, 0.3);
+  }
+  50% {
+    opacity: 0.92;
+    transform: scale(1.02);
+    box-shadow: 0 10px 40px -5px rgba(249, 115, 22, 0.5);
+  }
+}
+
+.animate-soft-pulse {
+  animation: soft-pulse 3s ease-in-out infinite;
+}
+
 .animate-sold-out-gradient {
   background: linear-gradient(
     90deg,

@@ -17,7 +17,7 @@ const CTAButton: React.FC<CTAButtonProps> = ({ onClick, className = '' }) => {
         className="group relative bg-gradient-to-r from-orange-500 to-red-600 text-white px-12 py-5 rounded-full font-bold text-xl shadow-2xl hover:shadow-orange-500/50 transform hover:scale-110 transition-all duration-300 overflow-hidden border-2 border-orange-400/30 inline-block"
       >
         {/* Animated background glow */}
-        <div className="absolute -inset-1 bg-gradient-to-r from-orange-300 to-red-300 rounded-full blur opacity-40 group-hover:opacity-80 transition-opacity duration-300 animate-pulse"></div>
+        <div className="absolute -inset-1 bg-gradient-to-r from-orange-300 to-red-300 rounded-full blur opacity-40 group-hover:opacity-80 transition-opacity duration-300 animate-soft-pulse"></div>
         
         {/* Button content */}
         <div className="relative flex items-center gap-3">

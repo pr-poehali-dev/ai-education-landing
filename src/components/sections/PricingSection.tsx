@@ -15,7 +15,7 @@ export default function PricingSection({ scrollToForm }: PricingSectionProps) {
         <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">Тарифы</span>
         </h2>
-        <div className="inline-flex items-center gap-3 px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-orange-500 via-red-600 to-pink-600 text-white text-base sm:text-lg font-bold rounded-xl shadow-2xl border-2 border-orange-300/50 animate-pulse">
+        <div className="inline-flex items-center gap-3 px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-orange-500 via-red-600 to-pink-600 text-white text-base sm:text-lg font-bold rounded-xl shadow-2xl border-2 border-orange-300/50 animate-soft-pulse">
           <Icon name="AlertTriangle" size={22} />
           С СЕНТЯБРЯ ПОВЫШЕНИЕ ЦЕН
           <Icon name="AlertTriangle" size={22} />
@@ -128,7 +128,7 @@ export default function PricingSection({ scrollToForm }: PricingSectionProps) {
                 href="https://torguykriptoy.getcourse.ru/chernikovgpt" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="w-full inline-flex items-center justify-center px-6 py-3 sm:py-4 bg-gradient-to-r from-orange-500 to-red-600 hover:from-orange-400 hover:to-red-500 text-white font-bold text-base sm:text-lg rounded-lg transition-all duration-300 shadow-xl hover:shadow-orange-500/50 hover:scale-105 border-2 border-orange-300/30 hover:border-orange-300/60 animate-pulse"
+                className="w-full inline-flex items-center justify-center px-6 py-3 sm:py-4 bg-gradient-to-r from-orange-500 to-red-600 hover:from-orange-400 hover:to-red-500 text-white font-bold text-base sm:text-lg rounded-lg transition-all duration-300 shadow-xl hover:shadow-orange-500/50 hover:scale-105 border-2 border-orange-300/30 hover:border-orange-300/60 animate-soft-pulse"
               >
                 🔥 ПОЛУЧИТЬ МАКСИМУМ
               </a>

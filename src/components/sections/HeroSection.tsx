@@ -42,7 +42,7 @@ export default function HeroSection({ scrollToForm, scrollToSection }: HeroSecti
   }, []);
   return (
     <div className="relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 via-purple-600/20 to-cyan-500/20 animate-pulse"></div>
+      <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 via-purple-600/20 to-cyan-500/20 animate-soft-pulse"></div>
       
       {/* Hero Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 pt-20 sm:pt-32 pb-12 sm:pb-20">
@@ -56,7 +56,7 @@ export default function HeroSection({ scrollToForm, scrollToSection }: HeroSecti
                 Научись зарабатывать с ИИ — <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">даже если ты полный ноль</span>
               </h1>
               <div className="flex flex-wrap gap-2 sm:gap-3">
-                <div className="inline-flex items-center gap-2 px-4 py-2.5 sm:px-5 sm:py-3 bg-gradient-to-r from-orange-500 via-red-600 to-pink-600 text-white text-sm sm:text-base font-bold rounded-xl shadow-2xl animate-pulse border-2 border-orange-300/50">
+                <div className="inline-flex items-center gap-2 px-4 py-2.5 sm:px-5 sm:py-3 bg-gradient-to-r from-orange-500 via-red-600 to-pink-600 text-white text-sm sm:text-base font-bold rounded-xl shadow-2xl animate-soft-pulse border-2 border-orange-300/50">
                   <Icon name="Users" size={20} className="animate-bounce" />
                   ЖИВОЕ ОБУЧЕНИЕ В КЛАССЕ
                 </div>
@@ -77,7 +77,7 @@ export default function HeroSection({ scrollToForm, scrollToSection }: HeroSecti
             
             {/* Countdown Timer */}
             <div className="relative">
-              <div className="absolute inset-0 bg-gradient-to-r from-orange-500/20 via-red-500/20 to-pink-500/20 rounded-2xl blur-xl animate-pulse"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-orange-500/20 via-red-500/20 to-pink-500/20 rounded-2xl blur-xl animate-soft-pulse"></div>
               <div className="relative bg-gradient-to-br from-slate-800/90 to-slate-900/90 backdrop-blur-sm rounded-2xl p-6 border-2 border-orange-500/50 shadow-2xl">
                 <div className="text-center mb-4">
                   <p className="text-orange-400 font-bold text-sm uppercase tracking-wider mb-1">До старта курса осталось</p>
@@ -131,7 +131,7 @@ export default function HeroSection({ scrollToForm, scrollToSection }: HeroSecti
                 href="https://torguykriptoy.getcourse.ru/chernikovgpt" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="inline-flex items-center bg-gradient-to-r from-cyan-500 via-blue-600 to-purple-600 hover:from-cyan-400 hover:via-blue-500 hover:to-purple-500 text-lg sm:text-xl px-8 sm:px-10 py-5 sm:py-6 text-white font-bold rounded-xl transition-all duration-300 shadow-2xl hover:shadow-cyan-500/30 hover:scale-105 animate-pulse border-2 border-cyan-300/30 hover:border-cyan-300/60 w-full sm:w-auto justify-center"
+                className="inline-flex items-center bg-gradient-to-r from-cyan-500 via-blue-600 to-purple-600 hover:from-cyan-400 hover:via-blue-500 hover:to-purple-500 text-lg sm:text-xl px-8 sm:px-10 py-5 sm:py-6 text-white font-bold rounded-xl transition-all duration-300 shadow-2xl hover:shadow-cyan-500/30 hover:scale-105 animate-soft-pulse border-2 border-cyan-300/30 hover:border-cyan-300/60 w-full sm:w-auto justify-center"
               >
                 <Icon name="Rocket" className="mr-3" size={24} />
                 Занять место на май →
@@ -171,7 +171,7 @@ export default function HeroSection({ scrollToForm, scrollToSection }: HeroSecti
           </div>
 
           <div className="relative animate-fade-in-up">
-            <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/30 to-blue-600/30 rounded-full blur-3xl animate-pulse"></div>
+            <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/30 to-blue-600/30 rounded-full blur-3xl animate-soft-pulse"></div>
             <img 
               src="https://cdn.poehali.dev/files/86be2539-f781-4550-a0e1-86adfb8e1f54.png"
               alt="Сергей Черников - Эксперт по ИИ"
