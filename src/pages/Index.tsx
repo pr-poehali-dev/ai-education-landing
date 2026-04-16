@@ -67,8 +67,6 @@ export default function Index() {
 
       <CTAButton onClick={scrollToForm} />
 
-      <CTAButton onClick={scrollToForm} />
-
       <ScrollReveal direction="left">
         <WorkshopReviewsSection />
       </ScrollReveal>
