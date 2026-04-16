@@ -17,6 +17,7 @@ interface TimeLeft {
 
 export default function HeroSection({ scrollToForm, scrollToSection }: HeroSectionProps) {
   const [timeLeft, setTimeLeft] = useState<TimeLeft>({ days: 0, hours: 0, minutes: 0, seconds: 0 });
+  const [isExpired, setIsExpired] = useState(false);
 
   useEffect(() => {
     const targetDate = new Date('2026-05-11T00:00:00').getTime();
@@ -26,12 +27,15 @@ export default function HeroSection({ scrollToForm, scrollToSection }: HeroSecti
       const distance = targetDate - now;
 
       if (distance > 0) {
+        setIsExpired(false);
         setTimeLeft({
           days: Math.floor(distance / (1000 * 60 * 60 * 24)),
           hours: Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
           minutes: Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)),
           seconds: Math.floor((distance % (1000 * 60)) / 1000)
         });
+      } else {
+        setIsExpired(true);
       }
     };
 
@@ -77,52 +81,58 @@ export default function HeroSection({ scrollToForm, scrollToSection }: HeroSecti
             
             {/* Countdown Timer */}
             <div className="relative">
-              <div className="absolute inset-0 bg-gradient-to-r from-orange-500/20 via-red-500/20 to-pink-500/20 rounded-2xl blur-xl animate-soft-pulse"></div>
-              <div className="relative bg-gradient-to-br from-slate-800/90 to-slate-900/90 backdrop-blur-sm rounded-2xl p-6 border-2 border-orange-500/50 shadow-2xl">
-                <div className="text-center mb-4">
-                  <p className="text-orange-400 font-bold text-sm uppercase tracking-wider mb-1">До старта курса осталось</p>
-                  <div className="h-1 w-20 bg-gradient-to-r from-orange-500 to-red-500 mx-auto rounded-full"></div>
-                </div>
-                
-                <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 sm:gap-3 md:gap-4">
-                  <div className="text-center group">
-                    <div className="bg-gradient-to-br from-orange-500/20 to-red-600/20 rounded-xl p-3 sm:p-4 border border-orange-500/30 backdrop-blur-sm group-hover:scale-105 transition-all duration-300 group-hover:shadow-lg group-hover:shadow-orange-500/50">
-                      <div className="text-2xl sm:text-4xl font-bold text-white mb-1 font-mono tabular-nums">
-                        {String(timeLeft.days).padStart(2, '0')}
-                      </div>
-                      <div className="text-xs sm:text-sm text-orange-300 font-medium">дней</div>
+              <div className={`absolute inset-0 bg-gradient-to-r ${isExpired ? 'from-green-500/20 via-emerald-500/20 to-cyan-500/20' : 'from-orange-500/20 via-red-500/20 to-pink-500/20'} rounded-2xl blur-xl animate-soft-pulse`}></div>
+              <div className={`relative bg-gradient-to-br from-slate-800/90 to-slate-900/90 backdrop-blur-sm rounded-2xl p-6 border-2 ${isExpired ? 'border-green-500/50' : 'border-orange-500/50'} shadow-2xl`}>
+                {isExpired ? (
+                  <div className="text-center space-y-3">
+                    <div className="inline-flex items-center gap-2 px-4 py-2 bg-green-500/20 border border-green-500/30 rounded-full">
+                      <Icon name="CheckCircle" size={20} className="text-green-400" />
+                      <span className="text-green-300 font-bold text-sm uppercase tracking-wider">Курс уже стартовал!</span>
                     </div>
+                    <p className="text-gray-300 text-sm sm:text-base">Присоединяйтесь — ещё можно записаться в текущий поток</p>
                   </div>
-                  
-                  <div className="text-center group">
-                    <div className="bg-gradient-to-br from-orange-500/20 to-red-600/20 rounded-xl p-3 sm:p-4 border border-orange-500/30 backdrop-blur-sm group-hover:scale-105 transition-all duration-300 group-hover:shadow-lg group-hover:shadow-orange-500/50">
-                      <div className="text-2xl sm:text-4xl font-bold text-white mb-1 font-mono tabular-nums">
-                        {String(timeLeft.hours).padStart(2, '0')}
-                      </div>
-                      <div className="text-xs sm:text-sm text-orange-300 font-medium">часов</div>
+                ) : (
+                  <>
+                    <div className="text-center mb-4">
+                      <p className="text-orange-400 font-bold text-sm uppercase tracking-wider mb-1">До старта курса осталось</p>
+                      <div className="h-1 w-20 bg-gradient-to-r from-orange-500 to-red-500 mx-auto rounded-full"></div>
                     </div>
-                  </div>
-                  
-                  <div className="text-center group">
-                    <div className="bg-gradient-to-br from-orange-500/20 to-red-600/20 rounded-xl p-3 sm:p-4 border border-orange-500/30 backdrop-blur-sm group-hover:scale-105 transition-all duration-300 group-hover:shadow-lg group-hover:shadow-orange-500/50">
-                      <div className="text-2xl sm:text-4xl font-bold text-white mb-1 font-mono tabular-nums">
-                        {String(timeLeft.minutes).padStart(2, '0')}
+                    <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 sm:gap-3 md:gap-4">
+                      <div className="text-center group">
+                        <div className="bg-gradient-to-br from-orange-500/20 to-red-600/20 rounded-xl p-3 sm:p-4 border border-orange-500/30 backdrop-blur-sm group-hover:scale-105 transition-all duration-300 group-hover:shadow-lg group-hover:shadow-orange-500/50">
+                          <div className="text-2xl sm:text-4xl font-bold text-white mb-1 font-mono tabular-nums">
+                            {String(timeLeft.days).padStart(2, '0')}
+                          </div>
+                          <div className="text-xs sm:text-sm text-orange-300 font-medium">дней</div>
+                        </div>
                       </div>
-                      <div className="text-xs sm:text-sm text-orange-300 font-medium">минут</div>
-                    </div>
-                  </div>
-                  
-                  <div className="text-center group">
-                    <div className="bg-gradient-to-br from-orange-500/20 to-red-600/20 rounded-xl p-3 sm:p-4 border border-orange-500/30 backdrop-blur-sm group-hover:scale-105 transition-all duration-300 group-hover:shadow-lg group-hover:shadow-orange-500/50">
-                      <div className="text-2xl sm:text-4xl font-bold text-white mb-1 font-mono tabular-nums">
-                        {String(timeLeft.seconds).padStart(2, '0')}
+                      <div className="text-center group">
+                        <div className="bg-gradient-to-br from-orange-500/20 to-red-600/20 rounded-xl p-3 sm:p-4 border border-orange-500/30 backdrop-blur-sm group-hover:scale-105 transition-all duration-300 group-hover:shadow-lg group-hover:shadow-orange-500/50">
+                          <div className="text-2xl sm:text-4xl font-bold text-white mb-1 font-mono tabular-nums">
+                            {String(timeLeft.hours).padStart(2, '0')}
+                          </div>
+                          <div className="text-xs sm:text-sm text-orange-300 font-medium">часов</div>
+                        </div>
                       </div>
-                      <div className="text-xs sm:text-sm text-orange-300 font-medium">секунд</div>
+                      <div className="text-center group">
+                        <div className="bg-gradient-to-br from-orange-500/20 to-red-600/20 rounded-xl p-3 sm:p-4 border border-orange-500/30 backdrop-blur-sm group-hover:scale-105 transition-all duration-300 group-hover:shadow-lg group-hover:shadow-orange-500/50">
+                          <div className="text-2xl sm:text-4xl font-bold text-white mb-1 font-mono tabular-nums">
+                            {String(timeLeft.minutes).padStart(2, '0')}
+                          </div>
+                          <div className="text-xs sm:text-sm text-orange-300 font-medium">минут</div>
+                        </div>
+                      </div>
+                      <div className="text-center group">
+                        <div className="bg-gradient-to-br from-orange-500/20 to-red-600/20 rounded-xl p-3 sm:p-4 border border-orange-500/30 backdrop-blur-sm group-hover:scale-105 transition-all duration-300 group-hover:shadow-lg group-hover:shadow-orange-500/50">
+                          <div className="text-2xl sm:text-4xl font-bold text-white mb-1 font-mono tabular-nums">
+                            {String(timeLeft.seconds).padStart(2, '0')}
+                          </div>
+                          <div className="text-xs sm:text-sm text-orange-300 font-medium">секунд</div>
+                        </div>
+                      </div>
                     </div>
-                  </div>
-                </div>
-                
-
+                  </>
+                )}
               </div>
             </div>
 

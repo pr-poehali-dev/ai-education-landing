@@ -64,32 +64,39 @@ export default function FormSection() {
 
         <Card className="bg-slate-800/50 border-slate-700 backdrop-blur-sm">
           <CardContent className="p-4 sm:p-6 lg:p-8">
-            <div className="text-center space-y-3">
+            <div className="text-center space-y-5">
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8 text-gray-300 text-sm sm:text-base">
+                <div className="flex items-center gap-2">
+                  <Icon name="Shield" size={18} className="text-cyan-400" />
+                  <span>Безопасная оплата</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Icon name="CreditCard" size={18} className="text-cyan-400" />
+                  <span>Рассрочка от 3 мес.</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Icon name="Users" size={18} className="text-cyan-400" />
+                  <span>Осталось 13 мест</span>
+                </div>
+              </div>
               <a 
                 href="https://torguykriptoy.getcourse.ru/chernikovgpt" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="inline-flex items-center bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-base sm:text-lg py-5 sm:py-6 px-8 sm:px-12 text-white font-medium rounded-md transition-colors w-full sm:w-auto justify-center"
+                className="inline-flex items-center bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-base sm:text-lg py-5 sm:py-6 px-8 sm:px-12 text-white font-bold rounded-xl transition-all duration-300 shadow-lg hover:shadow-cyan-500/30 hover:scale-105 w-full sm:w-auto justify-center"
               >
-                <Icon name="Send" className="mr-2" />
-                Отправить заявку
+                <Icon name="Rocket" className="mr-2" size={20} />
+                Записаться на курс
               </a>
+              <p className="text-gray-500 text-xs sm:text-sm">
+                Нажимая кнопку, вы перейдёте на страницу оформления заявки
+              </p>
             </div>
           </CardContent>
         </Card>
       </section>
 
-      {/* Footer */}
-      <footer className="py-8 sm:py-10 lg:py-12 px-4 sm:px-6 border-t border-slate-700">
-        <div className="max-w-7xl mx-auto text-center">
-          <div className="text-2xl font-bold text-white mb-4">
-            Школа ИИ <span className="text-cyan-400">Сергея Черникова</span>
-          </div>
-          <p className="text-gray-400">
-            © 2025 Школа ИИ. Все права защищены.
-          </p>
-        </div>
-      </footer>
+
     </>
   );
 }

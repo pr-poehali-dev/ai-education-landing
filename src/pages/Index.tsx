@@ -65,8 +65,6 @@ export default function Index() {
         <ProfessionsSection />
       </ScrollReveal>
 
-      <CTAButton onClick={scrollToForm} />
-
       <ScrollReveal direction="left">
         <WorkshopReviewsSection />
       </ScrollReveal>
@@ -80,8 +78,6 @@ export default function Index() {
       <ScrollReveal>
         <ProgramSection scrollToForm={scrollToForm} />
       </ScrollReveal>
-
-      <CTAButton onClick={scrollToForm} />
 
       <ScrollReveal>
         <PricingSection scrollToForm={scrollToForm} />
