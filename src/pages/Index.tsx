@@ -11,6 +11,7 @@ import SundayAICompactSection from '@/components/sections/SundayAICompactSection
 
 import AIToolsSection from '@/components/sections/AIToolsSection';
 import TestimonialsSection from '@/components/sections/TestimonialsSection';
+import WorkshopReviewsSection from '@/components/sections/WorkshopReviewsSection';
 import ProgramSection from '@/components/sections/ProgramSection';
 import PricingSection from '@/components/sections/PricingSection';
 import CorporatePaymentSection from '@/components/sections/CorporatePaymentSection';
@@ -66,6 +67,10 @@ export default function Index() {
       <CTAButton onClick={scrollToForm} />
 
       <CTAButton onClick={scrollToForm} />
+
+      <ScrollReveal direction="left">
+        <WorkshopReviewsSection />
+      </ScrollReveal>
 
       <ScrollReveal>
         <TestimonialsSection />
