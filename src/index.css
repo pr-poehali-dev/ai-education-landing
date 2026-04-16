@@ -481,6 +481,70 @@
   transition: filter 0.3s ease;
 }
 
+@keyframes camera-rec {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  10% {
+    transform: scale(1.05);
+  }
+  20% {
+    transform: scale(1);
+  }
+  40% {
+    transform: scale(1) rotate(0deg);
+  }
+  50% {
+    transform: scale(1.02) rotate(-2deg);
+  }
+  60% {
+    transform: scale(1) rotate(1deg);
+  }
+  70% {
+    transform: scale(1.03) rotate(0deg);
+  }
+  80% {
+    transform: scale(1) rotate(-1deg);
+  }
+  100% {
+    transform: scale(1) rotate(0deg);
+    opacity: 1;
+  }
+}
+
+@keyframes rec-blink {
+  0%,
+  100% {
+    opacity: 1;
+    box-shadow: 0 0 4px 2px rgba(239, 68, 68, 0.6);
+  }
+  50% {
+    opacity: 0.3;
+    box-shadow: 0 0 2px 1px rgba(239, 68, 68, 0.3);
+  }
+}
+
+.group:hover .animate-video-icon {
+  animation: camera-rec 1.5s ease-in-out infinite;
+}
+
+.group:hover .animate-video-rec::after {
+  content: "";
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  width: 6px;
+  height: 6px;
+  background: #ef4444;
+  border-radius: 50%;
+  animation: rec-blink 1s ease-in-out infinite;
+}
+
+.animate-video-rec {
+  position: relative;
+}
+
 .animate-sold-out-gradient {
   background: linear-gradient(
     90deg,
