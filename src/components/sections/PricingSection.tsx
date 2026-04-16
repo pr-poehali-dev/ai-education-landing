@@ -72,11 +72,7 @@ export default function PricingSection({ scrollToForm }: PricingSectionProps) {
         </Card>
 
         <Card className="bg-gradient-to-b from-slate-800/70 to-slate-800/50 border-cyan-500/50 relative overflow-hidden">
-          <div className="absolute top-3 right-3 sm:top-4 sm:right-4">
-            <Badge className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white">
-              Популярный
-            </Badge>
-          </div>
+
           <CardContent className="p-6 sm:p-8">
             <h3 className="text-xl sm:text-2xl font-bold text-white mb-1">МАКСИМУМ</h3>
             <p className="text-gray-400 text-sm mb-3">персональный рост с Сергеем Черниковым</p>
