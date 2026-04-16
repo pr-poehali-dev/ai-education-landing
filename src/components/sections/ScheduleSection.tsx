@@ -114,7 +114,7 @@ export default function ScheduleSection() {
         <div className="inline-flex items-center bg-gradient-to-r from-orange-500/20 to-red-600/20 border-2 border-orange-400/50 rounded-full px-6 sm:px-10 py-4 sm:py-5 text-base sm:text-lg backdrop-blur-sm shadow-lg shadow-orange-500/20">
           <Icon name="Users" className="text-orange-400 mr-3" size={24} />
           <span className="text-white font-bold">
-            Всего мест: <span className="text-orange-400 text-xl sm:text-2xl">20</span>
+            Всего мест: <span className="text-orange-400 text-xl sm:text-2xl">30</span>
           </span>
         </div>
         
@@ -126,20 +126,50 @@ export default function ScheduleSection() {
                 <Icon name="Heart" className="text-white" size={32} />
               </div>
               <h4 className="text-2xl sm:text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500 mb-2">
-                Почему только 20 мест?
+                Почему только 30 мест?
               </h4>
               <div className="h-1 w-24 bg-gradient-to-r from-cyan-500 to-blue-500 mx-auto rounded-full"></div>
             </div>
             
             <p className="text-white text-lg sm:text-xl font-bold text-center mb-4">
-              «Не поток. Не конвейер. Только 20 человек в группе.»
+              «Не поток. Не конвейер. Только 30 человек в группе.»
             </p>
             <p className="text-gray-200 text-base sm:text-lg leading-relaxed text-center mb-6">
               Я лично проверяю каждое домашнее задание, отвечаю на вопросы и слежу за прогрессом каждого студента. Именно поэтому <span className="text-cyan-400 font-bold">94% выпускников применяют ИИ в работе</span> уже через месяц после старта.
             </p>
+
+            <div className="bg-gradient-to-br from-purple-500/10 to-indigo-600/10 border border-purple-400/30 rounded-2xl p-6 mb-6">
+              <div className="flex items-center justify-center gap-3 mb-4">
+                <div className="w-10 h-10 bg-gradient-to-r from-purple-500 to-indigo-600 rounded-xl flex items-center justify-center shadow-lg shadow-purple-500/30">
+                  <Icon name="HandHelping" className="text-white" size={22} />
+                </div>
+                <h5 className="text-lg sm:text-xl font-bold text-white">На каждом занятии — 3 наставника</h5>
+              </div>
+              <p className="text-gray-200 text-base leading-relaxed text-center mb-4">
+                Помимо преподавателя, в зале работают <span className="text-purple-300 font-bold">2 куратора-практика</span>, которые подходят к каждому лично. Застрял на задании? Куратор уже рядом. Не понял промпт? Объяснят на твоём примере. Ни один студент не останется без внимания — <span className="text-white font-semibold">это как личный тренер, только в мире ИИ</span>.
+              </p>
+              <div className="grid grid-cols-3 gap-3">
+                <div className="bg-slate-800/60 rounded-xl p-3 text-center border border-purple-500/20">
+                  <Icon name="Mic" className="text-cyan-400 mx-auto mb-1.5" size={22} />
+                  <p className="text-white font-semibold text-xs sm:text-sm">Преподаватель</p>
+                  <p className="text-gray-400 text-xs">ведёт урок</p>
+                </div>
+                <div className="bg-slate-800/60 rounded-xl p-3 text-center border border-purple-500/20">
+                  <Icon name="User" className="text-purple-400 mx-auto mb-1.5" size={22} />
+                  <p className="text-white font-semibold text-xs sm:text-sm">Куратор №1</p>
+                  <p className="text-gray-400 text-xs">помогает лично</p>
+                </div>
+                <div className="bg-slate-800/60 rounded-xl p-3 text-center border border-purple-500/20">
+                  <Icon name="User" className="text-purple-400 mx-auto mb-1.5" size={22} />
+                  <p className="text-white font-semibold text-xs sm:text-sm">Куратор №2</p>
+                  <p className="text-gray-400 text-xs">помогает лично</p>
+                </div>
+              </div>
+            </div>
+
             <div className="bg-orange-500/10 border border-orange-400/40 rounded-xl px-5 py-3 text-center">
               <p className="text-orange-300 font-bold text-base sm:text-lg">
-                ⚡ На май осталось 6 мест из 20
+                ⚡ На май осталось 13 мест из 30
               </p>
             </div>
             
