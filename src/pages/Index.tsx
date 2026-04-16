@@ -22,6 +22,7 @@ import CTAButton from '@/components/ui/cta-button';
 import AnimatedBackground from '@/components/ui/animated-background';
 
 import ScrollReveal from '@/components/ui/scroll-reveal';
+import FloatingConsultButton from '@/components/FloatingConsultButton';
 
 export default function Index() {
   const scrollToForm = () => {
@@ -110,6 +111,7 @@ export default function Index() {
         <Footer />
       </ScrollReveal>
 
+      <FloatingConsultButton />
     </div>
   );
 }

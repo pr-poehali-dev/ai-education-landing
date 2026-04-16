@@ -78,12 +78,12 @@ export default function StickyHeader({ scrollToForm, scrollToSection }: StickyHe
             ТГ-КАНАЛ
           </a>
           <a 
-            href="https://t.me/ChernikovGPT_Bot" 
+            href="https://torguykriptoy.getcourse.ru/chernikovgpt" 
             target="_blank" 
             rel="noopener noreferrer"
-            className="inline-flex items-center px-4 py-3 lg:px-6 lg:py-3 bg-gradient-to-r from-orange-500 to-red-600 hover:from-orange-400 hover:to-red-500 text-white font-bold rounded-lg transition-all duration-300 shadow-xl hover:shadow-orange-500/40 hover:scale-105 text-sm lg:text-base border-2 border-orange-300/40 animate-pulse"
+            className="inline-flex items-center px-4 py-3 lg:px-6 lg:py-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold rounded-lg transition-all duration-300 shadow-lg hover:shadow-cyan-500/25 hover:scale-105 text-sm lg:text-base border border-cyan-400/20"
           >
-            🔥 БЕСПЛАТНАЯ КОНСУЛЬТАЦИЯ ПО ИИ
+            🚀 Записаться
           </a>
         </div>
 
@@ -161,13 +161,13 @@ export default function StickyHeader({ scrollToForm, scrollToSection }: StickyHe
             ТГ-КАНАЛ
           </a>
           <a 
-            href="https://t.me/ChernikovGPT_Bot" 
+            href="https://torguykriptoy.getcourse.ru/chernikovgpt" 
             target="_blank" 
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-orange-500 to-red-600 hover:from-orange-400 hover:to-red-500 text-white font-bold rounded-lg transition-all duration-300 shadow-xl hover:shadow-orange-500/40 hover:scale-105 border-2 border-orange-300/40 animate-pulse"
+            className="inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold rounded-lg transition-all duration-300 shadow-lg hover:shadow-cyan-500/25 hover:scale-105 border border-cyan-400/20"
             onClick={() => setIsMobileMenuOpen(false)}
           >
-            🔥 БЕСПЛАТНАЯ КОНСУЛЬТАЦИЯ ПО ИИ
+            🚀 Записаться
           </a>
         </div>
       </div>
