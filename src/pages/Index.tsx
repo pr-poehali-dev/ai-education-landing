@@ -20,7 +20,7 @@ import FormSection from '@/components/sections/FormSection';
 import Footer from '@/components/sections/Footer';
 import CTAButton from '@/components/ui/cta-button';
 import AnimatedBackground from '@/components/ui/animated-background';
-import ChatWidget from '@/components/ChatWidget';
+
 import ScrollReveal from '@/components/ui/scroll-reveal';
 
 export default function Index() {
@@ -110,7 +110,6 @@ export default function Index() {
         <Footer />
       </ScrollReveal>
 
-      <ChatWidget />
     </div>
   );
 }
