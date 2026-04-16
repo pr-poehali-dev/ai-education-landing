@@ -67,8 +67,8 @@ export default function AIToolsSection() {
   };
 
   return (
-    <section id="ai-tools" className="py-12 sm:py-20 px-4 sm:px-6 max-w-7xl mx-auto">
-      <div className="text-center mb-10 sm:mb-16">
+    <section id="ai-tools" className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 max-w-7xl mx-auto">
+      <div className="text-center mb-8 sm:mb-10 lg:mb-12">
         <h2 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-4 sm:mb-6 leading-tight">
           Какие <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">нейронки и сервисы</span> вы изучите
         </h2>
@@ -77,7 +77,7 @@ export default function AIToolsSection() {
         </p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4 sm:gap-6 lg:gap-8 mb-8 sm:mb-12">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4 sm:gap-6 lg:gap-8 mb-6 sm:mb-8 lg:mb-10">
         {Object.entries(aiTools).map(([key, category]) => {
           const stats = getStats(key);
           const isHovered = hoveredCard === key;

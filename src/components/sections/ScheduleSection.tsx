@@ -4,8 +4,8 @@ import Icon from '@/components/ui/icon';
 
 export default function ScheduleSection() {
   return (
-    <section className="py-16 px-6 max-w-6xl mx-auto">
-      <div className="text-center mb-12">
+    <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 max-w-6xl mx-auto">
+      <div className="text-center mb-8 sm:mb-10 lg:mb-12">
         <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">Расписание</span> курса
         </h2>
@@ -110,7 +110,7 @@ export default function ScheduleSection() {
       </div>
 
       {/* Дополнительная информация */}
-      <div className="mt-12 text-center space-y-6">
+      <div className="mt-8 sm:mt-10 lg:mt-12 text-center space-y-4 sm:space-y-6">
         <div className="inline-flex items-center bg-gradient-to-r from-orange-500/20 to-red-600/20 border-2 border-orange-400/50 rounded-full px-4 sm:px-6 md:px-10 py-4 sm:py-5 text-base sm:text-lg backdrop-blur-sm shadow-lg shadow-orange-500/20">
           <Icon name="Users" className="text-orange-400 mr-3" size={24} />
           <span className="text-white font-bold">

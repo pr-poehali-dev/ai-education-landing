@@ -4,7 +4,7 @@ import Icon from '@/components/ui/icon';
 
 export default function SundayAICompactSection() {
   return (
-    <section className="relative py-12 overflow-hidden">
+    <section className="relative py-8 sm:py-10 lg:py-12 overflow-hidden">
       {/* Subtle background glow */}
       <div className="absolute inset-0 bg-gradient-to-r from-orange-500/5 via-yellow-500/5 to-orange-500/5"></div>
       

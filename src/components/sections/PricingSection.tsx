@@ -10,8 +10,8 @@ interface PricingSectionProps {
 
 export default function PricingSection({ scrollToForm }: PricingSectionProps) {
   return (
-    <section id="pricing" className="py-20 px-6 max-w-7xl mx-auto">
-      <div className="text-center mb-10">
+    <section id="pricing" className="py-16 sm:py-20 lg:py-24 px-4 sm:px-6 max-w-7xl mx-auto">
+      <div className="text-center mb-8 sm:mb-10 lg:mb-12">
         <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">Тарифы</span>
         </h2>

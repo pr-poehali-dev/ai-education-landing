@@ -120,11 +120,11 @@ export default function CalendarSection() {
   }
 
   return (
-    <section className="relative py-16 sm:py-20 overflow-hidden" id="calendar">
+    <section className="relative py-12 sm:py-16 lg:py-20 overflow-hidden" id="calendar">
       <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-blue-500/5 to-purple-500/5"></div>
       
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
-        <div className="text-center mb-8 sm:mb-12">
+        <div className="text-center mb-6 sm:mb-8 lg:mb-12">
           <Badge className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white border-0 mb-4 text-xs sm:text-sm">
             Расписание занятий
           </Badge>

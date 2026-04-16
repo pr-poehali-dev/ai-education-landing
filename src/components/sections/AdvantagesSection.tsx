@@ -39,8 +39,8 @@ const partners = ["Мой Бизнес", "Центр Поддержки Пред
 
 export default function AdvantagesSection() {
   return (
-    <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 max-w-7xl mx-auto">
-      <div className="text-center mb-12 sm:mb-16">
+    <section className="py-16 sm:py-20 lg:py-24 px-4 sm:px-6 max-w-7xl mx-auto">
+      <div className="text-center mb-8 sm:mb-10 lg:mb-12">
         <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6">
           Почему нужно идти <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">ко мне?</span>
         </h2>

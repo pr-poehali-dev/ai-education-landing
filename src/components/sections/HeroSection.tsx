@@ -45,8 +45,8 @@ export default function HeroSection({ scrollToForm, scrollToSection }: HeroSecti
       <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 via-purple-600/20 to-cyan-500/20 animate-soft-pulse"></div>
       
       {/* Hero Content */}
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 pt-20 sm:pt-32 pb-12 sm:pb-20">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 pt-24 sm:pt-32 pb-16 sm:pb-24">
+        <div className="grid lg:grid-cols-2 gap-8 sm:gap-10 lg:gap-12 items-center">
           <div className="space-y-8">
             <div className="space-y-4">
               <Badge className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white border-0">

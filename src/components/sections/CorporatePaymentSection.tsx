@@ -10,7 +10,7 @@ export default function CorporatePaymentSection() {
   };
 
   return (
-    <section className="py-12 px-6 max-w-4xl mx-auto">
+    <section className="py-8 sm:py-12 lg:py-16 px-4 sm:px-6 max-w-4xl mx-auto">
       <style>
         {`
           .faq-container {

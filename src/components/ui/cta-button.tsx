@@ -8,7 +8,7 @@ interface CTAButtonProps {
 
 const CTAButton: React.FC<CTAButtonProps> = ({ onClick, className = '' }) => {
   return (
-    <div className={`flex justify-center py-8 ${className}`}>
+    <div className={`flex justify-center py-6 sm:py-8 lg:py-10 ${className}`}>
       <a
         href="https://torguykriptoy.getcourse.ru/chernikovgpt"
         target="_blank"
