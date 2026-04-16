@@ -27,7 +27,7 @@ export default function PricingSection({ scrollToForm }: PricingSectionProps) {
           <CardContent className="p-6 sm:p-8">
             <h3 className="text-xl sm:text-2xl font-bold text-white mb-1">СТАРТ</h3>
             <p className="text-gray-400 text-sm mb-3">всё необходимое для результата</p>
-            <div className="text-3xl sm:text-4xl font-bold text-cyan-400 mb-1">99,000₽</div>
+            <div className="text-3xl sm:text-4xl font-bold text-cyan-400 mb-1">100 000₽</div>
             <div className="bg-cyan-500/10 border border-cyan-500/30 rounded-lg px-4 py-2 mb-5 text-sm text-cyan-300 mt-2">
               💡 Один ИИ-проект для клиента окупает курс полностью
             </div>
@@ -81,7 +81,7 @@ export default function PricingSection({ scrollToForm }: PricingSectionProps) {
           <CardContent className="p-6 sm:p-8">
             <h3 className="text-xl sm:text-2xl font-bold text-white mb-1">МАКСИМУМ</h3>
             <p className="text-gray-400 text-sm mb-3">персональный рост с Сергеем Черниковым</p>
-            <div className="text-3xl sm:text-4xl font-bold text-cyan-400 mb-1">299,000₽</div>
+            <div className="text-3xl sm:text-4xl font-bold text-cyan-400 mb-1">300 000₽</div>
             <div className="bg-orange-500/10 border border-orange-500/30 rounded-lg px-4 py-2 mb-5 text-sm text-orange-300">
               🔥 Личный доступ к эксперту с 7+ годами практики в ИИ
             </div>
