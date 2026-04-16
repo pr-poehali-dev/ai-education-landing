@@ -15,7 +15,7 @@ export default function ProgramSection({ scrollToForm }: ProgramSectionProps) {
           Программа <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">курса</span>
         </h2>
         <p className="text-base sm:text-lg lg:text-xl text-gray-300 max-w-3xl mx-auto">
-          Структурированное обучение от основ до продвинутых техник работы с ИИ
+          Курс для новичков: ведём от полного нуля до уверенного владения нейросетями за 3 месяца
         </p>
       </div>
 
@@ -27,7 +27,7 @@ export default function ProgramSection({ scrollToForm }: ProgramSectionProps) {
                 <div className="w-8 h-8 rounded-full bg-gradient-to-r from-cyan-500 to-blue-600 flex items-center justify-center text-white font-bold mr-4">1</div>
                 <div className="text-left">
                   <h3 className="text-xl font-bold">ИИ в контент-маркетинге и первый заработок</h3>
-                  <p className="text-gray-400 text-sm">Основы работы с нейросетями и первые результаты</p>
+                  <p className="text-gray-400 text-sm">Начинаем с нуля — покажем всё пошагово, даже если ты впервые слышишь про ИИ</p>
                 </div>
               </div>
             </AccordionTrigger>
