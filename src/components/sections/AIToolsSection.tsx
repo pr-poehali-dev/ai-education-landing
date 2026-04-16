@@ -99,7 +99,7 @@ export default function AIToolsSection() {
                 <div className="flex items-start sm:items-center justify-between mb-4 sm:mb-6 gap-3">
                   <div className="flex items-center gap-2 sm:gap-3 lg:gap-4 flex-1 min-w-0">
                     <div className={`w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 rounded-xl sm:rounded-2xl bg-gradient-to-r ${category.color} p-2 sm:p-3 lg:p-4 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300`}>
-                      <Icon name={category.icon as any} size={24} className={`sm:w-7 sm:h-7 lg:w-8 lg:h-8 text-white ${key === 'text' ? 'animate-typing-icon' : ''}`} />
+                      <Icon name={category.icon as any} size={24} className={`sm:w-7 sm:h-7 lg:w-8 lg:h-8 text-white ${key === 'text' ? 'animate-typing-icon' : key === 'image' ? 'animate-photo-icon' : ''}`} />
                     </div>
                     <div className="min-w-0">
                       <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-white mb-0.5 sm:mb-1 truncate">
