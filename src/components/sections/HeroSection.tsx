@@ -53,9 +53,16 @@ export default function HeroSection({ scrollToForm, scrollToSection }: HeroSecti
         <div className="grid lg:grid-cols-2 gap-8 sm:gap-10 lg:gap-12 items-center">
           <div className="space-y-8">
             <div className="space-y-4">
-              <Badge className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white border-0">
-                Практический курс по нейросетям — для новичков
-              </Badge>
+              <div className="flex flex-wrap items-center gap-3">
+                <span className="inline-flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-sm sm:text-base font-bold rounded-xl shadow-lg shadow-cyan-500/30 border border-cyan-300/30">
+                  <Icon name="Zap" size={16} />
+                  Практический курс по нейросетям — для новичков
+                </span>
+                <span className="inline-flex items-center gap-2 px-4 py-2.5 bg-red-600/20 border-2 border-red-500/70 text-red-300 text-sm sm:text-base font-bold rounded-xl animate-soft-pulse">
+                  <Icon name="Flame" size={16} className="text-red-400" />
+                  На май осталось 7 мест
+                </span>
+              </div>
               <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight">
                 Научись зарабатывать с ИИ — <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">даже если твой арсенал ограничился ДипСиком</span>
               </h1>
