@@ -63,6 +63,40 @@ export default function HeroSection({ scrollToForm, scrollToSection }: HeroSecti
                   На май осталось 7 мест
                 </span>
               </div>
+              {/* ЛОЗУНГ */}
+              <div className="relative py-2 select-none animate-shake">
+                <div className="relative inline-block">
+                  <span className="relative z-10 text-4xl sm:text-5xl lg:text-6xl font-black uppercase tracking-tight leading-none text-white animate-flicker"
+                    style={{ textShadow: '0 0 20px #f97316, 0 0 40px #ef4444, 0 0 80px #dc2626' }}>
+                    НЕ ЗНАТЬ AI —
+                  </span>
+                  <span
+                    aria-hidden="true"
+                    className="absolute inset-0 text-4xl sm:text-5xl lg:text-6xl font-black uppercase tracking-tight leading-none text-red-400 animate-glitch-1"
+                    style={{ textShadow: '2px 0 #22d3ee' }}>
+                    НЕ ЗНАТЬ AI —
+                  </span>
+                  <span
+                    aria-hidden="true"
+                    className="absolute inset-0 text-4xl sm:text-5xl lg:text-6xl font-black uppercase tracking-tight leading-none text-cyan-400 animate-glitch-2"
+                    style={{ textShadow: '-2px 0 #f97316' }}>
+                    НЕ ЗНАТЬ AI —
+                  </span>
+                </div>
+                <br />
+                <div className="relative inline-block mt-1">
+                  <span className="relative z-10 text-5xl sm:text-6xl lg:text-7xl font-black uppercase tracking-tight leading-none text-transparent bg-clip-text bg-gradient-to-r from-orange-400 via-red-500 to-pink-500 animate-flicker"
+                    style={{ WebkitTextStroke: '1px rgba(251,146,60,0.4)', filter: 'drop-shadow(0 0 30px #f97316) drop-shadow(0 0 60px #ef4444)' }}>
+                    ДОРОГО!
+                  </span>
+                  <span
+                    aria-hidden="true"
+                    className="absolute inset-0 text-5xl sm:text-6xl lg:text-7xl font-black uppercase tracking-tight leading-none text-red-500 animate-glitch-1"
+                    style={{ filter: 'blur(1px)', opacity: 0.6 }}>
+                    ДОРОГО!
+                  </span>
+                </div>
+              </div>
               <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight">
                 Научись зарабатывать с ИИ — <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">даже если твой арсенал ограничился ДипСиком</span>
               </h1>
