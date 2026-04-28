@@ -233,6 +233,27 @@ export default function TrustSection() {
           </div>
         </div>
       </div>
+
+      {/* Виджет отзывов 2ГИС */}
+      <div className="mt-10 sm:mt-14 flex justify-center">
+        <iframe
+          id="big_dark_70000001105602364"
+          frameBorder="0"
+          width="528"
+          height="824"
+          sandbox="allow-modals allow-forms allow-scripts allow-same-origin allow-popups allow-top-navigation-by-user-activation"
+          className="w-full max-w-[528px] rounded-2xl"
+          ref={(el) => {
+            if (!el) return;
+            const u = "PGhlYWQ+PHNjcmlwdCB0eXBlPSJ0ZXh0L2phdmFzY3JpcHQiPgogICAgd2luZG93Ll9fc2l6ZV9fPSdiaWcnOwogICAgd2luZG93Ll9fdGhlbWVfXz0nZGFyayc7CiAgICB3aW5kb3cuX19icmFuY2hJZF9fPSc3MDAwMDAwMTEwNTYwMjM2NCcKICAgIHdpbmRvdy5fX29yZ0lkX189JzcwMDAwMDAxMTA1NjAyMzYzJwogICA8L3NjcmlwdD48c2NyaXB0IGNyb3Nzb3JpZ2luPSJhbm9ueW1vdXMiIHR5cGU9Im1vZHVsZSIgc3JjPSJodHRwczovL2Rpc2suMmdpcy5jb20vd2lkZ2V0LWNvbnN0cnVjdG9yL2Fzc2V0cy9pZnJhbWUuanMiPjwvc2NyaXB0PjxsaW5rIHJlbD0ibW9kdWxlcHJlbG9hZCIgY3Jvc3NvcmlnaW49ImFub255bW91cyIgaHJlZj0iaHR0cHM6Ly9kaXNrLjJnaXMuY29tL3dpZGdldC1jb25zdHJ1Y3Rvci9hc3NldHMvZGVmYXVsdHMuanMiPjxsaW5rIHJlbD0ic3R5bGVzaGVldCIgY3Jvc3NvcmlnaW49ImFub255bW91cyIgaHJlZj0iaHR0cHM6Ly9kaXNrLjJnaXMuY29tL3dpZGdldC1jb25zdHJ1Y3Rvci9hc3NldHMvZGVmYXVsdHMuY3NzIj48L2hlYWQ+PGJvZHk+PGRpdiBpZD0iaWZyYW1lIj48L2Rpdj48L2JvZHk+";
+            try {
+              el.contentWindow?.document.open();
+              el.contentWindow?.document.write(decodeURIComponent(escape(atob(u))));
+              el.contentWindow?.document.close();
+            } catch (e) { void e; }
+          }}
+        />
+      </div>
     </section>
   );
 }
