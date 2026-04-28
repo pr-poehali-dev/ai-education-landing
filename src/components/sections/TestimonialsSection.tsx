@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import Icon from '@/components/ui/icon';
 
@@ -54,74 +54,169 @@ const testimonials = [
 ];
 
 export default function TestimonialsSection() {
+  const trackRef = useRef<HTMLDivElement>(null);
+  const [current, setCurrent] = useState(0);
+  const [isDragging, setIsDragging] = useState(false);
+  const dragStart = useRef(0);
+  const dragDelta = useRef(0);
+  const total = testimonials.length;
+
+  const goTo = (index: number) => {
+    setCurrent((index + total) % total);
+  };
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      if (!isDragging) setCurrent(c => (c + 1) % total);
+    }, 4500);
+    return () => clearInterval(timer);
+  }, [isDragging, total]);
+
+  const onPointerDown = (e: React.PointerEvent) => {
+    setIsDragging(true);
+    dragStart.current = e.clientX;
+    dragDelta.current = 0;
+  };
+
+  const onPointerMove = (e: React.PointerEvent) => {
+    if (!isDragging) return;
+    dragDelta.current = e.clientX - dragStart.current;
+  };
+
+  const onPointerUp = () => {
+    if (Math.abs(dragDelta.current) > 50) {
+      if (dragDelta.current < 0) goTo(current + 1);
+      else goTo(current - 1);
+    }
+    setIsDragging(false);
+    dragDelta.current = 0;
+  };
+
+  const getVisible = () => {
+    const prev = (current - 1 + total) % total;
+    const next = (current + 1) % total;
+    return [prev, current, next];
+  };
+
+  const [prev, curr, next] = getVisible();
+
   return (
     <section id="testimonials" className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 max-w-7xl mx-auto">
       <div className="text-center mb-8 sm:mb-10 lg:mb-12">
-        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6">
+        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4">
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">Отзывы</span> студентов
         </h2>
-        <p className="text-base sm:text-lg lg:text-xl text-gray-300 max-w-3xl mx-auto">
+        <p className="text-base sm:text-lg text-gray-300">
           Реальные истории успеха наших выпускников
         </p>
       </div>
 
-      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-        {testimonials.map((testimonial) => (
-          <Card key={testimonial.id} className="bg-slate-800/50 border-slate-700 hover:border-cyan-500/50 transition-all duration-300 backdrop-blur-sm">
-            <CardContent className="p-6">
-              <div className="flex items-center mb-4">
-                <img 
-                  src={testimonial.image} 
-                  alt={testimonial.name}
-                  className="w-12 h-12 rounded-full object-cover mr-3"
-                />
-                <div>
-                  <h4 className="text-lg font-semibold text-white">{testimonial.name}</h4>
-                  <div className="flex items-center">
-                    {[...Array(5)].map((_, i) => (
-                      <Icon 
-                        key={i} 
-                        name="Star" 
-                        className={`${i < testimonial.rating ? 'text-yellow-400 fill-current' : 'text-gray-600'}`}
-                        size={16} 
-                      />
-                    ))}
-                  </div>
-                </div>
-              </div>
-              
-              <div className="space-y-3">
-                <p className="text-gray-300 leading-relaxed text-sm">
-                  "{testimonial.text}"
-                </p>
-                
-                {testimonial.highlight && (
-                  <div className="bg-gradient-to-r from-cyan-500/10 to-blue-600/10 border-l-4 border-cyan-500 pl-4 py-2 rounded-r-lg">
-                    <p className="text-cyan-100 text-sm font-medium italic">
-                      "{testimonial.highlight}"
-                    </p>
-                  </div>
-                )}
-              </div>
-              
-              <div className="flex items-center justify-between mt-4 pt-4 border-t border-slate-700">
-                <div className="flex items-center text-cyan-400">
-                  <Icon name="MessageCircle" className="mr-2" size={16} />
-                  <span className="text-sm">Проверенный отзыв</span>
-                </div>
-                <Icon name="Quote" className="text-slate-600" size={20} />
-              </div>
-            </CardContent>
-          </Card>
-        ))}
+      {/* Карусель */}
+      <div className="relative select-none">
+        {/* Кнопки */}
+        <button
+          onClick={() => goTo(current - 1)}
+          className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-2 sm:-translate-x-5 z-20 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-slate-800/90 border border-slate-600 hover:border-cyan-500/60 text-white flex items-center justify-center shadow-xl transition-all duration-200 hover:scale-110"
+        >
+          <Icon name="ChevronLeft" size={22} />
+        </button>
+        <button
+          onClick={() => goTo(current + 1)}
+          className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-2 sm:translate-x-5 z-20 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-slate-800/90 border border-slate-600 hover:border-cyan-500/60 text-white flex items-center justify-center shadow-xl transition-all duration-200 hover:scale-110"
+        >
+          <Icon name="ChevronRight" size={22} />
+        </button>
+
+        {/* Трек */}
+        <div
+          ref={trackRef}
+          className="overflow-hidden mx-6 sm:mx-10"
+          onPointerDown={onPointerDown}
+          onPointerMove={onPointerMove}
+          onPointerUp={onPointerUp}
+          onPointerLeave={onPointerUp}
+        >
+          <div className="flex items-stretch gap-4 sm:gap-6 justify-center py-4">
+            {/* Предыдущая — затемнённая */}
+            <div className="hidden md:block w-[280px] lg:w-[320px] shrink-0 opacity-40 scale-95 transition-all duration-500 cursor-pointer" onClick={() => goTo(current - 1)}>
+              <TestimonialCard testimonial={testimonials[prev]} />
+            </div>
+
+            {/* Активная */}
+            <div className="w-full max-w-[340px] sm:max-w-[400px] lg:max-w-[420px] shrink-0 transition-all duration-500 z-10">
+              <TestimonialCard testimonial={testimonials[curr]} active />
+            </div>
+
+            {/* Следующая — затемнённая */}
+            <div className="hidden md:block w-[280px] lg:w-[320px] shrink-0 opacity-40 scale-95 transition-all duration-500 cursor-pointer" onClick={() => goTo(current + 1)}>
+              <TestimonialCard testimonial={testimonials[next]} />
+            </div>
+          </div>
+        </div>
+
+        {/* Точки */}
+        <div className="flex justify-center gap-2 mt-5">
+          {testimonials.map((_, i) => (
+            <button
+              key={i}
+              onClick={() => goTo(i)}
+              className={`rounded-full transition-all duration-300 ${i === current ? 'w-6 h-2 bg-cyan-400' : 'w-2 h-2 bg-slate-600 hover:bg-slate-400'}`}
+            />
+          ))}
+        </div>
       </div>
 
-      <div className="text-center mt-12">
+      <div className="text-center mt-10">
         <div className="inline-flex items-center bg-slate-800/50 border border-slate-700 rounded-full px-4 sm:px-6 py-3 text-sm sm:text-base">
           <Icon name="Users" className="text-cyan-400 mr-2" size={20} />
           <span className="text-white font-medium">Более 10,000 довольных студентов по всему миру. Онлайн+офлайн.</span>
         </div>
       </div>
     </section>
+  );
+}
+
+function TestimonialCard({ testimonial, active }: { testimonial: typeof testimonials[0]; active?: boolean }) {
+  return (
+    <Card className={`h-full bg-slate-800/60 border-slate-700 backdrop-blur-sm transition-all duration-300 ${active ? 'border-cyan-500/50 shadow-2xl shadow-cyan-500/10' : ''}`}>
+      <CardContent className="p-5 sm:p-6 flex flex-col h-full">
+        <div className="flex items-center mb-4">
+          <img
+            src={testimonial.image}
+            alt={testimonial.name}
+            className="w-12 h-12 rounded-full object-cover mr-3 shrink-0"
+          />
+          <div>
+            <h4 className="text-base font-semibold text-white">{testimonial.name}</h4>
+            <div className="flex items-center gap-0.5 mt-0.5">
+              {[...Array(5)].map((_, i) => (
+                <Icon
+                  key={i}
+                  name="Star"
+                  size={14}
+                  className={i < testimonial.rating ? 'text-yellow-400 fill-current' : 'text-gray-600'}
+                />
+              ))}
+            </div>
+          </div>
+        </div>
+
+        <p className="text-gray-300 text-sm leading-relaxed flex-1">"{testimonial.text}"</p>
+
+        {testimonial.highlight && (
+          <div className="mt-3 bg-gradient-to-r from-cyan-500/10 to-blue-600/10 border-l-4 border-cyan-500 pl-4 py-2 rounded-r-lg">
+            <p className="text-cyan-100 text-sm italic">"{testimonial.highlight}"</p>
+          </div>
+        )}
+
+        <div className="flex items-center justify-between mt-4 pt-4 border-t border-slate-700">
+          <div className="flex items-center text-cyan-400">
+            <Icon name="MessageCircle" className="mr-2" size={15} />
+            <span className="text-xs">Проверенный отзыв</span>
+          </div>
+          <Icon name="Quote" className="text-slate-600" size={18} />
+        </div>
+      </CardContent>
+    </Card>
   );
 }
