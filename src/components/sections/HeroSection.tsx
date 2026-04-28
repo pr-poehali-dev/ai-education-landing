@@ -178,7 +178,7 @@ export default function HeroSection({ scrollToForm, scrollToSection }: HeroSecti
                 <Icon name="Rocket" size={22} />
                 Занять место на май →
               </a>
-              <p className="text-xs text-gray-500 mt-2 ml-1">Без предоплаты. Бронируем место за вами.</p>
+
             </div>
 
             {/* 7. Социальные доказательства */}
