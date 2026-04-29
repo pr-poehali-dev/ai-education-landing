@@ -69,42 +69,7 @@ export default function HeroSection({ scrollToForm, scrollToSection }: HeroSecti
           {/* ── ЛЕВАЯ КОЛОНКА — контент ── */}
           <div className="flex flex-col gap-6 sm:gap-7">
 
-            {/* 1. ЛОЗУНГ — самый крупный элемент, первый взгляд */}
-            <div className="select-none animate-shake leading-none">
-              <div className="relative inline-block">
-                <span
-                  className="relative z-10 block text-4xl xs:text-5xl sm:text-6xl lg:text-7xl font-black uppercase tracking-tight text-white animate-flicker"
-                  style={{ textShadow: '0 0 20px #f97316, 0 0 50px #ef4444' }}
-                >
-                  НЕ ЗНАТЬ AI —
-                </span>
-                <span aria-hidden="true"
-                  className="absolute inset-0 block text-4xl xs:text-5xl sm:text-6xl lg:text-7xl font-black uppercase tracking-tight text-red-400 animate-glitch-1"
-                  style={{ textShadow: '2px 0 #22d3ee' }}>
-                  НЕ ЗНАТЬ AI —
-                </span>
-                <span aria-hidden="true"
-                  className="absolute inset-0 block text-4xl xs:text-5xl sm:text-6xl lg:text-7xl font-black uppercase tracking-tight text-cyan-400 animate-glitch-2"
-                  style={{ textShadow: '-2px 0 #f97316' }}>
-                  НЕ ЗНАТЬ AI —
-                </span>
-              </div>
-              <div className="relative inline-block mt-1">
-                <span
-                  className="relative z-10 block text-5xl xs:text-6xl sm:text-7xl lg:text-8xl font-black uppercase tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-orange-400 via-red-500 to-pink-500 animate-flicker"
-                  style={{ filter: 'drop-shadow(0 0 30px #f97316) drop-shadow(0 0 60px #ef4444)' }}
-                >
-                  ДОРОГО!
-                </span>
-                <span aria-hidden="true"
-                  className="absolute inset-0 block text-5xl xs:text-6xl sm:text-7xl lg:text-8xl font-black uppercase tracking-tight text-red-500 animate-glitch-1"
-                  style={{ filter: 'blur(1px)', opacity: 0.5 }}>
-                  ДОРОГО!
-                </span>
-              </div>
-            </div>
-
-            {/* 2. Заголовок H1 — объясняем выгоду */}
+            {/* 1. Заголовок H1 — объясняем выгоду */}
             <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white leading-snug">
               Научись зарабатывать с ИИ —{' '}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400">
@@ -203,7 +168,42 @@ export default function HeroSection({ scrollToForm, scrollToSection }: HeroSecti
           </div>
 
           {/* ── ПРАВАЯ КОЛОНКА — фото эксперта ── */}
-          <div className="relative flex items-center justify-center order-first lg:order-last">
+          <div className="relative flex flex-col items-center justify-center order-first lg:order-last gap-4">
+            {/* Лозунг над фото */}
+            <div className="select-none leading-none text-center w-full">
+              <div className="relative inline-block">
+                <span
+                  className="relative z-10 block text-3xl xs:text-4xl sm:text-5xl font-black uppercase tracking-tight text-white animate-flicker"
+                  style={{ textShadow: '0 0 20px #f97316, 0 0 50px #ef4444' }}
+                >
+                  НЕ ЗНАТЬ AI —
+                </span>
+                <span aria-hidden="true"
+                  className="absolute inset-0 block text-3xl xs:text-4xl sm:text-5xl font-black uppercase tracking-tight text-red-400 animate-glitch-1"
+                  style={{ textShadow: '2px 0 #22d3ee' }}>
+                  НЕ ЗНАТЬ AI —
+                </span>
+                <span aria-hidden="true"
+                  className="absolute inset-0 block text-3xl xs:text-4xl sm:text-5xl font-black uppercase tracking-tight text-cyan-400 animate-glitch-2"
+                  style={{ textShadow: '-2px 0 #f97316' }}>
+                  НЕ ЗНАТЬ AI —
+                </span>
+              </div>
+              <div className="relative inline-block mt-1">
+                <span
+                  className="relative z-10 block text-4xl xs:text-5xl sm:text-6xl font-black uppercase tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-orange-400 via-red-500 to-pink-500 animate-flicker"
+                  style={{ filter: 'drop-shadow(0 0 30px #f97316) drop-shadow(0 0 60px #ef4444)' }}
+                >
+                  ДОРОГО!
+                </span>
+                <span aria-hidden="true"
+                  className="absolute inset-0 block text-4xl xs:text-5xl sm:text-6xl font-black uppercase tracking-tight text-red-500 animate-glitch-1"
+                  style={{ filter: 'blur(1px)', opacity: 0.5 }}>
+                  ДОРОГО!
+                </span>
+              </div>
+            </div>
+
             {/* Мобайл: компактное фото над текстом */}
             <div className="relative w-full max-w-[280px] sm:max-w-sm lg:max-w-full mx-auto">
               <div className="absolute inset-0 bg-gradient-to-b from-cyan-500/25 to-purple-600/25 rounded-3xl blur-3xl animate-soft-pulse scale-110" />
