@@ -16,6 +16,9 @@ import ProgramSection from '@/components/sections/ProgramSection';
 import PricingSection from '@/components/sections/PricingSection';
 import CorporatePaymentSection from '@/components/sections/CorporatePaymentSection';
 import AdvantagesSection from '@/components/sections/AdvantagesSection';
+import ExpertSection from '@/components/sections/ExpertSection';
+import WhyOfflineSection from '@/components/sections/WhyOfflineSection';
+import FAQSection from '@/components/sections/FAQSection';
 import FormSection from '@/components/sections/FormSection';
 import Footer from '@/components/sections/Footer';
 import CTAButton from '@/components/ui/cta-button';
@@ -95,7 +98,19 @@ export default function Index() {
         <AdvantagesSection />
       </ScrollReveal>
 
+      <ScrollReveal>
+        <ExpertSection />
+      </ScrollReveal>
+
+      <ScrollReveal direction="right">
+        <WhyOfflineSection />
+      </ScrollReveal>
+
       <CTAButton onClick={scrollToForm} />
+
+      <ScrollReveal>
+        <FAQSection />
+      </ScrollReveal>
 
       <ScrollReveal>
         <FormSection />
