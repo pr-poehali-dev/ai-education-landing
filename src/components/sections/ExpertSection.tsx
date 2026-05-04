@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Icon from '@/components/ui/icon';
 
 const stats = [
@@ -95,6 +96,14 @@ export default function ExpertSection() {
               </p>
               <footer className="mt-3 text-purple-300 text-sm font-semibold">— Сергей Черников</footer>
             </blockquote>
+
+            <Link
+              to="/o-spikere"
+              className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300 text-sm font-semibold transition-colors duration-200 group w-fit"
+            >
+              Подробная биография и путь в ИИ
+              <Icon name="ArrowRight" size={15} className="group-hover:translate-x-1 transition-transform duration-200" />
+            </Link>
 
           </div>
         </div>

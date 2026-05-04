@@ -7,6 +7,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import CalendarPage from "./pages/CalendarPage";
 import AdminCalendarPage from "./pages/AdminCalendarPage";
+import SpeakerPage from "./pages/SpeakerPage";
 import NotFound from "./pages/NotFound";
 import WelcomeModal from "@/components/ui/WelcomeModal";
 
@@ -23,6 +24,7 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/calendar" element={<CalendarPage />} />
           <Route path="/admin/calendar" element={<AdminCalendarPage />} />
+          <Route path="/o-spikere" element={<SpeakerPage />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
