@@ -169,7 +169,7 @@ export default function ScheduleSection() {
 
             <div className="bg-orange-500/10 border border-orange-400/40 rounded-xl px-5 py-3 text-center">
               <p className="text-orange-300 font-bold text-base sm:text-lg">
-                ⚡ На май осталось 13 мест из 30
+                ⚡ На май осталось 2 места из 30
               </p>
             </div>
             
