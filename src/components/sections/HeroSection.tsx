@@ -239,11 +239,12 @@ export default function HeroSection({ scrollToForm, scrollToSection }: HeroSecti
                 </div>
               </div>
 
-              {/* Плашка с именем */}
-              <div className="absolute z-20 bottom-14 sm:bottom-16 left-1/2 -translate-x-1/2 w-[82%] bg-slate-900/90 backdrop-blur-md rounded-2xl px-4 py-2.5 border border-cyan-500/30 text-center shadow-xl">
-                <p className="text-white font-bold text-sm leading-tight">Сергей Черников</p>
-                <p className="text-cyan-400 text-xs mt-0.5">Эксперт по ИИ · Владивосток</p>
-              </div>
+            </div>
+
+            {/* Плашка с именем — под видео */}
+            <div className="w-full max-w-[300px] sm:max-w-[380px] lg:max-w-full mx-auto bg-slate-900/80 backdrop-blur-md rounded-2xl px-4 py-3 border border-cyan-500/30 text-center shadow-xl">
+              <p className="text-white font-bold text-sm leading-tight">Сергей Черников</p>
+              <p className="text-cyan-400 text-xs mt-0.5">Эксперт по ИИ · Владивосток</p>
             </div>
 
           </div>
