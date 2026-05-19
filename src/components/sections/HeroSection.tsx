@@ -18,7 +18,7 @@ export default function HeroSection({ scrollToForm, scrollToSection }: HeroSecti
   const [isExpired, setIsExpired] = useState(false);
 
   useEffect(() => {
-    const targetDate = new Date('2026-05-11T00:00:00').getTime();
+    const targetDate = new Date('2026-09-14T00:00:00').getTime();
     const updateCountdown = () => {
       const now = new Date().getTime();
       const distance = targetDate - now;
@@ -59,7 +59,7 @@ export default function HeroSection({ scrollToForm, scrollToSection }: HeroSecti
           </span>
           <span className="inline-flex items-center gap-1.5 px-4 py-2 bg-red-600/20 border-2 border-red-500/60 text-red-300 text-xs sm:text-sm font-bold rounded-full animate-soft-pulse">
             <Icon name="Flame" size={13} className="text-red-400" />
-            На май осталось 2 места из 30
+            На сентябрь осталось 20 мест из 30
           </span>
         </div>
 
@@ -141,7 +141,7 @@ export default function HeroSection({ scrollToForm, scrollToSection }: HeroSecti
                 className="inline-flex items-center justify-center gap-3 w-full sm:w-auto bg-gradient-to-r from-cyan-500 via-blue-600 to-purple-600 hover:from-cyan-400 hover:via-blue-500 hover:to-purple-500 text-white text-lg sm:text-xl font-bold px-8 sm:px-10 py-4 sm:py-5 rounded-2xl shadow-2xl shadow-cyan-500/25 hover:shadow-cyan-500/40 hover:scale-[1.03] transition-all duration-300 border-2 border-cyan-300/30 hover:border-cyan-300/60 animate-soft-pulse"
               >
                 <Icon name="Rocket" size={22} />
-                Занять место на май →
+                Занять место на сентябрь →
               </a>
 
             </div>

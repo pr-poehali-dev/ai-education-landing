@@ -76,7 +76,7 @@ export default function FormSection() {
                 </div>
                 <div className="flex items-center gap-2">
                   <Icon name="Users" size={18} className="text-cyan-400" />
-                  <span>Осталось 2 места</span>
+                  <span>Осталось 20 мест</span>
                 </div>
               </div>
               <a 
