@@ -204,18 +204,29 @@ export default function HeroSection({ scrollToForm, scrollToSection }: HeroSecti
               </div>
             </div>
 
-            {/* Мобайл: компактное фото над текстом */}
-            <div className="relative w-full max-w-[280px] sm:max-w-sm lg:max-w-full mx-auto">
-              <div className="absolute inset-0 bg-gradient-to-b from-cyan-500/25 to-purple-600/25 rounded-3xl blur-3xl animate-soft-pulse scale-110" />
-              <div className="absolute -top-3 -right-3 w-20 h-20 bg-orange-500/20 rounded-full blur-2xl" />
-              <div className="absolute -bottom-3 -left-3 w-24 h-24 bg-cyan-500/15 rounded-full blur-2xl" />
-              <img
-                src="https://cdn.poehali.dev/files/86be2539-f781-4550-a0e1-86adfb8e1f54.png"
-                alt="Сергей Черников — эксперт по ИИ"
-                className="relative z-10 w-full rounded-3xl shadow-2xl shadow-cyan-500/20 border border-cyan-500/20 hover:scale-[1.02] transition-transform duration-500"
-              />
-              {/* Плашка на фото */}
-              <div className="absolute z-20 bottom-4 left-1/2 -translate-x-1/2 w-[90%] bg-slate-900/90 backdrop-blur-md rounded-2xl px-4 py-3 border border-cyan-500/30 text-center shadow-xl">
+            {/* Видео-блок */}
+            <div className="relative w-full max-w-[320px] sm:max-w-sm lg:max-w-full mx-auto">
+              {/* Внешнее свечение */}
+              <div className="absolute inset-0 bg-gradient-to-b from-cyan-500/30 to-purple-600/30 rounded-3xl blur-3xl animate-soft-pulse scale-110" />
+              <div className="absolute -top-4 -right-4 w-24 h-24 bg-orange-500/25 rounded-full blur-2xl" />
+              <div className="absolute -bottom-4 -left-4 w-28 h-28 bg-cyan-500/20 rounded-full blur-2xl" />
+
+              {/* Рамка-обёртка */}
+              <div className="relative z-10 rounded-3xl p-[2px] bg-gradient-to-br from-cyan-400/60 via-purple-500/40 to-blue-600/60 shadow-2xl shadow-cyan-500/30">
+                <div className="rounded-[22px] overflow-hidden bg-slate-900">
+                  <video
+                    src="https://cdn.poehali.dev/projects/e8628072-d7db-463c-b1d5-7cbdef013225/bucket/cecec551-46ad-4d4f-8d8e-3fd6e341aa88.mp4"
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+                    className="w-full h-auto block"
+                  />
+                </div>
+              </div>
+
+              {/* Плашка под видео */}
+              <div className="absolute z-20 bottom-4 left-1/2 -translate-x-1/2 w-[88%] bg-slate-900/90 backdrop-blur-md rounded-2xl px-4 py-3 border border-cyan-500/30 text-center shadow-xl">
                 <p className="text-white font-bold text-sm sm:text-base leading-tight">Сергей Черников</p>
                 <p className="text-cyan-400 text-xs sm:text-sm mt-0.5">Эксперт по ИИ · Владивосток</p>
               </div>
