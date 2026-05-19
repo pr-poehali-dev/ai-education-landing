@@ -17,7 +17,7 @@ export default function PricingSection({ scrollToForm }: PricingSectionProps) {
         </h2>
         <div className="inline-flex items-center gap-3 px-4 sm:px-6 md:px-8 py-2.5 sm:py-3 md:py-4 bg-gradient-to-r from-orange-500 via-red-600 to-pink-600 text-white text-sm sm:text-base md:text-lg font-bold rounded-xl shadow-2xl border-2 border-orange-300/50 animate-soft-pulse">
           <Icon name="AlertTriangle" size={22} />
-          С СЕНТЯБРЯ ПОВЫШЕНИЕ ЦЕН
+          НАБОР НА СЕНТЯБРЬСКИЙ ПОТОК ОТКРЫТ
           <Icon name="AlertTriangle" size={22} />
         </div>
       </div>
@@ -70,7 +70,7 @@ export default function PricingSection({ scrollToForm }: PricingSectionProps) {
                 rel="noopener noreferrer"
                 className="w-full inline-flex items-center justify-center px-6 py-3 sm:py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold text-base sm:text-lg rounded-lg transition-all duration-300 shadow-lg hover:shadow-cyan-500/25 hover:scale-105 border border-cyan-400/20"
               >
-                🚀 ЗАПИСЬ НА МАЙ
+                🚀 ЗАПИСАТЬСЯ НА СЕНТЯБРЬ
               </a>
             </div>
           </CardContent>

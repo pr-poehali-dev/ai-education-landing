@@ -106,7 +106,7 @@ export default function HeroSection({ scrollToForm, scrollToSection }: HeroSecti
                     <Icon name="CheckCircle" size={22} className="text-green-400 shrink-0" />
                     <div>
                       <p className="text-green-300 font-bold text-sm uppercase tracking-wider">Курс уже стартовал!</p>
-                      <p className="text-gray-400 text-sm mt-0.5">Ещё можно записаться в текущий поток</p>
+                      <p className="text-gray-400 text-sm mt-0.5">Запись на сентябрьский поток открыта</p>
                     </div>
                   </div>
                 ) : (
