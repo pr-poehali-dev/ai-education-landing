@@ -128,6 +128,13 @@ export default function TrustSection() {
                   className="h-10 sm:h-12 md:h-16 w-auto object-contain"
                 />
               </div>
+              <div className="p-3 sm:p-4 md:p-6 bg-slate-800/30 rounded-lg border border-slate-700 flex items-center justify-center min-w-[140px] sm:min-w-[180px] md:min-w-[200px] hover:scale-105 transition-transform duration-300">
+                <img 
+                  src="https://cdn.poehali.dev/files/7c88d504-420e-43c2-a7d9-ebae68b53a9f.png" 
+                  alt="VLPACIFIC судоремонтный цех" 
+                  className="h-10 sm:h-12 md:h-16 w-auto object-contain"
+                />
+              </div>
             </div>
             {/* Duplicate set for infinite scroll */}
             <div className="flex gap-3 sm:gap-4 md:gap-6">
@@ -226,6 +233,13 @@ export default function TrustSection() {
                 <img 
                   src="https://cdn.poehali.dev/projects/e8628072-d7db-463c-b1d5-7cbdef013225/bucket/9ae22994-0c9c-4ee0-8797-bc2d147790b8.png" 
                   alt="Плёсы Песчаного" 
+                  className="h-10 sm:h-12 md:h-16 w-auto object-contain"
+                />
+              </div>
+              <div className="p-3 sm:p-4 md:p-6 bg-slate-800/30 rounded-lg border border-slate-700 flex items-center justify-center min-w-[140px] sm:min-w-[180px] md:min-w-[200px] hover:scale-105 transition-transform duration-300">
+                <img 
+                  src="https://cdn.poehali.dev/files/7c88d504-420e-43c2-a7d9-ebae68b53a9f.png" 
+                  alt="VLPACIFIC судоремонтный цех" 
                   className="h-10 sm:h-12 md:h-16 w-auto object-contain"
                 />
               </div>
