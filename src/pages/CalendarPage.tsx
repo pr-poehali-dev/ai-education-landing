@@ -29,7 +29,7 @@ const MONTHS = [
 export default function CalendarPage() {
   const [events, setEvents] = useState<CalendarEvent[]>([]);
   const [loading, setLoading] = useState(true);
-  const [selectedMonth, setSelectedMonth] = useState<number>(0);
+  const [selectedMonth, setSelectedMonth] = useState<number>(4);
   const [selectedDate, setSelectedDate] = useState<string | null>(null);
   const [isAdminMode, setIsAdminMode] = useState(false);
   const [adminKey, setAdminKey] = useState('');
