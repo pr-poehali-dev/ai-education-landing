@@ -4,26 +4,66 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
         xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-    
-    <!-- Главная страница -->
-    <url>
-        <loc>https://ai-education-landing.poehali.dev/</loc>
-        <lastmod>2026-01-16</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>1.0</priority>
-        <image:image>
-            <image:loc>https://cdn.poehali.dev/projects/e8628072-d7db-463c-b1d5-7cbdef013225/files/og-image-1762866799945.jpg</image:loc>
-            <image:title>Школа ИИ Сергея Черникова - Хакни Нейросети</image:title>
-            <image:caption>Офлайн обучение нейросетям во Владивостоке</image:caption>
-        </image:image>
-    </url>
 
-    <!-- Страница календаря -->
-    <url>
-        <loc>https://ai-education-landing.poehali.dev/calendar</loc>
-        <lastmod>2026-01-16</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.8</priority>
-    </url>
+  <!-- Главная страница -->
+  <url>
+    <loc>https://chernikovgpt.ru/</loc>
+    <lastmod>2026-05-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://cdn.poehali.dev/projects/e8628072-d7db-463c-b1d5-7cbdef013225/files/og-image-1762866799945.jpg</image:loc>
+      <image:title>Школа нейросетей Сергея Черникова — Хакни Нейросети | Владивосток</image:title>
+      <image:caption>Офлайн курсы по искусственному интеллекту во Владивостоке. Курс Хакни Нейросети — 3 месяца, 6 профессий, с нуля.</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Программа курса -->
+  <url>
+    <loc>https://chernikovgpt.ru/#program</loc>
+    <lastmod>2026-05-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Тарифы -->
+  <url>
+    <loc>https://chernikovgpt.ru/#pricing</loc>
+    <lastmod>2026-05-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Об эксперте -->
+  <url>
+    <loc>https://chernikovgpt.ru/#speaker</loc>
+    <lastmod>2026-05-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Расписание -->
+  <url>
+    <loc>https://chernikovgpt.ru/#schedule</loc>
+    <lastmod>2026-05-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- FAQ -->
+  <url>
+    <loc>https://chernikovgpt.ru/#faq</loc>
+    <lastmod>2026-05-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Календарь событий -->
+  <url>
+    <loc>https://chernikovgpt.ru/calendar</loc>
+    <lastmod>2026-05-25</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
 
 </urlset>

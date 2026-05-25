@@ -98,16 +98,34 @@
         "hasCourseInstance": {
           "@type": "CourseInstance",
           "courseMode": "onsite",
-          "startDate": "2026-05-11",
+          "startDate": "2026-09-14",
           "location": {
             "@type": "Place",
-            "name": "Учебный класс",
-            "address": {"@type": "PostalAddress", "addressLocality": "Владивосток", "addressCountry": "RU"}
+            "name": "Учебный класс во Владивостоке",
+            "address": {"@type": "PostalAddress", "addressLocality": "Владивосток", "addressRegion": "Приморский край", "addressCountry": "RU"}
           }
         },
         "teaches": ["ChatGPT", "Midjourney", "GigaChat", "Sora", "Prompt Engineering", "Генеративный ИИ"],
         "numberOfCredits": 6,
-        "occupationalCredentialAwarded": "Сертификат об окончании курса"
+        "occupationalCredentialAwarded": "Сертификат об окончании курса",
+        "offers": [
+          {
+            "@type": "Offer",
+            "name": "Тариф СТАРТ",
+            "price": "150000",
+            "priceCurrency": "RUB",
+            "availability": "https://schema.org/InStock",
+            "url": "https://torguykriptoy.getcourse.ru/chernikovgpt"
+          },
+          {
+            "@type": "Offer",
+            "name": "Тариф МАКСИМУМ",
+            "price": "300000",
+            "priceCurrency": "RUB",
+            "availability": "https://schema.org/InStock",
+            "url": "https://torguykriptoy.getcourse.ru/chernikovgpt"
+          }
+        ]
       },
       {
         "@context": "https://schema.org",
@@ -161,6 +179,53 @@
             "acceptedAnswer": {"@type": "Answer", "text": "Вы научитесь работать с ChatGPT, Midjourney, GigaChat, Sora, освоите prompt engineering и сможете применять ИИ для заработка и ускорения рабочих задач в 16 раз."}
           }
         ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Школа нейросетей Владивосток — Хакни Нейросети | Сергей Черников",
+        "url": "https://chernikovgpt.ru/",
+        "description": "Первая офлайн-школа ИИ на Дальнем Востоке. Курс «Хакни Нейросети» — практическое обучение ChatGPT, Midjourney, GigaChat и Sora во Владивостоке. 3 месяца, 6 профессий, с нуля. Следующий поток — 14 сентября 2026.",
+        "inLanguage": "ru",
+        "isPartOf": {"@type": "WebSite", "name": "Хакни Нейросети", "url": "https://chernikovgpt.ru/"},
+        "about": {
+          "@type": "Thing",
+          "name": "Обучение искусственному интеллекту во Владивостоке",
+          "description": "Офлайн курсы по нейросетям и ИИ для жителей Владивостока и Приморского края. Школа Сергея Черникова — ведущего эксперта по ИИ на Дальнем Востоке с аудиторией 10 000+ студентов."
+        },
+        "mentions": [
+          {"@type": "SoftwareApplication", "name": "ChatGPT", "applicationCategory": "AI Assistant"},
+          {"@type": "SoftwareApplication", "name": "Midjourney", "applicationCategory": "AI Image Generator"},
+          {"@type": "SoftwareApplication", "name": "GigaChat", "applicationCategory": "AI Assistant"},
+          {"@type": "SoftwareApplication", "name": "Sora", "applicationCategory": "AI Video Generator"}
+        ],
+        "speakable": {
+          "@type": "SpeakableSpecification",
+          "cssSelector": ["h1", "h2", ".description"]
+        }
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Школа нейросетей Хакни Нейросети",
+        "description": "Офлайн школа искусственного интеллекта во Владивостоке. Курсы по ChatGPT, Midjourney, GigaChat, Sora для начинающих. Основатель — Сергей Черников.",
+        "url": "https://chernikovgpt.ru/",
+        "telephone": "",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Владивосток",
+          "addressRegion": "Приморский край",
+          "addressCountry": "RU"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": "43.1155",
+          "longitude": "131.8855"
+        },
+        "areaServed": ["Владивосток", "Приморский край", "Дальний Восток"],
+        "priceRange": "150000–300000 ₽",
+        "image": "https://cdn.poehali.dev/projects/e8628072-d7db-463c-b1d5-7cbdef013225/files/og-image-1762866799945.jpg",
+        "sameAs": ["https://torguykriptoy.getcourse.ru/chernikovgpt"]
       }
     ]
     </script>
