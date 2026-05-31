@@ -49,15 +49,7 @@ export default function Footer() {
                 <Icon name="Send" size={16} className="text-cyan-400 flex-shrink-0" />
                 Телеграм-канал
               </a>
-              <a 
-                href="https://t.me/ChernikovGPT_Bot" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="flex items-center gap-2 text-gray-400 hover:text-cyan-400 transition-colors text-sm"
-              >
-                <Icon name="MessageCircle" size={16} className="text-cyan-400 flex-shrink-0" />
-                Бесплатная консультация
-              </a>
+
               <a 
                 href="https://t.me/DashaChernikova8" 
                 target="_blank" 
