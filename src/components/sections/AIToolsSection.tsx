@@ -17,7 +17,7 @@ const aiTools = {
     color: "from-green-500 to-teal-600",
     bgColor: "bg-green-500/10",
     borderColor: "border-green-500/20",
-    items: ["Nano Banana Pro", "Seedream", "Midjourney", "Stable Diffusion", "Flux 2 Pro"]
+    items: ["Nano Banana Pro", "Seedream", "Stable Diffusion", "Flux 2 Pro"]
   },
   video: {
     title: "Видео нейросети",
@@ -25,7 +25,7 @@ const aiTools = {
     color: "from-red-500 to-pink-600",
     bgColor: "bg-red-500/10",
     borderColor: "border-red-500/20",
-    items: ["Kling Ai", "Veo 3", "Mini max", "RunWayML", "Seedance", "Sora 2", "WAN", "PixVerse"]
+    items: ["Kling Ai", "Veo 3", "Mini max", "RunWayML", "Seedance", "WAN", "PixVerse"]
   },
   services: {
     title: "Полезные сервисы",
