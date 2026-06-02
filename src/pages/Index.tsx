@@ -13,6 +13,7 @@ import AIToolsSection from '@/components/sections/AIToolsSection';
 import TestimonialsSection from '@/components/sections/TestimonialsSection';
 import WorkshopReviewsSection from '@/components/sections/WorkshopReviewsSection';
 import ProgramSection from '@/components/sections/ProgramSection';
+import ROISection from '@/components/sections/ROISection';
 import PricingSection from '@/components/sections/PricingSection';
 import CorporatePaymentSection from '@/components/sections/CorporatePaymentSection';
 import AdvantagesSection from '@/components/sections/AdvantagesSection';
@@ -79,6 +80,10 @@ export default function Index() {
 
       <ScrollReveal>
         <ProgramSection scrollToForm={scrollToForm} />
+      </ScrollReveal>
+
+      <ScrollReveal direction="left">
+        <ROISection />
       </ScrollReveal>
 
       <ScrollReveal>
