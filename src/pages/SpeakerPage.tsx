@@ -32,14 +32,14 @@ const timeline = [
   {
     year: '2025–2026',
     title: 'Расширение программы',
-    text: 'В программу добавляются новые инструменты: Sora (видео), GigaChat, Claude, Gemini. Курс охватывает 6 профессий ИИ-специалиста. Группы расписаны на 3 месяца вперёд.',
+    text: 'В программу добавляются новые инструменты: Seedance 2 (видео), GigaChat, Claude, Gemini. Курс охватывает 6 профессий ИИ-специалиста. Группы расписаны на 3 месяца вперёд.',
   },
 ];
 
 const expertise = [
   { icon: 'MessageSquare', label: 'ChatGPT и промпт-инжиниринг' },
-  { icon: 'Image', label: 'Midjourney — генерация изображений' },
-  { icon: 'Video', label: 'Sora — ИИ-видеогенерация' },
+  { icon: 'Image', label: 'Nano Banana — генерация изображений' },
+  { icon: 'Video', label: 'Seedance 2 — ИИ-видеогенерация' },
   { icon: 'Bot', label: 'GigaChat, Claude, Gemini' },
   { icon: 'Briefcase', label: 'ИИ для бизнеса и автоматизации' },
   { icon: 'TrendingUp', label: 'Заработок с нейросетями' },
@@ -134,7 +134,7 @@ export default function SpeakerPage() {
               Ведущий эксперт по нейросетям и искусственному интеллекту в Приморском крае.
               Основатель <strong className="text-white">первой и единственной офлайн-школы ИИ</strong> на Дальнем Востоке России.
               Обучил более <strong className="text-cyan-300">10 000 человек</strong> практическому применению
-              ChatGPT, Midjourney, GigaChat и других ИИ-инструментов для работы и заработка.
+              ChatGPT, Nano Banana, GigaChat и других ИИ-инструментов для работы и заработка.
             </p>
 
             <p className="text-gray-400 text-sm sm:text-base leading-relaxed">

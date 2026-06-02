@@ -13,13 +13,13 @@ const incomeExamples = [
     icon: 'Image',
     role: 'ИИ-дизайнер',
     income: 'от 80 000₽/мес',
-    desc: 'Картинки и креативы на заказ в Midjourney',
+    desc: 'Картинки и креативы на заказ в Nano Banana',
   },
   {
     icon: 'Video',
     role: 'ИИ-видеограф',
     income: 'от 100 000₽/мес',
-    desc: 'Ролики и реклама с нейросетью Sora',
+    desc: 'Ролики и реклама с нейросетью Seedance 2',
   },
   {
     icon: 'Briefcase',
