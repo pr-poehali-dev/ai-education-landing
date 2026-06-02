@@ -10,8 +10,30 @@ import AdminCalendarPage from "./pages/AdminCalendarPage";
 import SpeakerPage from "./pages/SpeakerPage";
 import NotFound from "./pages/NotFound";
 import WelcomeModal from "@/components/ui/WelcomeModal";
+import { useEffect } from "react";
 
 const queryClient = new QueryClient();
+
+const NotFoundWithNoIndex = () => {
+  useEffect(() => {
+    const robots = document.createElement("meta");
+    robots.name = "robots";
+    robots.content = "noindex, follow";
+    document.head.appendChild(robots);
+
+    const status = document.createElement("meta");
+    status.name = "prerender-status-code";
+    status.content = "404";
+    document.head.appendChild(status);
+
+    return () => {
+      document.head.removeChild(robots);
+      document.head.removeChild(status);
+    };
+  }, []);
+
+  return <NotFound />;
+};
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
@@ -26,7 +48,7 @@ const App = () => (
           <Route path="/admin/calendar" element={<AdminCalendarPage />} />
           <Route path="/o-spikere" element={<SpeakerPage />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-          <Route path="*" element={<NotFound />} />
+          <Route path="*" element={<NotFoundWithNoIndex />} />
         </Routes>
       </BrowserRouter>
     </TooltipProvider>
