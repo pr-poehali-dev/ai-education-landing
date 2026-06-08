@@ -23,6 +23,7 @@ import FAQSection from '@/components/sections/FAQSection';
 import FormSection from '@/components/sections/FormSection';
 import Footer from '@/components/sections/Footer';
 import CTAButton from '@/components/ui/cta-button';
+import FloatingConsultButton from '@/components/FloatingConsultButton';
 import AnimatedBackground from '@/components/ui/animated-background';
 
 import ScrollReveal from '@/components/ui/scroll-reveal';
@@ -123,6 +124,8 @@ export default function Index() {
       <ScrollReveal>
         <Footer />
       </ScrollReveal>
+
+      <FloatingConsultButton />
 
     </div>
   );
