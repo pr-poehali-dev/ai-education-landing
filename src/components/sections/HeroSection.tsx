@@ -67,7 +67,7 @@ export default function HeroSection({ scrollToForm, scrollToSection }: HeroSecti
           </span>
           <span className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-red-600/20 border border-red-500/60 text-red-300 text-xs font-bold rounded-full animate-soft-pulse">
             <Icon name="Flame" size={11} className="text-red-400" />
-            На сентябрь осталось 20 мест из 30
+            На сентябрь осталось 7 мест из 30
           </span>
         </div>
 

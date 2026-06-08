@@ -246,8 +246,8 @@ export default function SpeakerPage() {
             Хотите пройти обучение у Сергея?
           </h2>
           <p className="text-gray-400 text-base mb-6 max-w-xl mx-auto">
-            Ближайший поток стартует <strong className="text-white">11 мая 2026</strong> во Владивостоке.
-            Осталось 2 места из 30.
+            Ближайший поток стартует <strong className="text-white">14 сентября 2026</strong> во Владивостоке.
+            Осталось 7 мест из 30.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <a
