@@ -93,6 +93,20 @@ export default function CalendarGrid({ selectedMonth, selectedDate, events, onDa
         </CardTitle>
       </CardHeader>
       <CardContent>
+        <div className="flex flex-wrap items-center gap-4 mb-4">
+          <div className="flex items-center gap-2">
+            <span className="w-3.5 h-3.5 rounded-sm" style={{ backgroundColor: '#3b82f6' }} />
+            <span className="text-sm text-gray-300">Поток 1 — пн / чт</span>
+          </div>
+          <div className="flex items-center gap-2">
+            <span className="w-3.5 h-3.5 rounded-sm" style={{ backgroundColor: '#a855f7' }} />
+            <span className="text-sm text-gray-300">Поток 2 — ср / сб</span>
+          </div>
+          <div className="flex items-center gap-2">
+            <span className="w-3.5 h-3.5 rounded-sm" style={{ backgroundColor: '#ec4899' }} />
+            <span className="text-sm text-gray-300">ИИшница</span>
+          </div>
+        </div>
         <div className="grid grid-cols-7 gap-px mb-px">
           {['Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб', 'Вс'].map(day => (
             <div key={day} className="text-center font-semibold text-gray-400 py-2">
