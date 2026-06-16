@@ -95,11 +95,16 @@ export default function CalendarSection() {
             {dayEvents.slice(0, 2).map(evt => (
               <div
                 key={evt.id}
-                className="text-[10px] sm:text-xs px-1 py-0.5 rounded truncate"
+                className="text-[10px] sm:text-xs px-1 py-0.5 rounded"
                 style={{ backgroundColor: evt.color + '30', color: evt.color }}
                 title={evt.title}
               >
-                {evt.title}
+                <span className="block truncate">{evt.title}</span>
+                {evt.start_time && (
+                  <span className="block opacity-80">
+                    {evt.start_time.slice(0, 5)}{evt.end_time ? `–${evt.end_time.slice(0, 5)}` : ''}
+                  </span>
+                )}
               </div>
             ))}
             {dayEvents.length > 2 && (
