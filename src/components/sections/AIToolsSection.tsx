@@ -17,7 +17,7 @@ const aiTools = {
     color: "from-green-500 to-teal-600",
     bgColor: "bg-green-500/10",
     borderColor: "border-green-500/20",
-    items: ["Nano Banana Pro", "Seedream", "Stable Diffusion", "Flux 2 Pro"]
+    items: ["GPT 2", "Nano Banana Pro", "Nano Banana 2", "Seedream", "Flux 2 Pro"]
   },
   video: {
     title: "Видео нейросети",
@@ -137,7 +137,7 @@ export default function AIToolsSection() {
                         {item}
                       </span>
                       {/* Популярные инструменты с бейджиками */}
-                      {["Claude", "Kling Ai", "Seedance", "Veo 3", "Nano Banana Pro", "Seedream", "Поехали", "multi-chat", "freepik", "perplexity"].includes(item) && (
+                      {["Claude", "Kling Ai", "Seedance", "Veo 3", "GPT 2", "Nano Banana Pro", "Nano Banana 2", "Seedream", "Поехали", "multi-chat", "freepik", "perplexity"].includes(item) && (
                         <span className="ml-auto text-[10px] sm:text-xs px-1.5 sm:px-2 py-0.5 sm:py-1 bg-cyan-500/20 text-cyan-400 rounded-full whitespace-nowrap font-bold">
                           ТОП
                         </span>
