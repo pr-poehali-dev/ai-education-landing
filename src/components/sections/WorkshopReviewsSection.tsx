@@ -65,6 +65,21 @@ export default function WorkshopReviewsSection() {
         <p className="text-lg sm:text-xl text-gray-300 max-w-2xl mx-auto">
           А теперь представьте, что происходит с людьми за <span className="text-cyan-400 font-bold">3 месяца</span>...
         </p>
+
+        <div className="grid grid-cols-3 gap-3 sm:gap-6 max-w-2xl mx-auto mt-8 sm:mt-10">
+          <div className="bg-slate-800/50 border border-slate-700 rounded-xl py-4 px-2 sm:px-4">
+            <div className="text-2xl sm:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">94%</div>
+            <div className="text-xs sm:text-sm text-gray-400 mt-1">применяют ИИ в работе</div>
+          </div>
+          <div className="bg-slate-800/50 border border-slate-700 rounded-xl py-4 px-2 sm:px-4">
+            <div className="text-2xl sm:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">10 000+</div>
+            <div className="text-xs sm:text-sm text-gray-400 mt-1">выпускников</div>
+          </div>
+          <div className="bg-slate-800/50 border border-slate-700 rounded-xl py-4 px-2 sm:px-4">
+            <div className="text-2xl sm:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">4.9/5</div>
+            <div className="text-xs sm:text-sm text-gray-400 mt-1">средняя оценка курса</div>
+          </div>
+        </div>
       </div>
 
       <div className="relative">
@@ -91,10 +106,10 @@ export default function WorkshopReviewsSection() {
           {videos.map((src, index) => (
             <div
               key={index}
-              className="flex-shrink-0 w-full md:w-[calc(33.333%-16px)]"
+              className="flex-shrink-0 w-full md:w-[calc(33.333%-16px)] flex justify-center"
             >
               <div
-                className="relative group rounded-2xl overflow-hidden border-2 border-slate-700 hover:border-cyan-500/50 transition-all duration-300 bg-slate-900 cursor-pointer aspect-[9/16]"
+                className="relative group rounded-2xl overflow-hidden border-2 border-slate-700 hover:border-cyan-500/50 transition-all duration-300 bg-slate-900 cursor-pointer aspect-[9/16] max-h-[70vh] md:max-h-none w-auto md:w-full"
                 onClick={() => handlePlay(index)}
               >
                 <video

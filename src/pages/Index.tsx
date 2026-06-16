@@ -7,7 +7,6 @@ import TrustSection from '@/components/sections/TrustSection';
 import CalendarSection from '@/components/sections/CalendarSection';
 import ProfessionsSection from '@/components/sections/ProfessionsSection';
 import SundayAISection from '@/components/sections/SundayAISection';
-import SundayAICompactSection from '@/components/sections/SundayAICompactSection';
 
 import AIToolsSection from '@/components/sections/AIToolsSection';
 import TestimonialsSection from '@/components/sections/TestimonialsSection';
@@ -89,10 +88,6 @@ export default function Index() {
 
       <ScrollReveal>
         <PricingSection scrollToForm={scrollToForm} />
-      </ScrollReveal>
-
-      <ScrollReveal direction="left">
-        <SundayAICompactSection />
       </ScrollReveal>
 
       <ScrollReveal direction="right">
