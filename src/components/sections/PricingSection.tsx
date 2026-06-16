@@ -56,6 +56,14 @@ export default function PricingSection({ scrollToForm }: PricingSectionProps) {
               </li>
               <li className="flex items-center text-gray-300">
                 <Icon name="Check" className="text-cyan-400 mr-3" size={20} />
+                Доступ к записям всех занятий
+              </li>
+              <li className="flex items-center text-gray-300">
+                <Icon name="Check" className="text-cyan-400 mr-3" size={20} />
+                Библиотека готовых ИИ-промптов и шаблонов
+              </li>
+              <li className="flex items-center text-gray-300">
+                <Icon name="Check" className="text-cyan-400 mr-3" size={20} />
                 Экзамен
               </li>
               <li className="flex items-center text-gray-300">
