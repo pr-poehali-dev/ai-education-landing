@@ -72,7 +72,7 @@ export default function CalendarSection() {
     const days = [];
 
     for (let i = 0; i < firstDay; i++) {
-      days.push(<div key={`empty-${i}`} className="h-20 sm:h-24 border border-slate-700/30" />);
+      days.push(<div key={`empty-${i}`} className="min-h-20 sm:min-h-24 border border-slate-700/30" />);
     }
 
     for (let day = 1; day <= daysInMonth; day++) {
@@ -84,7 +84,7 @@ export default function CalendarSection() {
         <div
           key={day}
           onClick={() => setSelectedDate(date)}
-          className={`relative h-20 sm:h-24 border border-slate-700/30 p-1.5 sm:p-2 cursor-pointer transition-all duration-200 hover:border-cyan-500/50 hover:bg-slate-800/30 ${
+          className={`relative min-h-20 sm:min-h-24 border border-slate-700/30 p-1.5 sm:p-2 cursor-pointer transition-all duration-200 hover:border-cyan-500/50 hover:bg-slate-800/30 ${
             selectedDate === date ? 'bg-slate-800/50 border-cyan-500 ring-2 ring-cyan-500/30' : 'bg-slate-900/20'
           }`}
         >

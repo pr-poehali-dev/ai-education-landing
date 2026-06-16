@@ -45,7 +45,7 @@ export default function CalendarGrid({ selectedMonth, selectedDate, events, onDa
     const days = [];
 
     for (let i = 0; i < firstDay; i++) {
-      days.push(<div key={`empty-${i}`} className="h-24 sm:h-28 border border-slate-700/50" />);
+      days.push(<div key={`empty-${i}`} className="min-h-24 sm:min-h-28 border border-slate-700/50" />);
     }
 
     for (let day = 1; day <= daysInMonth; day++) {
@@ -56,7 +56,7 @@ export default function CalendarGrid({ selectedMonth, selectedDate, events, onDa
         <div
           key={day}
           onClick={() => onDateSelect(date)}
-          className={`relative h-24 sm:h-28 border border-slate-700/50 p-2 cursor-pointer transition-all duration-200 hover:border-cyan-500/50 hover:bg-slate-800/50 ${
+          className={`relative min-h-24 sm:min-h-28 border border-slate-700/50 p-2 cursor-pointer transition-all duration-200 hover:border-cyan-500/50 hover:bg-slate-800/50 ${
             selectedDate === date ? 'bg-slate-800 border-cyan-500' : 'bg-slate-900/30'
           }`}
         >
