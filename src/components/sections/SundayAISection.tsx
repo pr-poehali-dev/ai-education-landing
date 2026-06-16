@@ -158,7 +158,7 @@ export default function SundayAISection() {
                   
                   {/* Price badge */}
                   <div className="flex flex-col items-start gap-1 bg-orange-500/20 border-2 border-orange-500/50 rounded-xl px-3 sm:px-4 py-2 w-full sm:w-auto sm:flex-shrink-0">
-                    <span className="text-orange-400 font-bold text-lg sm:text-xl">1000₽</span>
+                    <span className="text-orange-400 font-bold text-lg sm:text-xl">1500₽</span>
                     <span className="text-orange-300 text-xs">Завтрак включен</span>
                   </div>
                 </div>
