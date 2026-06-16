@@ -265,7 +265,7 @@ export default function CalendarSection() {
                     
                     <div className="space-y-2 pt-4 border-t border-slate-700">
                       <h4 className="text-white font-semibold mb-3 text-sm">Типы событий:</h4>
-                      {Object.entries(EVENT_TYPES_DISPLAY).map(([type, info]) => (
+                      {Object.entries(EVENT_TYPES_DISPLAY).filter(([type]) => type === 'lesson' || type === 'special').map(([type, info]) => (
                         <div key={type} className="flex items-center gap-2 text-xs sm:text-sm text-gray-300">
                           <Icon name={info.icon} size={14} className="text-cyan-400" />
                           <span>{info.label}</span>
