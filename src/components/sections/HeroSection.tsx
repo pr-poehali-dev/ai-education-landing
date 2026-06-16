@@ -101,6 +101,11 @@ export default function HeroSection({ scrollToForm, scrollToSection }: HeroSecti
                 <Icon name="Clock" size={15} className="text-orange-400" />
                 3 месяца
               </span>
+              <span className="text-gray-600">·</span>
+              <span className="flex items-center gap-1.5 text-white font-medium">
+                <Icon name="Layers" size={15} className="text-purple-400" />
+                2 потока: с 14 и 16 сентября
+              </span>
             </div>
 
             {/* Таймер */}

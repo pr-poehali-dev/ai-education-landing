@@ -9,9 +9,13 @@ export default function ScheduleSection() {
         <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">Расписание</span> курса
         </h2>
-        <p className="text-lg text-gray-300">
+        <p className="text-lg text-gray-300 mb-4">
           Интенсивная программа обучения нейросетям
         </p>
+        <div className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-400/40 rounded-full px-5 py-2.5 text-sm sm:text-base backdrop-blur-sm">
+          <Icon name="Users" className="text-cyan-400" size={20} />
+          <span className="text-white font-semibold">Стартуют сразу <span className="text-cyan-400">2 потока</span> — выбирайте удобный график</span>
+        </div>
       </div>
 
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
@@ -25,9 +29,15 @@ export default function ScheduleSection() {
               <h3 className="text-xl font-bold text-white mb-2">Старт курса</h3>
             </div>
             
-            <div className="space-y-2">
-              <div className="text-3xl sm:text-4xl font-bold text-cyan-400">14</div>
-              <div className="text-lg text-white font-semibold">сентября</div>
+            <div className="space-y-3">
+              <div className="bg-slate-700/70 border border-cyan-400/30 rounded-lg py-3 px-4">
+                <div className="text-cyan-300 text-sm font-medium">Поток 1</div>
+                <div className="text-2xl sm:text-3xl font-bold text-cyan-400">14 сентября</div>
+              </div>
+              <div className="bg-slate-700/70 border border-purple-400/30 rounded-lg py-3 px-4">
+                <div className="text-purple-300 text-sm font-medium">Поток 2</div>
+                <div className="text-2xl sm:text-3xl font-bold text-purple-400">16 сентября</div>
+              </div>
               <div className="text-sm text-gray-300">2026 года</div>
             </div>
             
@@ -57,15 +67,32 @@ export default function ScheduleSection() {
                 <Icon name="Calendar" className="text-purple-400" size={16} />
                 <span className="text-white font-semibold">2 раза в неделю</span>
               </div>
-              
-              <div className="space-y-2">
-                <div className="bg-slate-700/70 border border-purple-400/30 rounded-lg py-3 px-4">
-                  <div className="text-purple-300 text-sm font-medium">Понедельник</div>
-                  <div className="text-white font-bold text-lg">17:00 - 20:00</div>
+
+              <div className="bg-slate-700/50 border border-cyan-400/30 rounded-lg p-3">
+                <div className="text-cyan-300 text-sm font-bold mb-2">Поток 1</div>
+                <div className="space-y-1.5">
+                  <div className="flex items-center justify-between text-sm">
+                    <span className="text-gray-300">Понедельник</span>
+                    <span className="text-white font-bold">17:00–20:00</span>
+                  </div>
+                  <div className="flex items-center justify-between text-sm">
+                    <span className="text-gray-300">Четверг</span>
+                    <span className="text-white font-bold">17:00–20:00</span>
+                  </div>
                 </div>
-                <div className="bg-slate-700/70 border border-pink-400/30 rounded-lg py-3 px-4">
-                  <div className="text-pink-300 text-sm font-medium">Четверг</div>
-                  <div className="text-white font-bold text-lg">17:00 - 20:00</div>
+              </div>
+
+              <div className="bg-slate-700/50 border border-purple-400/30 rounded-lg p-3">
+                <div className="text-purple-300 text-sm font-bold mb-2">Поток 2</div>
+                <div className="space-y-1.5">
+                  <div className="flex items-center justify-between text-sm">
+                    <span className="text-gray-300">Среда</span>
+                    <span className="text-white font-bold">17:00–20:00</span>
+                  </div>
+                  <div className="flex items-center justify-between text-sm">
+                    <span className="text-gray-300">Суббота</span>
+                    <span className="text-white font-bold">10:00–13:00</span>
+                  </div>
                 </div>
               </div>
             </div>
